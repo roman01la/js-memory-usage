@@ -4,6 +4,7 @@
 - [ImmutableJS](#immutablejs)
 - [ClojureScript](#clojurescript)
 - [Kotlin](#kotlin)
+- [GopherJS (Go)](#gopherjs-go)
 - Elm
 - Reason/BuckleScript
 - PureScript
@@ -12,7 +13,6 @@
 - Scala.js
 - RacketScript
 - GHCJS (Haskell)
-- GopherJS (Go)
 - ...
 
 ## How to add stats
@@ -117,5 +117,22 @@ _Stats for at least three types of data structures are required:_
   "1000 item ArrayList": 10443.376,
   "1000 item HashMap": 227163.968,
   "1000 item HashSet": 106779.984
+}
+```
+
+## GopherJS (Go)
+```json
+{
+  "empty array": 259,
+  "empty map": 74,
+
+  "10 item array": 388,
+  "10 item map": 960,
+
+  "100 item array": 781,
+  "100 item map": 13451,
+
+  "1000 item array": 4349,
+  "1000 item map": 170437
 }
 ```
