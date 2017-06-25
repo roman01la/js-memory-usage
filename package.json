@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build:clj": "java -cp src/clj/cljs.jar:src/clj/src clojure.main src/clj/build.clj",
+    "run:js": "node src/plain-js/test.js > out/plain-js.json",
+    "run:immutable-js": "node src/immutable-js/test.js > out/immutable-js.json",
+    "run:clj": "node src/clj/test.js > out/clj.json"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "memwatch-next": "^0.3.0"
+  }
+}
