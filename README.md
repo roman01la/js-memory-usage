@@ -3,10 +3,10 @@
 - [JavaScript](#javascript)
 - [ImmutableJS](#immutablejs)
 - [ClojureScript](#clojurescript)
+- [Kotlin](#kotlin)
 - Elm
 - Reason/BuckleScript
 - PureScript
-- Kotlin
 - Dart
 - ElixirScript
 - Scala.js
@@ -96,5 +96,26 @@ _Stats for at least three types of data structures are required:_
   "1000 item vector": 11238,
   "1000 item map": 121323.768,
   "1000 item set": 123868.216
+}
+```
+
+## Kotlin
+```json
+{
+  "empty ArrayList": 119.472,
+  "empty HashMap": 413.456,
+  "empty HashSet": 443.84,
+
+  "10 item ArrayList": 270.416,
+  "10 item HashMap": 2230.152,
+  "10 item HashSet": 1575.968,
+
+  "100 item ArrayList": 1248.416,
+  "100 item HashMap": 20032.696,
+  "100 item HashSet": 11219.92,
+
+  "1000 item ArrayList": 10443.376,
+  "1000 item HashMap": 227163.968,
+  "1000 item HashSet": 106779.984
 }
 ```
