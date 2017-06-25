@@ -27,16 +27,16 @@ results['empty map'] = record(1000, () => Immutable.Map());
 results['empty set'] = record(1000, () => Immutable.Set());
 
 function listSet(list, i) { return list.push(0); }
-function mapSet(map, i) { return map.set(i, 0); }
+function mapSet(map, i) { return map.set('key-' + i, 0); }
 function setSet(set, i) { return set.add(i); }
 
-results['10 item list'] = record(100000, () => fill(10, Immutable.List(), listSet));
-results['10 item map'] = record(100000, () => fill(10, Immutable.Map(), mapSet));
-results['10 item set'] = record(100000, () => fill(10, Immutable.Set(), setSet));
+results['10 item list'] = record(1000, () => fill(10, Immutable.List(), listSet));
+results['10 item map'] = record(1000, () => fill(10, Immutable.Map(), mapSet));
+results['10 item set'] = record(1000, () => fill(10, Immutable.Set(), setSet));
 
-results['100 item list'] = record(10000, () => fill(100, Immutable.List(), listSet));
-results['100 item map'] = record(10000, () => fill(100, Immutable.Map(), mapSet));
-results['100 item set'] = record(10000, () => fill(100, Immutable.Set(), setSet));
+results['100 item list'] = record(1000, () => fill(100, Immutable.List(), listSet));
+results['100 item map'] = record(1000, () => fill(100, Immutable.Map(), mapSet));
+results['100 item set'] = record(1000, () => fill(100, Immutable.Set(), setSet));
 
 results['1000 item list'] = record(1000, () => fill(1000, Immutable.List(), listSet));
 results['1000 item map'] = record(1000, () => fill(1000, Immutable.Map(), mapSet));

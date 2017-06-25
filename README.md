@@ -35,25 +35,25 @@ _Stats for at least three types of data structures are required:_
 ## JavaScript
 ```json
 {
-  "empty object": 69.224,
+  "empty object": 68.736,
   "empty array": 93.144,
   "empty map": 197.016,
   "empty set": 166.04,
 
-  "10 item object": 218.32216,
-  "10 item array": 242.26208,
-  "10 item map": 530.48856,
-  "10 item set": 402.46528,
+  "10 item object": 145.936,
+  "10 item array": 247.304,
+  "10 item map": 882.352,
+  "10 item set": 432.168,
 
-  "100 item object": 1201.3952,
-  "100 item array": 1337.2456,
-  "100 item map": 3665.1808,
-  "100 item set": 2641.2072,
+  "100 item object": 6243.432,
+  "100 item array": 1342.584,
+  "100 item map": 6870.2,
+  "100 item set": 2646.2,
 
-  "1000 item object": 10398.224,
+  "1000 item object": 98686.272,
   "1000 item array": 11598.584,
-  "1000 item map": 28758.464,
-  "1000 item set": 20566.2
+  "1000 item map": 60762.608,
+  "1000 item set": 20564.048
 }
 ```
 
@@ -61,20 +61,20 @@ _Stats for at least three types of data structures are required:_
 ```json
 {
   "empty list": 22.312,
-  "empty map": 20.232,
+  "empty map": 19.976,
   "empty set": 20.224,
 
-  "10 item list": 491.71112,
-  "10 item map": 1427.28672,
-  "10 item set": 1483.24152,
+  "10 item list": 619.52,
+  "10 item map": 1897.168,
+  "10 item set": 1572.456,
 
-  "100 item list": 2568.4048,
-  "100 item map": 15558.6776,
-  "100 item set": 15612.3232,
+  "100 item list": 2643.56,
+  "100 item map": 17404.792,
+  "100 item set": 15680.4,
 
-  "1000 item list": 20483.56,
-  "1000 item map": 123817.784,
-  "1000 item set": 123851.168
+  "1000 item list": 20485.28,
+  "1000 item map": 182599.904,
+  "1000 item set": 123836.416
 }
 ```
 
@@ -85,16 +85,16 @@ _Stats for at least three types of data structures are required:_
   "empty map": 11.864,
   "empty set": 11.952,
 
-  "10 item vector": 298.856,
-  "10 item map": 457.584,
-  "10 item set": 763.048,
+  "10 item vector": 298.088,
+  "10 item map": 1367.592,
+  "10 item set": 706.472,
 
-  "100 item vector": 1591.504,
-  "100 item map": 5230.448,
-  "100 item set": 5395.128,
+  "100 item vector": 1589.032,
+  "100 item map": 8877.656,
+  "100 item set": 5325.976,
 
-  "1000 item vector": 11237.696,
-  "1000 item map": 123785.2,
-  "1000 item set": 123900.056
+  "1000 item vector": 11238,
+  "1000 item map": 121323.768,
+  "1000 item set": 123868.216
 }
 ```

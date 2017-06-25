@@ -1,17 +1,14 @@
 {
-  "empty vector": 11.096,
   "empty map": 11.864,
+  "1000 item vector": 11238,
   "empty set": 11.952,
-
-  "10 item vector": 298.856,
-  "10 item map": 457.584,
-  "10 item set": 763.048,
-
-  "100 item vector": 1591.504,
-  "100 item map": 5230.448,
-  "100 item set": 5395.128,
-
-  "1000 item vector": 11237.696,
-  "1000 item map": 123785.2,
-  "1000 item set": 123900.056
+  "empty vector": 11.096,
+  "10 item set": 706.472,
+  "100 item map": 8877.656,
+  "100 item vector": 1589.032,
+  "1000 item set": 123868.216,
+  "100 item set": 5325.976,
+  "10 item map": 1367.592,
+  "10 item vector": 298.088,
+  "1000 item map": 121323.768
 }

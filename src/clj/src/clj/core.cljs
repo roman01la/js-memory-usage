@@ -18,7 +18,7 @@
   (conj v 0))
 
 (defn map-set [m i]
-  (assoc m i 0))
+  (assoc m (str "key-" i) 0))
 
 (defn set-set [s i]
   (conj s i))
