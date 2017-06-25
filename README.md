@@ -6,6 +6,13 @@
 - Elm
 - Reason/BuckleScript
 - PureScript
+- Kotlin
+- Dart
+- ElixirScript
+- Scala.js
+- RacketScript
+- GHCJS (Haskell)
+- GopherJS (Go)
 - ...
 
 ## How to add stats
