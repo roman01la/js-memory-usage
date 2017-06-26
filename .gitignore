@@ -1,4 +1,5 @@
 node_modules
 src/clj/out
 src/go/test.js.map
+elm-stuff
 .merlin
