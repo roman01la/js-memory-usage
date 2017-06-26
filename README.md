@@ -8,7 +8,6 @@
 - [RacketScript](#racketscript)
 - [Reason (BuckleScript)](#reason-bucklescript)
 - [Elm](#elm)
-- Reason/BuckleScript
 - PureScript
 - Dart
 - ElixirScript
