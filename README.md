@@ -6,8 +6,8 @@
 - [Kotlin](#kotlin)
 - [GopherJS (Go)](#gopherjs-go)
 - [RacketScript](#racketscript)
+- [Reason (BuckleScript)](#reason-bucklescript)
 - Elm
-- Reason/BuckleScript
 - PureScript
 - Dart
 - ElixirScript
@@ -155,5 +155,26 @@ _Stats for at least three types of data structures are required:_
   "1000 item list": 55942.032,
   "1000 item vector": 8112.088,
   "1000 item hash map": 147176.56
+}
+```
+
+## Reason (BuckleScript)
+```json
+{
+  "empty List": 19,
+  "empty Array": 87,
+  "empty Hashtbl": 288,
+
+  "10 item List": 671,
+  "10 item Array": 164,
+  "10 item Hashtbl": 1385,
+
+  "100 item List": 6418,
+  "100 item Array": 867,
+  "100 item Hashtbl": 11114,
+
+  "1000 item List": 64038,
+  "1000 item Array": 8059,
+  "1000 item Hashtbl": 108558
 }
 ```
