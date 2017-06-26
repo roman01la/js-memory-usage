@@ -5,16 +5,19 @@
     "build:go": "~/go/bin/gopherjs build src/go/test.go -o src/go/test.js",
     "build:rkt": "racks -n -t babel -d src/racket/out src/racket/test.rkt",
     "build:elm": "cd src/elm && elm-make --yes Main.elm --output elm.js",
+    "build:reason": "bsb",
     "run:js": "node src/plain-js/test.js > out/plain-js.json",
     "run:immutable-js": "node src/immutable-js/test.js > out/immutable-js.json",
     "run:clj": "node src/clj/test.js > out/clj.json",
     "run:kotlin": "node src/kotlin/test.js > out/kotlin.json",
     "run:go": "node src/go/test.js > out/go.json",
     "run:rkt": "node src/racket/out/dist/modules/test.rkt.js > out/racket.json",
-    "run:elm": "node src/elm/test.js > out/elm.json"
+    "run:elm": "node src/elm/test.js > out/elm.json",
+    "run:reason": "node lib/js/src/reason/test.js > out/reason.json"
   },
   "dependencies": {
     "elm": "^0.18.0",
+    "bs-platform": "^1.7.5",
     "immutable": "^3.8.1",
     "kotlin": "^1.1.0",
     "memwatch-next": "^0.3.0"
