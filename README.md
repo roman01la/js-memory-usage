@@ -5,13 +5,13 @@
 - [ClojureScript](#clojurescript)
 - [Kotlin](#kotlin)
 - [GopherJS (Go)](#gopherjs-go)
+- [RacketScript](#racketscript)
 - Elm
 - Reason/BuckleScript
 - PureScript
 - Dart
 - ElixirScript
 - Scala.js
-- RacketScript
 - GHCJS (Haskell)
 - ...
 
@@ -134,5 +134,26 @@ _Stats for at least three types of data structures are required:_
 
   "1000 item array": 4349,
   "1000 item map": 170437
+}
+```
+
+## RacketScript
+```json
+{
+  "empty list": 18.968,
+  "empty vector": 141.664,
+  "empty hash map": 234.688,
+
+  "10 item list": 606.76,
+  "10 item vector": 216.344,
+  "10 item hash map": 1633.32,
+
+  "100 item list": 5637.984,
+  "100 item vector": 918.064,
+  "100 item hash map": 13657.544,
+
+  "1000 item list": 55942.032,
+  "1000 item vector": 8112.088,
+  "1000 item hash map": 147176.56
 }
 ```
