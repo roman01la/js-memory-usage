@@ -1,0 +1,18 @@
+{
+  "empty object": 68.736,
+  "empty array": 93.144,
+  "empty map": 197.016,
+  "empty set": 166.04,
+  "10 item object": 145.936,
+  "10 item array": 247.304,
+  "10 item map": 882.352,
+  "10 item set": 432.168,
+  "100 item object": 6243.432,
+  "100 item array": 1342.584,
+  "100 item map": 6870.2,
+  "100 item set": 2646.2,
+  "1000 item object": 98686.272,
+  "1000 item array": 11598.584,
+  "1000 item map": 60762.608,
+  "1000 item set": 20564.048
+}

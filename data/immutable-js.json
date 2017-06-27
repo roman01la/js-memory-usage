@@ -1,0 +1,14 @@
+{
+  "empty list": 22.312,
+  "empty map": 19.976,
+  "empty set": 20.224,
+  "10 item list": 619.52,
+  "10 item map": 1897.168,
+  "10 item set": 1572.456,
+  "100 item list": 2643.56,
+  "100 item map": 17404.792,
+  "100 item set": 15680.4,
+  "1000 item list": 20485.28,
+  "1000 item map": 182599.904,
+  "1000 item set": 123836.416
+}

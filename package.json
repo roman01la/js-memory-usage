@@ -1,7 +1,7 @@
 {
   "scripts": {
     "watch": "webpack -w",
-    "build": "webpack -p"
+    "build": "NODE_ENV=production webpack -p"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
