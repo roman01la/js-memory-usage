@@ -14,6 +14,16 @@ export default {
     flexDirection: 'column',
     alignItems: 'center'
   },
+  link: {
+    color: '#fff',
+    textDecoration: 'none',
+    background: '#242424',
+    padding: '4px 8px',
+    borderRadius: 2,
+    position: 'fixed',
+    top: 8,
+    left: 8
+  },
   chartTitle: {
     textAlign: 'center'
   },

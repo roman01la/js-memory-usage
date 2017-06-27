@@ -116,6 +116,18 @@ class Chart extends Component {
           h(Bar, { dataKey: 'b2', stackId: 's', fill: colors.b2 }),
           h(Bar, { dataKey: 'b3', stackId: 's', fill: colors.b3 })
         )
+      ),
+      h(
+        'div',
+        {},
+        h(
+          'a',
+          {
+            href: 'https://github.com/roman01la/js-memory-usage',
+            style: styles.link
+          },
+          'GitHub'
+        )
       )
     );
   }
