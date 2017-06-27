@@ -81,22 +81,27 @@ _Stats for at least three types of data structures are required:_
 ## ClojureScript
 ```json
 {
-  "empty vector": 11.096,
-  "empty map": 11.864,
-  "empty set": 11.952,
+  "empty list": 8.936,
+  "empty vector": 11.776,
+  "empty map": 11.368,
+  "empty set": 11.368,
 
-  "10 item vector": 298.088,
-  "10 item map": 1367.592,
-  "10 item set": 706.472,
+  "10 item list": 783.92,
+  "10 item vector": 286.744,
+  "10 item map": 1366.72,
+  "10 item set": 732.528,
 
-  "100 item vector": 1589.032,
-  "100 item map": 8877.656,
-  "100 item set": 5325.976,
+  "100 item list": 7239.256,
+  "100 item vector": 1600.8,
+  "100 item map": 8896.968,
+  "100 item set": 5402.552,
 
-  "1000 item vector": 11238,
-  "1000 item map": 121323.768,
-  "1000 item set": 123868.216
+  "1000 item list": 72040.64,
+  "1000 item vector": 11235.368,
+  "1000 item map": 121328.16,
+  "1000 item set": 123852.92
 }
+
 ```
 
 ## Kotlin
