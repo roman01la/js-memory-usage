@@ -95,7 +95,7 @@ class Chart extends Component {
       }),
       h(
         ResponsiveContainer,
-        { width: '90%', height: 600 },
+        {},
         h(
           BarChart,
           { data },

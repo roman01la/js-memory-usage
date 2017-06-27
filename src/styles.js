@@ -12,7 +12,11 @@ export default {
     color: '#242424',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '100vw',
+    height: '100vh',
+    boxSizing: 'border-box',
+    padding: 16
   },
   link: {
     color: '#fff',
