@@ -35,47 +35,48 @@ _Stats for at least three types of data structures are required:_
 ## JavaScript
 ```json
 {
-  "empty object": 68.736,
-  "empty array": 93.144,
-  "empty map": 197.016,
-  "empty set": 166.04,
+  "empty object": 70.192,
+  "empty array": 93.04,
+  "empty map": 196.32,
+  "empty set": 166.64,
 
-  "10 item object": 145.936,
-  "10 item array": 247.304,
-  "10 item map": 882.352,
-  "10 item set": 432.168,
+  "10 item object": 143.552,
+  "10 item array": 246.152,
+  "10 item map": 882.304,
+  "10 item set": 431.76,
 
-  "100 item object": 6243.432,
-  "100 item array": 1342.584,
-  "100 item map": 6870.2,
-  "100 item set": 2646.2,
+  "100 item object": 6242.864,
+  "100 item array": 1341.864,
+  "100 item map": 6869.504,
+  "100 item set": 2645.504,
 
-  "1000 item object": 98686.272,
-  "1000 item array": 11598.584,
-  "1000 item map": 60762.608,
-  "1000 item set": 20564.048
+  "1000 item object": 98685.52,
+  "1000 item array": 11597.864,
+  "1000 item map": 60768.392,
+  "1000 item set": 20563.264
 }
 ```
 
 ## ImmutableJS
 ```json
 {
-  "empty list": 22.312,
-  "empty map": 19.976,
-  "empty set": 20.224,
+  "empty list": 19.904,
+  "empty map": 23.16,
+  "empty set": 23.192,
 
-  "10 item list": 619.52,
-  "10 item map": 1897.168,
-  "10 item set": 1572.456,
+  "10 item list": 641.752,
+  "10 item map": 1901.608,
+  "10 item set": 1578.704,
 
-  "100 item list": 2643.56,
-  "100 item map": 17404.792,
-  "100 item set": 15680.4,
+  "100 item list": 2647.36,
+  "100 item map": 17411.496,
+  "100 item set": 15679.656,
 
-  "1000 item list": 20485.28,
-  "1000 item map": 182599.904,
-  "1000 item set": 123836.416
+  "1000 item list": 20485.224,
+  "1000 item map": 182600.704,
+  "1000 item set": 123834.648
 }
+
 ```
 
 ## ClojureScript
@@ -107,91 +108,91 @@ _Stats for at least three types of data structures are required:_
 ## Kotlin
 ```json
 {
-  "empty List": "121.704",
-  "empty ArrayList": "107.904",
-  "empty HashMap": "267.904",
-  "empty HashSet": "291.792",
+  "empty List": 119.296,
+  "empty ArrayList": 107.856,
+  "empty HashMap": 267.952,
+  "empty HashSet": 291.792,
 
-  "10 item List": "262.216",
-  "10 item ArrayList": "270.4",
-  "10 item HashMap": "1989.728",
-  "10 item HashSet": "1422.32",
+  "10 item List": 262.28,
+  "10 item ArrayList": 270.4,
+  "10 item HashMap": 1989.936,
+  "10 item HashSet": 1422.104,
 
-  "100 item List": "1243.424",
-  "100 item ArrayList": "1247.944",
-  "100 item HashMap": "19904.576",
-  "100 item HashSet": "11067.224",
+  "100 item List": 1243.344,
+  "100 item ArrayList": 1247.944,
+  "100 item HashMap": 19904.608,
+  "100 item HashSet": 11067.224,
 
-  "1000 item List": "9693.176",
-  "1000 item ArrayList": "9696.392",
-  "1000 item HashMap": "227046.288",
-  "1000 item HashSet": "106626.328"
+  "1000 item List": 9693.176,
+  "1000 item ArrayList": 9696.408,
+  "1000 item HashMap": 227046.304,
+  "1000 item HashSet": 106626.312
 }
 ```
 
 ## GopherJS (Go)
 ```json
 {
-  "empty array": 259,
+  "empty array": 267,
   "empty map": 74,
 
-  "10 item array": 388,
-  "10 item map": 960,
+  "10 item array": 385,
+  "10 item map": 961,
 
   "100 item array": 781,
-  "100 item map": 13451,
+  "100 item map": 13474,
 
-  "1000 item array": 4349,
-  "1000 item map": 170437
+  "1000 item array": 4344,
+  "1000 item map": 170444
 }
 ```
 
 ## RacketScript
 ```json
 {
-  "empty list": 18.968,
-  "empty vector": 141.664,
-  "empty hash map": 234.688,
+  "empty list": 20.104,
+  "empty vector": 138.48,
+  "empty hash map": 235.8,
 
-  "10 item list": 606.76,
-  "10 item vector": 216.344,
-  "10 item hash map": 1633.32,
+  "10 item list": 606.568,
+  "10 item vector": 285.048,
+  "10 item hash map": 1645.144,
 
-  "100 item list": 5637.984,
-  "100 item vector": 918.064,
-  "100 item hash map": 13657.544,
+  "100 item list": 5637.992,
+  "100 item vector": 1234.384,
+  "100 item hash map": 13579.56,
 
-  "1000 item list": 55942.032,
-  "1000 item vector": 8112.088,
-  "1000 item hash map": 147176.56
+  "1000 item list": 55971,
+  "1000 item vector": 1234.48,
+  "1000 item hash map": 146484.752
 }
 ```
 
 ## Reason (BuckleScript)
 ```json
 {
-  "empty List": 85,
+  "empty List": 84,
   "empty Array": 145,
   "empty Set": 71,
   "empty Map": 71,
-  "empty Hashtbl": 345,
+  "empty Hashtbl": 346,
 
-  "10 item List": 723,
-  "10 item Array": 200,
-  "10 item Set": 971,
+  "10 item List": 720,
+  "10 item Array": 207,
+  "10 item Set": 975,
   "10 item Map": 1363,
-  "10 item Hashtbl": 1442,
+  "10 item Hashtbl": 1443,
 
-  "100 item List": 6473,
-  "100 item Array": 920,
+  "100 item List": 6480,
+  "100 item Array": 927,
   "100 item Set": 8082,
-  "100 item Map": 12080,
-  "100 item Hashtbl": 11167,
+  "100 item Map": 12081,
+  "100 item Hashtbl": 11165,
 
   "1000 item List": 64073,
-  "1000 item Array": 8120,
+  "1000 item Array": 8122,
   "1000 item Set": 80404,
-  "1000 item Map": 120080,
+  "1000 item Map": 120077,
   "1000 item Hashtbl": 108343
 }
 ```

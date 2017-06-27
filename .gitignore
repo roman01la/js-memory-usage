@@ -3,3 +3,5 @@ src/clj/out
 src/go/test.js.map
 elm-stuff
 .merlin
+lib
+*.log

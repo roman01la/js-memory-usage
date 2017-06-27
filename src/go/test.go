@@ -12,7 +12,7 @@ var memwatch *js.Object = js.Global.Call("require", "memwatch-next")
 func fillArr(cnt int) []int {
 	coll := []int{}
 	for i := 0; i < cnt; i++ {
-		coll = append(coll, 0)
+		coll = append(coll, i)
 	}
 	return coll
 }
@@ -32,7 +32,7 @@ func recordArr(cnt int, fill int) int {
 func fillMap(cnt int) map[string]int {
 	coll := make(map[string]int)
 	for i := 0; i < cnt; i++ {
-		coll["key-"+strconv.Itoa(i)] = 0
+		coll["key-"+strconv.Itoa(i)] = i
 	}
 	return coll
 }

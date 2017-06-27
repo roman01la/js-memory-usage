@@ -26,11 +26,11 @@
     return o;
   }
   function arrSet(arr, i) {
-    arr.add_11rb$(0);
+    arr.add_11rb$(i);
     return arr;
   }
   function mapSet(map, i) {
-    map.put_xwzc9p$('key-' + Kotlin.toString(i), 0);
+    map.put_xwzc9p$('key-' + Kotlin.toString(i), i);
     return map;
   }
   function setSet(set, i) {

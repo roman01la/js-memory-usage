@@ -24,12 +24,12 @@ fun <T> fill(cnt: Int, obj: T, fn: (T, Int) -> T): T {
 }
 
 fun arrSet(arr: ArrayList<Int>, i: Int): ArrayList<Int> {
-    arr.add(0)
+    arr.add(i)
     return arr
 }
 
 fun mapSet(map: HashMap<String, Int>, i: Int): HashMap<String, Int> {
-    map.put("key-" + i, 0)
+    map.put("key-" + i, i)
     return map
 }
 

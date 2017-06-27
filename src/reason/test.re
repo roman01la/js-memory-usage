@@ -27,26 +27,33 @@ module Test = {
   };
   let rec fillHashtbl cnt obj =>
     if (cnt > 0) {
-      Hashtbl.add obj ("key-" ^ string_of_int cnt) 0;
+      Hashtbl.add obj ("key-" ^ string_of_int cnt) cnt;
       fillHashtbl (cnt - 1) obj
     } else {
       obj
     };
   let rec fillList cnt obj =>
     if (cnt > 0) {
-      fillList (cnt - 1) (List.append [0] obj)
+      fillList (cnt - 1) (List.append [cnt] obj)
     } else {
       obj
     };
   let rec fillMap cnt obj =>
     if (cnt > 0) {
-      fillMap (cnt - 1) (TestMap.add ("key-" ^ string_of_int cnt) 0 obj)
+      fillMap (cnt - 1) (TestMap.add ("key-" ^ string_of_int cnt) cnt obj)
     } else {
       obj
     };
   let rec fillSet cnt obj =>
     if (cnt > 0) {
       fillSet (cnt - 1) (TestSet.add (string_of_int cnt) obj)
+    } else {
+      obj
+    };
+  let rec fillArr cnt obj =>
+    if (cnt > 0) {
+      obj.(cnt - 1) = cnt;
+      fillArr (cnt - 1) obj
     } else {
       obj
     };
@@ -57,17 +64,17 @@ module Test = {
     "empty Map": record 1000 (fun () => TestMap.empty),
     "empty Hashtbl": record 1000 (fun () => Hashtbl.create 0),
     "10 item List": record 1000 (fun () => fillList 10 []),
-    "10 item Array": record 1000 (fun () => Array.make 10 0),
+    "10 item Array": record 1000 (fun () => fillArr 10 (Array.make 10 0)),
     "10 item Set": record 1000 (fun () => fillSet 10 TestSet.empty),
     "10 item Map": record 1000 (fun () => fillMap 10 TestMap.empty),
     "10 item Hashtbl": record 1000 (fun () => fillHashtbl 10 (Hashtbl.create 0)),
     "100 item List": record 1000 (fun () => fillList 100 []),
-    "100 item Array": record 1000 (fun () => Array.make 100 0),
+    "100 item Array": record 1000 (fun () => fillArr 100 (Array.make 100 0)),
     "100 item Set": record 1000 (fun () => fillSet 100 TestSet.empty),
     "100 item Map": record 1000 (fun () => fillMap 100 TestMap.empty),
     "100 item Hashtbl": record 1000 (fun () => fillHashtbl 100 (Hashtbl.create 0)),
     "1000 item List": record 1000 (fun () => fillList 1000 []),
-    "1000 item Array": record 1000 (fun () => Array.make 1000 0),
+    "1000 item Array": record 1000 (fun () => fillArr 1000 (Array.make 1000 0)),
     "1000 item Set": record 1000 (fun () => fillSet 1000 TestSet.empty),
     "1000 item Map": record 1000 (fun () => fillMap 1000 TestMap.empty),
     "1000 item Hashtbl": record 1000 (fun () => fillHashtbl 1000 (Hashtbl.create 0))

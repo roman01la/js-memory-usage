@@ -23,23 +23,37 @@ results['empty array'] = record(1000, () => new Array());
 results['empty map'] = record(1000, () => new Map());
 results['empty set'] = record(1000, () => new Set());
 
-function objSet(obj, i) { obj['key-' + i] = 0; }
-function arrSet(arr, i) { arr.push(0); }
-function mapSet(map, i) { map.set('key-' + i, 0); }
-function setSet(set, i) { set.add(i); }
+function objSet(obj, i) {
+  obj['key-' + i] = i;
+}
+function arrSet(arr, i) {
+  arr.push(i);
+}
+function mapSet(map, i) {
+  map.set('key-' + i, i);
+}
+function setSet(set, i) {
+  set.add(i);
+}
 
 results['10 item object'] = record(1000, () => fill(10, new Object(), objSet));
 results['10 item array'] = record(1000, () => fill(10, new Array(), arrSet));
 results['10 item map'] = record(1000, () => fill(10, new Map(), mapSet));
 results['10 item set'] = record(1000, () => fill(10, new Set(), setSet));
 
-results['100 item object'] = record(1000, () => fill(100, new Object(), objSet));
+results['100 item object'] = record(1000, () =>
+  fill(100, new Object(), objSet)
+);
 results['100 item array'] = record(1000, () => fill(100, new Array(), arrSet));
 results['100 item map'] = record(1000, () => fill(100, new Map(), mapSet));
 results['100 item set'] = record(1000, () => fill(100, new Set(), setSet));
 
-results['1000 item object'] = record(1000, () => fill(1000, new Object(), objSet));
-results['1000 item array'] = record(1000, () => fill(1000, new Array(), arrSet));
+results['1000 item object'] = record(1000, () =>
+  fill(1000, new Object(), objSet)
+);
+results['1000 item array'] = record(1000, () =>
+  fill(1000, new Array(), arrSet)
+);
 results['1000 item map'] = record(1000, () => fill(1000, new Map(), mapSet));
 results['1000 item set'] = record(1000, () => fill(1000, new Set(), setSet));
 
