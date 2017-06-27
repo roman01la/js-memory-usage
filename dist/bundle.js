@@ -1398,54 +1398,7 @@ module.exports = isArray;
 
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var global    = __webpack_require__(57)
-  , core      = __webpack_require__(58)
-  , hide      = __webpack_require__(98)
-  , redefine  = __webpack_require__(200)
-  , ctx       = __webpack_require__(203)
-  , PROTOTYPE = 'prototype';
-
-var $export = function(type, name, source){
-  var IS_FORCED = type & $export.F
-    , IS_GLOBAL = type & $export.G
-    , IS_STATIC = type & $export.S
-    , IS_PROTO  = type & $export.P
-    , IS_BIND   = type & $export.B
-    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] || (global[name] = {}) : (global[name] || {})[PROTOTYPE]
-    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
-    , expProto  = exports[PROTOTYPE] || (exports[PROTOTYPE] = {})
-    , key, own, out, exp;
-  if(IS_GLOBAL)source = name;
-  for(key in source){
-    // contains in native
-    own = !IS_FORCED && target && target[key] !== undefined;
-    // export native or passed
-    out = (own ? target : source)[key];
-    // bind timers to global for call from export context
-    exp = IS_BIND && own ? ctx(out, global) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
-    // extend global
-    if(target)redefine(target, key, out, type & $export.U);
-    // export
-    if(exports[key] != out)hide(exports, key, exp);
-    if(IS_PROTO && expProto[key] != out)expProto[key] = out;
-  }
-};
-global.core = core;
-// type bitmap
-$export.F = 1;   // forced
-$export.G = 2;   // global
-$export.S = 4;   // static
-$export.P = 8;   // proto
-$export.B = 16;  // bind
-$export.W = 32;  // wrap
-$export.U = 64;  // safe
-$export.R = 128; // real proto method for `library` 
-module.exports = $export;
-
-/***/ }),
+/* 6 */,
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4523,18 +4476,7 @@ function linear() {
 
 
 /***/ }),
-/* 39 */
-/***/ (function(module, exports) {
-
-module.exports = function(exec){
-  try {
-    return !!exec();
-  } catch(e){
-    return true;
-  }
-};
-
-/***/ }),
+/* 39 */,
 /* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5333,63 +5275,12 @@ exports.default = {
 };
 
 /***/ }),
-/* 57 */
-/***/ (function(module, exports) {
-
-// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-var global = module.exports = typeof window != 'undefined' && window.Math == Math
-  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
-if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
-
-/***/ }),
-/* 58 */
-/***/ (function(module, exports) {
-
-var core = module.exports = {version: '2.4.0'};
-if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
-
-/***/ }),
-/* 59 */
-/***/ (function(module, exports) {
-
-module.exports = function(it){
-  return typeof it === 'object' ? it !== null : typeof it === 'function';
-};
-
-/***/ }),
-/* 60 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(39)(function(){
-  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
-});
-
-/***/ }),
-/* 61 */
-/***/ (function(module, exports) {
-
-// 20.2.2.28 Math.sign(x)
-module.exports = Math.sign || function sign(x){
-  return (x = +x) == 0 || x != x ? x : x < 0 ? -1 : 1;
-};
-
-/***/ }),
-/* 62 */
-/***/ (function(module, exports) {
-
-// 20.2.2.14 Math.expm1(x)
-var $expm1 = Math.expm1;
-module.exports = (!$expm1
-  // Old FF bug
-  || $expm1(10) > 22025.465794806719 || $expm1(10) < 22025.4657948067165168
-  // Tor Browser bug
-  || $expm1(-2e-17) != -2e-17
-) ? function expm1(x){
-  return (x = +x) == 0 ? x : x > -1e-6 && x < 1e-6 ? x + x * x / 2 : Math.exp(x) - 1;
-} : $expm1;
-
-/***/ }),
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8057,28 +7948,8 @@ exports.default = {
 };
 
 /***/ }),
-/* 98 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var dP         = __webpack_require__(194)
-  , createDesc = __webpack_require__(199);
-module.exports = __webpack_require__(60) ? function(object, key, value){
-  return dP.f(object, key, createDesc(1, value));
-} : function(object, key, value){
-  object[key] = value;
-  return object;
-};
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports) {
-
-// 20.2.2.20 Math.log1p(x)
-module.exports = Math.log1p || function log1p(x){
-  return (x = +x) > -1e-8 && x < 1e-8 ? x - x * x / 2 : Math.log(1 + x);
-};
-
-/***/ }),
+/* 98 */,
+/* 99 */,
 /* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14124,8 +13995,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(28);
 
-__webpack_require__(191);
-
 var _ResponsiveContainer = __webpack_require__(221);
 
 var _ResponsiveContainer2 = _interopRequireDefault(_ResponsiveContainer);
@@ -14313,505 +14182,36 @@ var Chart = function (_Component) {
 (0, _preact.render)((0, _preact.h)(Chart), window.app);
 
 /***/ }),
-/* 191 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(192);
-
-/* eslint no-proto: 0 */
-var testObject = {};
-
-if (!(Object.setPrototypeOf || testObject.__proto__)) {
-  var nativeGetPrototypeOf = Object.getPrototypeOf;
-
-  Object.getPrototypeOf = function (object) {
-    if (object.__proto__) {
-      return object.__proto__;
-    }
-
-    return nativeGetPrototypeOf.call(Object, object);
-  };
-}
-
-/***/ }),
-/* 192 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(193);
-__webpack_require__(205);
-__webpack_require__(206);
-__webpack_require__(207);
-__webpack_require__(208);
-__webpack_require__(209);
-__webpack_require__(210);
-__webpack_require__(211);
-__webpack_require__(212);
-__webpack_require__(213);
-__webpack_require__(214);
-__webpack_require__(215);
-__webpack_require__(216);
-__webpack_require__(217);
-__webpack_require__(218);
-__webpack_require__(219);
-__webpack_require__(220);
-module.exports = __webpack_require__(58).Math;
-
-/***/ }),
-/* 193 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.3 Math.acosh(x)
-var $export = __webpack_require__(6)
-  , log1p   = __webpack_require__(99)
-  , sqrt    = Math.sqrt
-  , $acosh  = Math.acosh;
-
-$export($export.S + $export.F * !($acosh
-  // V8 bug: https://code.google.com/p/v8/issues/detail?id=3509
-  && Math.floor($acosh(Number.MAX_VALUE)) == 710
-  // Tor Browser bug: Math.acosh(Infinity) -> NaN 
-  && $acosh(Infinity) == Infinity
-), 'Math', {
-  acosh: function acosh(x){
-    return (x = +x) < 1 ? NaN : x > 94906265.62425156
-      ? Math.log(x) + Math.LN2
-      : log1p(x - 1 + sqrt(x - 1) * sqrt(x + 1));
-  }
-});
-
-/***/ }),
-/* 194 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var anObject       = __webpack_require__(195)
-  , IE8_DOM_DEFINE = __webpack_require__(196)
-  , toPrimitive    = __webpack_require__(198)
-  , dP             = Object.defineProperty;
-
-exports.f = __webpack_require__(60) ? Object.defineProperty : function defineProperty(O, P, Attributes){
-  anObject(O);
-  P = toPrimitive(P, true);
-  anObject(Attributes);
-  if(IE8_DOM_DEFINE)try {
-    return dP(O, P, Attributes);
-  } catch(e){ /* empty */ }
-  if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
-  if('value' in Attributes)O[P] = Attributes.value;
-  return O;
-};
-
-/***/ }),
-/* 195 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isObject = __webpack_require__(59);
-module.exports = function(it){
-  if(!isObject(it))throw TypeError(it + ' is not an object!');
-  return it;
-};
-
-/***/ }),
-/* 196 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = !__webpack_require__(60) && !__webpack_require__(39)(function(){
-  return Object.defineProperty(__webpack_require__(197)('div'), 'a', {get: function(){ return 7; }}).a != 7;
-});
-
-/***/ }),
-/* 197 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isObject = __webpack_require__(59)
-  , document = __webpack_require__(57).document
-  // in old IE typeof document.createElement is 'object'
-  , is = isObject(document) && isObject(document.createElement);
-module.exports = function(it){
-  return is ? document.createElement(it) : {};
-};
-
-/***/ }),
-/* 198 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(59);
-// instead of the ES6 spec version, we didn't implement @@toPrimitive case
-// and the second argument - flag - preferred type is a string
-module.exports = function(it, S){
-  if(!isObject(it))return it;
-  var fn, val;
-  if(S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
-  if(typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it)))return val;
-  if(!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
-  throw TypeError("Can't convert object to primitive value");
-};
-
-/***/ }),
-/* 199 */
-/***/ (function(module, exports) {
-
-module.exports = function(bitmap, value){
-  return {
-    enumerable  : !(bitmap & 1),
-    configurable: !(bitmap & 2),
-    writable    : !(bitmap & 4),
-    value       : value
-  };
-};
-
-/***/ }),
-/* 200 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var global    = __webpack_require__(57)
-  , hide      = __webpack_require__(98)
-  , has       = __webpack_require__(201)
-  , SRC       = __webpack_require__(202)('src')
-  , TO_STRING = 'toString'
-  , $toString = Function[TO_STRING]
-  , TPL       = ('' + $toString).split(TO_STRING);
-
-__webpack_require__(58).inspectSource = function(it){
-  return $toString.call(it);
-};
-
-(module.exports = function(O, key, val, safe){
-  var isFunction = typeof val == 'function';
-  if(isFunction)has(val, 'name') || hide(val, 'name', key);
-  if(O[key] === val)return;
-  if(isFunction)has(val, SRC) || hide(val, SRC, O[key] ? '' + O[key] : TPL.join(String(key)));
-  if(O === global){
-    O[key] = val;
-  } else {
-    if(!safe){
-      delete O[key];
-      hide(O, key, val);
-    } else {
-      if(O[key])O[key] = val;
-      else hide(O, key, val);
-    }
-  }
-// add fake Function#toString for correct work wrapped methods / constructors with methods like LoDash isNative
-})(Function.prototype, TO_STRING, function toString(){
-  return typeof this == 'function' && this[SRC] || $toString.call(this);
-});
-
-/***/ }),
-/* 201 */
-/***/ (function(module, exports) {
-
-var hasOwnProperty = {}.hasOwnProperty;
-module.exports = function(it, key){
-  return hasOwnProperty.call(it, key);
-};
-
-/***/ }),
-/* 202 */
-/***/ (function(module, exports) {
-
-var id = 0
-  , px = Math.random();
-module.exports = function(key){
-  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
-};
-
-/***/ }),
-/* 203 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// optional / simple context binding
-var aFunction = __webpack_require__(204);
-module.exports = function(fn, that, length){
-  aFunction(fn);
-  if(that === undefined)return fn;
-  switch(length){
-    case 1: return function(a){
-      return fn.call(that, a);
-    };
-    case 2: return function(a, b){
-      return fn.call(that, a, b);
-    };
-    case 3: return function(a, b, c){
-      return fn.call(that, a, b, c);
-    };
-  }
-  return function(/* ...args */){
-    return fn.apply(that, arguments);
-  };
-};
-
-/***/ }),
-/* 204 */
-/***/ (function(module, exports) {
-
-module.exports = function(it){
-  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
-  return it;
-};
-
-/***/ }),
-/* 205 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.5 Math.asinh(x)
-var $export = __webpack_require__(6)
-  , $asinh  = Math.asinh;
-
-function asinh(x){
-  return !isFinite(x = +x) || x == 0 ? x : x < 0 ? -asinh(-x) : Math.log(x + Math.sqrt(x * x + 1));
-}
-
-// Tor Browser bug: Math.asinh(0) -> -0 
-$export($export.S + $export.F * !($asinh && 1 / $asinh(0) > 0), 'Math', {asinh: asinh});
-
-/***/ }),
-/* 206 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.7 Math.atanh(x)
-var $export = __webpack_require__(6)
-  , $atanh  = Math.atanh;
-
-// Tor Browser bug: Math.atanh(-0) -> 0 
-$export($export.S + $export.F * !($atanh && 1 / $atanh(-0) < 0), 'Math', {
-  atanh: function atanh(x){
-    return (x = +x) == 0 ? x : Math.log((1 + x) / (1 - x)) / 2;
-  }
-});
-
-/***/ }),
-/* 207 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.9 Math.cbrt(x)
-var $export = __webpack_require__(6)
-  , sign    = __webpack_require__(61);
-
-$export($export.S, 'Math', {
-  cbrt: function cbrt(x){
-    return sign(x = +x) * Math.pow(Math.abs(x), 1 / 3);
-  }
-});
-
-/***/ }),
-/* 208 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.11 Math.clz32(x)
-var $export = __webpack_require__(6);
-
-$export($export.S, 'Math', {
-  clz32: function clz32(x){
-    return (x >>>= 0) ? 31 - Math.floor(Math.log(x + 0.5) * Math.LOG2E) : 32;
-  }
-});
-
-/***/ }),
-/* 209 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.12 Math.cosh(x)
-var $export = __webpack_require__(6)
-  , exp     = Math.exp;
-
-$export($export.S, 'Math', {
-  cosh: function cosh(x){
-    return (exp(x = +x) + exp(-x)) / 2;
-  }
-});
-
-/***/ }),
-/* 210 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.14 Math.expm1(x)
-var $export = __webpack_require__(6)
-  , $expm1  = __webpack_require__(62);
-
-$export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', {expm1: $expm1});
-
-/***/ }),
-/* 211 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.16 Math.fround(x)
-var $export   = __webpack_require__(6)
-  , sign      = __webpack_require__(61)
-  , pow       = Math.pow
-  , EPSILON   = pow(2, -52)
-  , EPSILON32 = pow(2, -23)
-  , MAX32     = pow(2, 127) * (2 - EPSILON32)
-  , MIN32     = pow(2, -126);
-
-var roundTiesToEven = function(n){
-  return n + 1 / EPSILON - 1 / EPSILON;
-};
-
-
-$export($export.S, 'Math', {
-  fround: function fround(x){
-    var $abs  = Math.abs(x)
-      , $sign = sign(x)
-      , a, result;
-    if($abs < MIN32)return $sign * roundTiesToEven($abs / MIN32 / EPSILON32) * MIN32 * EPSILON32;
-    a = (1 + EPSILON32 / EPSILON) * $abs;
-    result = a - (a - $abs);
-    if(result > MAX32 || result != result)return $sign * Infinity;
-    return $sign * result;
-  }
-});
-
-/***/ }),
-/* 212 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.17 Math.hypot([value1[, value2[, … ]]])
-var $export = __webpack_require__(6)
-  , abs     = Math.abs;
-
-$export($export.S, 'Math', {
-  hypot: function hypot(value1, value2){ // eslint-disable-line no-unused-vars
-    var sum  = 0
-      , i    = 0
-      , aLen = arguments.length
-      , larg = 0
-      , arg, div;
-    while(i < aLen){
-      arg = abs(arguments[i++]);
-      if(larg < arg){
-        div  = larg / arg;
-        sum  = sum * div * div + 1;
-        larg = arg;
-      } else if(arg > 0){
-        div  = arg / larg;
-        sum += div * div;
-      } else sum += arg;
-    }
-    return larg === Infinity ? Infinity : larg * Math.sqrt(sum);
-  }
-});
-
-/***/ }),
-/* 213 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.18 Math.imul(x, y)
-var $export = __webpack_require__(6)
-  , $imul   = Math.imul;
-
-// some WebKit versions fails with big numbers, some has wrong arity
-$export($export.S + $export.F * __webpack_require__(39)(function(){
-  return $imul(0xffffffff, 5) != -5 || $imul.length != 2;
-}), 'Math', {
-  imul: function imul(x, y){
-    var UINT16 = 0xffff
-      , xn = +x
-      , yn = +y
-      , xl = UINT16 & xn
-      , yl = UINT16 & yn;
-    return 0 | xl * yl + ((UINT16 & xn >>> 16) * yl + xl * (UINT16 & yn >>> 16) << 16 >>> 0);
-  }
-});
-
-/***/ }),
-/* 214 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.21 Math.log10(x)
-var $export = __webpack_require__(6);
-
-$export($export.S, 'Math', {
-  log10: function log10(x){
-    return Math.log(x) / Math.LN10;
-  }
-});
-
-/***/ }),
-/* 215 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.20 Math.log1p(x)
-var $export = __webpack_require__(6);
-
-$export($export.S, 'Math', {log1p: __webpack_require__(99)});
-
-/***/ }),
-/* 216 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.22 Math.log2(x)
-var $export = __webpack_require__(6);
-
-$export($export.S, 'Math', {
-  log2: function log2(x){
-    return Math.log(x) / Math.LN2;
-  }
-});
-
-/***/ }),
-/* 217 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.28 Math.sign(x)
-var $export = __webpack_require__(6);
-
-$export($export.S, 'Math', {sign: __webpack_require__(61)});
-
-/***/ }),
-/* 218 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.30 Math.sinh(x)
-var $export = __webpack_require__(6)
-  , expm1   = __webpack_require__(62)
-  , exp     = Math.exp;
-
-// V8 near Chromium 38 has a problem with very small numbers
-$export($export.S + $export.F * __webpack_require__(39)(function(){
-  return !Math.sinh(-2e-17) != -2e-17;
-}), 'Math', {
-  sinh: function sinh(x){
-    return Math.abs(x = +x) < 1
-      ? (expm1(x) - expm1(-x)) / 2
-      : (exp(x - 1) - exp(-x - 1)) * (Math.E / 2);
-  }
-});
-
-/***/ }),
-/* 219 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.33 Math.tanh(x)
-var $export = __webpack_require__(6)
-  , expm1   = __webpack_require__(62)
-  , exp     = Math.exp;
-
-$export($export.S, 'Math', {
-  tanh: function tanh(x){
-    var a = expm1(x = +x)
-      , b = expm1(-x);
-    return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (exp(x) + exp(-x));
-  }
-});
-
-/***/ }),
-/* 220 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.34 Math.trunc(x)
-var $export = __webpack_require__(6);
-
-$export($export.S, 'Math', {
-  trunc: function trunc(it){
-    return (it > 0 ? Math.floor : Math.ceil)(it);
-  }
-});
-
-/***/ }),
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
 /* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -32225,63 +31625,141 @@ Object.defineProperty(exports, "__esModule", {
 });
 var dataMap = exports.dataMap = [{
   name: 'JavaScript',
-  b0: 197.016,
-  b1: 882.352,
-  b2: 6870.2,
-  b3: 60762.608
+  b0: 196.32,
+  b1: 882.304,
+  b2: 6869.504,
+  b3: 60768.392
 }, {
   name: 'ImmutableJS',
-  b0: 19.976,
-  b1: 1897.168,
-  b2: 17404.792,
-  b3: 182599.904
+  b0: 23.16,
+  b1: 1901.608,
+  b2: 17411.496,
+  b3: 182600.704
 }, {
   name: 'ClojureScript',
-  b0: 11.864,
-  b1: 1367.592,
-  b2: 8877.656,
-  b3: 121323.768
-}, { name: 'Kotlin', b0: 413.456, b1: 2230.152, b2: 20032.696, b3: 227163.968 }, { name: 'GopherJS', b0: 74, b1: 960, b2: 13451, b3: 170437 }, {
+  b0: 11.368,
+  b1: 1366.72,
+  b2: 8896.968,
+  b3: 121328.16
+}, {
+  name: 'Kotlin',
+  b0: 267.952,
+  b1: 1989.936,
+  b2: 19904.608,
+  b3: 227046.304
+}, {
+  name: 'GopherJS',
+  b0: 74,
+  b1: 961,
+  b2: 13474,
+  b3: 170444
+}, {
   name: 'RacketScript',
-  b0: 234.688,
-  b1: 1633.32,
-  b2: 13657.544,
-  b3: 147176.56
-}, { name: 'Reason', b0: 345, b1: 1442, b2: 11167, b3: 108343 }, { name: 'Elm', b0: 11.368, b1: 1076.36, b2: 10436.36, b3: 104329.2 }];
+  b0: 235.8,
+  b1: 1645.144,
+  b2: 13579.56,
+  b3: 146484.752
+}, {
+  name: 'Reason',
+  b0: 71,
+  b1: 1363,
+  b2: 12081,
+  b3: 120077
+}, {
+  name: 'Elm',
+  b0: 11.368,
+  b1: 1076.36,
+  b2: 10436.36,
+  b3: 104329.2
+}];
 
-var dataSet = exports.dataSet = [{ name: 'JavaScript', b0: 166.04, b1: 432.168, b2: 2646.2, b3: 20564.048 }, {
+var dataSet = exports.dataSet = [{
+  name: 'JavaScript',
+  b0: 166.64,
+  b1: 431.76,
+  b2: 2645.504,
+  b3: 20563.264
+}, {
   name: 'ImmutableJS',
-  b0: 20.224,
-  b1: 1572.456,
-  b2: 15680.4,
-  b3: 123836.416
+  b0: 23.192,
+  b1: 1578.704,
+  b2: 15679.656,
+  b3: 123834.648
 }, {
   name: 'ClojureScript',
-  b0: 11.952,
-  b1: 706.472,
-  b2: 5325.976,
-  b3: 123868.216
-}, { name: 'Kotlin', b0: 443.84, b1: 1575.968, b2: 11219.92, b3: 106779.984 }, { name: 'Reason', b0: 71, b1: 971, b2: 8082, b3: 80404 }, { name: 'Elm', b0: 11.424, b1: 1114.608, b2: 10475.792, b3: 104248.064 }];
+  b0: 11.368,
+  b1: 732.528,
+  b2: 5402.552,
+  b3: 123852.92
+}, {
+  name: 'Kotlin',
+  b0: 291.792,
+  b1: 1422.104,
+  b2: 11067.224,
+  b3: 106626.312
+}, {
+  name: 'Reason',
+  b0: 71,
+  b1: 975,
+  b2: 8082,
+  b3: 80404
+}, {
+  name: 'Elm',
+  b0: 11.424,
+  b1: 1114.608,
+  b2: 10475.792,
+  b3: 104248.064
+}];
 
 var dataIdxed = exports.dataIdxed = [{
   name: 'JavaScript',
-  b0: 93.144,
-  b1: 247.304,
-  b2: 1342.584,
-  b3: 11598.584
+  b0: 93.04,
+  b1: 246.152,
+  b2: 1341.864,
+  b3: 11597.864
 }, {
   name: 'ImmutableJS',
-  b0: 22.312,
-  b1: 619.52,
-  b2: 2643.56,
-  b3: 20485.28
+  b0: 19.904,
+  b1: 641.752,
+  b2: 2647.36,
+  b3: 20485.224
 }, {
   name: 'ClojureScript',
-  b0: 11.096,
-  b1: 298.088,
-  b2: 1589.032,
-  b3: 11238
-}, { name: 'Kotlin', b0: 119.472, b1: 270.416, b2: 1248.416, b3: 10443.376 }, { name: 'GopherJS', b0: 259, b1: 388, b2: 781, b3: 4349 }, { name: 'RacketScript', b0: 141.664, b1: 216.344, b2: 918.064, b3: 8112.088 }, { name: 'Reason', b0: 145, b1: 200, b2: 920, b3: 8120 }, { name: 'Elm', b0: 11.456, b1: 208.288, b2: 1267.408, b3: 11220.536 }];
+  b0: 11.776,
+  b1: 286.744,
+  b2: 1600.8,
+  b3: 11235.368
+}, {
+  name: 'Kotlin',
+  b0: 107.856,
+  b1: 270.4,
+  b2: 1247.944,
+  b3: 9696.408
+}, {
+  name: 'GopherJS',
+  b0: 267,
+  b1: 385,
+  b2: 781,
+  b3: 4344
+}, {
+  name: 'RacketScript',
+  b0: 138.48,
+  b1: 285.048,
+  b2: 1234.384,
+  b3: 1234.48
+}, {
+  name: 'Reason',
+  b0: 145,
+  b1: 207,
+  b2: 927,
+  b3: 8122
+}, {
+  name: 'Elm',
+  b0: 11.456,
+  b1: 208.288,
+  b2: 1267.408,
+  b3: 11220.536
+}];
 
 var dataList = exports.dataList = [{
   name: 'ClojureScript',
@@ -32289,13 +31767,31 @@ var dataList = exports.dataList = [{
   b1: 783.92,
   b2: 7239.256,
   b3: 72040.64
-}, { name: 'Kotlin', b0: 121.704, b1: 262.216, b2: 1243.424, b3: 9693.176 }, { name: 'GopherJS', b0: 74, b1: 960, b2: 13451, b3: 170437 }, {
+}, {
+  name: 'Kotlin',
+  b0: 119.296,
+  b1: 262.28,
+  b2: 1243.344,
+  b3: 9693.176
+}, {
   name: 'RacketScript',
-  b0: 18.968,
-  b1: 606.76,
-  b2: 5637.984,
-  b3: 55942.032
-}, { name: 'Reason', b0: 85, b1: 723, b2: 6473, b3: 64073 }, { name: 'Elm', b0: 43.776, b1: 524.696, b2: 4851.144, b3: 48046.928 }];
+  b0: 20.104,
+  b1: 606.568,
+  b2: 5637.992,
+  b3: 55971
+}, {
+  name: 'Reason',
+  b0: 84,
+  b1: 720,
+  b2: 6480,
+  b3: 64073
+}, {
+  name: 'Elm',
+  b0: 43.776,
+  b1: 524.696,
+  b2: 4851.144,
+  b3: 48046.928
+}];
 
 /***/ }),
 /* 491 */
