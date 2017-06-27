@@ -38,55 +38,91 @@
     return set;
   }
   function main$lambda() {
-    return ArrayList_init(0);
+    var list = Kotlin.kotlin.collections.ArrayList_init_ww73n8$(0);
+    var tmp$;
+    tmp$ = 0 - 1 | 0;
+    for (var index = 0; index <= tmp$; index++) {
+      list.add_11rb$(index);
+    }
+    return list;
   }
   function main$lambda_0() {
-    return HashMap_init();
+    return ArrayList_init(0);
   }
   function main$lambda_1() {
-    return HashSet_init();
+    return HashMap_init();
   }
   function main$lambda_2() {
+    return HashSet_init();
+  }
+  function main$lambda_3() {
+    var list = Kotlin.kotlin.collections.ArrayList_init_ww73n8$(10);
+    var tmp$;
+    tmp$ = 10 - 1 | 0;
+    for (var index = 0; index <= tmp$; index++) {
+      list.add_11rb$(index);
+    }
+    return list;
+  }
+  function main$lambda_4() {
     return fill(10, ArrayList_init(0), Kotlin.getCallableRef('arrSet', function (arr, i) {
       return arrSet(arr, i);
     }));
   }
-  function main$lambda_3() {
+  function main$lambda_5() {
     return fill(10, HashMap_init(), Kotlin.getCallableRef('mapSet', function (map, i) {
       return mapSet(map, i);
     }));
   }
-  function main$lambda_4() {
+  function main$lambda_6() {
     return fill(10, HashSet_init(), Kotlin.getCallableRef('setSet', function (set, i) {
       return setSet(set, i);
     }));
   }
-  function main$lambda_5() {
+  function main$lambda_7() {
+    var list = Kotlin.kotlin.collections.ArrayList_init_ww73n8$(100);
+    var tmp$;
+    tmp$ = 100 - 1 | 0;
+    for (var index = 0; index <= tmp$; index++) {
+      list.add_11rb$(index);
+    }
+    return list;
+  }
+  function main$lambda_8() {
     return fill(100, ArrayList_init(0), Kotlin.getCallableRef('arrSet', function (arr, i) {
       return arrSet(arr, i);
     }));
   }
-  function main$lambda_6() {
+  function main$lambda_9() {
     return fill(100, HashMap_init(), Kotlin.getCallableRef('mapSet', function (map, i) {
       return mapSet(map, i);
     }));
   }
-  function main$lambda_7() {
+  function main$lambda_10() {
     return fill(100, HashSet_init(), Kotlin.getCallableRef('setSet', function (set, i) {
       return setSet(set, i);
     }));
   }
-  function main$lambda_8() {
+  function main$lambda_11() {
+    var list = Kotlin.kotlin.collections.ArrayList_init_ww73n8$(1000);
+    var tmp$;
+    tmp$ = 1000 - 1 | 0;
+    for (var index = 0; index <= tmp$; index++) {
+      list.add_11rb$(index);
+    }
+    return list;
+  }
+  function main$lambda_12() {
     return fill(1000, ArrayList_init(0), Kotlin.getCallableRef('arrSet', function (arr, i) {
       return arrSet(arr, i);
     }));
   }
-  function main$lambda_9() {
+  function main$lambda_13() {
     return fill(1000, HashMap_init(), Kotlin.getCallableRef('mapSet', function (map, i) {
       return mapSet(map, i);
     }));
   }
-  function main$lambda_10() {
+  function main$lambda_14() {
     return fill(1000, HashSet_init(), Kotlin.getCallableRef('setSet', function (set, i) {
       return setSet(set, i);
     }));
@@ -94,18 +130,22 @@
   function main(args) {
     var memwatch = require('memwatch-next');
     var results = HashMap_init();
-    results.put_xwzc9p$('empty ArrayList', record(memwatch, 1000, main$lambda));
-    results.put_xwzc9p$('empty HashMap', record(memwatch, 1000, main$lambda_0));
-    results.put_xwzc9p$('empty HashSet', record(memwatch, 1000, main$lambda_1));
-    results.put_xwzc9p$('10 item ArrayList', record(memwatch, 1000, main$lambda_2));
-    results.put_xwzc9p$('10 item HashMap', record(memwatch, 1000, main$lambda_3));
-    results.put_xwzc9p$('10 item HashSet', record(memwatch, 1000, main$lambda_4));
-    results.put_xwzc9p$('100 item ArrayList', record(memwatch, 1000, main$lambda_5));
-    results.put_xwzc9p$('100 item HashMap', record(memwatch, 1000, main$lambda_6));
-    results.put_xwzc9p$('100 item HashSet', record(memwatch, 1000, main$lambda_7));
-    results.put_xwzc9p$('1000 item ArrayList', record(memwatch, 1000, main$lambda_8));
-    results.put_xwzc9p$('1000 item HashMap', record(memwatch, 1000, main$lambda_9));
-    results.put_xwzc9p$('1000 item HashSet', record(memwatch, 1000, main$lambda_10));
+    results.put_xwzc9p$('empty List', record(memwatch, 1000, main$lambda));
+    results.put_xwzc9p$('empty ArrayList', record(memwatch, 1000, main$lambda_0));
+    results.put_xwzc9p$('empty HashMap', record(memwatch, 1000, main$lambda_1));
+    results.put_xwzc9p$('empty HashSet', record(memwatch, 1000, main$lambda_2));
+    results.put_xwzc9p$('10 item List', record(memwatch, 1000, main$lambda_3));
+    results.put_xwzc9p$('10 item ArrayList', record(memwatch, 1000, main$lambda_4));
+    results.put_xwzc9p$('10 item HashMap', record(memwatch, 1000, main$lambda_5));
+    results.put_xwzc9p$('10 item HashSet', record(memwatch, 1000, main$lambda_6));
+    results.put_xwzc9p$('100 item List', record(memwatch, 1000, main$lambda_7));
+    results.put_xwzc9p$('100 item ArrayList', record(memwatch, 1000, main$lambda_8));
+    results.put_xwzc9p$('100 item HashMap', record(memwatch, 1000, main$lambda_9));
+    results.put_xwzc9p$('100 item HashSet', record(memwatch, 1000, main$lambda_10));
+    results.put_xwzc9p$('1000 item List', record(memwatch, 1000, main$lambda_11));
+    results.put_xwzc9p$('1000 item ArrayList', record(memwatch, 1000, main$lambda_12));
+    results.put_xwzc9p$('1000 item HashMap', record(memwatch, 1000, main$lambda_13));
+    results.put_xwzc9p$('1000 item HashSet', record(memwatch, 1000, main$lambda_14));
     println(results.toString());
   }
   _.record_w3k0cn$ = record;

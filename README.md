@@ -107,21 +107,25 @@ _Stats for at least three types of data structures are required:_
 ## Kotlin
 ```json
 {
-  "empty ArrayList": 119.472,
-  "empty HashMap": 413.456,
-  "empty HashSet": 443.84,
+  "empty List": "121.704",
+  "empty ArrayList": "107.904",
+  "empty HashMap": "267.904",
+  "empty HashSet": "291.792",
 
-  "10 item ArrayList": 270.416,
-  "10 item HashMap": 2230.152,
-  "10 item HashSet": 1575.968,
+  "10 item List": "262.216",
+  "10 item ArrayList": "270.4",
+  "10 item HashMap": "1989.728",
+  "10 item HashSet": "1422.32",
 
-  "100 item ArrayList": 1248.416,
-  "100 item HashMap": 20032.696,
-  "100 item HashSet": 11219.92,
+  "100 item List": "1243.424",
+  "100 item ArrayList": "1247.944",
+  "100 item HashMap": "19904.576",
+  "100 item HashSet": "11067.224",
 
-  "1000 item ArrayList": 10443.376,
-  "1000 item HashMap": 227163.968,
-  "1000 item HashSet": 106779.984
+  "1000 item List": "9693.176",
+  "1000 item ArrayList": "9696.392",
+  "1000 item HashMap": "227046.288",
+  "1000 item HashSet": "106626.328"
 }
 ```
 

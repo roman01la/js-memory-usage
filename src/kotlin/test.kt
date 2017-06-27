@@ -42,18 +42,22 @@ fun main(args: Array<String>): Unit {
     var memwatch: dynamic = require("memwatch-next")
     var results: HashMap<String, Int> = HashMap()
 
+    results.put("empty List", record(memwatch, 1000, fun (): List<Int> { return List(0, {i -> i}) }))
     results.put("empty ArrayList", record(memwatch, 1000, fun (): ArrayList<Int> { return ArrayList(0) }))
     results.put("empty HashMap", record(memwatch, 1000, fun (): HashMap<String, Int> { return HashMap() }))
     results.put("empty HashSet", record(memwatch, 1000, fun (): HashSet<Int> { return HashSet() }))
 
+    results.put("10 item List", record(memwatch, 1000, fun (): List<Int> { return List(10, {i -> i}) }))
     results.put("10 item ArrayList", record(memwatch, 1000, fun (): ArrayList<Int> { return fill(10, ArrayList(0), ::arrSet) }))
     results.put("10 item HashMap", record(memwatch, 1000, fun (): HashMap<String, Int> { return fill(10, HashMap(), ::mapSet) }))
     results.put("10 item HashSet", record(memwatch, 1000, fun (): HashSet<Int> { return fill(10, HashSet(), ::setSet) }))
 
+    results.put("100 item List", record(memwatch, 1000, fun (): List<Int> { return List(100, {i -> i}) }))
     results.put("100 item ArrayList", record(memwatch, 1000, fun (): ArrayList<Int> { return fill(100, ArrayList(0), ::arrSet) }))
     results.put("100 item HashMap", record(memwatch, 1000, fun (): HashMap<String, Int> { return fill(100, HashMap(), ::mapSet) }))
     results.put("100 item HashSet", record(memwatch, 1000, fun (): HashSet<Int> { return fill(100, HashSet(), ::setSet) }))
 
+    results.put("1000 item List", record(memwatch, 1000, fun (): List<Int> { return List(1000, {i -> i}) }))
     results.put("1000 item ArrayList", record(memwatch, 1000, fun (): ArrayList<Int> { return fill(1000, ArrayList(0), ::arrSet) }))
     results.put("1000 item HashMap", record(memwatch, 1000, fun (): HashMap<String, Int> { return fill(1000, HashMap(), ::mapSet) }))
     results.put("1000 item HashSet", record(memwatch, 1000, fun (): HashSet<Int> { return fill(1000, HashSet(), ::setSet) }))
