@@ -41,6 +41,78 @@ const hints = {
   Set: 'collection of unique values'
 };
 
+const dstypes = {
+  List: {
+    Kotlin: 0,
+    Elm: 1,
+    RacketScript: 1,
+    Reason: 1,
+    ClojureScript: 1
+  },
+  Map: {
+    JavaScript: 0,
+    Elm: 1,
+    ClojureScript: 1,
+    Reason: 1,
+    RacketScript: 1,
+    GopherJS: 0,
+    ImmutableJS: 1,
+    Kotlin: 0
+  },
+  Array: {
+    RacketScript: 0,
+    GopherJS: 0,
+    Reason: 0,
+    Kotlin: 0,
+    Elm: 1,
+    ClojureScript: 1,
+    JavaScript: 0,
+    ImmutableJS: 1
+  },
+  Set: {
+    JavaScript: 0,
+    Reason: 1,
+    Elm: 1,
+    Kotlin: 0,
+    ClojureScript: 1,
+    ImmutableJS: 1
+  }
+};
+
+const getPath = (x, y, width, height) => {
+  return `M ${x},${y} h ${width} v ${height} h ${-width} Z`;
+};
+
+const shapeBar = (dkey, ds) => props => {
+  const { fill, x, y, width, height, name } = props;
+  const title = dstypes[ds][name] === 0 ? 'MUTABLE' : 'IMMUTABLE';
+  const fillLine = props[dkey] !== undefined ? fill : 'transparent';
+  let fs = width / 10;
+  fs = fs <= 10 ? 10 : fs;
+  return h(
+    'g',
+    {},
+    h(
+      'text',
+      {
+        x: x + width / 2,
+        y: y - fs,
+        fontSize: fs,
+        fontWeight: 600,
+        textAnchor: 'middle',
+        fill: fillLine
+      },
+      title
+    ),
+    h('path', {
+      d: getPath(x, y - 6, width, 2),
+      stroke: 'none',
+      fill: fillLine
+    }),
+    h('path', { d: getPath(x, y, width, height), stroke: 'none', fill })
+  );
+};
+
 class Chart extends Component {
   constructor() {
     super();
@@ -100,7 +172,7 @@ class Chart extends Component {
           BarChart,
           { data },
           h(XAxis, { dataKey: 'name' }),
-          h(YAxis, { tickFormatter: formatSize }),
+          h(YAxis, { tickFormatter: formatSize, padding: { top: 16 } }),
           h(CartesianGrid, { strokeDasharray: '1 1' }),
           h(Tooltip, { content: renderToolTip, animationDuration: 200 }),
           h(Legend, {
@@ -111,10 +183,30 @@ class Chart extends Component {
             disabled: hiddenKeys,
             onClick: ({ dataKey }) => this._toggleDataKey(hiddenKeys, dataKey)
           }),
-          h(Bar, { dataKey: 'b0', stackId: 's', fill: colors.b0 }),
-          h(Bar, { dataKey: 'b1', stackId: 's', fill: colors.b1 }),
-          h(Bar, { dataKey: 'b2', stackId: 's', fill: colors.b2 }),
-          h(Bar, { dataKey: 'b3', stackId: 's', fill: colors.b3 })
+          h(Bar, {
+            dataKey: 'b0',
+            stackId: 's',
+            fill: colors.b0,
+            shape: shapeBar('b0', currTab)
+          }),
+          h(Bar, {
+            dataKey: 'b1',
+            stackId: 's',
+            fill: colors.b1,
+            shape: shapeBar('b1', currTab)
+          }),
+          h(Bar, {
+            dataKey: 'b2',
+            stackId: 's',
+            fill: colors.b2,
+            shape: shapeBar('b2', currTab)
+          }),
+          h(Bar, {
+            dataKey: 'b3',
+            stackId: 's',
+            fill: colors.b3,
+            shape: shapeBar('b3', currTab)
+          })
         )
       ),
       h(
