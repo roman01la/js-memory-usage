@@ -1,4 +1,8 @@
 node_modules
 src/clj/out
 src/go/test.js.map
+src/dart/test.js.deps
+src/dart/test.js.map
 .merlin
+.packages
+.pub

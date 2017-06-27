@@ -5,6 +5,7 @@
     "build:go": "~/go/bin/gopherjs build src/go/test.go -o src/go/test.js",
     "build:rkt": "racks -n -t babel -d src/racket/out src/racket/test.rkt",
     "build:reason": "bsb",
+    "build:dart": "dart2js --out=src/dart/test.js src/dart/test.dart",
     "run:js": "node src/plain-js/test.js > out/plain-js.json",
     "run:immutable-js": "node src/immutable-js/test.js > out/immutable-js.json",
     "run:clj": "node src/clj/test.js > out/clj.json",

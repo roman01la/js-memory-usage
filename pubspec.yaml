@@ -1,0 +1,8 @@
+name: "perftest"
+dependencies:
+  js: ^0.6.0
+  node_interop: ^0.0.1
+
+transformers:
+  - $dart2js
+  - node_interop
