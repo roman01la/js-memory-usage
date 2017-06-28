@@ -165,7 +165,7 @@ _Stats for at least three types of data structures are required:_
   "100 item hash map": 13579.56,
 
   "1000 item list": 55971,
-  "1000 item vector": 1234.48,
+  "1000 item vector": 10428.632,
   "1000 item hash map": 146484.752
 }
 ```

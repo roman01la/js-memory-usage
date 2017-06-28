@@ -46,7 +46,7 @@
 (set! results (obj-assign results ($/obj ["100 item hash map" (record 1000 (lambda () (fill-hash 100 (hash))))])))
 (set! results (obj-assign results ($/obj ["100 item list" (record 1000 (lambda () (fill-list 100 (list))))])))
 
-(set! results (obj-assign results ($/obj ["1000 item vector" (record 1000 (lambda () (fill-vec 100 (vector))))])))
+(set! results (obj-assign results ($/obj ["1000 item vector" (record 1000 (lambda () (fill-vec 1000 (vector))))])))
 (set! results (obj-assign results ($/obj ["1000 item hash map" (record 1000 (lambda () (fill-hash 1000 (hash))))])))
 (set! results (obj-assign results ($/obj ["1000 item list" (record 1000 (lambda () (fill-list 1000 (list))))])))
 
