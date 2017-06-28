@@ -143,7 +143,7 @@ export const dataIdxed = [
     b0: 138.48,
     b1: 285.048,
     b2: 1234.384,
-    b3: 1234.48
+    b3: 10428.632
   },
   {
     name: 'Reason',
