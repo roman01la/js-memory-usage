@@ -1,7 +1,5 @@
 # Data Structures Memory Usage in JavaScript
 
-<img src="chart.png" />
-
 - [JavaScript](#javascript)
 - [ImmutableJS](#immutablejs)
 - [ClojureScript](#clojurescript)
