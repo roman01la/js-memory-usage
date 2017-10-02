@@ -1,3 +1,5 @@
+import kotlin.js.json
+
 external fun require(module:String):dynamic
 
 fun <T> record(memwatch: dynamic, cnt: Int, fn: () -> T): Int {
@@ -40,7 +42,7 @@ fun setSet(set: HashSet<Int>, i: Int): HashSet<Int> {
 
 fun main(args: Array<String>): Unit {
     var memwatch: dynamic = require("memwatch-next")
-    var results: HashMap<String, Int> = HashMap()
+    var results: HashMap<String, Int> = LinkedHashMap()
 
     results.put("empty List", record(memwatch, 1000, fun (): List<Int> { return List(0, {i -> i}) }))
     results.put("empty ArrayList", record(memwatch, 1000, fun (): ArrayList<Int> { return ArrayList(0) }))
@@ -62,5 +64,5 @@ fun main(args: Array<String>): Unit {
     results.put("1000 item HashMap", record(memwatch, 1000, fun (): HashMap<String, Int> { return fill(1000, HashMap(), ::mapSet) }))
     results.put("1000 item HashSet", record(memwatch, 1000, fun (): HashSet<Int> { return fill(1000, HashSet(), ::setSet) }))
 
-    println(results.toString())
+    println(JSON.stringify(json(*results.toList().toTypedArray()), {_, v -> v }, "  "))
 }

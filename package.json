@@ -20,6 +20,7 @@
     "bs-platform": "^1.7.5",
     "immutable": "^3.8.1",
     "kotlin": "^1.1.0",
+    "kotlin-compiler": "^1.1.0",
     "memwatch-next": "^0.3.0"
   }
 }
