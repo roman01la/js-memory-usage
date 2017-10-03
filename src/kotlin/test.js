@@ -1,8 +1,11 @@
 (function (_, Kotlin) {
   'use strict';
   var ArrayList_init = Kotlin.kotlin.collections.ArrayList_init_ww73n8$;
+  var LinkedHashMap_init = Kotlin.kotlin.collections.LinkedHashMap_init_q3lmfv$;
   var HashMap_init = Kotlin.kotlin.collections.HashMap_init_q3lmfv$;
   var HashSet_init = Kotlin.kotlin.collections.HashSet_init_287e2$;
+  var toList = Kotlin.kotlin.collections.toList_abgq59$;
+  var json = Kotlin.kotlin.js.json_pyyo18$;
   var println = Kotlin.kotlin.io.println_s8jyv4$;
   function record(memwatch, cnt, fn) {
     memwatch.gc();
@@ -38,7 +41,7 @@
     return set;
   }
   function main$lambda() {
-    var list = Kotlin.kotlin.collections.ArrayList_init_ww73n8$(0);
+    var list = ArrayList_init(0);
     var tmp$;
     tmp$ = 0 - 1 | 0;
     for (var index = 0; index <= tmp$; index++) {
@@ -56,7 +59,7 @@
     return HashSet_init();
   }
   function main$lambda_3() {
-    var list = Kotlin.kotlin.collections.ArrayList_init_ww73n8$(10);
+    var list = ArrayList_init(10);
     var tmp$;
     tmp$ = 10 - 1 | 0;
     for (var index = 0; index <= tmp$; index++) {
@@ -80,7 +83,7 @@
     }));
   }
   function main$lambda_7() {
-    var list = Kotlin.kotlin.collections.ArrayList_init_ww73n8$(100);
+    var list = ArrayList_init(100);
     var tmp$;
     tmp$ = 100 - 1 | 0;
     for (var index = 0; index <= tmp$; index++) {
@@ -104,7 +107,7 @@
     }));
   }
   function main$lambda_11() {
-    var list = Kotlin.kotlin.collections.ArrayList_init_ww73n8$(1000);
+    var list = ArrayList_init(1000);
     var tmp$;
     tmp$ = 1000 - 1 | 0;
     for (var index = 0; index <= tmp$; index++) {
@@ -127,9 +130,13 @@
       return setSet(set, i);
     }));
   }
+  function main$lambda_15(f, v) {
+    return v;
+  }
+  var copyToArray = Kotlin.kotlin.collections.copyToArray;
   function main(args) {
     var memwatch = require('memwatch-next');
-    var results = HashMap_init();
+    var results = LinkedHashMap_init();
     results.put_xwzc9p$('empty List', record(memwatch, 1000, main$lambda));
     results.put_xwzc9p$('empty ArrayList', record(memwatch, 1000, main$lambda_0));
     results.put_xwzc9p$('empty HashMap', record(memwatch, 1000, main$lambda_1));
@@ -146,7 +153,7 @@
     results.put_xwzc9p$('1000 item ArrayList', record(memwatch, 1000, main$lambda_12));
     results.put_xwzc9p$('1000 item HashMap', record(memwatch, 1000, main$lambda_13));
     results.put_xwzc9p$('1000 item HashSet', record(memwatch, 1000, main$lambda_14));
-    println(results.toString());
+    println(JSON.stringify(json(copyToArray(toList(results)).slice()), main$lambda_15, '  '));
   }
   _.record_w3k0cn$ = record;
   _.fill_joeu6c$ = fill;
