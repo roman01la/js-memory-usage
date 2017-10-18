@@ -1,5 +1,7 @@
 # Data Structures Memory Usage in JavaScript
 
+[Comparison chart](https://roman01la.github.io/js-memory-usage/)
+
 - [JavaScript](#javascript)
 - [ImmutableJS](#immutablejs)
 - [ClojureScript](#clojurescript)
