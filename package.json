@@ -1,11 +1,14 @@
 {
   "scripts": {
-    "build:clj": "java -cp src/clj/cljs.jar:src/clj/src clojure.main src/clj/build.clj",
-    "build:kotlin": "kotlinc-js -output src/kotlin/test.js -module-kind commonjs src/kotlin/test.kt",
+    "build:clj":
+      "java -cp src/clj/cljs.jar:src/clj/src clojure.main src/clj/build.clj",
+    "build:kotlin":
+      "kotlinc-js -output src/kotlin/test.js -module-kind commonjs src/kotlin/test.kt",
     "build:go": "~/go/bin/gopherjs build src/go/test.go -o src/go/test.js",
     "build:rkt": "racks -t babel -d src/racket/out src/racket/test.rkt",
     "build:elm": "cd src/elm && elm-make --yes Main.elm --output elm.js",
     "build:reason": "bsb",
+    "build:elixir": "mix compile",
     "run:js": "node src/plain-js/test.js > out/plain-js.json",
     "run:immutable-js": "node src/immutable-js/test.js > out/immutable-js.json",
     "run:clj": "node src/clj/test.js > out/clj.json",
@@ -13,7 +16,9 @@
     "run:go": "node src/go/test.js > out/go.json",
     "run:rkt": "node src/racket/out/dist/modules/test.rkt.js > out/racket.json",
     "run:elm": "node src/elm/test.js > out/elm.json",
-    "run:reason": "node lib/js/src/reason/test.js > out/reason.json"
+    "run:reason": "node lib/js/src/reason/test.js > out/reason.json",
+    "run:elixir":
+      "node --experimental-modules src/elixir/build/index.mjs > out/elixir.json"
   },
   "dependencies": {
     "elm": "^0.18.0",

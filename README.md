@@ -10,9 +10,9 @@
 - [RacketScript](#racketscript)
 - [Reason (BuckleScript)](#reason-bucklescript)
 - [Elm](#elm)
+- [ElixirScript](#elixirscript)
 - PureScript
 - Dart
-- ElixirScript
 - Scala.js
 - GHCJS (Haskell)
 - ...
@@ -42,20 +42,20 @@ _Stats for at least three types of data structures are required:_
   "empty map": 196.32,
   "empty set": 166.64,
 
-  "10 item object": 143.552,
-  "10 item array": 246.152,
-  "10 item map": 882.304,
-  "10 item set": 431.76,
+  "10 items object": 143.552,
+  "10 items array": 246.152,
+  "10 items map": 882.304,
+  "10 items set": 431.76,
 
-  "100 item object": 6242.864,
-  "100 item array": 1341.864,
-  "100 item map": 6869.504,
-  "100 item set": 2645.504,
+  "100 items object": 6242.864,
+  "100 items array": 1341.864,
+  "100 items map": 6869.504,
+  "100 items set": 2645.504,
 
-  "1000 item object": 98685.52,
-  "1000 item array": 11597.864,
-  "1000 item map": 60768.392,
-  "1000 item set": 20563.264
+  "1000 items object": 98685.52,
+  "1000 items array": 11597.864,
+  "1000 items map": 60768.392,
+  "1000 items set": 20563.264
 }
 ```
 
@@ -66,17 +66,17 @@ _Stats for at least three types of data structures are required:_
   "empty map": 23.16,
   "empty set": 23.192,
 
-  "10 item list": 641.752,
-  "10 item map": 1901.608,
-  "10 item set": 1578.704,
+  "10 items list": 641.752,
+  "10 items map": 1901.608,
+  "10 items set": 1578.704,
 
-  "100 item list": 2647.36,
-  "100 item map": 17411.496,
-  "100 item set": 15679.656,
+  "100 items list": 2647.36,
+  "100 items map": 17411.496,
+  "100 items set": 15679.656,
 
-  "1000 item list": 20485.224,
-  "1000 item map": 182600.704,
-  "1000 item set": 123834.648
+  "1000 items list": 20485.224,
+  "1000 items map": 182600.704,
+  "1000 items set": 123834.648
 }
 
 ```
@@ -89,20 +89,20 @@ _Stats for at least three types of data structures are required:_
   "empty map": 11.368,
   "empty set": 11.368,
 
-  "10 item list": 783.92,
-  "10 item vector": 286.744,
-  "10 item map": 1366.72,
-  "10 item set": 732.528,
+  "10 items list": 783.92,
+  "10 items vector": 286.744,
+  "10 items map": 1366.72,
+  "10 items set": 732.528,
 
-  "100 item list": 7239.256,
-  "100 item vector": 1600.8,
-  "100 item map": 8896.968,
-  "100 item set": 5402.552,
+  "100 items list": 7239.256,
+  "100 items vector": 1600.8,
+  "100 items map": 8896.968,
+  "100 items set": 5402.552,
 
-  "1000 item list": 72040.64,
-  "1000 item vector": 11235.368,
-  "1000 item map": 121328.16,
-  "1000 item set": 123852.92
+  "1000 items list": 72040.64,
+  "1000 items vector": 11235.368,
+  "1000 items map": 121328.16,
+  "1000 items set": 123852.92
 }
 
 ```
@@ -115,20 +115,20 @@ _Stats for at least three types of data structures are required:_
   "empty HashMap": 454.968,
   "empty HashSet": 497.112,
 
-  "10 item List": 252,
-  "10 item ArrayList": 262.624,
-  "10 item HashMap": 1725.72,
-  "10 item HashSet": 1072.216,
+  "10 items List": 252,
+  "10 items ArrayList": 262.624,
+  "10 items HashMap": 1725.72,
+  "10 items HashSet": 1072.216,
 
-  "100 item List": 1165.448,
-  "100 item ArrayList": 1166.744,
-  "100 item HashMap": 20542.936,
-  "100 item HashSet": 5630.728,
+  "100 items List": 1165.448,
+  "100 items ArrayList": 1166.744,
+  "100 items HashMap": 20542.936,
+  "100 items HashSet": 5630.728,
 
-  "1000 item List": 9692.632,
-  "1000 item ArrayList": 9695.568,
-  "1000 item HashMap": 121960.52,
-  "1000 item HashSet": 50820.536
+  "1000 items List": 9692.632,
+  "1000 items ArrayList": 9695.568,
+  "1000 items HashMap": 121960.52,
+  "1000 items HashSet": 50820.536
 }
 ```
 
@@ -138,14 +138,14 @@ _Stats for at least three types of data structures are required:_
   "empty array": 267,
   "empty map": 74,
 
-  "10 item array": 385,
-  "10 item map": 961,
+  "10 items array": 385,
+  "10 items map": 961,
 
-  "100 item array": 781,
-  "100 item map": 13474,
+  "100 items array": 781,
+  "100 items map": 13474,
 
-  "1000 item array": 4344,
-  "1000 item map": 170444
+  "1000 items array": 4344,
+  "1000 items map": 170444
 }
 ```
 
@@ -156,17 +156,17 @@ _Stats for at least three types of data structures are required:_
   "empty vector": 138.48,
   "empty hash map": 235.8,
 
-  "10 item list": 606.568,
-  "10 item vector": 285.048,
-  "10 item hash map": 1645.144,
+  "10 items list": 606.568,
+  "10 items vector": 285.048,
+  "10 items hash map": 1645.144,
 
-  "100 item list": 5637.992,
-  "100 item vector": 1234.384,
-  "100 item hash map": 13579.56,
+  "100 items list": 5637.992,
+  "100 items vector": 1234.384,
+  "100 items hash map": 13579.56,
 
-  "1000 item list": 55971,
-  "1000 item vector": 10428.632,
-  "1000 item hash map": 146484.752
+  "1000 items list": 55971,
+  "1000 items vector": 10428.632,
+  "1000 items hash map": 146484.752
 }
 ```
 
@@ -179,23 +179,23 @@ _Stats for at least three types of data structures are required:_
   "empty Map": 71,
   "empty Hashtbl": 346,
 
-  "10 item List": 720,
-  "10 item Array": 207,
-  "10 item Set": 975,
-  "10 item Map": 1363,
-  "10 item Hashtbl": 1443,
+  "10 items List": 720,
+  "10 items Array": 207,
+  "10 items Set": 975,
+  "10 items Map": 1363,
+  "10 items Hashtbl": 1443,
 
-  "100 item List": 6480,
-  "100 item Array": 927,
-  "100 item Set": 8082,
-  "100 item Map": 12081,
-  "100 item Hashtbl": 11165,
+  "100 items List": 6480,
+  "100 items Array": 927,
+  "100 items Set": 8082,
+  "100 items Map": 12081,
+  "100 items Hashtbl": 11165,
 
-  "1000 item List": 64073,
-  "1000 item Array": 8122,
-  "1000 item Set": 80404,
-  "1000 item Map": 120077,
-  "1000 item Hashtbl": 108343
+  "1000 items List": 64073,
+  "1000 items Array": 8122,
+  "1000 items Set": 80404,
+  "1000 items Map": 120077,
+  "1000 items Hashtbl": 108343
 }
 ```
 
@@ -207,19 +207,36 @@ _Stats for at least three types of data structures are required:_
   "empty dict": 11.368,
   "empty set": 11.424,
 
-  "10 item list": 524.696,
-  "10 item array": 208.288,
-  "10 item dict": 1076.36,
-  "10 item set": 1114.608,
+  "10 items list": 524.696,
+  "10 items array": 208.288,
+  "10 items dict": 1076.36,
+  "10 items set": 1114.608,
 
-  "100 item list": 4851.144,
-  "100 item array": 1267.408,
-  "100 item dict": 10436.36,
-  "100 item set": 10475.792,
+  "100 items list": 4851.144,
+  "100 items array": 1267.408,
+  "100 items dict": 10436.36,
+  "100 items set": 10475.792,
 
-  "1000 item list": 48046.928,
-  "1000 item array": 11220.536,
-  "1000 item dict": 104329.2,
-  "1000 item set": 104248.064
+  "1000 items list": 48046.928,
+  "1000 items array": 11220.536,
+  "1000 items dict": 104329.2,
+  "1000 items set": 104248.064
+}
+```
+
+## ElixirScript
+```json
+{
+  "empty list": 390.464,
+  "empty map": 879.656,
+  "empty set": 1113.472,
+
+  "100 items list": 868.592,
+  "100 items map": 6879.232,
+  "100 items set": 7066.392,
+
+  "1000 items list": 8067.248,
+  "1000 items map": 61019.32,
+  "1000 items set": 60954.144
 }
 ```
