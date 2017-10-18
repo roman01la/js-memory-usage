@@ -1432,92 +1432,6 @@ Elixir.load = function(module) {
     return module.__load(Elixir);
 }
 import Node from './node.js';
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.Stream').__load = function(Elixir) {
-    if (Elixir.File.Stream.__exports)
-        return Elixir.File.Stream.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__build__'), 3), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [158273546373132296677247289802743319200])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/file/stream.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(119), ElixirScript.Core.BitString.integer(18), ElixirScript.Core.BitString.integer(96), ElixirScript.Core.BitString.integer(81), ElixirScript.Core.BitString.integer(7), ElixirScript.Core.BitString.integer(251), ElixirScript.Core.BitString.integer(154), ElixirScript.Core.BitString.integer(216), ElixirScript.Core.BitString.integer(141), ElixirScript.Core.BitString.integer(144), ElixirScript.Core.BitString.integer(213), ElixirScript.Core.BitString.integer(18), ElixirScript.Core.BitString.integer(145), ElixirScript.Core.BitString.integer(139), ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(160))], [Symbol.for('module'), Symbol.for('Elixir.File.Stream')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__struct__'), Elixir.File.Stream.__load(Elixir)], [Symbol.for('line_or_bytes'), Symbol.for('line')], [Symbol.for('modes'), []], [Symbol.for('path'), null], [Symbol.for('raw'), true]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303403295')], __function_args__, (kv5764607523034032950) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523034032950] = __arg_matches__;
-
-                const [map5764607523034032950, keys5764607523034032950] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303403295'), ElixirScript.Core.Patterns.variable('keys576460752303403295')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523034032950, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303403295'), ElixirScript.Core.Patterns.variable('val576460752303403295')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303403295'), ElixirScript.Core.Patterns.variable('keys576460752303403295')]
-                        })], __function_args__, (key5764607523034032950, val5764607523034032950, map5764607523034032950, keys5764607523034032950) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523034032950, val5764607523034032950, map5764607523034032950, keys5764607523034032950] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523034032950, val5764607523034032950, map5764607523034032950), Elixir.List.__load(Elixir).__delete__(keys5764607523034032950, key5764607523034032950));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref5387517 = new ElixirScript.Core.Tuple(map5764607523034032950, keys5764607523034032950);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523034032950;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.Stream.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523034032950)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523034032950);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        __MODULE__: Symbol.for('Elixir.File.Stream'),
-        __info__
-    };
-
-    Elixir.File.Stream.__exports = __exports
-
-    return __exports;
-}
 ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.HashSet').__load = function(Elixir) {
     if (Elixir.HashSet.__exports)
         return Elixir.HashSet.__exports;
@@ -1575,7 +1489,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.HashSet').__load = f
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref5023623 = new ElixirScript.Core.Tuple(map5764607523033779500, keys5764607523033779500);
+                const _ref1173554 = new ElixirScript.Core.Tuple(map5764607523033779500, keys5764607523033779500);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033779500;
@@ -1661,7 +1575,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.HashDict').__load = 
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref8864012 = new ElixirScript.Core.Tuple(map5764607523033786870, keys5764607523033786870);
+                const _ref5317876 = new ElixirScript.Core.Tuple(map5764607523033786870, keys5764607523033786870);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033786870;
@@ -1687,6 +1601,92 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.HashDict').__load = 
     };
 
     Elixir.HashDict.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.Stream').__load = function(Elixir) {
+    if (Elixir.File.Stream.__exports)
+        return Elixir.File.Stream.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__build__'), 3), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [158273546373132296677247289802743319200])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/file/stream.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(119), ElixirScript.Core.BitString.integer(18), ElixirScript.Core.BitString.integer(96), ElixirScript.Core.BitString.integer(81), ElixirScript.Core.BitString.integer(7), ElixirScript.Core.BitString.integer(251), ElixirScript.Core.BitString.integer(154), ElixirScript.Core.BitString.integer(216), ElixirScript.Core.BitString.integer(141), ElixirScript.Core.BitString.integer(144), ElixirScript.Core.BitString.integer(213), ElixirScript.Core.BitString.integer(18), ElixirScript.Core.BitString.integer(145), ElixirScript.Core.BitString.integer(139), ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(160))], [Symbol.for('module'), Symbol.for('Elixir.File.Stream')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__struct__'), Elixir.File.Stream.__load(Elixir)], [Symbol.for('line_or_bytes'), Symbol.for('line')], [Symbol.for('modes'), []], [Symbol.for('path'), null], [Symbol.for('raw'), true]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303403295')], __function_args__, (kv5764607523034032950) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523034032950] = __arg_matches__;
+
+                const [map5764607523034032950, keys5764607523034032950] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303403295'), ElixirScript.Core.Patterns.variable('keys576460752303403295')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523034032950, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303403295'), ElixirScript.Core.Patterns.variable('val576460752303403295')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303403295'), ElixirScript.Core.Patterns.variable('keys576460752303403295')]
+                        })], __function_args__, (key5764607523034032950, val5764607523034032950, map5764607523034032950, keys5764607523034032950) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523034032950, val5764607523034032950, map5764607523034032950, keys5764607523034032950] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523034032950, val5764607523034032950, map5764607523034032950), Elixir.List.__load(Elixir).__delete__(keys5764607523034032950, key5764607523034032950));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref8893917 = new ElixirScript.Core.Tuple(map5764607523034032950, keys5764607523034032950);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523034032950;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.Stream.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523034032950)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523034032950);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        __MODULE__: Symbol.for('Elixir.File.Stream'),
+        __info__
+    };
+
+    Elixir.File.Stream.__exports = __exports
 
     return __exports;
 }
@@ -1730,45 +1730,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable').__load 
     const __exports = protocol;
 
     Elixir.Enumerable.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars').__load = function(Elixir) {
-    if (Elixir.String.Chars.__exports)
-        return Elixir.String.Chars.__exports;
-
-    const protocol = ElixirScript.Core.Functions.defprotocol({
-        to_string: function() {},
-        __impl__: function() {}
-    });
-
-    ElixirScript.Core.Functions.defimpl(protocol, Symbol, Elixir.String.Chars.Atom.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.BitString, Elixir.String.Chars.BitString.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.Date'), Elixir.String.Chars.Date.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.DateTime'), Elixir.String.Chars.DateTime.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.Float, Elixir.String.Chars.Float.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.Integer, Elixir.String.Chars.Integer.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, Array, Elixir.String.Chars.List.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.NaiveDateTime'), Elixir.String.Chars.NaiveDateTime.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.Time'), Elixir.String.Chars.Time.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.URI'), Elixir.String.Chars.URI.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.Version'), Elixir.String.Chars.Version.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.Version.Requirement'), Elixir.String.Chars.Version.Requirement.__load(Elixir))
-
-    const __exports = protocol;
-
-    Elixir.String.Chars.__exports = __exports
 
     return __exports;
 }
@@ -1829,7 +1790,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.IO.Stream').__load =
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref4506914 = new ElixirScript.Core.Tuple(map5764607523033562550, keys5764607523033562550);
+                const _ref254081 = new ElixirScript.Core.Tuple(map5764607523033562550, keys5764607523033562550);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033562550;
@@ -1855,6 +1816,45 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.IO.Stream').__load =
     };
 
     Elixir.IO.Stream.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars').__load = function(Elixir) {
+    if (Elixir.String.Chars.__exports)
+        return Elixir.String.Chars.__exports;
+
+    const protocol = ElixirScript.Core.Functions.defprotocol({
+        to_string: function() {},
+        __impl__: function() {}
+    });
+
+    ElixirScript.Core.Functions.defimpl(protocol, Symbol, Elixir.String.Chars.Atom.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.BitString, Elixir.String.Chars.BitString.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.Date'), Elixir.String.Chars.Date.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.DateTime'), Elixir.String.Chars.DateTime.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.Float, Elixir.String.Chars.Float.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.Integer, Elixir.String.Chars.Integer.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, Array, Elixir.String.Chars.List.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.NaiveDateTime'), Elixir.String.Chars.NaiveDateTime.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.Time'), Elixir.String.Chars.Time.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.URI'), Elixir.String.Chars.URI.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.Version'), Elixir.String.Chars.Version.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, Symbol.for('Elixir.Version.Requirement'), Elixir.String.Chars.Version.Requirement.__load(Elixir))
+
+    const __exports = protocol;
+
+    Elixir.String.Chars.__exports = __exports
 
     return __exports;
 }
@@ -3939,7 +3939,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Regex').__load = fun
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref673883 = new ElixirScript.Core.Tuple(map5764607523033068450, keys5764607523033068450);
+                const _ref4618449 = new ElixirScript.Core.Tuple(map5764607523033068450, keys5764607523033068450);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033068450;
@@ -4025,7 +4025,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Regex.CompileError')
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref9990873 = new ElixirScript.Core.Tuple(map5764607523033141080, keys5764607523033141080);
+                const _ref8075028 = new ElixirScript.Core.Tuple(map5764607523033141080, keys5764607523033141080);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033141080;
@@ -4051,92 +4051,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Regex.CompileError')
     };
 
     Elixir.Regex.CompileError.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Time').__load = function(Elixir) {
-    if (Elixir.Time.__exports)
-        return Elixir.Time.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('compare'), 2), new ElixirScript.Core.Tuple(Symbol.for('convert'), 2), new ElixirScript.Core.Tuple(Symbol.for('convert!'), 2), new ElixirScript.Core.Tuple(Symbol.for('diff'), 2), new ElixirScript.Core.Tuple(Symbol.for('diff'), 3), new ElixirScript.Core.Tuple(Symbol.for('from_erl'), 1), new ElixirScript.Core.Tuple(Symbol.for('from_erl'), 2), new ElixirScript.Core.Tuple(Symbol.for('from_erl'), 3), new ElixirScript.Core.Tuple(Symbol.for('from_erl!'), 1), new ElixirScript.Core.Tuple(Symbol.for('from_erl!'), 2), new ElixirScript.Core.Tuple(Symbol.for('from_erl!'), 3), new ElixirScript.Core.Tuple(Symbol.for('from_iso8601'), 1), new ElixirScript.Core.Tuple(Symbol.for('from_iso8601'), 2), new ElixirScript.Core.Tuple(Symbol.for('from_iso8601!'), 1), new ElixirScript.Core.Tuple(Symbol.for('new'), 3), new ElixirScript.Core.Tuple(Symbol.for('new'), 4), new ElixirScript.Core.Tuple(Symbol.for('new'), 5), new ElixirScript.Core.Tuple(Symbol.for('to_erl'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_iso8601'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_iso8601'), 2), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1), new ElixirScript.Core.Tuple(Symbol.for('utc_now'), 0), new ElixirScript.Core.Tuple(Symbol.for('utc_now'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [126707326284327681087116713642773742552])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/time.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(129), ElixirScript.Core.BitString.integer(197), ElixirScript.Core.BitString.integer(202), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(85), ElixirScript.Core.BitString.integer(15), ElixirScript.Core.BitString.integer(182), ElixirScript.Core.BitString.integer(193), ElixirScript.Core.BitString.integer(51), ElixirScript.Core.BitString.integer(148), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(216))], [Symbol.for('module'), Symbol.for('Elixir.Time')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__struct__'), Elixir.Time.__load(Elixir)], [Symbol.for('calendar'), Elixir.Calendar.ISO.__load(Elixir)], [Symbol.for('hour'), null], [Symbol.for('microsecond'), new ElixirScript.Core.Tuple(0, 0)], [Symbol.for('minute'), null], [Symbol.for('second'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303414175')], __function_args__, (kv5764607523034141750) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523034141750] = __arg_matches__;
-
-                const [map5764607523034141750, keys5764607523034141750] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303414175'), ElixirScript.Core.Patterns.variable('keys576460752303414175')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523034141750, new ElixirScript.Core.Tuple(__struct__(), [Symbol.for('hour'), Symbol.for('minute'), Symbol.for('second')]), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303414175'), ElixirScript.Core.Patterns.variable('val576460752303414175')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303414175'), ElixirScript.Core.Patterns.variable('keys576460752303414175')]
-                        })], __function_args__, (key5764607523034141750, val5764607523034141750, map5764607523034141750, keys5764607523034141750) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523034141750, val5764607523034141750, map5764607523034141750, keys5764607523034141750] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523034141750, val5764607523034141750, map5764607523034141750), Elixir.List.__load(Elixir).__delete__(keys5764607523034141750, key5764607523034141750));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref1073010 = new ElixirScript.Core.Tuple(map5764607523034141750, keys5764607523034141750);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523034141750;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Time.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523034141750)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523034141750);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        __MODULE__: Symbol.for('Elixir.Time'),
-        __info__
-    };
-
-    Elixir.Time.__exports = __exports
 
     return __exports;
 }
@@ -4197,7 +4111,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.DateTime').__load = 
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref7876834 = new ElixirScript.Core.Tuple(map5764607523034136930, keys5764607523034136930);
+                const _ref9135302 = new ElixirScript.Core.Tuple(map5764607523034136930, keys5764607523034136930);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523034136930;
@@ -4223,92 +4137,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.DateTime').__load = 
     };
 
     Elixir.DateTime.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Date.Range').__load = function(Elixir) {
-    if (Elixir.Date.Range.__exports)
-        return Elixir.Date.Range.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [203441004790964460483984872294820836409])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/date_range.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(153), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(79), ElixirScript.Core.BitString.integer(243), ElixirScript.Core.BitString.integer(44), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(107), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(211), ElixirScript.Core.BitString.integer(16), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(57))], [Symbol.for('module'), Symbol.for('Elixir.Date.Range')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__struct__'), Elixir.Date.Range.__load(Elixir)], [Symbol.for('first'), null], [Symbol.for('first_in_iso_days'), null], [Symbol.for('last'), null], [Symbol.for('last_in_iso_days'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303413917')], __function_args__, (kv5764607523034139170) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523034139170] = __arg_matches__;
-
-                const [map5764607523034139170, keys5764607523034139170] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303413917'), ElixirScript.Core.Patterns.variable('keys576460752303413917')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523034139170, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303413917'), ElixirScript.Core.Patterns.variable('val576460752303413917')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303413917'), ElixirScript.Core.Patterns.variable('keys576460752303413917')]
-                        })], __function_args__, (key5764607523034139170, val5764607523034139170, map5764607523034139170, keys5764607523034139170) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523034139170, val5764607523034139170, map5764607523034139170, keys5764607523034139170] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523034139170, val5764607523034139170, map5764607523034139170), Elixir.List.__load(Elixir).__delete__(keys5764607523034139170, key5764607523034139170));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref9494427 = new ElixirScript.Core.Tuple(map5764607523034139170, keys5764607523034139170);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523034139170;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Date.Range.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523034139170)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523034139170);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        __MODULE__: Symbol.for('Elixir.Date.Range'),
-        __info__
-    };
-
-    Elixir.Date.Range.__exports = __exports
 
     return __exports;
 }
@@ -4369,7 +4197,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.NaiveDateTime').__lo
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref5838485 = new ElixirScript.Core.Tuple(map5764607523034144280, keys5764607523034144280);
+                const _ref1357636 = new ElixirScript.Core.Tuple(map5764607523034144280, keys5764607523034144280);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523034144280;
@@ -4395,6 +4223,92 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.NaiveDateTime').__lo
     };
 
     Elixir.NaiveDateTime.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Version').__load = function(Elixir) {
+    if (Elixir.Version.__exports)
+        return Elixir.Version.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('compare'), 2), new ElixirScript.Core.Tuple(Symbol.for('compile_requirement'), 1), new ElixirScript.Core.Tuple(Symbol.for('match?'), 2), new ElixirScript.Core.Tuple(Symbol.for('match?'), 3), new ElixirScript.Core.Tuple(Symbol.for('parse'), 1), new ElixirScript.Core.Tuple(Symbol.for('parse!'), 1), new ElixirScript.Core.Tuple(Symbol.for('parse_requirement'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [163616801921434985427487133473942115967])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/version.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(123), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(115), ElixirScript.Core.BitString.integer(39), ElixirScript.Core.BitString.integer(145), ElixirScript.Core.BitString.integer(219), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(105), ElixirScript.Core.BitString.integer(139), ElixirScript.Core.BitString.integer(136), ElixirScript.Core.BitString.integer(121), ElixirScript.Core.BitString.integer(235), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(150), ElixirScript.Core.BitString.integer(127))], [Symbol.for('module'), Symbol.for('Elixir.Version')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__struct__'), Elixir.Version.__load(Elixir)], [Symbol.for('build'), null], [Symbol.for('major'), null], [Symbol.for('minor'), null], [Symbol.for('patch'), null], [Symbol.for('pre'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303281567')], __function_args__, (kv5764607523032815670) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523032815670] = __arg_matches__;
+
+                const [map5764607523032815670, keys5764607523032815670] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303281567'), ElixirScript.Core.Patterns.variable('keys576460752303281567')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523032815670, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303281567'), ElixirScript.Core.Patterns.variable('val576460752303281567')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303281567'), ElixirScript.Core.Patterns.variable('keys576460752303281567')]
+                        })], __function_args__, (key5764607523032815670, val5764607523032815670, map5764607523032815670, keys5764607523032815670) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523032815670, val5764607523032815670, map5764607523032815670, keys5764607523032815670] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523032815670, val5764607523032815670, map5764607523032815670), Elixir.List.__load(Elixir).__delete__(keys5764607523032815670, key5764607523032815670));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref5851355 = new ElixirScript.Core.Tuple(map5764607523032815670, keys5764607523032815670);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523032815670;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Version.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523032815670)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523032815670);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        __MODULE__: Symbol.for('Elixir.Version'),
+        __info__
+    };
+
+    Elixir.Version.__exports = __exports
 
     return __exports;
 }
@@ -4463,12 +4377,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect').__load = f
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Version').__load = function(Elixir) {
-    if (Elixir.Version.__exports)
-        return Elixir.Version.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Date.Range').__load = function(Elixir) {
+    if (Elixir.Date.Range.__exports)
+        return Elixir.Date.Range.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('compare'), 2), new ElixirScript.Core.Tuple(Symbol.for('compile_requirement'), 1), new ElixirScript.Core.Tuple(Symbol.for('match?'), 2), new ElixirScript.Core.Tuple(Symbol.for('match?'), 3), new ElixirScript.Core.Tuple(Symbol.for('parse'), 1), new ElixirScript.Core.Tuple(Symbol.for('parse!'), 1), new ElixirScript.Core.Tuple(Symbol.for('parse_requirement'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [163616801921434985427487133473942115967])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/version.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(123), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(115), ElixirScript.Core.BitString.integer(39), ElixirScript.Core.BitString.integer(145), ElixirScript.Core.BitString.integer(219), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(105), ElixirScript.Core.BitString.integer(139), ElixirScript.Core.BitString.integer(136), ElixirScript.Core.BitString.integer(121), ElixirScript.Core.BitString.integer(235), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(150), ElixirScript.Core.BitString.integer(127))], [Symbol.for('module'), Symbol.for('Elixir.Version')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [203441004790964460483984872294820836409])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/date_range.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(153), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(79), ElixirScript.Core.BitString.integer(243), ElixirScript.Core.BitString.integer(44), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(107), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(211), ElixirScript.Core.BitString.integer(16), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(57))], [Symbol.for('module'), Symbol.for('Elixir.Date.Range')]]);
 
         const value = __info__map__.get(kind);
 
@@ -4490,28 +4404,28 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Version').__load = f
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return new Map([[Symbol.for('__struct__'), Elixir.Version.__load(Elixir)], [Symbol.for('build'), null], [Symbol.for('major'), null], [Symbol.for('minor'), null], [Symbol.for('patch'), null], [Symbol.for('pre'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303281567')], __function_args__, (kv5764607523032815670) => {
+                return new Map([[Symbol.for('__struct__'), Elixir.Date.Range.__load(Elixir)], [Symbol.for('first'), null], [Symbol.for('first_in_iso_days'), null], [Symbol.for('last'), null], [Symbol.for('last_in_iso_days'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303413917')], __function_args__, (kv5764607523034139170) => {
                 return true;
             })) !== null) {
-                let [kv5764607523032815670] = __arg_matches__;
+                let [kv5764607523034139170] = __arg_matches__;
 
-                const [map5764607523032815670, keys5764607523032815670] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303281567'), ElixirScript.Core.Patterns.variable('keys576460752303281567')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523032815670, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                const [map5764607523034139170, keys5764607523034139170] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303413917'), ElixirScript.Core.Patterns.variable('keys576460752303413917')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523034139170, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
 
                         if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303281567'), ElixirScript.Core.Patterns.variable('val576460752303281567')]
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303413917'), ElixirScript.Core.Patterns.variable('val576460752303413917')]
                         }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303281567'), ElixirScript.Core.Patterns.variable('keys576460752303281567')]
-                        })], __function_args__, (key5764607523032815670, val5764607523032815670, map5764607523032815670, keys5764607523032815670) => {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303413917'), ElixirScript.Core.Patterns.variable('keys576460752303413917')]
+                        })], __function_args__, (key5764607523034139170, val5764607523034139170, map5764607523034139170, keys5764607523034139170) => {
                             return true;
                         })) !== null) {
-                            let [key5764607523032815670, val5764607523032815670, map5764607523032815670, keys5764607523032815670] = __arg_matches__;
+                            let [key5764607523034139170, val5764607523034139170, map5764607523034139170, keys5764607523034139170] = __arg_matches__;
 
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523032815670, val5764607523032815670, map5764607523032815670), Elixir.List.__load(Elixir).__delete__(keys5764607523032815670, key5764607523032815670));
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523034139170, val5764607523034139170, map5764607523034139170), Elixir.List.__load(Elixir).__delete__(keys5764607523034139170, key5764607523034139170));
                         }
 
                         throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -4520,17 +4434,17 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Version').__load = f
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref5411200 = new ElixirScript.Core.Tuple(map5764607523032815670, keys5764607523032815670);
+                const _ref4243626 = new ElixirScript.Core.Tuple(map5764607523034139170, keys5764607523034139170);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523032815670;
+                    return map5764607523034139170;
                 }, () => {
                     return true;
                 }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Version.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523032815670)))))));
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Date.Range.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523034139170)))))));
                 }, () => {
                     return true;
-                })).call(this, keys5764607523032815670);
+                })).call(this, keys5764607523034139170);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -4541,11 +4455,97 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Version').__load = f
 
     const __exports = {
         __struct__,
-        __MODULE__: Symbol.for('Elixir.Version'),
+        __MODULE__: Symbol.for('Elixir.Date.Range'),
         __info__
     };
 
-    Elixir.Version.__exports = __exports
+    Elixir.Date.Range.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Time').__load = function(Elixir) {
+    if (Elixir.Time.__exports)
+        return Elixir.Time.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('compare'), 2), new ElixirScript.Core.Tuple(Symbol.for('convert'), 2), new ElixirScript.Core.Tuple(Symbol.for('convert!'), 2), new ElixirScript.Core.Tuple(Symbol.for('diff'), 2), new ElixirScript.Core.Tuple(Symbol.for('diff'), 3), new ElixirScript.Core.Tuple(Symbol.for('from_erl'), 1), new ElixirScript.Core.Tuple(Symbol.for('from_erl'), 2), new ElixirScript.Core.Tuple(Symbol.for('from_erl'), 3), new ElixirScript.Core.Tuple(Symbol.for('from_erl!'), 1), new ElixirScript.Core.Tuple(Symbol.for('from_erl!'), 2), new ElixirScript.Core.Tuple(Symbol.for('from_erl!'), 3), new ElixirScript.Core.Tuple(Symbol.for('from_iso8601'), 1), new ElixirScript.Core.Tuple(Symbol.for('from_iso8601'), 2), new ElixirScript.Core.Tuple(Symbol.for('from_iso8601!'), 1), new ElixirScript.Core.Tuple(Symbol.for('new'), 3), new ElixirScript.Core.Tuple(Symbol.for('new'), 4), new ElixirScript.Core.Tuple(Symbol.for('new'), 5), new ElixirScript.Core.Tuple(Symbol.for('to_erl'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_iso8601'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_iso8601'), 2), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1), new ElixirScript.Core.Tuple(Symbol.for('utc_now'), 0), new ElixirScript.Core.Tuple(Symbol.for('utc_now'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [126707326284327681087116713642773742552])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/time.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(129), ElixirScript.Core.BitString.integer(197), ElixirScript.Core.BitString.integer(202), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(85), ElixirScript.Core.BitString.integer(15), ElixirScript.Core.BitString.integer(182), ElixirScript.Core.BitString.integer(193), ElixirScript.Core.BitString.integer(51), ElixirScript.Core.BitString.integer(148), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(216))], [Symbol.for('module'), Symbol.for('Elixir.Time')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__struct__'), Elixir.Time.__load(Elixir)], [Symbol.for('calendar'), Elixir.Calendar.ISO.__load(Elixir)], [Symbol.for('hour'), null], [Symbol.for('microsecond'), new ElixirScript.Core.Tuple(0, 0)], [Symbol.for('minute'), null], [Symbol.for('second'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303414175')], __function_args__, (kv5764607523034141750) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523034141750] = __arg_matches__;
+
+                const [map5764607523034141750, keys5764607523034141750] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303414175'), ElixirScript.Core.Patterns.variable('keys576460752303414175')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523034141750, new ElixirScript.Core.Tuple(__struct__(), [Symbol.for('hour'), Symbol.for('minute'), Symbol.for('second')]), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303414175'), ElixirScript.Core.Patterns.variable('val576460752303414175')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303414175'), ElixirScript.Core.Patterns.variable('keys576460752303414175')]
+                        })], __function_args__, (key5764607523034141750, val5764607523034141750, map5764607523034141750, keys5764607523034141750) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523034141750, val5764607523034141750, map5764607523034141750, keys5764607523034141750] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523034141750, val5764607523034141750, map5764607523034141750), Elixir.List.__load(Elixir).__delete__(keys5764607523034141750, key5764607523034141750));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref6874381 = new ElixirScript.Core.Tuple(map5764607523034141750, keys5764607523034141750);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523034141750;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Time.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523034141750)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523034141750);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        __MODULE__: Symbol.for('Elixir.Time'),
+        __info__
+    };
+
+    Elixir.Time.__exports = __exports
 
     return __exports;
 }
@@ -4606,7 +4606,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Version.InvalidVersi
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref3378765 = new ElixirScript.Core.Tuple(map5764607523032559010, keys5764607523032559010);
+                const _ref6216642 = new ElixirScript.Core.Tuple(map5764607523032559010, keys5764607523032559010);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523032559010;
@@ -4692,7 +4692,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Code.LoadError').__l
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref1833236 = new ElixirScript.Core.Tuple(map5764607523033609270, keys5764607523033609270);
+                const _ref7766394 = new ElixirScript.Core.Tuple(map5764607523033609270, keys5764607523033609270);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033609270;
@@ -4718,6 +4718,92 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Code.LoadError').__l
     };
 
     Elixir.Code.LoadError.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.LinkError').__load = function(Elixir) {
+    if (Elixir.File.LinkError.__exports)
+        return Elixir.File.LinkError.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [153355092213420006314060496088594000183]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(115), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(29), ElixirScript.Core.BitString.integer(205), ElixirScript.Core.BitString.integer(209), ElixirScript.Core.BitString.integer(214), ElixirScript.Core.BitString.integer(206), ElixirScript.Core.BitString.integer(54), ElixirScript.Core.BitString.integer(15), ElixirScript.Core.BitString.integer(76), ElixirScript.Core.BitString.integer(208), ElixirScript.Core.BitString.integer(3), ElixirScript.Core.BitString.integer(243), ElixirScript.Core.BitString.integer(90), ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(55))], [Symbol.for('module'), Symbol.for('Elixir.File.LinkError')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.File.LinkError.__load(Elixir)], [Symbol.for('action'), ''], [Symbol.for('existing'), null], [Symbol.for('new'), null], [Symbol.for('reason'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303354239')], __function_args__, (kv5764607523033542390) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523033542390] = __arg_matches__;
+
+                const [map5764607523033542390, keys5764607523033542390] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303354239'), ElixirScript.Core.Patterns.variable('keys576460752303354239')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033542390, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303354239'), ElixirScript.Core.Patterns.variable('val576460752303354239')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303354239'), ElixirScript.Core.Patterns.variable('keys576460752303354239')]
+                        })], __function_args__, (key5764607523033542390, val5764607523033542390, map5764607523033542390, keys5764607523033542390) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523033542390, val5764607523033542390, map5764607523033542390, keys5764607523033542390] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033542390, val5764607523033542390, map5764607523033542390), Elixir.List.__load(Elixir).__delete__(keys5764607523033542390, key5764607523033542390));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref2032695 = new ElixirScript.Core.Tuple(map5764607523033542390, keys5764607523033542390);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523033542390;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.LinkError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033542390)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523033542390);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        __MODULE__: Symbol.for('Elixir.File.LinkError'),
+        __info__
+    };
+
+    Elixir.File.LinkError.__exports = __exports
 
     return __exports;
 }
@@ -4778,7 +4864,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.CopyError').__l
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref152490 = new ElixirScript.Core.Tuple(map5764607523033621090, keys5764607523033621090);
+                const _ref2663047 = new ElixirScript.Core.Tuple(map5764607523033621090, keys5764607523033621090);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033621090;
@@ -4804,6 +4890,31 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.CopyError').__l
     };
 
     Elixir.File.CopyError.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.List.Chars').__load = function(Elixir) {
+    if (Elixir.List.Chars.__exports)
+        return Elixir.List.Chars.__exports;
+
+    const protocol = ElixirScript.Core.Functions.defprotocol({
+        to_charlist: function() {},
+        __impl__: function() {}
+    });
+
+    ElixirScript.Core.Functions.defimpl(protocol, Symbol, Elixir.List.Chars.Atom.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.BitString, Elixir.List.Chars.BitString.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.Float, Elixir.List.Chars.Float.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.Integer, Elixir.List.Chars.Integer.__load(Elixir))
+
+    ElixirScript.Core.Functions.defimpl(protocol, Array, Elixir.List.Chars.List.__load(Elixir))
+
+    const __exports = protocol;
+
+    Elixir.List.Chars.__exports = __exports
 
     return __exports;
 }
@@ -4864,7 +4975,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Version.InvalidRequi
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref3943748 = new ElixirScript.Core.Tuple(map5764607523032823980, keys5764607523032823980);
+                const _ref6760764 = new ElixirScript.Core.Tuple(map5764607523032823980, keys5764607523032823980);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523032823980;
@@ -4950,7 +5061,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Version.Requirement'
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref1410774 = new ElixirScript.Core.Tuple(map5764607523032567330, keys5764607523032567330);
+                const _ref5736989 = new ElixirScript.Core.Tuple(map5764607523032567330, keys5764607523032567330);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523032567330;
@@ -4976,117 +5087,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Version.Requirement'
     };
 
     Elixir.Version.Requirement.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.LinkError').__load = function(Elixir) {
-    if (Elixir.File.LinkError.__exports)
-        return Elixir.File.LinkError.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [153355092213420006314060496088594000183]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(115), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(29), ElixirScript.Core.BitString.integer(205), ElixirScript.Core.BitString.integer(209), ElixirScript.Core.BitString.integer(214), ElixirScript.Core.BitString.integer(206), ElixirScript.Core.BitString.integer(54), ElixirScript.Core.BitString.integer(15), ElixirScript.Core.BitString.integer(76), ElixirScript.Core.BitString.integer(208), ElixirScript.Core.BitString.integer(3), ElixirScript.Core.BitString.integer(243), ElixirScript.Core.BitString.integer(90), ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(55))], [Symbol.for('module'), Symbol.for('Elixir.File.LinkError')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.File.LinkError.__load(Elixir)], [Symbol.for('action'), ''], [Symbol.for('existing'), null], [Symbol.for('new'), null], [Symbol.for('reason'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303354239')], __function_args__, (kv5764607523033542390) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523033542390] = __arg_matches__;
-
-                const [map5764607523033542390, keys5764607523033542390] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303354239'), ElixirScript.Core.Patterns.variable('keys576460752303354239')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033542390, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303354239'), ElixirScript.Core.Patterns.variable('val576460752303354239')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303354239'), ElixirScript.Core.Patterns.variable('keys576460752303354239')]
-                        })], __function_args__, (key5764607523033542390, val5764607523033542390, map5764607523033542390, keys5764607523033542390) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523033542390, val5764607523033542390, map5764607523033542390, keys5764607523033542390] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033542390, val5764607523033542390, map5764607523033542390), Elixir.List.__load(Elixir).__delete__(keys5764607523033542390, key5764607523033542390));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref7086113 = new ElixirScript.Core.Tuple(map5764607523033542390, keys5764607523033542390);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033542390;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.LinkError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033542390)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523033542390);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        __MODULE__: Symbol.for('Elixir.File.LinkError'),
-        __info__
-    };
-
-    Elixir.File.LinkError.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.List.Chars').__load = function(Elixir) {
-    if (Elixir.List.Chars.__exports)
-        return Elixir.List.Chars.__exports;
-
-    const protocol = ElixirScript.Core.Functions.defprotocol({
-        to_charlist: function() {},
-        __impl__: function() {}
-    });
-
-    ElixirScript.Core.Functions.defimpl(protocol, Symbol, Elixir.List.Chars.Atom.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.BitString, Elixir.List.Chars.BitString.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.Float, Elixir.List.Chars.Float.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, ElixirScript.Core.Integer, Elixir.List.Chars.Integer.__load(Elixir))
-
-    ElixirScript.Core.Functions.defimpl(protocol, Array, Elixir.List.Chars.List.__load(Elixir))
-
-    const __exports = protocol;
-
-    Elixir.List.Chars.__exports = __exports
 
     return __exports;
 }
@@ -5217,7 +5217,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.SystemLimitError')._
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref3562730 = new ElixirScript.Core.Tuple(map5764607523033869110, keys5764607523033869110);
+                const _ref2468480 = new ElixirScript.Core.Tuple(map5764607523033869110, keys5764607523033869110);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033869110;
@@ -5243,6 +5243,52 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.SystemLimitError')._
     };
 
     Elixir.SystemLimitError.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Application').__load = function(Elixir) {
+    if (Elixir.Application.__exports)
+        return Elixir.Application.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('app_dir'), 1), new ElixirScript.Core.Tuple(Symbol.for('app_dir'), 2), new ElixirScript.Core.Tuple(Symbol.for('delete_env'), 2), new ElixirScript.Core.Tuple(Symbol.for('delete_env'), 3), new ElixirScript.Core.Tuple(Symbol.for('ensure_all_started'), 1), new ElixirScript.Core.Tuple(Symbol.for('ensure_all_started'), 2), new ElixirScript.Core.Tuple(Symbol.for('ensure_started'), 1), new ElixirScript.Core.Tuple(Symbol.for('ensure_started'), 2), new ElixirScript.Core.Tuple(Symbol.for('fetch_env'), 2), new ElixirScript.Core.Tuple(Symbol.for('fetch_env!'), 2), new ElixirScript.Core.Tuple(Symbol.for('format_error'), 1), new ElixirScript.Core.Tuple(Symbol.for('get_all_env'), 1), new ElixirScript.Core.Tuple(Symbol.for('get_application'), 1), new ElixirScript.Core.Tuple(Symbol.for('get_env'), 2), new ElixirScript.Core.Tuple(Symbol.for('get_env'), 3), new ElixirScript.Core.Tuple(Symbol.for('load'), 1), new ElixirScript.Core.Tuple(Symbol.for('loaded_applications'), 0), new ElixirScript.Core.Tuple(Symbol.for('put_env'), 3), new ElixirScript.Core.Tuple(Symbol.for('put_env'), 4), new ElixirScript.Core.Tuple(Symbol.for('spec'), 1), new ElixirScript.Core.Tuple(Symbol.for('spec'), 2), new ElixirScript.Core.Tuple(Symbol.for('start'), 1), new ElixirScript.Core.Tuple(Symbol.for('start'), 2), new ElixirScript.Core.Tuple(Symbol.for('started_applications'), 0), new ElixirScript.Core.Tuple(Symbol.for('started_applications'), 1), new ElixirScript.Core.Tuple(Symbol.for('stop'), 1), new ElixirScript.Core.Tuple(Symbol.for('unload'), 1)]], [Symbol.for('macros'), [new ElixirScript.Core.Tuple(Symbol.for('__using__'), 1)]], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [304463378597513731124515206257966072795])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/application.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(229), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(135), ElixirScript.Core.BitString.integer(39), ElixirScript.Core.BitString.integer(63), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(189), ElixirScript.Core.BitString.integer(89), ElixirScript.Core.BitString.integer(173), ElixirScript.Core.BitString.integer(160), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(112), ElixirScript.Core.BitString.integer(67), ElixirScript.Core.BitString.integer(219))], [Symbol.for('module'), Symbol.for('Elixir.Application')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function start(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('app'), ElixirScript.Core.Patterns.variable('type')], __function_args__, (app0, type0) => {
+                return ElixirScript.Core.erlang.is_atom(app0);
+            })) !== null) {
+                let [app0, type0] = __arg_matches__;
+
+                return ElixirScript.Core.application.start(app0, type0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        start,
+        __MODULE__: Symbol.for('Elixir.Application'),
+        __info__
+    };
+
+    Elixir.Application.__exports = __exports
 
     return __exports;
 }
@@ -5303,7 +5349,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.ErlangError').__load
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref3628513 = new ElixirScript.Core.Tuple(map5764607523033528630, keys5764607523033528630);
+                const _ref5543496 = new ElixirScript.Core.Tuple(map5764607523033528630, keys5764607523033528630);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033528630;
@@ -5329,224 +5375,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.ErlangError').__load
     };
 
     Elixir.ErlangError.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.ArithmeticError').__load = function(Elixir) {
-    if (Elixir.ArithmeticError.__exports)
-        return Elixir.ArithmeticError.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [324913333050734226878192336661517975807]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(244), ElixirScript.Core.BitString.integer(112), ElixirScript.Core.BitString.integer(8), ElixirScript.Core.BitString.integer(32), ElixirScript.Core.BitString.integer(117), ElixirScript.Core.BitString.integer(224), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(222), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(118), ElixirScript.Core.BitString.integer(107), ElixirScript.Core.BitString.integer(219), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(72), ElixirScript.Core.BitString.integer(64), ElixirScript.Core.BitString.integer(255))], [Symbol.for('module'), Symbol.for('Elixir.ArithmeticError')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.ArithmeticError.__load(Elixir)], [Symbol.for('message'), 'bad argument in arithmetic expression']]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303387647')], __function_args__, (kv5764607523033876470) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523033876470] = __arg_matches__;
-
-                const [map5764607523033876470, keys5764607523033876470] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303387647'), ElixirScript.Core.Patterns.variable('keys576460752303387647')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033876470, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303387647'), ElixirScript.Core.Patterns.variable('val576460752303387647')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303387647'), ElixirScript.Core.Patterns.variable('keys576460752303387647')]
-                        })], __function_args__, (key5764607523033876470, val5764607523033876470, map5764607523033876470, keys5764607523033876470) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523033876470, val5764607523033876470, map5764607523033876470, keys5764607523033876470] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033876470, val5764607523033876470, map5764607523033876470), Elixir.List.__load(Elixir).__delete__(keys5764607523033876470, key5764607523033876470));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref7370673 = new ElixirScript.Core.Tuple(map5764607523033876470, keys5764607523033876470);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033876470;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.ArithmeticError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033876470)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523033876470);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        __MODULE__: Symbol.for('Elixir.ArithmeticError'),
-        __info__
-    };
-
-    Elixir.ArithmeticError.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.BadFunctionError').__load = function(Elixir) {
-    if (Elixir.BadFunctionError.__exports)
-        return Elixir.BadFunctionError.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [319473884326606676641834399423699118085]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(240), ElixirScript.Core.BitString.integer(88), ElixirScript.Core.BitString.integer(110), ElixirScript.Core.BitString.integer(153), ElixirScript.Core.BitString.integer(89), ElixirScript.Core.BitString.integer(137), ElixirScript.Core.BitString.integer(158), ElixirScript.Core.BitString.integer(59), ElixirScript.Core.BitString.integer(191), ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(146), ElixirScript.Core.BitString.integer(112), ElixirScript.Core.BitString.integer(68), ElixirScript.Core.BitString.integer(104), ElixirScript.Core.BitString.integer(5))], [Symbol.for('module'), Symbol.for('Elixir.BadFunctionError')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.BadFunctionError.__load(Elixir)], [Symbol.for('term'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303382684')], __function_args__, (kv5764607523033826840) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523033826840] = __arg_matches__;
-
-                const [map5764607523033826840, keys5764607523033826840] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303382684'), ElixirScript.Core.Patterns.variable('keys576460752303382684')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033826840, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303382684'), ElixirScript.Core.Patterns.variable('val576460752303382684')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303382684'), ElixirScript.Core.Patterns.variable('keys576460752303382684')]
-                        })], __function_args__, (key5764607523033826840, val5764607523033826840, map5764607523033826840, keys5764607523033826840) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523033826840, val5764607523033826840, map5764607523033826840, keys5764607523033826840] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033826840, val5764607523033826840, map5764607523033826840), Elixir.List.__load(Elixir).__delete__(keys5764607523033826840, key5764607523033826840));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref3138485 = new ElixirScript.Core.Tuple(map5764607523033826840, keys5764607523033826840);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033826840;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.BadFunctionError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033826840)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523033826840);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        __MODULE__: Symbol.for('Elixir.BadFunctionError'),
-        __info__
-    };
-
-    Elixir.BadFunctionError.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Application').__load = function(Elixir) {
-    if (Elixir.Application.__exports)
-        return Elixir.Application.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('app_dir'), 1), new ElixirScript.Core.Tuple(Symbol.for('app_dir'), 2), new ElixirScript.Core.Tuple(Symbol.for('delete_env'), 2), new ElixirScript.Core.Tuple(Symbol.for('delete_env'), 3), new ElixirScript.Core.Tuple(Symbol.for('ensure_all_started'), 1), new ElixirScript.Core.Tuple(Symbol.for('ensure_all_started'), 2), new ElixirScript.Core.Tuple(Symbol.for('ensure_started'), 1), new ElixirScript.Core.Tuple(Symbol.for('ensure_started'), 2), new ElixirScript.Core.Tuple(Symbol.for('fetch_env'), 2), new ElixirScript.Core.Tuple(Symbol.for('fetch_env!'), 2), new ElixirScript.Core.Tuple(Symbol.for('format_error'), 1), new ElixirScript.Core.Tuple(Symbol.for('get_all_env'), 1), new ElixirScript.Core.Tuple(Symbol.for('get_application'), 1), new ElixirScript.Core.Tuple(Symbol.for('get_env'), 2), new ElixirScript.Core.Tuple(Symbol.for('get_env'), 3), new ElixirScript.Core.Tuple(Symbol.for('load'), 1), new ElixirScript.Core.Tuple(Symbol.for('loaded_applications'), 0), new ElixirScript.Core.Tuple(Symbol.for('put_env'), 3), new ElixirScript.Core.Tuple(Symbol.for('put_env'), 4), new ElixirScript.Core.Tuple(Symbol.for('spec'), 1), new ElixirScript.Core.Tuple(Symbol.for('spec'), 2), new ElixirScript.Core.Tuple(Symbol.for('start'), 1), new ElixirScript.Core.Tuple(Symbol.for('start'), 2), new ElixirScript.Core.Tuple(Symbol.for('started_applications'), 0), new ElixirScript.Core.Tuple(Symbol.for('started_applications'), 1), new ElixirScript.Core.Tuple(Symbol.for('stop'), 1), new ElixirScript.Core.Tuple(Symbol.for('unload'), 1)]], [Symbol.for('macros'), [new ElixirScript.Core.Tuple(Symbol.for('__using__'), 1)]], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [304463378597513731124515206257966072795])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/application.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(229), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(135), ElixirScript.Core.BitString.integer(39), ElixirScript.Core.BitString.integer(63), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(189), ElixirScript.Core.BitString.integer(89), ElixirScript.Core.BitString.integer(173), ElixirScript.Core.BitString.integer(160), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(112), ElixirScript.Core.BitString.integer(67), ElixirScript.Core.BitString.integer(219))], [Symbol.for('module'), Symbol.for('Elixir.Application')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function start(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('app'), ElixirScript.Core.Patterns.variable('type')], __function_args__, (app0, type0) => {
-                return ElixirScript.Core.erlang.is_atom(app0);
-            })) !== null) {
-                let [app0, type0] = __arg_matches__;
-
-                return ElixirScript.Core.application.start(app0, type0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        start,
-        __MODULE__: Symbol.for('Elixir.Application'),
-        __info__
-    };
-
-    Elixir.Application.__exports = __exports
 
     return __exports;
 }
@@ -5607,7 +5435,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.BadArityError').__lo
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref2803315 = new ElixirScript.Core.Tuple(map5764607523033708460, keys5764607523033708460);
+                const _ref4055993 = new ElixirScript.Core.Tuple(map5764607523033708460, keys5764607523033708460);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033708460;
@@ -5633,6 +5461,92 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.BadArityError').__lo
     };
 
     Elixir.BadArityError.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.ArithmeticError').__load = function(Elixir) {
+    if (Elixir.ArithmeticError.__exports)
+        return Elixir.ArithmeticError.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [324913333050734226878192336661517975807]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(244), ElixirScript.Core.BitString.integer(112), ElixirScript.Core.BitString.integer(8), ElixirScript.Core.BitString.integer(32), ElixirScript.Core.BitString.integer(117), ElixirScript.Core.BitString.integer(224), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(222), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(118), ElixirScript.Core.BitString.integer(107), ElixirScript.Core.BitString.integer(219), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(72), ElixirScript.Core.BitString.integer(64), ElixirScript.Core.BitString.integer(255))], [Symbol.for('module'), Symbol.for('Elixir.ArithmeticError')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.ArithmeticError.__load(Elixir)], [Symbol.for('message'), 'bad argument in arithmetic expression']]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303387647')], __function_args__, (kv5764607523033876470) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523033876470] = __arg_matches__;
+
+                const [map5764607523033876470, keys5764607523033876470] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303387647'), ElixirScript.Core.Patterns.variable('keys576460752303387647')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033876470, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303387647'), ElixirScript.Core.Patterns.variable('val576460752303387647')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303387647'), ElixirScript.Core.Patterns.variable('keys576460752303387647')]
+                        })], __function_args__, (key5764607523033876470, val5764607523033876470, map5764607523033876470, keys5764607523033876470) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523033876470, val5764607523033876470, map5764607523033876470, keys5764607523033876470] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033876470, val5764607523033876470, map5764607523033876470), Elixir.List.__load(Elixir).__delete__(keys5764607523033876470, key5764607523033876470));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref1356145 = new ElixirScript.Core.Tuple(map5764607523033876470, keys5764607523033876470);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523033876470;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.ArithmeticError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033876470)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523033876470);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        __MODULE__: Symbol.for('Elixir.ArithmeticError'),
+        __info__
+    };
+
+    Elixir.ArithmeticError.__exports = __exports
 
     return __exports;
 }
@@ -5693,7 +5607,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.CondClauseError').__
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref6794980 = new ElixirScript.Core.Tuple(map5764607523033788760, keys5764607523033788760);
+                const _ref800812 = new ElixirScript.Core.Tuple(map5764607523033788760, keys5764607523033788760);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033788760;
@@ -5779,7 +5693,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.BadStructError').__l
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref1295666 = new ElixirScript.Core.Tuple(map5764607523033755830, keys5764607523033755830);
+                const _ref7098817 = new ElixirScript.Core.Tuple(map5764607523033755830, keys5764607523033755830);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033755830;
@@ -5808,12 +5722,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.BadStructError').__l
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.MatchError').__load = function(Elixir) {
-    if (Elixir.MatchError.__exports)
-        return Elixir.MatchError.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.BadFunctionError').__load = function(Elixir) {
+    if (Elixir.BadFunctionError.__exports)
+        return Elixir.BadFunctionError.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [286883817035895668109008182360640846091]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(215), ElixirScript.Core.BitString.integer(211), ElixirScript.Core.BitString.integer(208), ElixirScript.Core.BitString.integer(57), ElixirScript.Core.BitString.integer(154), ElixirScript.Core.BitString.integer(102), ElixirScript.Core.BitString.integer(229), ElixirScript.Core.BitString.integer(31), ElixirScript.Core.BitString.integer(65), ElixirScript.Core.BitString.integer(32), ElixirScript.Core.BitString.integer(71), ElixirScript.Core.BitString.integer(173), ElixirScript.Core.BitString.integer(81), ElixirScript.Core.BitString.integer(127), ElixirScript.Core.BitString.integer(249), ElixirScript.Core.BitString.integer(11))], [Symbol.for('module'), Symbol.for('Elixir.MatchError')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [319473884326606676641834399423699118085]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(240), ElixirScript.Core.BitString.integer(88), ElixirScript.Core.BitString.integer(110), ElixirScript.Core.BitString.integer(153), ElixirScript.Core.BitString.integer(89), ElixirScript.Core.BitString.integer(137), ElixirScript.Core.BitString.integer(158), ElixirScript.Core.BitString.integer(59), ElixirScript.Core.BitString.integer(191), ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(146), ElixirScript.Core.BitString.integer(112), ElixirScript.Core.BitString.integer(68), ElixirScript.Core.BitString.integer(104), ElixirScript.Core.BitString.integer(5))], [Symbol.for('module'), Symbol.for('Elixir.BadFunctionError')]]);
 
         const value = __info__map__.get(kind);
 
@@ -5835,28 +5749,28 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.MatchError').__load 
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.MatchError.__load(Elixir)], [Symbol.for('term'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303371679')], __function_args__, (kv5764607523033716790) => {
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.BadFunctionError.__load(Elixir)], [Symbol.for('term'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303382684')], __function_args__, (kv5764607523033826840) => {
                 return true;
             })) !== null) {
-                let [kv5764607523033716790] = __arg_matches__;
+                let [kv5764607523033826840] = __arg_matches__;
 
-                const [map5764607523033716790, keys5764607523033716790] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303371679'), ElixirScript.Core.Patterns.variable('keys576460752303371679')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033716790, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                const [map5764607523033826840, keys5764607523033826840] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303382684'), ElixirScript.Core.Patterns.variable('keys576460752303382684')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033826840, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
 
                         if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303371679'), ElixirScript.Core.Patterns.variable('val576460752303371679')]
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303382684'), ElixirScript.Core.Patterns.variable('val576460752303382684')]
                         }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303371679'), ElixirScript.Core.Patterns.variable('keys576460752303371679')]
-                        })], __function_args__, (key5764607523033716790, val5764607523033716790, map5764607523033716790, keys5764607523033716790) => {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303382684'), ElixirScript.Core.Patterns.variable('keys576460752303382684')]
+                        })], __function_args__, (key5764607523033826840, val5764607523033826840, map5764607523033826840, keys5764607523033826840) => {
                             return true;
                         })) !== null) {
-                            let [key5764607523033716790, val5764607523033716790, map5764607523033716790, keys5764607523033716790] = __arg_matches__;
+                            let [key5764607523033826840, val5764607523033826840, map5764607523033826840, keys5764607523033826840] = __arg_matches__;
 
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033716790, val5764607523033716790, map5764607523033716790), Elixir.List.__load(Elixir).__delete__(keys5764607523033716790, key5764607523033716790));
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033826840, val5764607523033826840, map5764607523033826840), Elixir.List.__load(Elixir).__delete__(keys5764607523033826840, key5764607523033826840));
                         }
 
                         throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -5865,17 +5779,17 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.MatchError').__load 
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref8634820 = new ElixirScript.Core.Tuple(map5764607523033716790, keys5764607523033716790);
+                const _ref746930 = new ElixirScript.Core.Tuple(map5764607523033826840, keys5764607523033826840);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033716790;
+                    return map5764607523033826840;
                 }, () => {
                     return true;
                 }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.MatchError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033716790)))))));
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.BadFunctionError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033826840)))))));
                 }, () => {
                     return true;
-                })).call(this, keys5764607523033716790);
+                })).call(this, keys5764607523033826840);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -5886,11 +5800,11 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.MatchError').__load 
 
     const __exports = {
         __struct__,
-        __MODULE__: Symbol.for('Elixir.MatchError'),
+        __MODULE__: Symbol.for('Elixir.BadFunctionError'),
         __info__
     };
 
-    Elixir.MatchError.__exports = __exports
+    Elixir.BadFunctionError.__exports = __exports
 
     return __exports;
 }
@@ -5951,7 +5865,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.BadMapError').__load
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref6815056 = new ElixirScript.Core.Tuple(map5764607523033734390, keys5764607523033734390);
+                const _ref7153496 = new ElixirScript.Core.Tuple(map5764607523033734390, keys5764607523033734390);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033734390;
@@ -6037,7 +5951,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.BadBooleanError').__
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref8230064 = new ElixirScript.Core.Tuple(map5764607523033819800, keys5764607523033819800);
+                const _ref7809169 = new ElixirScript.Core.Tuple(map5764607523033819800, keys5764607523033819800);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033819800;
@@ -6063,6 +5977,92 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.BadBooleanError').__
     };
 
     Elixir.BadBooleanError.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.MatchError').__load = function(Elixir) {
+    if (Elixir.MatchError.__exports)
+        return Elixir.MatchError.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [286883817035895668109008182360640846091]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(215), ElixirScript.Core.BitString.integer(211), ElixirScript.Core.BitString.integer(208), ElixirScript.Core.BitString.integer(57), ElixirScript.Core.BitString.integer(154), ElixirScript.Core.BitString.integer(102), ElixirScript.Core.BitString.integer(229), ElixirScript.Core.BitString.integer(31), ElixirScript.Core.BitString.integer(65), ElixirScript.Core.BitString.integer(32), ElixirScript.Core.BitString.integer(71), ElixirScript.Core.BitString.integer(173), ElixirScript.Core.BitString.integer(81), ElixirScript.Core.BitString.integer(127), ElixirScript.Core.BitString.integer(249), ElixirScript.Core.BitString.integer(11))], [Symbol.for('module'), Symbol.for('Elixir.MatchError')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.MatchError.__load(Elixir)], [Symbol.for('term'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303371679')], __function_args__, (kv5764607523033716790) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523033716790] = __arg_matches__;
+
+                const [map5764607523033716790, keys5764607523033716790] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303371679'), ElixirScript.Core.Patterns.variable('keys576460752303371679')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033716790, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303371679'), ElixirScript.Core.Patterns.variable('val576460752303371679')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303371679'), ElixirScript.Core.Patterns.variable('keys576460752303371679')]
+                        })], __function_args__, (key5764607523033716790, val5764607523033716790, map5764607523033716790, keys5764607523033716790) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523033716790, val5764607523033716790, map5764607523033716790, keys5764607523033716790] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033716790, val5764607523033716790, map5764607523033716790), Elixir.List.__load(Elixir).__delete__(keys5764607523033716790, key5764607523033716790));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref9557125 = new ElixirScript.Core.Tuple(map5764607523033716790, keys5764607523033716790);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523033716790;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.MatchError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033716790)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523033716790);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        __MODULE__: Symbol.for('Elixir.MatchError'),
+        __info__
+    };
+
+    Elixir.MatchError.__exports = __exports
 
     return __exports;
 }
@@ -6123,7 +6123,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.CaseClauseError').__
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref5801588 = new ElixirScript.Core.Tuple(map5764607523033751340, keys5764607523033751340);
+                const _ref1804769 = new ElixirScript.Core.Tuple(map5764607523033751340, keys5764607523033751340);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033751340;
@@ -6587,7 +6587,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.WithClauseError').__
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref7992356 = new ElixirScript.Core.Tuple(map5764607523033745260, keys5764607523033745260);
+                const _ref2503982 = new ElixirScript.Core.Tuple(map5764607523033745260, keys5764607523033745260);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033745260;
@@ -6673,7 +6673,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.TryClauseError').__l
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref8645006 = new ElixirScript.Core.Tuple(map5764607523033771800, keys5764607523033771800);
+                const _ref8323161 = new ElixirScript.Core.Tuple(map5764607523033771800, keys5764607523033771800);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033771800;
@@ -6702,12 +6702,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.TryClauseError').__l
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.FunctionClauseError').__load = function(Elixir) {
-    if (Elixir.FunctionClauseError.__exports)
-        return Elixir.FunctionClauseError.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.UndefinedFunctionError').__load = function(Elixir) {
+    if (Elixir.UndefinedFunctionError.__exports)
+        return Elixir.UndefinedFunctionError.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('blame'), 3), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [11707322694186173941361066936831062410]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(8), ElixirScript.Core.BitString.integer(206), ElixirScript.Core.BitString.integer(191), ElixirScript.Core.BitString.integer(146), ElixirScript.Core.BitString.integer(218), ElixirScript.Core.BitString.integer(28), ElixirScript.Core.BitString.integer(225), ElixirScript.Core.BitString.integer(179), ElixirScript.Core.BitString.integer(230), ElixirScript.Core.BitString.integer(26), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(67), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(168), ElixirScript.Core.BitString.integer(49), ElixirScript.Core.BitString.integer(138))], [Symbol.for('module'), Symbol.for('Elixir.FunctionClauseError')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('function_not_exported'), 4), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [269300456488347202930651375143609354214]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(202), ElixirScript.Core.BitString.integer(153), ElixirScript.Core.BitString.integer(97), ElixirScript.Core.BitString.integer(158), ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(249), ElixirScript.Core.BitString.integer(3), ElixirScript.Core.BitString.integer(246), ElixirScript.Core.BitString.integer(164), ElixirScript.Core.BitString.integer(157), ElixirScript.Core.BitString.integer(212), ElixirScript.Core.BitString.integer(3), ElixirScript.Core.BitString.integer(48), ElixirScript.Core.BitString.integer(226), ElixirScript.Core.BitString.integer(199), ElixirScript.Core.BitString.integer(230))], [Symbol.for('module'), Symbol.for('Elixir.UndefinedFunctionError')]]);
 
         const value = __info__map__.get(kind);
 
@@ -6729,28 +6729,28 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.FunctionClauseError'
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.FunctionClauseError.__load(Elixir)], [Symbol.for('args'), null], [Symbol.for('arity'), null], [Symbol.for('clauses'), null], [Symbol.for('function'), null], [Symbol.for('kind'), null], [Symbol.for('module'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303372412')], __function_args__, (kv5764607523033724120) => {
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.UndefinedFunctionError.__load(Elixir)], [Symbol.for('arity'), null], [Symbol.for('exports'), null], [Symbol.for('function'), null], [Symbol.for('module'), null], [Symbol.for('reason'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303375164')], __function_args__, (kv5764607523033751640) => {
                 return true;
             })) !== null) {
-                let [kv5764607523033724120] = __arg_matches__;
+                let [kv5764607523033751640] = __arg_matches__;
 
-                const [map5764607523033724120, keys5764607523033724120] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303372412'), ElixirScript.Core.Patterns.variable('keys576460752303372412')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033724120, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                const [map5764607523033751640, keys5764607523033751640] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303375164'), ElixirScript.Core.Patterns.variable('keys576460752303375164')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033751640, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
 
                         if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303372412'), ElixirScript.Core.Patterns.variable('val576460752303372412')]
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303375164'), ElixirScript.Core.Patterns.variable('val576460752303375164')]
                         }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303372412'), ElixirScript.Core.Patterns.variable('keys576460752303372412')]
-                        })], __function_args__, (key5764607523033724120, val5764607523033724120, map5764607523033724120, keys5764607523033724120) => {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303375164'), ElixirScript.Core.Patterns.variable('keys576460752303375164')]
+                        })], __function_args__, (key5764607523033751640, val5764607523033751640, map5764607523033751640, keys5764607523033751640) => {
                             return true;
                         })) !== null) {
-                            let [key5764607523033724120, val5764607523033724120, map5764607523033724120, keys5764607523033724120] = __arg_matches__;
+                            let [key5764607523033751640, val5764607523033751640, map5764607523033751640, keys5764607523033751640] = __arg_matches__;
 
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033724120, val5764607523033724120, map5764607523033724120), Elixir.List.__load(Elixir).__delete__(keys5764607523033724120, key5764607523033724120));
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033751640, val5764607523033751640, map5764607523033751640), Elixir.List.__load(Elixir).__delete__(keys5764607523033751640, key5764607523033751640));
                         }
 
                         throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -6759,17 +6759,17 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.FunctionClauseError'
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref9664728 = new ElixirScript.Core.Tuple(map5764607523033724120, keys5764607523033724120);
+                const _ref9578990 = new ElixirScript.Core.Tuple(map5764607523033751640, keys5764607523033751640);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033724120;
+                    return map5764607523033751640;
                 }, () => {
                     return true;
                 }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.FunctionClauseError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033724120)))))));
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.UndefinedFunctionError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033751640)))))));
                 }, () => {
                     return true;
-                })).call(this, keys5764607523033724120);
+                })).call(this, keys5764607523033751640);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -6780,11 +6780,11 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.FunctionClauseError'
 
     const __exports = {
         __struct__,
-        __MODULE__: Symbol.for('Elixir.FunctionClauseError'),
+        __MODULE__: Symbol.for('Elixir.UndefinedFunctionError'),
         __info__
     };
 
-    Elixir.FunctionClauseError.__exports = __exports
+    Elixir.UndefinedFunctionError.__exports = __exports
 
     return __exports;
 }
@@ -6793,7 +6793,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Test').__load = func
         return Elixir.Test.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('fill'), 3), new ElixirScript.Core.Tuple(Symbol.for('listSet'), 2), new ElixirScript.Core.Tuple(Symbol.for('mapSet'), 2), new ElixirScript.Core.Tuple(Symbol.for('setSet'), 2), new ElixirScript.Core.Tuple(Symbol.for('start'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [336439182515937435581251838810007254551])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 51]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/Users/attendify/git/js-memory-usage/src/elixir/lib/elixir.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(253), ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(212), ElixirScript.Core.BitString.integer(97), ElixirScript.Core.BitString.integer(36), ElixirScript.Core.BitString.integer(53), ElixirScript.Core.BitString.integer(1), ElixirScript.Core.BitString.integer(173), ElixirScript.Core.BitString.integer(238), ElixirScript.Core.BitString.integer(130), ElixirScript.Core.BitString.integer(182), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(235), ElixirScript.Core.BitString.integer(247), ElixirScript.Core.BitString.integer(182), ElixirScript.Core.BitString.integer(23))], [Symbol.for('module'), Symbol.for('Elixir.Test')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('fill'), 3), new ElixirScript.Core.Tuple(Symbol.for('listSet'), 2), new ElixirScript.Core.Tuple(Symbol.for('mapSet'), 2), new ElixirScript.Core.Tuple(Symbol.for('setSet'), 2), new ElixirScript.Core.Tuple(Symbol.for('start'), 2), new ElixirScript.Core.Tuple(Symbol.for('tupleSet'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [154850350715294917228809799789746574399])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 51]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/Users/attendify/git/js-memory-usage/src/elixir/lib/elixir.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(127), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(189), ElixirScript.Core.BitString.integer(108), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(209), ElixirScript.Core.BitString.integer(25), ElixirScript.Core.BitString.integer(254), ElixirScript.Core.BitString.integer(251), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(128), ElixirScript.Core.BitString.integer(45), ElixirScript.Core.BitString.integer(55), ElixirScript.Core.BitString.integer(212), ElixirScript.Core.BitString.integer(63))], [Symbol.for('module'), Symbol.for('Elixir.Test')]]);
 
         const value = __info__map__.get(kind);
 
@@ -6913,6 +6913,24 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Test').__load = func
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 })
 
+                Node.record('empty tuple', 1000, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                            return true;
+                        })) !== null) {
+                            let [] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple();
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                })
+
                 Node.record('empty map', 1000, (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
@@ -6959,6 +6977,24 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Test').__load = func
                             let [] = __arg_matches__;
 
                             return Elixir.Test.__load(Elixir).fill(10, [], Elixir.Test.__load(Elixir).listSet);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                })
+
+                Node.record('10 items tuple', 1000, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                            return true;
+                        })) !== null) {
+                            let [] = __arg_matches__;
+
+                            return Elixir.Test.__load(Elixir).fill(10, new ElixirScript.Core.Tuple(), Elixir.Test.__load(Elixir).tupleSet);
                         }
 
                         throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -7021,6 +7057,24 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Test').__load = func
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 })
 
+                Node.record('100 items tuple', 1000, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                            return true;
+                        })) !== null) {
+                            let [] = __arg_matches__;
+
+                            return Elixir.Test.__load(Elixir).fill(100, new ElixirScript.Core.Tuple(), Elixir.Test.__load(Elixir).tupleSet);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                })
+
                 Node.record('100 items map', 1000, (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
@@ -7075,6 +7129,24 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Test').__load = func
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 })
 
+                Node.record('1000 items tuple', 1000, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                            return true;
+                        })) !== null) {
+                            let [] = __arg_matches__;
+
+                            return Elixir.Test.__load(Elixir).fill(1000, new ElixirScript.Core.Tuple(), Elixir.Test.__load(Elixir).tupleSet);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                })
+
                 Node.record('1000 items map', 1000, (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
@@ -7120,12 +7192,33 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Test').__load = func
         return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
     }
 
+    function tupleSet(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('i'), ElixirScript.Core.Patterns.variable('t')], __function_args__, (i0, t0) => {
+                return true;
+            })) !== null) {
+                let [i0, t0] = __arg_matches__;
+
+                return ElixirScript.Core.erlang.append_element(t0, i0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
     const __exports = {
         fill,
         listSet,
         mapSet,
         setSet,
         start,
+        tupleSet,
         __MODULE__: Symbol.for('Elixir.Test'),
         __info__
     };
@@ -7134,12 +7227,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Test').__load = func
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.UndefinedFunctionError').__load = function(Elixir) {
-    if (Elixir.UndefinedFunctionError.__exports)
-        return Elixir.UndefinedFunctionError.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.FunctionClauseError').__load = function(Elixir) {
+    if (Elixir.FunctionClauseError.__exports)
+        return Elixir.FunctionClauseError.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('function_not_exported'), 4), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [269300456488347202930651375143609354214]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(202), ElixirScript.Core.BitString.integer(153), ElixirScript.Core.BitString.integer(97), ElixirScript.Core.BitString.integer(158), ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(249), ElixirScript.Core.BitString.integer(3), ElixirScript.Core.BitString.integer(246), ElixirScript.Core.BitString.integer(164), ElixirScript.Core.BitString.integer(157), ElixirScript.Core.BitString.integer(212), ElixirScript.Core.BitString.integer(3), ElixirScript.Core.BitString.integer(48), ElixirScript.Core.BitString.integer(226), ElixirScript.Core.BitString.integer(199), ElixirScript.Core.BitString.integer(230))], [Symbol.for('module'), Symbol.for('Elixir.UndefinedFunctionError')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('blame'), 3), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [11707322694186173941361066936831062410]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(8), ElixirScript.Core.BitString.integer(206), ElixirScript.Core.BitString.integer(191), ElixirScript.Core.BitString.integer(146), ElixirScript.Core.BitString.integer(218), ElixirScript.Core.BitString.integer(28), ElixirScript.Core.BitString.integer(225), ElixirScript.Core.BitString.integer(179), ElixirScript.Core.BitString.integer(230), ElixirScript.Core.BitString.integer(26), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(67), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(168), ElixirScript.Core.BitString.integer(49), ElixirScript.Core.BitString.integer(138))], [Symbol.for('module'), Symbol.for('Elixir.FunctionClauseError')]]);
 
         const value = __info__map__.get(kind);
 
@@ -7161,28 +7254,28 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.UndefinedFunctionErr
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.UndefinedFunctionError.__load(Elixir)], [Symbol.for('arity'), null], [Symbol.for('exports'), null], [Symbol.for('function'), null], [Symbol.for('module'), null], [Symbol.for('reason'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303375164')], __function_args__, (kv5764607523033751640) => {
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.FunctionClauseError.__load(Elixir)], [Symbol.for('args'), null], [Symbol.for('arity'), null], [Symbol.for('clauses'), null], [Symbol.for('function'), null], [Symbol.for('kind'), null], [Symbol.for('module'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303372412')], __function_args__, (kv5764607523033724120) => {
                 return true;
             })) !== null) {
-                let [kv5764607523033751640] = __arg_matches__;
+                let [kv5764607523033724120] = __arg_matches__;
 
-                const [map5764607523033751640, keys5764607523033751640] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303375164'), ElixirScript.Core.Patterns.variable('keys576460752303375164')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033751640, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                const [map5764607523033724120, keys5764607523033724120] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303372412'), ElixirScript.Core.Patterns.variable('keys576460752303372412')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033724120, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
 
                         if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303375164'), ElixirScript.Core.Patterns.variable('val576460752303375164')]
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303372412'), ElixirScript.Core.Patterns.variable('val576460752303372412')]
                         }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303375164'), ElixirScript.Core.Patterns.variable('keys576460752303375164')]
-                        })], __function_args__, (key5764607523033751640, val5764607523033751640, map5764607523033751640, keys5764607523033751640) => {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303372412'), ElixirScript.Core.Patterns.variable('keys576460752303372412')]
+                        })], __function_args__, (key5764607523033724120, val5764607523033724120, map5764607523033724120, keys5764607523033724120) => {
                             return true;
                         })) !== null) {
-                            let [key5764607523033751640, val5764607523033751640, map5764607523033751640, keys5764607523033751640] = __arg_matches__;
+                            let [key5764607523033724120, val5764607523033724120, map5764607523033724120, keys5764607523033724120] = __arg_matches__;
 
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033751640, val5764607523033751640, map5764607523033751640), Elixir.List.__load(Elixir).__delete__(keys5764607523033751640, key5764607523033751640));
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033724120, val5764607523033724120, map5764607523033724120), Elixir.List.__load(Elixir).__delete__(keys5764607523033724120, key5764607523033724120));
                         }
 
                         throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -7191,17 +7284,17 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.UndefinedFunctionErr
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref8441518 = new ElixirScript.Core.Tuple(map5764607523033751640, keys5764607523033751640);
+                const _ref930388 = new ElixirScript.Core.Tuple(map5764607523033724120, keys5764607523033724120);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033751640;
+                    return map5764607523033724120;
                 }, () => {
                     return true;
                 }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.UndefinedFunctionError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033751640)))))));
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.FunctionClauseError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033724120)))))));
                 }, () => {
                     return true;
-                })).call(this, keys5764607523033751640);
+                })).call(this, keys5764607523033724120);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -7212,97 +7305,11 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.UndefinedFunctionErr
 
     const __exports = {
         __struct__,
-        __MODULE__: Symbol.for('Elixir.UndefinedFunctionError'),
+        __MODULE__: Symbol.for('Elixir.FunctionClauseError'),
         __info__
     };
 
-    Elixir.UndefinedFunctionError.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.GenEvent.Stream').__load = function(Elixir) {
-    if (Elixir.GenEvent.Stream.__exports)
-        return Elixir.GenEvent.Stream.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('code_change'), 3), new ElixirScript.Core.Tuple(Symbol.for('handle_call'), 2), new ElixirScript.Core.Tuple(Symbol.for('handle_event'), 2), new ElixirScript.Core.Tuple(Symbol.for('handle_info'), 2), new ElixirScript.Core.Tuple(Symbol.for('init'), 1), new ElixirScript.Core.Tuple(Symbol.for('terminate'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [299451319854083008433537647836123543660])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/gen_event/stream.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(225), ElixirScript.Core.BitString.integer(72), ElixirScript.Core.BitString.integer(57), ElixirScript.Core.BitString.integer(243), ElixirScript.Core.BitString.integer(254), ElixirScript.Core.BitString.integer(217), ElixirScript.Core.BitString.integer(0), ElixirScript.Core.BitString.integer(50), ElixirScript.Core.BitString.integer(134), ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(109), ElixirScript.Core.BitString.integer(85), ElixirScript.Core.BitString.integer(182), ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(184), ElixirScript.Core.BitString.integer(108))], [Symbol.for('module'), Symbol.for('Elixir.GenEvent.Stream')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__struct__'), Elixir.GenEvent.Stream.__load(Elixir)], [Symbol.for('manager'), null], [Symbol.for('timeout'), Symbol.for('infinity')]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303385023')], __function_args__, (kv5764607523033850230) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523033850230] = __arg_matches__;
-
-                const [map5764607523033850230, keys5764607523033850230] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303385023'), ElixirScript.Core.Patterns.variable('keys576460752303385023')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033850230, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303385023'), ElixirScript.Core.Patterns.variable('val576460752303385023')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303385023'), ElixirScript.Core.Patterns.variable('keys576460752303385023')]
-                        })], __function_args__, (key5764607523033850230, val5764607523033850230, map5764607523033850230, keys5764607523033850230) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523033850230, val5764607523033850230, map5764607523033850230, keys5764607523033850230] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033850230, val5764607523033850230, map5764607523033850230), Elixir.List.__load(Elixir).__delete__(keys5764607523033850230, key5764607523033850230));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref7554403 = new ElixirScript.Core.Tuple(map5764607523033850230, keys5764607523033850230);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033850230;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.GenEvent.Stream.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033850230)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523033850230);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        __MODULE__: Symbol.for('Elixir.GenEvent.Stream'),
-        __info__
-    };
-
-    Elixir.GenEvent.Stream.__exports = __exports
+    Elixir.FunctionClauseError.__exports = __exports
 
     return __exports;
 }
@@ -7363,7 +7370,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.ArgumentError').__lo
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref9612269 = new ElixirScript.Core.Tuple(map5764607523033876440, keys5764607523033876440);
+                const _ref4571401 = new ElixirScript.Core.Tuple(map5764607523033876440, keys5764607523033876440);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033876440;
@@ -7423,7 +7430,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.ArgumentError').__lo
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref6997317 = new ElixirScript.Core.Tuple(valid5764607523033877080, invalid5764607523033877080);
+                const _ref4362728 = new ElixirScript.Core.Tuple(valid5764607523033877080, invalid5764607523033877080);
 
                 ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return Symbol.for('ok');
@@ -7455,12 +7462,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.ArgumentError').__lo
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Error').__load = function(Elixir) {
-    if (Elixir.Inspect.Error.__exports)
-        return Elixir.Inspect.Error.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.GenEvent.Stream').__load = function(Elixir) {
+    if (Elixir.GenEvent.Stream.__exports)
+        return Elixir.GenEvent.Stream.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [55169843312173522017981876016311194310]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/inspect/algebra.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(129), ElixirScript.Core.BitString.integer(83), ElixirScript.Core.BitString.integer(72), ElixirScript.Core.BitString.integer(148), ElixirScript.Core.BitString.integer(10), ElixirScript.Core.BitString.integer(64), ElixirScript.Core.BitString.integer(76), ElixirScript.Core.BitString.integer(55), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(73), ElixirScript.Core.BitString.integer(170), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(198))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Error')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('code_change'), 3), new ElixirScript.Core.Tuple(Symbol.for('handle_call'), 2), new ElixirScript.Core.Tuple(Symbol.for('handle_event'), 2), new ElixirScript.Core.Tuple(Symbol.for('handle_info'), 2), new ElixirScript.Core.Tuple(Symbol.for('init'), 1), new ElixirScript.Core.Tuple(Symbol.for('terminate'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [299451319854083008433537647836123543660])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/gen_event/stream.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(225), ElixirScript.Core.BitString.integer(72), ElixirScript.Core.BitString.integer(57), ElixirScript.Core.BitString.integer(243), ElixirScript.Core.BitString.integer(254), ElixirScript.Core.BitString.integer(217), ElixirScript.Core.BitString.integer(0), ElixirScript.Core.BitString.integer(50), ElixirScript.Core.BitString.integer(134), ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(109), ElixirScript.Core.BitString.integer(85), ElixirScript.Core.BitString.integer(182), ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(184), ElixirScript.Core.BitString.integer(108))], [Symbol.for('module'), Symbol.for('Elixir.GenEvent.Stream')]]);
 
         const value = __info__map__.get(kind);
 
@@ -7482,28 +7489,28 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Error').__lo
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.Inspect.Error.__load(Elixir)], [Symbol.for('message'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303325919')], __function_args__, (kv5764607523033259190) => {
+                return new Map([[Symbol.for('__struct__'), Elixir.GenEvent.Stream.__load(Elixir)], [Symbol.for('manager'), null], [Symbol.for('timeout'), Symbol.for('infinity')]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303385023')], __function_args__, (kv5764607523033850230) => {
                 return true;
             })) !== null) {
-                let [kv5764607523033259190] = __arg_matches__;
+                let [kv5764607523033850230] = __arg_matches__;
 
-                const [map5764607523033259190, keys5764607523033259190] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303325919'), ElixirScript.Core.Patterns.variable('keys576460752303325919')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033259190, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                const [map5764607523033850230, keys5764607523033850230] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303385023'), ElixirScript.Core.Patterns.variable('keys576460752303385023')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033850230, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
 
                         if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303325919'), ElixirScript.Core.Patterns.variable('val576460752303325919')]
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303385023'), ElixirScript.Core.Patterns.variable('val576460752303385023')]
                         }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303325919'), ElixirScript.Core.Patterns.variable('keys576460752303325919')]
-                        })], __function_args__, (key5764607523033259190, val5764607523033259190, map5764607523033259190, keys5764607523033259190) => {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303385023'), ElixirScript.Core.Patterns.variable('keys576460752303385023')]
+                        })], __function_args__, (key5764607523033850230, val5764607523033850230, map5764607523033850230, keys5764607523033850230) => {
                             return true;
                         })) !== null) {
-                            let [key5764607523033259190, val5764607523033259190, map5764607523033259190, keys5764607523033259190] = __arg_matches__;
+                            let [key5764607523033850230, val5764607523033850230, map5764607523033850230, keys5764607523033850230] = __arg_matches__;
 
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033259190, val5764607523033259190, map5764607523033259190), Elixir.List.__load(Elixir).__delete__(keys5764607523033259190, key5764607523033259190));
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033850230, val5764607523033850230, map5764607523033850230), Elixir.List.__load(Elixir).__delete__(keys5764607523033850230, key5764607523033850230));
                         }
 
                         throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -7512,79 +7519,17 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Error').__lo
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref826047 = new ElixirScript.Core.Tuple(map5764607523033259190, keys5764607523033259190);
+                const _ref8408757 = new ElixirScript.Core.Tuple(map5764607523033850230, keys5764607523033850230);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033259190;
+                    return map5764607523033850230;
                 }, () => {
                     return true;
                 }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Inspect.Error.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033259190)))))));
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.GenEvent.Stream.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033850230)))))));
                 }, () => {
                     return true;
-                })).call(this, keys5764607523033259190);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function exception(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('msg576460752303325983')], __function_args__, (msg5764607523033259830) => {
-                return ElixirScript.Core.erlang.is_binary(msg5764607523033259830);
-            })) !== null) {
-                let [msg5764607523033259830] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, [new ElixirScript.Core.Tuple(Symbol.for('message'), msg5764607523033259830)]));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('args576460752303325983')], __function_args__, (args5764607523033259830) => {
-                return ElixirScript.Core.erlang.is_list(args5764607523033259830);
-            })) !== null) {
-                let [args5764607523033259830] = __arg_matches__;
-
-                const [struct5764607523033259830] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('struct576460752303325983'), __struct__());
-
-                const [valid5764607523033259830, invalid5764607523033259830] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('valid576460752303325983'), ElixirScript.Core.Patterns.variable('invalid576460752303325983')]
-                }), Elixir.Enum.__load(Elixir).split_with(args5764607523033259830, (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('k576460752303325983'), ElixirScript.Core.Patterns.variable('_')]
-                        })], __function_args__, (k5764607523033259830) => {
-                            return true;
-                        })) !== null) {
-                            let [k5764607523033259830] = __arg_matches__;
-
-                            return ElixirScript.Core.maps.is_key(k5764607523033259830, struct5764607523033259830);
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref8950172 = new ElixirScript.Core.Tuple(valid5764607523033259830, invalid5764607523033259830);
-
-                ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return Symbol.for('ok');
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return Elixir.IO.__load(Elixir).warn('the following fields are unknown when raising ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Inspect.Error.__load(Elixir))) + (': ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(invalid5764607523033259830)) + '. ')) + ('Please make sure to only give known fields when raising ' + ('or redefine ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Inspect.Error.__load(Elixir))) + '.exception/1 to ') + ('discard unknown fields. Future Elixir versions will raise on ' + 'unknown fields given to raise/2')))));
-                }, () => {
-                    return true;
-                })).call(this, invalid5764607523033259830)
-
-                return Elixir.Kernel.__load(Elixir).struct__emark__(struct5764607523033259830, valid5764607523033259830);
+                })).call(this, keys5764607523033850230);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -7595,12 +7540,11 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Error').__lo
 
     const __exports = {
         __struct__,
-        exception,
-        __MODULE__: Symbol.for('Elixir.Inspect.Error'),
+        __MODULE__: Symbol.for('Elixir.GenEvent.Stream'),
         __info__
     };
 
-    Elixir.Inspect.Error.__exports = __exports
+    Elixir.GenEvent.Stream.__exports = __exports
 
     return __exports;
 }
@@ -7661,7 +7605,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enum.OutOfBoundsErro
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref8985137 = new ElixirScript.Core.Tuple(map5764607523033645410, keys5764607523033645410);
+                const _ref7807504 = new ElixirScript.Core.Tuple(map5764607523033645410, keys5764607523033645410);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033645410;
@@ -7747,7 +7691,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enum.EmptyError').__
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref5607660 = new ElixirScript.Core.Tuple(map5764607523033638370, keys5764607523033638370);
+                const _ref4600315 = new ElixirScript.Core.Tuple(map5764607523033638370, keys5764607523033638370);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033638370;
@@ -7773,6 +7717,155 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enum.EmptyError').__
     };
 
     Elixir.Enum.EmptyError.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Error').__load = function(Elixir) {
+    if (Elixir.Inspect.Error.__exports)
+        return Elixir.Inspect.Error.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [55169843312173522017981876016311194310]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/inspect/algebra.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(129), ElixirScript.Core.BitString.integer(83), ElixirScript.Core.BitString.integer(72), ElixirScript.Core.BitString.integer(148), ElixirScript.Core.BitString.integer(10), ElixirScript.Core.BitString.integer(64), ElixirScript.Core.BitString.integer(76), ElixirScript.Core.BitString.integer(55), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(73), ElixirScript.Core.BitString.integer(170), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(198))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Error')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.Inspect.Error.__load(Elixir)], [Symbol.for('message'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303325919')], __function_args__, (kv5764607523033259190) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523033259190] = __arg_matches__;
+
+                const [map5764607523033259190, keys5764607523033259190] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303325919'), ElixirScript.Core.Patterns.variable('keys576460752303325919')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033259190, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303325919'), ElixirScript.Core.Patterns.variable('val576460752303325919')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303325919'), ElixirScript.Core.Patterns.variable('keys576460752303325919')]
+                        })], __function_args__, (key5764607523033259190, val5764607523033259190, map5764607523033259190, keys5764607523033259190) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523033259190, val5764607523033259190, map5764607523033259190, keys5764607523033259190] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033259190, val5764607523033259190, map5764607523033259190), Elixir.List.__load(Elixir).__delete__(keys5764607523033259190, key5764607523033259190));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref8249195 = new ElixirScript.Core.Tuple(map5764607523033259190, keys5764607523033259190);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523033259190;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Inspect.Error.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033259190)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523033259190);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function exception(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('msg576460752303325983')], __function_args__, (msg5764607523033259830) => {
+                return ElixirScript.Core.erlang.is_binary(msg5764607523033259830);
+            })) !== null) {
+                let [msg5764607523033259830] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, [new ElixirScript.Core.Tuple(Symbol.for('message'), msg5764607523033259830)]));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('args576460752303325983')], __function_args__, (args5764607523033259830) => {
+                return ElixirScript.Core.erlang.is_list(args5764607523033259830);
+            })) !== null) {
+                let [args5764607523033259830] = __arg_matches__;
+
+                const [struct5764607523033259830] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('struct576460752303325983'), __struct__());
+
+                const [valid5764607523033259830, invalid5764607523033259830] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('valid576460752303325983'), ElixirScript.Core.Patterns.variable('invalid576460752303325983')]
+                }), Elixir.Enum.__load(Elixir).split_with(args5764607523033259830, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('k576460752303325983'), ElixirScript.Core.Patterns.variable('_')]
+                        })], __function_args__, (k5764607523033259830) => {
+                            return true;
+                        })) !== null) {
+                            let [k5764607523033259830] = __arg_matches__;
+
+                            return ElixirScript.Core.maps.is_key(k5764607523033259830, struct5764607523033259830);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref5905323 = new ElixirScript.Core.Tuple(valid5764607523033259830, invalid5764607523033259830);
+
+                ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return Symbol.for('ok');
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return Elixir.IO.__load(Elixir).warn('the following fields are unknown when raising ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Inspect.Error.__load(Elixir))) + (': ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(invalid5764607523033259830)) + '. ')) + ('Please make sure to only give known fields when raising ' + ('or redefine ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Inspect.Error.__load(Elixir))) + '.exception/1 to ') + ('discard unknown fields. Future Elixir versions will raise on ' + 'unknown fields given to raise/2')))));
+                }, () => {
+                    return true;
+                })).call(this, invalid5764607523033259830)
+
+                return Elixir.Kernel.__load(Elixir).struct__emark__(struct5764607523033259830, valid5764607523033259830);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        exception,
+        __MODULE__: Symbol.for('Elixir.Inspect.Error'),
+        __info__
+    };
+
+    Elixir.Inspect.Error.__exports = __exports
 
     return __exports;
 }
@@ -7833,7 +7926,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.RuntimeError').__loa
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref8876626 = new ElixirScript.Core.Tuple(map5764607523033934690, keys5764607523033934690);
+                const _ref289819 = new ElixirScript.Core.Tuple(map5764607523033934690, keys5764607523033934690);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033934690;
@@ -7893,7 +7986,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.RuntimeError').__loa
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref1572192 = new ElixirScript.Core.Tuple(valid5764607523033935350, invalid5764607523033935350);
+                const _ref8787735 = new ElixirScript.Core.Tuple(valid5764607523033935350, invalid5764607523033935350);
 
                 ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return Symbol.for('ok');
@@ -7982,7 +8075,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Range').__load = fun
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref1442053 = new ElixirScript.Core.Tuple(map5764607523033098220, keys5764607523033098220);
+                const _ref7970557 = new ElixirScript.Core.Tuple(map5764607523033098220, keys5764607523033098220);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033098220;
@@ -8035,6 +8128,397 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Range').__load = fun
     };
 
     Elixir.Range.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Macro').__load = function(Elixir) {
+    if (Elixir.Macro.__exports)
+        return Elixir.Macro.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('camelize'), 1), new ElixirScript.Core.Tuple(Symbol.for('classify_identifier'), 1), new ElixirScript.Core.Tuple(Symbol.for('decompose_call'), 1), new ElixirScript.Core.Tuple(Symbol.for('escape'), 1), new ElixirScript.Core.Tuple(Symbol.for('escape'), 2), new ElixirScript.Core.Tuple(Symbol.for('expand'), 2), new ElixirScript.Core.Tuple(Symbol.for('expand_once'), 2), new ElixirScript.Core.Tuple(Symbol.for('generate_arguments'), 2), new ElixirScript.Core.Tuple(Symbol.for('pipe'), 3), new ElixirScript.Core.Tuple(Symbol.for('pipe_warning'), 1), new ElixirScript.Core.Tuple(Symbol.for('postwalk'), 2), new ElixirScript.Core.Tuple(Symbol.for('postwalk'), 3), new ElixirScript.Core.Tuple(Symbol.for('prewalk'), 2), new ElixirScript.Core.Tuple(Symbol.for('prewalk'), 3), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 2), new ElixirScript.Core.Tuple(Symbol.for('traverse'), 4), new ElixirScript.Core.Tuple(Symbol.for('underscore'), 1), new ElixirScript.Core.Tuple(Symbol.for('unescape_string'), 1), new ElixirScript.Core.Tuple(Symbol.for('unescape_string'), 2), new ElixirScript.Core.Tuple(Symbol.for('unescape_tokens'), 1), new ElixirScript.Core.Tuple(Symbol.for('unescape_tokens'), 2), new ElixirScript.Core.Tuple(Symbol.for('unpipe'), 1), new ElixirScript.Core.Tuple(Symbol.for('update_meta'), 2), new ElixirScript.Core.Tuple(Symbol.for('validate'), 1), new ElixirScript.Core.Tuple(Symbol.for('var'), 2)]], [Symbol.for('macros'), [new ElixirScript.Core.Tuple(Symbol.for('binary_ops'), 0), new ElixirScript.Core.Tuple(Symbol.for('unary_ops'), 0)]], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [222349112610777828672633644968841206979])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/macro.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(167), ElixirScript.Core.BitString.integer(70), ElixirScript.Core.BitString.integer(225), ElixirScript.Core.BitString.integer(163), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(213), ElixirScript.Core.BitString.integer(85), ElixirScript.Core.BitString.integer(186), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(203), ElixirScript.Core.BitString.integer(125), ElixirScript.Core.BitString.integer(173), ElixirScript.Core.BitString.integer(222), ElixirScript.Core.BitString.integer(126), ElixirScript.Core.BitString.integer(92), ElixirScript.Core.BitString.integer(195))], [Symbol.for('module'), Symbol.for('Elixir.Macro')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function classify_identifier(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('atom')], __function_args__, (atom0) => {
+                return ElixirScript.Core.erlang.is_atom(atom0);
+            })) !== null) {
+                let [atom0] = __arg_matches__;
+
+                const [charlist0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('charlist'), ElixirScript.Core.erlang.atom_to_list(atom0));
+
+                return ElixirScript.Core.SpecialForms.cond([atom0 === Symbol.for('%{}') || (atom0 === Symbol.for('{}') || (atom0 === Symbol.for('<<>>') || (atom0 === Symbol.for('...') || (atom0 === Symbol.for('..') || (atom0 === Symbol.for('.') || atom0 === Symbol.for('%')))))), () => {
+                    return Symbol.for('not_callable');
+                }], [ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([true], () => {
+                    return true;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([false], () => {
+                    return atom0 === Symbol.for('!==') || (atom0 === Symbol.for('==') || (atom0 === Symbol.for('!=') || (atom0 === Symbol.for('<=') || (atom0 === Symbol.for('>=') || (atom0 === Symbol.for('&&') || (atom0 === Symbol.for('||') || (atom0 === Symbol.for('<>') || (atom0 === Symbol.for('++') || (atom0 === Symbol.for('--') || (atom0 === Symbol.for('\\') || (atom0 === Symbol.for('::') || (atom0 === Symbol.for('<-') || (atom0 === Symbol.for('..') || (atom0 === Symbol.for('|>') || (atom0 === Symbol.for('=~') || (atom0 === Symbol.for('<') || (atom0 === Symbol.for('>') || (atom0 === Symbol.for('->') || (atom0 === Symbol.for('+') || (atom0 === Symbol.for('-') || (atom0 === Symbol.for('*') || (atom0 === Symbol.for('/') || (atom0 === Symbol.for('=') || (atom0 === Symbol.for('|') || (atom0 === Symbol.for('.') || (atom0 === Symbol.for('and') || (atom0 === Symbol.for('or') || (atom0 === Symbol.for('when') || (atom0 === Symbol.for('in') || (atom0 === Symbol.for('~>>') || (atom0 === Symbol.for('<<~') || (atom0 === Symbol.for('~>') || (atom0 === Symbol.for('<~') || (atom0 === Symbol.for('<~>') || (atom0 === Symbol.for('<|>') || (atom0 === Symbol.for('<<<') || (atom0 === Symbol.for('>>>') || (atom0 === Symbol.for('|||') || (atom0 === Symbol.for('&&&') || (atom0 === Symbol.for('^^^') || (atom0 === Symbol.for('~~~') || atom0 === Symbol.for('==='))))))))))))))))))))))))))))))))))))))))));
+                }, () => {
+                    return true;
+                })).call(this, atom0 === Symbol.for('@') || (atom0 === Symbol.for('^') || (atom0 === Symbol.for('not') || (atom0 === Symbol.for('+') || (atom0 === Symbol.for('-') || (atom0 === Symbol.for('~~~') || (atom0 === Symbol.for('&') || atom0 === Symbol.for('!')))))))), () => {
+                    return Symbol.for('callable');
+                }], [valid_alias__qmark__(charlist0), () => {
+                    return Symbol.for('alias');
+                }], [true, () => {
+                    return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                        values: [ElixirScript.Core.Patterns.variable('kind'), ElixirScript.Core.Patterns.variable('_acc'), [], ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('special')]
+                    })], (kind0, _acc0, special0) => {
+                        return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([false], () => {
+                            return Symbol.for('not_callable');
+                        }, () => {
+                            return true;
+                        }), ElixirScript.Core.Patterns.clause([true], () => {
+                            return Symbol.for('callable');
+                        }, () => {
+                            return true;
+                        })).call(this, ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([true], () => {
+                            return ElixirScript.Core.erlang.not(ElixirScript.Core.lists.member(64, special0));
+                        }, () => {
+                            return true;
+                        }), ElixirScript.Core.Patterns.clause([false], () => {
+                            return false;
+                        }, () => {
+                            return true;
+                        })).call(this, ElixirScript.Core.erlang.equals(kind0, Symbol.for('identifier'))));
+                    }, (kind0, _acc0, special0) => {
+                        return true;
+                    }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                        return Symbol.for('other');
+                    }, () => {
+                        return true;
+                    })).call(this, ElixirScript.Core.elixir_config.safe_get(Symbol.for('identifier_tokenizer'), Elixir.String.Tokenizer.__load(Elixir)).tokenize(charlist0));
+                }]);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function trim_leading_while_valid_identifier(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('char'), ElixirScript.Core.Patterns.variable('rest'))], __function_args__, (char0, rest0) => {
+                return char0 >= 97 && char0 <= 122 || char0 >= 65 && char0 <= 90 || char0 >= 48 && char0 <= 57 || ElixirScript.Core.erlang.equals(char0, 95);
+            })) !== null) {
+                let [char0, rest0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('other')], __function_args__, (other0) => {
+                return true;
+            })) !== null) {
+                let [other0] = __arg_matches__;
+
+                return other0;
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function valid_alias__qmark__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail([69, 108, 105, 120, 105, 114], ElixirScript.Core.Patterns.variable('rest'))], __function_args__, (rest0) => {
+                return true;
+            })) !== null) {
+                let [rest0] = __arg_matches__;
+
+                return valid_alias_piece__qmark__(rest0);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_other')], __function_args__, (_other0) => {
+                return true;
+            })) !== null) {
+                let [_other0] = __arg_matches__;
+
+                return false;
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function valid_alias_piece__qmark__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([[46, ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('char'), ElixirScript.Core.Patterns.variable('rest'))]], __function_args__, (char0, rest0) => {
+                return char0 >= 65 && char0 <= 90;
+            })) !== null) {
+                let [char0, rest0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, trim_leading_while_valid_identifier(rest0)));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([[]], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return true;
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_other')], __function_args__, (_other0) => {
+                return true;
+            })) !== null) {
+                let [_other0] = __arg_matches__;
+
+                return false;
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        classify_identifier,
+        __MODULE__: Symbol.for('Elixir.Macro'),
+        __info__
+    };
+
+    Elixir.Macro.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Exception').__load = function(Elixir) {
+    if (Elixir.Exception.__exports)
+        return Elixir.Exception.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('blame'), 3), new ElixirScript.Core.Tuple(Symbol.for('blame_mfa'), 3), new ElixirScript.Core.Tuple(Symbol.for('exception?'), 1), new ElixirScript.Core.Tuple(Symbol.for('format'), 2), new ElixirScript.Core.Tuple(Symbol.for('format'), 3), new ElixirScript.Core.Tuple(Symbol.for('format_banner'), 2), new ElixirScript.Core.Tuple(Symbol.for('format_banner'), 3), new ElixirScript.Core.Tuple(Symbol.for('format_exit'), 1), new ElixirScript.Core.Tuple(Symbol.for('format_fa'), 2), new ElixirScript.Core.Tuple(Symbol.for('format_file_line'), 2), new ElixirScript.Core.Tuple(Symbol.for('format_file_line'), 3), new ElixirScript.Core.Tuple(Symbol.for('format_mfa'), 3), new ElixirScript.Core.Tuple(Symbol.for('format_stacktrace'), 0), new ElixirScript.Core.Tuple(Symbol.for('format_stacktrace'), 1), new ElixirScript.Core.Tuple(Symbol.for('format_stacktrace_entry'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1), new ElixirScript.Core.Tuple(Symbol.for('normalize'), 2), new ElixirScript.Core.Tuple(Symbol.for('normalize'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [42981897892327218300758844540436993090])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(32), ElixirScript.Core.BitString.integer(86), ElixirScript.Core.BitString.integer(3), ElixirScript.Core.BitString.integer(46), ElixirScript.Core.BitString.integer(18), ElixirScript.Core.BitString.integer(66), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(231), ElixirScript.Core.BitString.integer(66), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(57), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(204), ElixirScript.Core.BitString.integer(237), ElixirScript.Core.BitString.integer(212), ElixirScript.Core.BitString.integer(66))], [Symbol.for('module'), Symbol.for('Elixir.Exception')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function message(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.capture(new Map([[Symbol.for('__struct__'), ElixirScript.Core.Patterns.variable('module')], [Symbol.for('__exception__'), true]]))], __function_args__, (module0, exception0) => {
+                return ElixirScript.Core.erlang.is_atom(module0);
+            })) !== null) {
+                let [module0, exception0] = __arg_matches__;
+
+                return ElixirScript.Core.SpecialForms._try(() => {
+                    return module0.message(exception0);
+                }, ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('e')], (e0) => {
+                    return 'got ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(ElixirScript.Core.Functions.call_property(e0, '__struct__'))) + (' with message ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(message(e0))) + ' '))) + ('while retrieving Exception.message/1 for ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(exception0)));
+                }, (e0) => {
+                    return true;
+                })), null, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x')], __function_args__, (x0) => {
+                            return ElixirScript.Core.erlang.is_binary(x0);
+                        })) !== null) {
+                            let [x0] = __arg_matches__;
+
+                            return x0;
+                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x')], __function_args__, (x0) => {
+                            return true;
+                        })) !== null) {
+                            let [x0] = __arg_matches__;
+
+                            return 'got ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(x0)) + ' ') + ('while retrieving Exception.message/1 for ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(exception0)) + ' ') + '(expected a string)');
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }, null);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        message,
+        __MODULE__: Symbol.for('Elixir.Exception'),
+        __info__
+    };
+
+    Elixir.Exception.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.KeyError').__load = function(Elixir) {
+    if (Elixir.KeyError.__exports)
+        return Elixir.KeyError.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [225082733096793300280017084026399513992]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(169), ElixirScript.Core.BitString.integer(85), ElixirScript.Core.BitString.integer(91), ElixirScript.Core.BitString.integer(137), ElixirScript.Core.BitString.integer(73), ElixirScript.Core.BitString.integer(35), ElixirScript.Core.BitString.integer(30), ElixirScript.Core.BitString.integer(46), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(88), ElixirScript.Core.BitString.integer(59), ElixirScript.Core.BitString.integer(32), ElixirScript.Core.BitString.integer(206), ElixirScript.Core.BitString.integer(192), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(136))], [Symbol.for('module'), Symbol.for('Elixir.KeyError')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.KeyError.__load(Elixir)], [Symbol.for('key'), null], [Symbol.for('term'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303358399')], __function_args__, (kv5764607523033583990) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523033583990] = __arg_matches__;
+
+                const [map5764607523033583990, keys5764607523033583990] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303358399'), ElixirScript.Core.Patterns.variable('keys576460752303358399')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033583990, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303358399'), ElixirScript.Core.Patterns.variable('val576460752303358399')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303358399'), ElixirScript.Core.Patterns.variable('keys576460752303358399')]
+                        })], __function_args__, (key5764607523033583990, val5764607523033583990, map5764607523033583990, keys5764607523033583990) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523033583990, val5764607523033583990, map5764607523033583990, keys5764607523033583990] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033583990, val5764607523033583990, map5764607523033583990), Elixir.List.__load(Elixir).__delete__(keys5764607523033583990, key5764607523033583990));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref4910466 = new ElixirScript.Core.Tuple(map5764607523033583990, keys5764607523033583990);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523033583990;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.KeyError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033583990)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523033583990);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function exception(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('args576460752303366526')], __function_args__, (args5764607523033665260) => {
+                return ElixirScript.Core.erlang.is_list(args5764607523033665260);
+            })) !== null) {
+                let [args5764607523033665260] = __arg_matches__;
+
+                const [struct5764607523033665260] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('struct576460752303366526'), __struct__());
+
+                const [valid5764607523033665260, invalid5764607523033665260] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('valid576460752303366526'), ElixirScript.Core.Patterns.variable('invalid576460752303366526')]
+                }), Elixir.Enum.__load(Elixir).split_with(args5764607523033665260, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('k576460752303366526'), ElixirScript.Core.Patterns.variable('_')]
+                        })], __function_args__, (k5764607523033665260) => {
+                            return true;
+                        })) !== null) {
+                            let [k5764607523033665260] = __arg_matches__;
+
+                            return ElixirScript.Core.maps.is_key(k5764607523033665260, struct5764607523033665260);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref6289695 = new ElixirScript.Core.Tuple(valid5764607523033665260, invalid5764607523033665260);
+
+                ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return Symbol.for('ok');
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return Elixir.IO.__load(Elixir).warn('the following fields are unknown when raising ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.KeyError.__load(Elixir))) + (': ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(invalid5764607523033665260)) + '. ')) + ('Please make sure to only give known fields when raising ' + ('or redefine ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.KeyError.__load(Elixir))) + '.exception/1 to ') + ('discard unknown fields. Future Elixir versions will raise on ' + 'unknown fields given to raise/2')))));
+                }, () => {
+                    return true;
+                })).call(this, invalid5764607523033665260)
+
+                return Elixir.Kernel.__load(Elixir).struct__emark__(struct5764607523033665260, valid5764607523033665260);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        exception,
+        __MODULE__: Symbol.for('Elixir.KeyError'),
+        __info__
+    };
+
+    Elixir.KeyError.__exports = __exports
 
     return __exports;
 }
@@ -8205,12 +8689,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Process').__load = f
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Exception').__load = function(Elixir) {
-    if (Elixir.Exception.__exports)
-        return Elixir.Exception.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Stream').__load = function(Elixir) {
+    if (Elixir.Enumerable.Stream.__exports)
+        return Elixir.Enumerable.Stream.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('blame'), 3), new ElixirScript.Core.Tuple(Symbol.for('blame_mfa'), 3), new ElixirScript.Core.Tuple(Symbol.for('exception?'), 1), new ElixirScript.Core.Tuple(Symbol.for('format'), 2), new ElixirScript.Core.Tuple(Symbol.for('format'), 3), new ElixirScript.Core.Tuple(Symbol.for('format_banner'), 2), new ElixirScript.Core.Tuple(Symbol.for('format_banner'), 3), new ElixirScript.Core.Tuple(Symbol.for('format_exit'), 1), new ElixirScript.Core.Tuple(Symbol.for('format_fa'), 2), new ElixirScript.Core.Tuple(Symbol.for('format_file_line'), 2), new ElixirScript.Core.Tuple(Symbol.for('format_file_line'), 3), new ElixirScript.Core.Tuple(Symbol.for('format_mfa'), 3), new ElixirScript.Core.Tuple(Symbol.for('format_stacktrace'), 0), new ElixirScript.Core.Tuple(Symbol.for('format_stacktrace'), 1), new ElixirScript.Core.Tuple(Symbol.for('format_stacktrace_entry'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1), new ElixirScript.Core.Tuple(Symbol.for('normalize'), 2), new ElixirScript.Core.Tuple(Symbol.for('normalize'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [42981897892327218300758844540436993090])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(32), ElixirScript.Core.BitString.integer(86), ElixirScript.Core.BitString.integer(3), ElixirScript.Core.BitString.integer(46), ElixirScript.Core.BitString.integer(18), ElixirScript.Core.BitString.integer(66), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(231), ElixirScript.Core.BitString.integer(66), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(57), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(204), ElixirScript.Core.BitString.integer(237), ElixirScript.Core.BitString.integer(212), ElixirScript.Core.BitString.integer(66))], [Symbol.for('module'), Symbol.for('Elixir.Exception')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [63519441553498825043520250837129339823]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Stream.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/stream.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(47), ElixirScript.Core.BitString.integer(201), ElixirScript.Core.BitString.integer(102), ElixirScript.Core.BitString.integer(66), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(193), ElixirScript.Core.BitString.integer(101), ElixirScript.Core.BitString.integer(221), ElixirScript.Core.BitString.integer(147), ElixirScript.Core.BitString.integer(161), ElixirScript.Core.BitString.integer(56), ElixirScript.Core.BitString.integer(203), ElixirScript.Core.BitString.integer(110), ElixirScript.Core.BitString.integer(157), ElixirScript.Core.BitString.integer(163), ElixirScript.Core.BitString.integer(175))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.Stream')]]);
 
         const value = __info__map__.get(kind);
 
@@ -8221,39 +8705,639 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Exception').__load =
         throw new ElixirScript.Core.Patterns.MatchError(kind);
     }
 
-    function message(...__function_args__) {
+    function __impl__(...__function_args__) {
         function recur(...__function_args__) {
             let __arg_matches__ = null;
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.capture(new Map([[Symbol.for('__struct__'), ElixirScript.Core.Patterns.variable('module')], [Symbol.for('__exception__'), true]]))], __function_args__, (module0, exception0) => {
-                return ElixirScript.Core.erlang.is_atom(module0);
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
             })) !== null) {
-                let [module0, exception0] = __arg_matches__;
+                let [] = __arg_matches__;
+
+                return Elixir.Stream.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Enumerable.Stream.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Enumerable.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function count(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_lazy')], __function_args__, (_lazy0) => {
+                return true;
+            })) !== null) {
+                let [_lazy0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('error'), Elixir.Enumerable.Stream.__load(Elixir));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function do_done(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [ElixirScript.Core.Patterns.variable('reason'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('_'))]
+            }), null], __function_args__, (reason0, acc0) => {
+                return true;
+            })) !== null) {
+                let [reason0, acc0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(reason0, acc0);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [ElixirScript.Core.Patterns.variable('reason'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('t'))]
+            }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [ElixirScript.Core.Patterns.variable('done'), ElixirScript.Core.Patterns.variable('fun')]
+            })], __function_args__, (reason0, acc0, t0, done0, fun0) => {
+                return true;
+            })) !== null) {
+                let [reason0, acc0, t0, done0, fun0] = __arg_matches__;
+
+                const [h0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('h'), ElixirScript.Core.Patterns.variable('_')), Elixir.Enum.__load(Elixir).reverse(t0));
+
+                const _ref7519265 = [h0];
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [Symbol.for('cont'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('_'))]
+                })], (acc1) => {
+                    return new ElixirScript.Core.Tuple(reason0, acc1);
+                }, (acc1) => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [Symbol.for('halt'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('_'))]
+                })], (acc1) => {
+                    return new ElixirScript.Core.Tuple(Symbol.for('halted'), acc1);
+                }, (acc1) => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [Symbol.for('suspend'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('_'))]
+                })], (acc1) => {
+                    return new ElixirScript.Core.Tuple(Symbol.for('suspended'), acc1, (...__function_args__) => {
+                        function recur(...__function_args__) {
+                            let __arg_matches__ = null;
+
+                            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x10) => {
+                                return true;
+                            })) !== null) {
+                                let [x10] = __arg_matches__;
+
+                                return new ElixirScript.Core.Tuple(Symbol.for('done'), ElixirScript.Core.erlang.element(2, x10));
+                            }
+
+                            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                        }
+
+                        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                    });
+                }, (acc1) => {
+                    return true;
+                })).call(this, done0([acc0, h0], fun0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function do_each(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('reduce'), ElixirScript.Core.Patterns.variable('done'), ElixirScript.Core.Patterns.variable('accs'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [ElixirScript.Core.Patterns.variable('command'), ElixirScript.Core.Patterns.variable('acc')]
+            })], __function_args__, (reduce0, done0, accs0, command0, acc0) => {
+                return true;
+            })) !== null) {
+                let [reduce0, done0, accs0, command0, acc0] = __arg_matches__;
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [Symbol.for('suspended'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('accs')), ElixirScript.Core.Patterns.variable('continuation')]
+                })], (acc1, accs1, continuation0) => {
+                    return new ElixirScript.Core.Tuple(Symbol.for('suspended'), acc1, (...__function_args__) => {
+                        function recur(...__function_args__) {
+                            let __arg_matches__ = null;
+
+                            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x10) => {
+                                return true;
+                            })) !== null) {
+                                let [x10] = __arg_matches__;
+
+                                return do_each(continuation0, done0, accs1, x10);
+                            }
+
+                            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                        }
+
+                        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                    });
+                }, (acc1, accs1, continuation0) => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [Symbol.for('halted'), ElixirScript.Core.Patterns.variable('accs')]
+                })], (accs1) => {
+                    return do_done(new ElixirScript.Core.Tuple(Symbol.for('halted'), accs1), done0);
+                }, (accs1) => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [Symbol.for('done'), ElixirScript.Core.Patterns.variable('accs')]
+                })], (accs1) => {
+                    return do_done(new ElixirScript.Core.Tuple(Symbol.for('done'), accs1), done0);
+                }, (accs1) => {
+                    return true;
+                })).call(this, reduce0(new ElixirScript.Core.Tuple(command0, ElixirScript.Core.Functions.concat(acc0, accs0))));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function do_reduce(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
+                __MODULE__: Symbol.for('Elixir.Stream')
+            }], [Symbol.for('enum'), ElixirScript.Core.Patterns.variable('enum')], [Symbol.for('funs'), ElixirScript.Core.Patterns.variable('funs')], [Symbol.for('accs'), ElixirScript.Core.Patterns.variable('accs')], [Symbol.for('done'), ElixirScript.Core.Patterns.variable('done')]]), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (enum0, funs0, accs0, done0, acc0, fun0) => {
+                return true;
+            })) !== null) {
+                let [enum0, funs0, accs0, done0, acc0, fun0] = __arg_matches__;
+
+                const [composed0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('composed'), ElixirScript.Core.lists.foldl((...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('fun'), ElixirScript.Core.Patterns.variable('acc')], __function_args__, (fun1, acc1) => {
+                            return true;
+                        })) !== null) {
+                            let [fun1, acc1] = __arg_matches__;
+
+                            return fun1(acc1);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }, fun0, funs0));
+
+                return do_each((...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x10) => {
+                            return true;
+                        })) !== null) {
+                            let [x10] = __arg_matches__;
+
+                            return Elixir.Enumerable.__load(Elixir).reduce(enum0, x10, composed0);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }, ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303290975')], (x5764607523032909750) => {
+                    return x5764607523032909750;
+                }, (x5764607523032909750) => {
+                    return x5764607523032909750 === null || x5764607523032909750 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return new ElixirScript.Core.Tuple(done0, fun0);
+                }, () => {
+                    return true;
+                })).call(this, done0), ElixirScript.Core.lists.reverse(accs0), acc0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function member__qmark__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_lazy'), ElixirScript.Core.Patterns.variable('_value')], __function_args__, (_lazy0, _value0) => {
+                return true;
+            })) !== null) {
+                let [_lazy0, _value0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('error'), Elixir.Enumerable.Stream.__load(Elixir));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function reduce(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('lazy'), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (lazy0, acc0, fun0) => {
+                return true;
+            })) !== null) {
+                let [lazy0, acc0, fun0] = __arg_matches__;
+
+                return do_reduce(lazy0, acc0, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x'), [ElixirScript.Core.Patterns.variable('acc')]], __function_args__, (x0, acc1) => {
+                            return true;
+                        })) !== null) {
+                            let [x0, acc1] = __arg_matches__;
+
+                            const [reason0, acc2] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                                values: [ElixirScript.Core.Patterns.variable('reason'), ElixirScript.Core.Patterns.variable('acc')]
+                            }), fun0(x0, acc1));
+
+                            const _ref2329480 = new ElixirScript.Core.Tuple(reason0, acc2);
+
+                            return new ElixirScript.Core.Tuple(reason0, [acc2]);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                });
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        count,
+        member__qmark__,
+        reduce,
+        __MODULE__: Symbol.for('Elixir.Enumerable.Stream'),
+        __info__
+    };
+
+    Elixir.Enumerable.Stream.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Opts').__load = function(Elixir) {
+    if (Elixir.Inspect.Opts.__exports)
+        return Elixir.Inspect.Opts.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [96986139011258206525641885334460402642])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/inspect/algebra.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(72), ElixirScript.Core.BitString.integer(246), ElixirScript.Core.BitString.integer(217), ElixirScript.Core.BitString.integer(214), ElixirScript.Core.BitString.integer(161), ElixirScript.Core.BitString.integer(5), ElixirScript.Core.BitString.integer(168), ElixirScript.Core.BitString.integer(56), ElixirScript.Core.BitString.integer(193), ElixirScript.Core.BitString.integer(250), ElixirScript.Core.BitString.integer(117), ElixirScript.Core.BitString.integer(197), ElixirScript.Core.BitString.integer(249), ElixirScript.Core.BitString.integer(223), ElixirScript.Core.BitString.integer(139), ElixirScript.Core.BitString.integer(210))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Opts')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__struct__'), Elixir.Inspect.Opts.__load(Elixir)], [Symbol.for('base'), Symbol.for('decimal')], [Symbol.for('binaries'), Symbol.for('infer')], [Symbol.for('char_lists'), Symbol.for('infer')], [Symbol.for('charlists'), Symbol.for('infer')], [Symbol.for('limit'), 50], [Symbol.for('pretty'), false], [Symbol.for('printable_limit'), 4096], [Symbol.for('safe'), true], [Symbol.for('structs'), true], [Symbol.for('syntax_colors'), []], [Symbol.for('width'), 80]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303381052')], __function_args__, (kv5764607523033810520) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523033810520] = __arg_matches__;
+
+                const [map5764607523033810520, keys5764607523033810520] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303381052'), ElixirScript.Core.Patterns.variable('keys576460752303381052')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033810520, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303381052'), ElixirScript.Core.Patterns.variable('val576460752303381052')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303381052'), ElixirScript.Core.Patterns.variable('keys576460752303381052')]
+                        })], __function_args__, (key5764607523033810520, val5764607523033810520, map5764607523033810520, keys5764607523033810520) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523033810520, val5764607523033810520, map5764607523033810520, keys5764607523033810520] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033810520, val5764607523033810520, map5764607523033810520), Elixir.List.__load(Elixir).__delete__(keys5764607523033810520, key5764607523033810520));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref673622 = new ElixirScript.Core.Tuple(map5764607523033810520, keys5764607523033810520);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523033810520;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Inspect.Opts.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033810520)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523033810520);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        __MODULE__: Symbol.for('Elixir.Inspect.Opts'),
+        __info__
+    };
+
+    Elixir.Inspect.Opts.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.UnicodeConversionError').__load = function(Elixir) {
+    if (Elixir.UnicodeConversionError.__exports)
+        return Elixir.UnicodeConversionError.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [106689219470822811067429209522873096068]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(80), ElixirScript.Core.BitString.integer(67), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(163), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(55), ElixirScript.Core.BitString.integer(158), ElixirScript.Core.BitString.integer(183), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(61), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(106), ElixirScript.Core.BitString.integer(51), ElixirScript.Core.BitString.integer(28), ElixirScript.Core.BitString.integer(215), ElixirScript.Core.BitString.integer(132))], [Symbol.for('module'), Symbol.for('Elixir.UnicodeConversionError')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.UnicodeConversionError.__load(Elixir)], [Symbol.for('encoded'), null], [Symbol.for('message'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303364956')], __function_args__, (kv5764607523033649560) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523033649560] = __arg_matches__;
+
+                const [map5764607523033649560, keys5764607523033649560] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303364956'), ElixirScript.Core.Patterns.variable('keys576460752303364956')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033649560, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303364956'), ElixirScript.Core.Patterns.variable('val576460752303364956')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303364956'), ElixirScript.Core.Patterns.variable('keys576460752303364956')]
+                        })], __function_args__, (key5764607523033649560, val5764607523033649560, map5764607523033649560, keys5764607523033649560) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523033649560, val5764607523033649560, map5764607523033649560, keys5764607523033649560] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033649560, val5764607523033649560, map5764607523033649560), Elixir.List.__load(Elixir).__delete__(keys5764607523033649560, key5764607523033649560));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref6348245 = new ElixirScript.Core.Tuple(map5764607523033649560, keys5764607523033649560);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523033649560;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.UnicodeConversionError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033649560)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523033649560);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function detail(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('rest')], __function_args__, (rest0) => {
+                return ElixirScript.Core.erlang.is_binary(rest0);
+            })) !== null) {
+                let [rest0] = __arg_matches__;
+
+                return 'encoding starting at ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(rest0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('h'), ElixirScript.Core.Patterns.variable('_'))], __function_args__, (h0) => {
+                return ElixirScript.Core.erlang.is_integer(h0);
+            })) !== null) {
+                let [h0] = __arg_matches__;
+
+                return 'code point ' + Elixir.String.Chars.__load(Elixir).to_string(h0);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('h'), ElixirScript.Core.Patterns.variable('_'))], __function_args__, (h0) => {
+                return true;
+            })) !== null) {
+                let [h0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, h0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function exception(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('opts')], __function_args__, (opts0) => {
+                return true;
+            })) !== null) {
+                let [opts0] = __arg_matches__;
+
+                return Elixir.UnicodeConversionError.__load(Elixir).__struct__(new Map([[Symbol.for('__exception__'), true], [Symbol.for('encoded'), Elixir.Keyword.__load(Elixir).fetch__emark__(opts0, Symbol.for('encoded'))], [Symbol.for('message'), Elixir.String.Chars.__load(Elixir).to_string(Elixir.Keyword.__load(Elixir).fetch__emark__(opts0, Symbol.for('kind'))) + (' ' + Elixir.String.Chars.__load(Elixir).to_string(detail(Elixir.Keyword.__load(Elixir).fetch__emark__(opts0, Symbol.for('rest')))))]]));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        exception,
+        __MODULE__: Symbol.for('Elixir.UnicodeConversionError'),
+        __info__
+    };
+
+    Elixir.UnicodeConversionError.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.List').__load = function(Elixir) {
+    if (Elixir.List.__exports)
+        return Elixir.List.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('delete'), 2), new ElixirScript.Core.Tuple(Symbol.for('delete_at'), 2), new ElixirScript.Core.Tuple(Symbol.for('duplicate'), 2), new ElixirScript.Core.Tuple(Symbol.for('first'), 1), new ElixirScript.Core.Tuple(Symbol.for('flatten'), 1), new ElixirScript.Core.Tuple(Symbol.for('flatten'), 2), new ElixirScript.Core.Tuple(Symbol.for('foldl'), 3), new ElixirScript.Core.Tuple(Symbol.for('foldr'), 3), new ElixirScript.Core.Tuple(Symbol.for('insert_at'), 3), new ElixirScript.Core.Tuple(Symbol.for('keydelete'), 3), new ElixirScript.Core.Tuple(Symbol.for('keyfind'), 3), new ElixirScript.Core.Tuple(Symbol.for('keyfind'), 4), new ElixirScript.Core.Tuple(Symbol.for('keymember?'), 3), new ElixirScript.Core.Tuple(Symbol.for('keyreplace'), 4), new ElixirScript.Core.Tuple(Symbol.for('keysort'), 2), new ElixirScript.Core.Tuple(Symbol.for('keystore'), 4), new ElixirScript.Core.Tuple(Symbol.for('keytake'), 3), new ElixirScript.Core.Tuple(Symbol.for('last'), 1), new ElixirScript.Core.Tuple(Symbol.for('myers_difference'), 2), new ElixirScript.Core.Tuple(Symbol.for('pop_at'), 2), new ElixirScript.Core.Tuple(Symbol.for('pop_at'), 3), new ElixirScript.Core.Tuple(Symbol.for('replace_at'), 3), new ElixirScript.Core.Tuple(Symbol.for('starts_with?'), 2), new ElixirScript.Core.Tuple(Symbol.for('to_atom'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_existing_atom'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_float'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_integer'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_integer'), 2), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_tuple'), 1), new ElixirScript.Core.Tuple(Symbol.for('update_at'), 3), new ElixirScript.Core.Tuple(Symbol.for('wrap'), 1), new ElixirScript.Core.Tuple(Symbol.for('zip'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [183401522195816640451078958454226739597])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/list.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(137), ElixirScript.Core.BitString.integer(249), ElixirScript.Core.BitString.integer(217), ElixirScript.Core.BitString.integer(45), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(197), ElixirScript.Core.BitString.integer(79), ElixirScript.Core.BitString.integer(84), ElixirScript.Core.BitString.integer(7), ElixirScript.Core.BitString.integer(135), ElixirScript.Core.BitString.integer(36), ElixirScript.Core.BitString.integer(14), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(94), ElixirScript.Core.BitString.integer(225), ElixirScript.Core.BitString.integer(141))], [Symbol.for('module'), Symbol.for('Elixir.List')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __delete__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('item'), ElixirScript.Core.Patterns.variable('list')), ElixirScript.Core.Patterns.variable('item')], __function_args__, (item0, list0, item1) => {
+                return true;
+            })) !== null) {
+                let [item0, list0, item1] = __arg_matches__;
+
+                return list0;
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('other'), ElixirScript.Core.Patterns.variable('list')), ElixirScript.Core.Patterns.variable('item')], __function_args__, (other0, list0, item0) => {
+                return true;
+            })) !== null) {
+                let [other0, list0, item0] = __arg_matches__;
+
+                return ElixirScript.Core.Functions.concat(other0, __delete__(list0, item0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([[], ElixirScript.Core.Patterns.variable('_item')], __function_args__, (_item0) => {
+                return true;
+            })) !== null) {
+                let [_item0] = __arg_matches__;
+
+                return [];
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function to_string(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('list')], __function_args__, (list0) => {
+                return ElixirScript.Core.erlang.is_list(list0);
+            })) !== null) {
+                let [list0] = __arg_matches__;
 
                 return ElixirScript.Core.SpecialForms._try(() => {
-                    return module0.message(exception0);
-                }, ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('e')], (e0) => {
-                    return 'got ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(ElixirScript.Core.Functions.call_property(e0, '__struct__'))) + (' with message ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(message(e0))) + ' '))) + ('while retrieving Exception.message/1 for ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(exception0)));
-                }, (e0) => {
-                    return true;
+                    return ElixirScript.Core.unicode.characters_to_binary(list0);
+                }, ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('cannot convert the given list to a string.\n\nTo be converted to a string, a list must contain only:\n\n  * strings\n  * integers representing Unicode codepoints\n  * or a list containing one of these three elements\n\nPlease check the given list or call inspect/1 to get the list representation, got:\n\n' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(list0)) + '\n')));
+                }, () => {
+                    return Elixir.Enum.__load(Elixir).member__qmark__(_, [Elixir.ArgumentError.__load(Elixir)]);
                 })), null, (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
 
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x')], __function_args__, (x0) => {
-                            return ElixirScript.Core.erlang.is_binary(x0);
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('result')], __function_args__, (result0) => {
+                            return ElixirScript.Core.erlang.is_binary(result0);
                         })) !== null) {
-                            let [x0] = __arg_matches__;
+                            let [result0] = __arg_matches__;
 
-                            return x0;
-                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x')], __function_args__, (x0) => {
+                            return result0;
+                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [Symbol.for('error'), ElixirScript.Core.Patterns.variable('encoded'), ElixirScript.Core.Patterns.variable('rest')]
+                        })], __function_args__, (encoded0, rest0) => {
                             return true;
                         })) !== null) {
-                            let [x0] = __arg_matches__;
+                            let [encoded0, rest0] = __arg_matches__;
 
-                            return 'got ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(x0)) + ' ') + ('while retrieving Exception.message/1 for ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(exception0)) + ' ') + '(expected a string)');
+                            return ElixirScript.Core.erlang.error(Elixir.UnicodeConversionError.__load(Elixir).exception([new ElixirScript.Core.Tuple(Symbol.for('encoded'), encoded0), new ElixirScript.Core.Tuple(Symbol.for('rest'), rest0), new ElixirScript.Core.Tuple(Symbol.for('kind'), Symbol.for('invalid'))]));
+                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [Symbol.for('incomplete'), ElixirScript.Core.Patterns.variable('encoded'), ElixirScript.Core.Patterns.variable('rest')]
+                        })], __function_args__, (encoded0, rest0) => {
+                            return true;
+                        })) !== null) {
+                            let [encoded0, rest0] = __arg_matches__;
+
+                            return ElixirScript.Core.erlang.error(Elixir.UnicodeConversionError.__load(Elixir).exception([new ElixirScript.Core.Tuple(Symbol.for('encoded'), encoded0), new ElixirScript.Core.Tuple(Symbol.for('rest'), rest0), new ElixirScript.Core.Tuple(Symbol.for('kind'), Symbol.for('incomplete'))]));
                         }
 
                         throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -8270,12 +9354,13 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Exception').__load =
     }
 
     const __exports = {
-        message,
-        __MODULE__: Symbol.for('Elixir.Exception'),
+        __delete__,
+        to_string,
+        __MODULE__: Symbol.for('Elixir.List'),
         __info__
     };
 
-    Elixir.Exception.__exports = __exports
+    Elixir.List.__exports = __exports
 
     return __exports;
 }
@@ -8336,7 +9421,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Stream').__load = fu
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref4001442 = new ElixirScript.Core.Tuple(map5764607523033020780, keys5764607523033020780);
+                const _ref7496014 = new ElixirScript.Core.Tuple(map5764607523033020780, keys5764607523033020780);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033020780;
@@ -8816,186 +9901,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Stream').__load = fu
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Macro').__load = function(Elixir) {
-    if (Elixir.Macro.__exports)
-        return Elixir.Macro.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Map').__load = function(Elixir) {
+    if (Elixir.Inspect.Map.__exports)
+        return Elixir.Inspect.Map.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('camelize'), 1), new ElixirScript.Core.Tuple(Symbol.for('classify_identifier'), 1), new ElixirScript.Core.Tuple(Symbol.for('decompose_call'), 1), new ElixirScript.Core.Tuple(Symbol.for('escape'), 1), new ElixirScript.Core.Tuple(Symbol.for('escape'), 2), new ElixirScript.Core.Tuple(Symbol.for('expand'), 2), new ElixirScript.Core.Tuple(Symbol.for('expand_once'), 2), new ElixirScript.Core.Tuple(Symbol.for('generate_arguments'), 2), new ElixirScript.Core.Tuple(Symbol.for('pipe'), 3), new ElixirScript.Core.Tuple(Symbol.for('pipe_warning'), 1), new ElixirScript.Core.Tuple(Symbol.for('postwalk'), 2), new ElixirScript.Core.Tuple(Symbol.for('postwalk'), 3), new ElixirScript.Core.Tuple(Symbol.for('prewalk'), 2), new ElixirScript.Core.Tuple(Symbol.for('prewalk'), 3), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 2), new ElixirScript.Core.Tuple(Symbol.for('traverse'), 4), new ElixirScript.Core.Tuple(Symbol.for('underscore'), 1), new ElixirScript.Core.Tuple(Symbol.for('unescape_string'), 1), new ElixirScript.Core.Tuple(Symbol.for('unescape_string'), 2), new ElixirScript.Core.Tuple(Symbol.for('unescape_tokens'), 1), new ElixirScript.Core.Tuple(Symbol.for('unescape_tokens'), 2), new ElixirScript.Core.Tuple(Symbol.for('unpipe'), 1), new ElixirScript.Core.Tuple(Symbol.for('update_meta'), 2), new ElixirScript.Core.Tuple(Symbol.for('validate'), 1), new ElixirScript.Core.Tuple(Symbol.for('var'), 2)]], [Symbol.for('macros'), [new ElixirScript.Core.Tuple(Symbol.for('binary_ops'), 0), new ElixirScript.Core.Tuple(Symbol.for('unary_ops'), 0)]], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [222349112610777828672633644968841206979])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/macro.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(167), ElixirScript.Core.BitString.integer(70), ElixirScript.Core.BitString.integer(225), ElixirScript.Core.BitString.integer(163), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(213), ElixirScript.Core.BitString.integer(85), ElixirScript.Core.BitString.integer(186), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(203), ElixirScript.Core.BitString.integer(125), ElixirScript.Core.BitString.integer(173), ElixirScript.Core.BitString.integer(222), ElixirScript.Core.BitString.integer(126), ElixirScript.Core.BitString.integer(92), ElixirScript.Core.BitString.integer(195))], [Symbol.for('module'), Symbol.for('Elixir.Macro')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function classify_identifier(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('atom')], __function_args__, (atom0) => {
-                return ElixirScript.Core.erlang.is_atom(atom0);
-            })) !== null) {
-                let [atom0] = __arg_matches__;
-
-                const [charlist0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('charlist'), ElixirScript.Core.erlang.atom_to_list(atom0));
-
-                return ElixirScript.Core.SpecialForms.cond([atom0 === Symbol.for('%{}') || (atom0 === Symbol.for('{}') || (atom0 === Symbol.for('<<>>') || (atom0 === Symbol.for('...') || (atom0 === Symbol.for('..') || (atom0 === Symbol.for('.') || atom0 === Symbol.for('%')))))), () => {
-                    return Symbol.for('not_callable');
-                }], [ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([true], () => {
-                    return true;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([false], () => {
-                    return atom0 === Symbol.for('!==') || (atom0 === Symbol.for('==') || (atom0 === Symbol.for('!=') || (atom0 === Symbol.for('<=') || (atom0 === Symbol.for('>=') || (atom0 === Symbol.for('&&') || (atom0 === Symbol.for('||') || (atom0 === Symbol.for('<>') || (atom0 === Symbol.for('++') || (atom0 === Symbol.for('--') || (atom0 === Symbol.for('\\') || (atom0 === Symbol.for('::') || (atom0 === Symbol.for('<-') || (atom0 === Symbol.for('..') || (atom0 === Symbol.for('|>') || (atom0 === Symbol.for('=~') || (atom0 === Symbol.for('<') || (atom0 === Symbol.for('>') || (atom0 === Symbol.for('->') || (atom0 === Symbol.for('+') || (atom0 === Symbol.for('-') || (atom0 === Symbol.for('*') || (atom0 === Symbol.for('/') || (atom0 === Symbol.for('=') || (atom0 === Symbol.for('|') || (atom0 === Symbol.for('.') || (atom0 === Symbol.for('and') || (atom0 === Symbol.for('or') || (atom0 === Symbol.for('when') || (atom0 === Symbol.for('in') || (atom0 === Symbol.for('~>>') || (atom0 === Symbol.for('<<~') || (atom0 === Symbol.for('~>') || (atom0 === Symbol.for('<~') || (atom0 === Symbol.for('<~>') || (atom0 === Symbol.for('<|>') || (atom0 === Symbol.for('<<<') || (atom0 === Symbol.for('>>>') || (atom0 === Symbol.for('|||') || (atom0 === Symbol.for('&&&') || (atom0 === Symbol.for('^^^') || (atom0 === Symbol.for('~~~') || atom0 === Symbol.for('==='))))))))))))))))))))))))))))))))))))))))));
-                }, () => {
-                    return true;
-                })).call(this, atom0 === Symbol.for('@') || (atom0 === Symbol.for('^') || (atom0 === Symbol.for('not') || (atom0 === Symbol.for('+') || (atom0 === Symbol.for('-') || (atom0 === Symbol.for('~~~') || (atom0 === Symbol.for('&') || atom0 === Symbol.for('!')))))))), () => {
-                    return Symbol.for('callable');
-                }], [valid_alias__qmark__(charlist0), () => {
-                    return Symbol.for('alias');
-                }], [true, () => {
-                    return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                        values: [ElixirScript.Core.Patterns.variable('kind'), ElixirScript.Core.Patterns.variable('_acc'), [], ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('special')]
-                    })], (kind0, _acc0, special0) => {
-                        return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([false], () => {
-                            return Symbol.for('not_callable');
-                        }, () => {
-                            return true;
-                        }), ElixirScript.Core.Patterns.clause([true], () => {
-                            return Symbol.for('callable');
-                        }, () => {
-                            return true;
-                        })).call(this, ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([true], () => {
-                            return ElixirScript.Core.erlang.not(ElixirScript.Core.lists.member(64, special0));
-                        }, () => {
-                            return true;
-                        }), ElixirScript.Core.Patterns.clause([false], () => {
-                            return false;
-                        }, () => {
-                            return true;
-                        })).call(this, ElixirScript.Core.erlang.equals(kind0, Symbol.for('identifier'))));
-                    }, (kind0, _acc0, special0) => {
-                        return true;
-                    }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                        return Symbol.for('other');
-                    }, () => {
-                        return true;
-                    })).call(this, ElixirScript.Core.elixir_config.safe_get(Symbol.for('identifier_tokenizer'), Elixir.String.Tokenizer.__load(Elixir)).tokenize(charlist0));
-                }]);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function trim_leading_while_valid_identifier(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('char'), ElixirScript.Core.Patterns.variable('rest'))], __function_args__, (char0, rest0) => {
-                return char0 >= 97 && char0 <= 122 || char0 >= 65 && char0 <= 90 || char0 >= 48 && char0 <= 57 || ElixirScript.Core.erlang.equals(char0, 95);
-            })) !== null) {
-                let [char0, rest0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('other')], __function_args__, (other0) => {
-                return true;
-            })) !== null) {
-                let [other0] = __arg_matches__;
-
-                return other0;
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function valid_alias__qmark__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail([69, 108, 105, 120, 105, 114], ElixirScript.Core.Patterns.variable('rest'))], __function_args__, (rest0) => {
-                return true;
-            })) !== null) {
-                let [rest0] = __arg_matches__;
-
-                return valid_alias_piece__qmark__(rest0);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_other')], __function_args__, (_other0) => {
-                return true;
-            })) !== null) {
-                let [_other0] = __arg_matches__;
-
-                return false;
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function valid_alias_piece__qmark__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([[46, ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('char'), ElixirScript.Core.Patterns.variable('rest'))]], __function_args__, (char0, rest0) => {
-                return char0 >= 65 && char0 <= 90;
-            })) !== null) {
-                let [char0, rest0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, trim_leading_while_valid_identifier(rest0)));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([[]], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return true;
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_other')], __function_args__, (_other0) => {
-                return true;
-            })) !== null) {
-                let [_other0] = __arg_matches__;
-
-                return false;
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        classify_identifier,
-        __MODULE__: Symbol.for('Elixir.Macro'),
-        __info__
-    };
-
-    Elixir.Macro.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Stream').__load = function(Elixir) {
-    if (Elixir.Enumerable.Stream.__exports)
-        return Elixir.Enumerable.Stream.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [63519441553498825043520250837129339823]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Stream.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/stream.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(47), ElixirScript.Core.BitString.integer(201), ElixirScript.Core.BitString.integer(102), ElixirScript.Core.BitString.integer(66), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(193), ElixirScript.Core.BitString.integer(101), ElixirScript.Core.BitString.integer(221), ElixirScript.Core.BitString.integer(147), ElixirScript.Core.BitString.integer(161), ElixirScript.Core.BitString.integer(56), ElixirScript.Core.BitString.integer(203), ElixirScript.Core.BitString.integer(110), ElixirScript.Core.BitString.integer(157), ElixirScript.Core.BitString.integer(163), ElixirScript.Core.BitString.integer(175))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.Stream')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [327352431873059261457275411920229861072]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Map.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/inspect.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(246), ElixirScript.Core.BitString.integer(69), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(251), ElixirScript.Core.BitString.integer(189), ElixirScript.Core.BitString.integer(40), ElixirScript.Core.BitString.integer(107), ElixirScript.Core.BitString.integer(163), ElixirScript.Core.BitString.integer(181), ElixirScript.Core.BitString.integer(151), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(117), ElixirScript.Core.BitString.integer(217), ElixirScript.Core.BitString.integer(134), ElixirScript.Core.BitString.integer(208))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Map')]]);
 
         const value = __info__map__.get(kind);
 
@@ -9017,19 +9928,19 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Stream').
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Stream.__load(Elixir);
+                return Elixir.Map.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Enumerable.Stream.__load(Elixir);
+                return Elixir.Inspect.Map.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Enumerable.__load(Elixir);
+                return Elixir.Inspect.__load(Elixir);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -9038,18 +9949,32 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Stream').
         return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
     }
 
-    function count(...__function_args__) {
+    function inspect(...__function_args__) {
         function recur(...__function_args__) {
             let __arg_matches__ = null;
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_lazy')], __function_args__, (_lazy0) => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (map0, opts0) => {
                 return true;
             })) !== null) {
-                let [_lazy0] = __arg_matches__;
+                let [map0, opts0] = __arg_matches__;
 
-                return new ElixirScript.Core.Tuple(Symbol.for('error'), Elixir.Enumerable.Stream.__load(Elixir));
+                return Elixir.Inspect.Algebra.__load(Elixir).nest(inspect(map0, '', opts0), 1);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map'), ElixirScript.Core.Patterns.variable('name'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (map0, name0, opts0) => {
+                return true;
+            })) !== null) {
+                let [map0, name0, opts0] = __arg_matches__;
+
+                const [map1] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('map'), ElixirScript.Core.maps.to_list(map0));
+
+                const [open0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('open'), Elixir.Inspect.Algebra.__load(Elixir).color('%' + (name0 + '{'), Symbol.for('map'), opts0));
+
+                const [sep0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('sep'), Elixir.Inspect.Algebra.__load(Elixir).color(',', Symbol.for('map'), opts0));
+
+                const [close0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('close'), Elixir.Inspect.Algebra.__load(Elixir).color('}', Symbol.for('map'), opts0));
+
+                return Elixir.Inspect.Algebra.__load(Elixir).surround_many(open0, map1, close0, opts0, traverse_fun(map1, opts0), sep0);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -9058,68 +9983,20 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Stream').
         return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
     }
 
-    function do_done(...__function_args__) {
+    function to_map(...__function_args__) {
         function recur(...__function_args__) {
             let __arg_matches__ = null;
 
             let __intermediate__ = null;
 
             if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [ElixirScript.Core.Patterns.variable('reason'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('_'))]
-            }), null], __function_args__, (reason0, acc0) => {
+                values: [ElixirScript.Core.Patterns.variable('key'), ElixirScript.Core.Patterns.variable('value')]
+            }), ElixirScript.Core.Patterns.variable('opts'), ElixirScript.Core.Patterns.variable('sep')], __function_args__, (key0, value0, opts0, sep0) => {
                 return true;
             })) !== null) {
-                let [reason0, acc0] = __arg_matches__;
+                let [key0, value0, opts0, sep0] = __arg_matches__;
 
-                return new ElixirScript.Core.Tuple(reason0, acc0);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [ElixirScript.Core.Patterns.variable('reason'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('t'))]
-            }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [ElixirScript.Core.Patterns.variable('done'), ElixirScript.Core.Patterns.variable('fun')]
-            })], __function_args__, (reason0, acc0, t0, done0, fun0) => {
-                return true;
-            })) !== null) {
-                let [reason0, acc0, t0, done0, fun0] = __arg_matches__;
-
-                const [h0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('h'), ElixirScript.Core.Patterns.variable('_')), Elixir.Enum.__load(Elixir).reverse(t0));
-
-                const _ref5557948 = [h0];
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [Symbol.for('cont'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('_'))]
-                })], (acc1) => {
-                    return new ElixirScript.Core.Tuple(reason0, acc1);
-                }, (acc1) => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [Symbol.for('halt'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('_'))]
-                })], (acc1) => {
-                    return new ElixirScript.Core.Tuple(Symbol.for('halted'), acc1);
-                }, (acc1) => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [Symbol.for('suspend'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('_'))]
-                })], (acc1) => {
-                    return new ElixirScript.Core.Tuple(Symbol.for('suspended'), acc1, (...__function_args__) => {
-                        function recur(...__function_args__) {
-                            let __arg_matches__ = null;
-
-                            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x10) => {
-                                return true;
-                            })) !== null) {
-                                let [x10] = __arg_matches__;
-
-                                return new ElixirScript.Core.Tuple(Symbol.for('done'), ElixirScript.Core.erlang.element(2, x10));
-                            }
-
-                            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                        }
-
-                        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                    });
-                }, (acc1) => {
-                    return true;
-                })).call(this, done0([acc0, h0], fun0));
+                return Elixir.Inspect.Algebra.__load(Elixir).concat(Elixir.Inspect.Algebra.__load(Elixir).concat(Elixir.Inspect.Algebra.__load(Elixir).to_doc(key0, opts0), sep0), Elixir.Inspect.Algebra.__load(Elixir).to_doc(value0, opts0));
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -9128,180 +10005,44 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Stream').
         return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
     }
 
-    function do_each(...__function_args__) {
+    function traverse_fun(...__function_args__) {
         function recur(...__function_args__) {
             let __arg_matches__ = null;
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('reduce'), ElixirScript.Core.Patterns.variable('done'), ElixirScript.Core.Patterns.variable('accs'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [ElixirScript.Core.Patterns.variable('command'), ElixirScript.Core.Patterns.variable('acc')]
-            })], __function_args__, (reduce0, done0, accs0, command0, acc0) => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('list'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (list0, opts0) => {
                 return true;
             })) !== null) {
-                let [reduce0, done0, accs0, command0, acc0] = __arg_matches__;
+                let [list0, opts0] = __arg_matches__;
 
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [Symbol.for('suspended'), ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('accs')), ElixirScript.Core.Patterns.variable('continuation')]
-                })], (acc1, accs1, continuation0) => {
-                    return new ElixirScript.Core.Tuple(Symbol.for('suspended'), acc1, (...__function_args__) => {
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303363903')], (x5764607523033639030) => {
+                    const [sep0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('sep'), Elixir.Inspect.Algebra.__load(Elixir).color(' => ', Symbol.for('map'), opts0));
+
+                    return (...__function_args__) => {
                         function recur(...__function_args__) {
                             let __arg_matches__ = null;
 
-                            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x10) => {
+                            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1'), ElixirScript.Core.Patterns.variable('x2')], __function_args__, (x10, x20) => {
                                 return true;
                             })) !== null) {
-                                let [x10] = __arg_matches__;
+                                let [x10, x20] = __arg_matches__;
 
-                                return do_each(continuation0, done0, accs1, x10);
+                                return to_map(x10, x20, sep0);
                             }
 
                             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
                         }
 
                         return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                    });
-                }, (acc1, accs1, continuation0) => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [Symbol.for('halted'), ElixirScript.Core.Patterns.variable('accs')]
-                })], (accs1) => {
-                    return do_done(new ElixirScript.Core.Tuple(Symbol.for('halted'), accs1), done0);
-                }, (accs1) => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [Symbol.for('done'), ElixirScript.Core.Patterns.variable('accs')]
-                })], (accs1) => {
-                    return do_done(new ElixirScript.Core.Tuple(Symbol.for('done'), accs1), done0);
-                }, (accs1) => {
-                    return true;
-                })).call(this, reduce0(new ElixirScript.Core.Tuple(command0, ElixirScript.Core.Functions.concat(acc0, accs0))));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function do_reduce(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
-                __MODULE__: Symbol.for('Elixir.Stream')
-            }], [Symbol.for('enum'), ElixirScript.Core.Patterns.variable('enum')], [Symbol.for('funs'), ElixirScript.Core.Patterns.variable('funs')], [Symbol.for('accs'), ElixirScript.Core.Patterns.variable('accs')], [Symbol.for('done'), ElixirScript.Core.Patterns.variable('done')]]), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (enum0, funs0, accs0, done0, acc0, fun0) => {
-                return true;
-            })) !== null) {
-                let [enum0, funs0, accs0, done0, acc0, fun0] = __arg_matches__;
-
-                const [composed0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('composed'), ElixirScript.Core.lists.foldl((...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('fun'), ElixirScript.Core.Patterns.variable('acc')], __function_args__, (fun1, acc1) => {
-                            return true;
-                        })) !== null) {
-                            let [fun1, acc1] = __arg_matches__;
-
-                            return fun1(acc1);
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }, fun0, funs0));
-
-                return do_each((...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x10) => {
-                            return true;
-                        })) !== null) {
-                            let [x10] = __arg_matches__;
-
-                            return Elixir.Enumerable.__load(Elixir).reduce(enum0, x10, composed0);
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }, ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303290975')], (x5764607523032909750) => {
-                    return x5764607523032909750;
-                }, (x5764607523032909750) => {
-                    return x5764607523032909750 === null || x5764607523032909750 === false;
+                    };
+                }, (x5764607523033639030) => {
+                    return x5764607523033639030 === null || x5764607523033639030 === false;
                 }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return new ElixirScript.Core.Tuple(done0, fun0);
+                    return Elixir.Inspect.List.__load(Elixir).keyword;
                 }, () => {
                     return true;
-                })).call(this, done0), ElixirScript.Core.lists.reverse(accs0), acc0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function member__qmark__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_lazy'), ElixirScript.Core.Patterns.variable('_value')], __function_args__, (_lazy0, _value0) => {
-                return true;
-            })) !== null) {
-                let [_lazy0, _value0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('error'), Elixir.Enumerable.Stream.__load(Elixir));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function reduce(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('lazy'), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (lazy0, acc0, fun0) => {
-                return true;
-            })) !== null) {
-                let [lazy0, acc0, fun0] = __arg_matches__;
-
-                return do_reduce(lazy0, acc0, (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x'), [ElixirScript.Core.Patterns.variable('acc')]], __function_args__, (x0, acc1) => {
-                            return true;
-                        })) !== null) {
-                            let [x0, acc1] = __arg_matches__;
-
-                            const [reason0, acc2] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                                values: [ElixirScript.Core.Patterns.variable('reason'), ElixirScript.Core.Patterns.variable('acc')]
-                            }), fun0(x0, acc1));
-
-                            const _ref8795481 = new ElixirScript.Core.Tuple(reason0, acc2);
-
-                            return new ElixirScript.Core.Tuple(reason0, [acc2]);
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                });
+                })).call(this, Elixir.Inspect.List.__load(Elixir).keyword__qmark__(list0));
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -9312,100 +10053,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Stream').
 
     const __exports = {
         __impl__,
-        count,
-        member__qmark__,
-        reduce,
-        __MODULE__: Symbol.for('Elixir.Enumerable.Stream'),
+        inspect,
+        __MODULE__: Symbol.for('Elixir.Inspect.Map'),
         __info__
     };
 
-    Elixir.Enumerable.Stream.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Opts').__load = function(Elixir) {
-    if (Elixir.Inspect.Opts.__exports)
-        return Elixir.Inspect.Opts.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [96986139011258206525641885334460402642])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/inspect/algebra.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(72), ElixirScript.Core.BitString.integer(246), ElixirScript.Core.BitString.integer(217), ElixirScript.Core.BitString.integer(214), ElixirScript.Core.BitString.integer(161), ElixirScript.Core.BitString.integer(5), ElixirScript.Core.BitString.integer(168), ElixirScript.Core.BitString.integer(56), ElixirScript.Core.BitString.integer(193), ElixirScript.Core.BitString.integer(250), ElixirScript.Core.BitString.integer(117), ElixirScript.Core.BitString.integer(197), ElixirScript.Core.BitString.integer(249), ElixirScript.Core.BitString.integer(223), ElixirScript.Core.BitString.integer(139), ElixirScript.Core.BitString.integer(210))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Opts')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__struct__'), Elixir.Inspect.Opts.__load(Elixir)], [Symbol.for('base'), Symbol.for('decimal')], [Symbol.for('binaries'), Symbol.for('infer')], [Symbol.for('char_lists'), Symbol.for('infer')], [Symbol.for('charlists'), Symbol.for('infer')], [Symbol.for('limit'), 50], [Symbol.for('pretty'), false], [Symbol.for('printable_limit'), 4096], [Symbol.for('safe'), true], [Symbol.for('structs'), true], [Symbol.for('syntax_colors'), []], [Symbol.for('width'), 80]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303381052')], __function_args__, (kv5764607523033810520) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523033810520] = __arg_matches__;
-
-                const [map5764607523033810520, keys5764607523033810520] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303381052'), ElixirScript.Core.Patterns.variable('keys576460752303381052')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033810520, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303381052'), ElixirScript.Core.Patterns.variable('val576460752303381052')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303381052'), ElixirScript.Core.Patterns.variable('keys576460752303381052')]
-                        })], __function_args__, (key5764607523033810520, val5764607523033810520, map5764607523033810520, keys5764607523033810520) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523033810520, val5764607523033810520, map5764607523033810520, keys5764607523033810520] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033810520, val5764607523033810520, map5764607523033810520), Elixir.List.__load(Elixir).__delete__(keys5764607523033810520, key5764607523033810520));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref6491426 = new ElixirScript.Core.Tuple(map5764607523033810520, keys5764607523033810520);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033810520;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Inspect.Opts.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033810520)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523033810520);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        __MODULE__: Symbol.for('Elixir.Inspect.Opts'),
-        __info__
-    };
-
-    Elixir.Inspect.Opts.__exports = __exports
+    Elixir.Inspect.Map.__exports = __exports
 
     return __exports;
 }
@@ -9918,7 +10571,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.GenEvent.
                         })]
                     }), ElixirScript.Core.gen.call(manager0, ElixirScript.Core.Functions.call_property(ElixirScript.Core.erlang.self), new ElixirScript.Core.Tuple(Symbol.for('add_process_handler'), ElixirScript.Core.Functions.call_property(ElixirScript.Core.erlang.self), ElixirScript.Core.Functions.call_property(ElixirScript.Core.erlang.self)), Symbol.for('infinity')));
 
-                    const _ref8360954 = new ElixirScript.Core.Tuple(pid0, ref0);
+                    const _ref8901571 = new ElixirScript.Core.Tuple(pid0, ref0);
 
                     const [mon_ref0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('mon_ref'), ElixirScript.Core.erlang.monitor(Symbol.for('process'), pid0));
 
@@ -10101,765 +10754,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.GenEvent.
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Map').__load = function(Elixir) {
-    if (Elixir.Inspect.Map.__exports)
-        return Elixir.Inspect.Map.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [327352431873059261457275411920229861072]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Map.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/inspect.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(246), ElixirScript.Core.BitString.integer(69), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(251), ElixirScript.Core.BitString.integer(189), ElixirScript.Core.BitString.integer(40), ElixirScript.Core.BitString.integer(107), ElixirScript.Core.BitString.integer(163), ElixirScript.Core.BitString.integer(181), ElixirScript.Core.BitString.integer(151), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(117), ElixirScript.Core.BitString.integer(217), ElixirScript.Core.BitString.integer(134), ElixirScript.Core.BitString.integer(208))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Map')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Map.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.Map.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function inspect(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (map0, opts0) => {
-                return true;
-            })) !== null) {
-                let [map0, opts0] = __arg_matches__;
-
-                return Elixir.Inspect.Algebra.__load(Elixir).nest(inspect(map0, '', opts0), 1);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map'), ElixirScript.Core.Patterns.variable('name'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (map0, name0, opts0) => {
-                return true;
-            })) !== null) {
-                let [map0, name0, opts0] = __arg_matches__;
-
-                const [map1] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('map'), ElixirScript.Core.maps.to_list(map0));
-
-                const [open0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('open'), Elixir.Inspect.Algebra.__load(Elixir).color('%' + (name0 + '{'), Symbol.for('map'), opts0));
-
-                const [sep0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('sep'), Elixir.Inspect.Algebra.__load(Elixir).color(',', Symbol.for('map'), opts0));
-
-                const [close0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('close'), Elixir.Inspect.Algebra.__load(Elixir).color('}', Symbol.for('map'), opts0));
-
-                return Elixir.Inspect.Algebra.__load(Elixir).surround_many(open0, map1, close0, opts0, traverse_fun(map1, opts0), sep0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function to_map(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [ElixirScript.Core.Patterns.variable('key'), ElixirScript.Core.Patterns.variable('value')]
-            }), ElixirScript.Core.Patterns.variable('opts'), ElixirScript.Core.Patterns.variable('sep')], __function_args__, (key0, value0, opts0, sep0) => {
-                return true;
-            })) !== null) {
-                let [key0, value0, opts0, sep0] = __arg_matches__;
-
-                return Elixir.Inspect.Algebra.__load(Elixir).concat(Elixir.Inspect.Algebra.__load(Elixir).concat(Elixir.Inspect.Algebra.__load(Elixir).to_doc(key0, opts0), sep0), Elixir.Inspect.Algebra.__load(Elixir).to_doc(value0, opts0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function traverse_fun(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('list'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (list0, opts0) => {
-                return true;
-            })) !== null) {
-                let [list0, opts0] = __arg_matches__;
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303363903')], (x5764607523033639030) => {
-                    const [sep0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('sep'), Elixir.Inspect.Algebra.__load(Elixir).color(' => ', Symbol.for('map'), opts0));
-
-                    return (...__function_args__) => {
-                        function recur(...__function_args__) {
-                            let __arg_matches__ = null;
-
-                            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1'), ElixirScript.Core.Patterns.variable('x2')], __function_args__, (x10, x20) => {
-                                return true;
-                            })) !== null) {
-                                let [x10, x20] = __arg_matches__;
-
-                                return to_map(x10, x20, sep0);
-                            }
-
-                            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                        }
-
-                        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                    };
-                }, (x5764607523033639030) => {
-                    return x5764607523033639030 === null || x5764607523033639030 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return Elixir.Inspect.List.__load(Elixir).keyword;
-                }, () => {
-                    return true;
-                })).call(this, Elixir.Inspect.List.__load(Elixir).keyword__qmark__(list0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        inspect,
-        __MODULE__: Symbol.for('Elixir.Inspect.Map'),
-        __info__
-    };
-
-    Elixir.Inspect.Map.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.KeyError').__load = function(Elixir) {
-    if (Elixir.KeyError.__exports)
-        return Elixir.KeyError.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [225082733096793300280017084026399513992]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(169), ElixirScript.Core.BitString.integer(85), ElixirScript.Core.BitString.integer(91), ElixirScript.Core.BitString.integer(137), ElixirScript.Core.BitString.integer(73), ElixirScript.Core.BitString.integer(35), ElixirScript.Core.BitString.integer(30), ElixirScript.Core.BitString.integer(46), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(88), ElixirScript.Core.BitString.integer(59), ElixirScript.Core.BitString.integer(32), ElixirScript.Core.BitString.integer(206), ElixirScript.Core.BitString.integer(192), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(136))], [Symbol.for('module'), Symbol.for('Elixir.KeyError')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.KeyError.__load(Elixir)], [Symbol.for('key'), null], [Symbol.for('term'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303358399')], __function_args__, (kv5764607523033583990) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523033583990] = __arg_matches__;
-
-                const [map5764607523033583990, keys5764607523033583990] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303358399'), ElixirScript.Core.Patterns.variable('keys576460752303358399')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033583990, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303358399'), ElixirScript.Core.Patterns.variable('val576460752303358399')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303358399'), ElixirScript.Core.Patterns.variable('keys576460752303358399')]
-                        })], __function_args__, (key5764607523033583990, val5764607523033583990, map5764607523033583990, keys5764607523033583990) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523033583990, val5764607523033583990, map5764607523033583990, keys5764607523033583990] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033583990, val5764607523033583990, map5764607523033583990), Elixir.List.__load(Elixir).__delete__(keys5764607523033583990, key5764607523033583990));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref8643059 = new ElixirScript.Core.Tuple(map5764607523033583990, keys5764607523033583990);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033583990;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.KeyError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033583990)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523033583990);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function exception(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('args576460752303366526')], __function_args__, (args5764607523033665260) => {
-                return ElixirScript.Core.erlang.is_list(args5764607523033665260);
-            })) !== null) {
-                let [args5764607523033665260] = __arg_matches__;
-
-                const [struct5764607523033665260] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('struct576460752303366526'), __struct__());
-
-                const [valid5764607523033665260, invalid5764607523033665260] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('valid576460752303366526'), ElixirScript.Core.Patterns.variable('invalid576460752303366526')]
-                }), Elixir.Enum.__load(Elixir).split_with(args5764607523033665260, (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('k576460752303366526'), ElixirScript.Core.Patterns.variable('_')]
-                        })], __function_args__, (k5764607523033665260) => {
-                            return true;
-                        })) !== null) {
-                            let [k5764607523033665260] = __arg_matches__;
-
-                            return ElixirScript.Core.maps.is_key(k5764607523033665260, struct5764607523033665260);
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref4526832 = new ElixirScript.Core.Tuple(valid5764607523033665260, invalid5764607523033665260);
-
-                ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return Symbol.for('ok');
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return Elixir.IO.__load(Elixir).warn('the following fields are unknown when raising ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.KeyError.__load(Elixir))) + (': ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(invalid5764607523033665260)) + '. ')) + ('Please make sure to only give known fields when raising ' + ('or redefine ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.KeyError.__load(Elixir))) + '.exception/1 to ') + ('discard unknown fields. Future Elixir versions will raise on ' + 'unknown fields given to raise/2')))));
-                }, () => {
-                    return true;
-                })).call(this, invalid5764607523033665260)
-
-                return Elixir.Kernel.__load(Elixir).struct__emark__(struct5764607523033665260, valid5764607523033665260);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        exception,
-        __MODULE__: Symbol.for('Elixir.KeyError'),
-        __info__
-    };
-
-    Elixir.KeyError.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.UnicodeConversionError').__load = function(Elixir) {
-    if (Elixir.UnicodeConversionError.__exports)
-        return Elixir.UnicodeConversionError.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [106689219470822811067429209522873096068]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(80), ElixirScript.Core.BitString.integer(67), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(163), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(55), ElixirScript.Core.BitString.integer(158), ElixirScript.Core.BitString.integer(183), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(61), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(106), ElixirScript.Core.BitString.integer(51), ElixirScript.Core.BitString.integer(28), ElixirScript.Core.BitString.integer(215), ElixirScript.Core.BitString.integer(132))], [Symbol.for('module'), Symbol.for('Elixir.UnicodeConversionError')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.UnicodeConversionError.__load(Elixir)], [Symbol.for('encoded'), null], [Symbol.for('message'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303364956')], __function_args__, (kv5764607523033649560) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523033649560] = __arg_matches__;
-
-                const [map5764607523033649560, keys5764607523033649560] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303364956'), ElixirScript.Core.Patterns.variable('keys576460752303364956')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033649560, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303364956'), ElixirScript.Core.Patterns.variable('val576460752303364956')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303364956'), ElixirScript.Core.Patterns.variable('keys576460752303364956')]
-                        })], __function_args__, (key5764607523033649560, val5764607523033649560, map5764607523033649560, keys5764607523033649560) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523033649560, val5764607523033649560, map5764607523033649560, keys5764607523033649560] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033649560, val5764607523033649560, map5764607523033649560), Elixir.List.__load(Elixir).__delete__(keys5764607523033649560, key5764607523033649560));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref2403045 = new ElixirScript.Core.Tuple(map5764607523033649560, keys5764607523033649560);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033649560;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.UnicodeConversionError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033649560)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523033649560);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function detail(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('rest')], __function_args__, (rest0) => {
-                return ElixirScript.Core.erlang.is_binary(rest0);
-            })) !== null) {
-                let [rest0] = __arg_matches__;
-
-                return 'encoding starting at ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(rest0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('h'), ElixirScript.Core.Patterns.variable('_'))], __function_args__, (h0) => {
-                return ElixirScript.Core.erlang.is_integer(h0);
-            })) !== null) {
-                let [h0] = __arg_matches__;
-
-                return 'code point ' + Elixir.String.Chars.__load(Elixir).to_string(h0);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('h'), ElixirScript.Core.Patterns.variable('_'))], __function_args__, (h0) => {
-                return true;
-            })) !== null) {
-                let [h0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, h0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function exception(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('opts')], __function_args__, (opts0) => {
-                return true;
-            })) !== null) {
-                let [opts0] = __arg_matches__;
-
-                return Elixir.UnicodeConversionError.__load(Elixir).__struct__(new Map([[Symbol.for('__exception__'), true], [Symbol.for('encoded'), Elixir.Keyword.__load(Elixir).fetch__emark__(opts0, Symbol.for('encoded'))], [Symbol.for('message'), Elixir.String.Chars.__load(Elixir).to_string(Elixir.Keyword.__load(Elixir).fetch__emark__(opts0, Symbol.for('kind'))) + (' ' + Elixir.String.Chars.__load(Elixir).to_string(detail(Elixir.Keyword.__load(Elixir).fetch__emark__(opts0, Symbol.for('rest')))))]]));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        exception,
-        __MODULE__: Symbol.for('Elixir.UnicodeConversionError'),
-        __info__
-    };
-
-    Elixir.UnicodeConversionError.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.List').__load = function(Elixir) {
-    if (Elixir.List.__exports)
-        return Elixir.List.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('delete'), 2), new ElixirScript.Core.Tuple(Symbol.for('delete_at'), 2), new ElixirScript.Core.Tuple(Symbol.for('duplicate'), 2), new ElixirScript.Core.Tuple(Symbol.for('first'), 1), new ElixirScript.Core.Tuple(Symbol.for('flatten'), 1), new ElixirScript.Core.Tuple(Symbol.for('flatten'), 2), new ElixirScript.Core.Tuple(Symbol.for('foldl'), 3), new ElixirScript.Core.Tuple(Symbol.for('foldr'), 3), new ElixirScript.Core.Tuple(Symbol.for('insert_at'), 3), new ElixirScript.Core.Tuple(Symbol.for('keydelete'), 3), new ElixirScript.Core.Tuple(Symbol.for('keyfind'), 3), new ElixirScript.Core.Tuple(Symbol.for('keyfind'), 4), new ElixirScript.Core.Tuple(Symbol.for('keymember?'), 3), new ElixirScript.Core.Tuple(Symbol.for('keyreplace'), 4), new ElixirScript.Core.Tuple(Symbol.for('keysort'), 2), new ElixirScript.Core.Tuple(Symbol.for('keystore'), 4), new ElixirScript.Core.Tuple(Symbol.for('keytake'), 3), new ElixirScript.Core.Tuple(Symbol.for('last'), 1), new ElixirScript.Core.Tuple(Symbol.for('myers_difference'), 2), new ElixirScript.Core.Tuple(Symbol.for('pop_at'), 2), new ElixirScript.Core.Tuple(Symbol.for('pop_at'), 3), new ElixirScript.Core.Tuple(Symbol.for('replace_at'), 3), new ElixirScript.Core.Tuple(Symbol.for('starts_with?'), 2), new ElixirScript.Core.Tuple(Symbol.for('to_atom'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_existing_atom'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_float'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_integer'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_integer'), 2), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_tuple'), 1), new ElixirScript.Core.Tuple(Symbol.for('update_at'), 3), new ElixirScript.Core.Tuple(Symbol.for('wrap'), 1), new ElixirScript.Core.Tuple(Symbol.for('zip'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [183401522195816640451078958454226739597])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/list.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(137), ElixirScript.Core.BitString.integer(249), ElixirScript.Core.BitString.integer(217), ElixirScript.Core.BitString.integer(45), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(197), ElixirScript.Core.BitString.integer(79), ElixirScript.Core.BitString.integer(84), ElixirScript.Core.BitString.integer(7), ElixirScript.Core.BitString.integer(135), ElixirScript.Core.BitString.integer(36), ElixirScript.Core.BitString.integer(14), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(94), ElixirScript.Core.BitString.integer(225), ElixirScript.Core.BitString.integer(141))], [Symbol.for('module'), Symbol.for('Elixir.List')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __delete__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('item'), ElixirScript.Core.Patterns.variable('list')), ElixirScript.Core.Patterns.variable('item')], __function_args__, (item0, list0, item1) => {
-                return true;
-            })) !== null) {
-                let [item0, list0, item1] = __arg_matches__;
-
-                return list0;
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('other'), ElixirScript.Core.Patterns.variable('list')), ElixirScript.Core.Patterns.variable('item')], __function_args__, (other0, list0, item0) => {
-                return true;
-            })) !== null) {
-                let [other0, list0, item0] = __arg_matches__;
-
-                return ElixirScript.Core.Functions.concat(other0, __delete__(list0, item0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([[], ElixirScript.Core.Patterns.variable('_item')], __function_args__, (_item0) => {
-                return true;
-            })) !== null) {
-                let [_item0] = __arg_matches__;
-
-                return [];
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function to_string(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('list')], __function_args__, (list0) => {
-                return ElixirScript.Core.erlang.is_list(list0);
-            })) !== null) {
-                let [list0] = __arg_matches__;
-
-                return ElixirScript.Core.SpecialForms._try(() => {
-                    return ElixirScript.Core.unicode.characters_to_binary(list0);
-                }, ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('cannot convert the given list to a string.\n\nTo be converted to a string, a list must contain only:\n\n  * strings\n  * integers representing Unicode codepoints\n  * or a list containing one of these three elements\n\nPlease check the given list or call inspect/1 to get the list representation, got:\n\n' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(list0)) + '\n')));
-                }, () => {
-                    return Elixir.Enum.__load(Elixir).member__qmark__(_, [Elixir.ArgumentError.__load(Elixir)]);
-                })), null, (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('result')], __function_args__, (result0) => {
-                            return ElixirScript.Core.erlang.is_binary(result0);
-                        })) !== null) {
-                            let [result0] = __arg_matches__;
-
-                            return result0;
-                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [Symbol.for('error'), ElixirScript.Core.Patterns.variable('encoded'), ElixirScript.Core.Patterns.variable('rest')]
-                        })], __function_args__, (encoded0, rest0) => {
-                            return true;
-                        })) !== null) {
-                            let [encoded0, rest0] = __arg_matches__;
-
-                            return ElixirScript.Core.erlang.error(Elixir.UnicodeConversionError.__load(Elixir).exception([new ElixirScript.Core.Tuple(Symbol.for('encoded'), encoded0), new ElixirScript.Core.Tuple(Symbol.for('rest'), rest0), new ElixirScript.Core.Tuple(Symbol.for('kind'), Symbol.for('invalid'))]));
-                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [Symbol.for('incomplete'), ElixirScript.Core.Patterns.variable('encoded'), ElixirScript.Core.Patterns.variable('rest')]
-                        })], __function_args__, (encoded0, rest0) => {
-                            return true;
-                        })) !== null) {
-                            let [encoded0, rest0] = __arg_matches__;
-
-                            return ElixirScript.Core.erlang.error(Elixir.UnicodeConversionError.__load(Elixir).exception([new ElixirScript.Core.Tuple(Symbol.for('encoded'), encoded0), new ElixirScript.Core.Tuple(Symbol.for('rest'), rest0), new ElixirScript.Core.Tuple(Symbol.for('kind'), Symbol.for('incomplete'))]));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }, null);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __delete__,
-        to_string,
-        __MODULE__: Symbol.for('Elixir.List'),
-        __info__
-    };
-
-    Elixir.List.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.MapSet').__load = function(Elixir) {
-    if (Elixir.MapSet.__exports)
-        return Elixir.MapSet.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('delete'), 2), new ElixirScript.Core.Tuple(Symbol.for('difference'), 2), new ElixirScript.Core.Tuple(Symbol.for('disjoint?'), 2), new ElixirScript.Core.Tuple(Symbol.for('equal?'), 2), new ElixirScript.Core.Tuple(Symbol.for('intersection'), 2), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('new'), 0), new ElixirScript.Core.Tuple(Symbol.for('new'), 1), new ElixirScript.Core.Tuple(Symbol.for('new'), 2), new ElixirScript.Core.Tuple(Symbol.for('put'), 2), new ElixirScript.Core.Tuple(Symbol.for('size'), 1), new ElixirScript.Core.Tuple(Symbol.for('subset?'), 2), new ElixirScript.Core.Tuple(Symbol.for('to_list'), 1), new ElixirScript.Core.Tuple(Symbol.for('union'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [177677801915726771788579233214503330181])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/map_set.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(133), ElixirScript.Core.BitString.integer(171), ElixirScript.Core.BitString.integer(127), ElixirScript.Core.BitString.integer(250), ElixirScript.Core.BitString.integer(130), ElixirScript.Core.BitString.integer(190), ElixirScript.Core.BitString.integer(98), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(83), ElixirScript.Core.BitString.integer(81), ElixirScript.Core.BitString.integer(62), ElixirScript.Core.BitString.integer(130), ElixirScript.Core.BitString.integer(242), ElixirScript.Core.BitString.integer(68), ElixirScript.Core.BitString.integer(33), ElixirScript.Core.BitString.integer(133))], [Symbol.for('module'), Symbol.for('Elixir.MapSet')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__struct__'), Elixir.MapSet.__load(Elixir)], [Symbol.for('map'), new Map([])], [Symbol.for('version'), 2]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303340700')], __function_args__, (kv5764607523033407000) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523033407000] = __arg_matches__;
-
-                const [map5764607523033407000, keys5764607523033407000] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303340700'), ElixirScript.Core.Patterns.variable('keys576460752303340700')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033407000, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303340700'), ElixirScript.Core.Patterns.variable('val576460752303340700')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303340700'), ElixirScript.Core.Patterns.variable('keys576460752303340700')]
-                        })], __function_args__, (key5764607523033407000, val5764607523033407000, map5764607523033407000, keys5764607523033407000) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523033407000, val5764607523033407000, map5764607523033407000, keys5764607523033407000] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033407000, val5764607523033407000, map5764607523033407000), Elixir.List.__load(Elixir).__delete__(keys5764607523033407000, key5764607523033407000));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref8438253 = new ElixirScript.Core.Tuple(map5764607523033407000, keys5764607523033407000);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033407000;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.MapSet.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033407000)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523033407000);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function member__qmark__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
-                __MODULE__: Symbol.for('Elixir.MapSet')
-            }], [Symbol.for('map'), ElixirScript.Core.Patterns.variable('map')]]), ElixirScript.Core.Patterns.variable('value')], __function_args__, (map0, value0) => {
-                return true;
-            })) !== null) {
-                let [map0, value0] = __arg_matches__;
-
-                return ElixirScript.Core.maps.is_key(value0, map0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function __new__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.MapSet.__load(Elixir).__struct__(new Map([[Symbol.for('map'), new Map([])], [Symbol.for('version'), 2]]));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function put(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.capture(new Map([[Symbol.for('__struct__'), {
-                __MODULE__: Symbol.for('Elixir.MapSet')
-            }], [Symbol.for('map'), ElixirScript.Core.Patterns.variable('map')]])), ElixirScript.Core.Patterns.variable('value')], __function_args__, (map0, map_set0, value0) => {
-                return true;
-            })) !== null) {
-                let [map0, map_set0, value0] = __arg_matches__;
-
-                return new Map([...map_set0, [Symbol.for('map'), ElixirScript.Core.maps.put(value0, [], map0)]]);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function size(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
-                __MODULE__: Symbol.for('Elixir.MapSet')
-            }], [Symbol.for('map'), ElixirScript.Core.Patterns.variable('map')]])], __function_args__, (map0) => {
-                return true;
-            })) !== null) {
-                let [map0] = __arg_matches__;
-
-                return ElixirScript.Core.erlang.map_size(map0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function to_list(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
-                __MODULE__: Symbol.for('Elixir.MapSet')
-            }], [Symbol.for('map'), ElixirScript.Core.Patterns.variable('map')]])], __function_args__, (map0) => {
-                return true;
-            })) !== null) {
-                let [map0] = __arg_matches__;
-
-                return ElixirScript.Core.maps.keys(map0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        member__qmark__,
-        __new__,
-        put,
-        size,
-        to_list,
-        __MODULE__: Symbol.for('Elixir.MapSet'),
-        __info__
-    };
-
-    Elixir.MapSet.__exports = __exports
-
-    return __exports;
-}
 ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Access').__load = function(Elixir) {
     if (Elixir.Access.__exports)
         return Elixir.Access.__exports;
@@ -11018,12 +10912,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Access').__load = fu
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.MapSet').__load = function(Elixir) {
-    if (Elixir.Enumerable.MapSet.__exports)
-        return Elixir.Enumerable.MapSet.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.MapSet').__load = function(Elixir) {
+    if (Elixir.MapSet.__exports)
+        return Elixir.MapSet.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [60011642930429269673849551126667568266]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.MapSet.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/map_set.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(45), ElixirScript.Core.BitString.integer(37), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(111), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(14), ElixirScript.Core.BitString.integer(90), ElixirScript.Core.BitString.integer(96), ElixirScript.Core.BitString.integer(186), ElixirScript.Core.BitString.integer(59), ElixirScript.Core.BitString.integer(145), ElixirScript.Core.BitString.integer(188), ElixirScript.Core.BitString.integer(145), ElixirScript.Core.BitString.integer(164), ElixirScript.Core.BitString.integer(138))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.MapSet')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('delete'), 2), new ElixirScript.Core.Tuple(Symbol.for('difference'), 2), new ElixirScript.Core.Tuple(Symbol.for('disjoint?'), 2), new ElixirScript.Core.Tuple(Symbol.for('equal?'), 2), new ElixirScript.Core.Tuple(Symbol.for('intersection'), 2), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('new'), 0), new ElixirScript.Core.Tuple(Symbol.for('new'), 1), new ElixirScript.Core.Tuple(Symbol.for('new'), 2), new ElixirScript.Core.Tuple(Symbol.for('put'), 2), new ElixirScript.Core.Tuple(Symbol.for('size'), 1), new ElixirScript.Core.Tuple(Symbol.for('subset?'), 2), new ElixirScript.Core.Tuple(Symbol.for('to_list'), 1), new ElixirScript.Core.Tuple(Symbol.for('union'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [177677801915726771788579233214503330181])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/map_set.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(133), ElixirScript.Core.BitString.integer(171), ElixirScript.Core.BitString.integer(127), ElixirScript.Core.BitString.integer(250), ElixirScript.Core.BitString.integer(130), ElixirScript.Core.BitString.integer(190), ElixirScript.Core.BitString.integer(98), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(83), ElixirScript.Core.BitString.integer(81), ElixirScript.Core.BitString.integer(62), ElixirScript.Core.BitString.integer(130), ElixirScript.Core.BitString.integer(242), ElixirScript.Core.BitString.integer(68), ElixirScript.Core.BitString.integer(33), ElixirScript.Core.BitString.integer(133))], [Symbol.for('module'), Symbol.for('Elixir.MapSet')]]);
 
         const value = __info__map__.get(kind);
 
@@ -11034,291 +10928,166 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.MapSet').
         throw new ElixirScript.Core.Patterns.MatchError(kind);
     }
 
-    function __impl__(...__function_args__) {
+    function __struct__(...__function_args__) {
         function recur(...__function_args__) {
             let __arg_matches__ = null;
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.MapSet.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return new Map([[Symbol.for('__struct__'), Elixir.MapSet.__load(Elixir)], [Symbol.for('map'), new Map([])], [Symbol.for('version'), 2]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303340700')], __function_args__, (kv5764607523033407000) => {
                 return true;
             })) !== null) {
-                let [] = __arg_matches__;
+                let [kv5764607523033407000] = __arg_matches__;
 
-                return Elixir.Enumerable.MapSet.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Enumerable.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function count(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map_set')], __function_args__, (map_set0) => {
-                return true;
-            })) !== null) {
-                let [map_set0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), Elixir.MapSet.__load(Elixir).size(map_set0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function member__qmark__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map_set'), ElixirScript.Core.Patterns.variable('val')], __function_args__, (map_set0, val0) => {
-                return true;
-            })) !== null) {
-                let [map_set0, val0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), Elixir.MapSet.__load(Elixir).member__qmark__(map_set0, val0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function reduce(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map_set'), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (map_set0, acc0, fun0) => {
-                return true;
-            })) !== null) {
-                let [map_set0, acc0, fun0] = __arg_matches__;
-
-                return Elixir.Enumerable.List.__load(Elixir).reduce(Elixir.MapSet.__load(Elixir).to_list(map_set0), acc0, fun0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        count,
-        member__qmark__,
-        reduce,
-        __MODULE__: Symbol.for('Elixir.Enumerable.MapSet'),
-        __info__
-    };
-
-    Elixir.Enumerable.MapSet.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Map').__load = function(Elixir) {
-    if (Elixir.Enumerable.Map.__exports)
-        return Elixir.Enumerable.Map.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [149380522820473093543120499350511023585]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Map.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/enum.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(112), ElixirScript.Core.BitString.integer(97), ElixirScript.Core.BitString.integer(164), ElixirScript.Core.BitString.integer(103), ElixirScript.Core.BitString.integer(69), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(118), ElixirScript.Core.BitString.integer(125), ElixirScript.Core.BitString.integer(136), ElixirScript.Core.BitString.integer(250), ElixirScript.Core.BitString.integer(254), ElixirScript.Core.BitString.integer(107), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(245), ElixirScript.Core.BitString.integer(225))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.Map')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Map.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Enumerable.Map.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Enumerable.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function count(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map')], __function_args__, (map0) => {
-                return true;
-            })) !== null) {
-                let [map0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.erlang.map_size(map0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function member__qmark__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [ElixirScript.Core.Patterns.variable('key'), ElixirScript.Core.Patterns.variable('value')]
-            })], __function_args__, (map0, key0, value0) => {
-                return true;
-            })) !== null) {
-                let [map0, key0, value0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [Symbol.for('ok'), ElixirScript.Core.Patterns.bound(value0)]
-                })], () => {
-                    return true;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return false;
-                }, () => {
-                    return true;
-                })).call(this, ElixirScript.Core.maps.find(key0, map0)));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_map'), ElixirScript.Core.Patterns.variable('_other')], __function_args__, (_map0, _other0) => {
-                return true;
-            })) !== null) {
-                let [_map0, _other0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), false);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function reduce(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map'), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (map0, acc0, fun0) => {
-                return true;
-            })) !== null) {
-                let [map0, acc0, fun0] = __arg_matches__;
-
-                return reduce_list(ElixirScript.Core.maps.to_list(map0), acc0, fun0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function reduce_list(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [Symbol.for('halt'), ElixirScript.Core.Patterns.variable('acc')]
-            }), ElixirScript.Core.Patterns.variable('_fun')], __function_args__, (acc0, _fun0) => {
-                return true;
-            })) !== null) {
-                let [acc0, _fun0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('halted'), acc0);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('list'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [Symbol.for('suspend'), ElixirScript.Core.Patterns.variable('acc')]
-            }), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (list0, acc0, fun0) => {
-                return true;
-            })) !== null) {
-                let [list0, acc0, fun0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('suspended'), acc0, (...__function_args__) => {
+                const [map5764607523033407000, keys5764607523033407000] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303340700'), ElixirScript.Core.Patterns.variable('keys576460752303340700')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033407000, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
 
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x10) => {
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303340700'), ElixirScript.Core.Patterns.variable('val576460752303340700')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303340700'), ElixirScript.Core.Patterns.variable('keys576460752303340700')]
+                        })], __function_args__, (key5764607523033407000, val5764607523033407000, map5764607523033407000, keys5764607523033407000) => {
                             return true;
                         })) !== null) {
-                            let [x10] = __arg_matches__;
+                            let [key5764607523033407000, val5764607523033407000, map5764607523033407000, keys5764607523033407000] = __arg_matches__;
 
-                            return reduce_list(list0, x10, fun0);
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033407000, val5764607523033407000, map5764607523033407000), Elixir.List.__load(Elixir).__delete__(keys5764607523033407000, key5764607523033407000));
                         }
 
                         throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
                     }
 
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                });
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([[], ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('acc')]
-            }), ElixirScript.Core.Patterns.variable('_fun')], __function_args__, (acc0, _fun0) => {
+                }));
+
+                const _ref1788764 = new ElixirScript.Core.Tuple(map5764607523033407000, keys5764607523033407000);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523033407000;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.MapSet.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033407000)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523033407000);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function member__qmark__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
+                __MODULE__: Symbol.for('Elixir.MapSet')
+            }], [Symbol.for('map'), ElixirScript.Core.Patterns.variable('map')]]), ElixirScript.Core.Patterns.variable('value')], __function_args__, (map0, value0) => {
                 return true;
             })) !== null) {
-                let [acc0, _fun0] = __arg_matches__;
+                let [map0, value0] = __arg_matches__;
 
-                return new ElixirScript.Core.Tuple(Symbol.for('done'), acc0);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('h'), ElixirScript.Core.Patterns.variable('t')), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('acc')]
-            }), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (h0, t0, acc0, fun0) => {
+                return ElixirScript.Core.maps.is_key(value0, map0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function __new__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
                 return true;
             })) !== null) {
-                let [h0, t0, acc0, fun0] = __arg_matches__;
+                let [] = __arg_matches__;
 
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, t0, fun0(h0, acc0), fun0));
+                return Elixir.MapSet.__load(Elixir).__struct__(new Map([[Symbol.for('map'), new Map([])], [Symbol.for('version'), 2]]));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function put(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.capture(new Map([[Symbol.for('__struct__'), {
+                __MODULE__: Symbol.for('Elixir.MapSet')
+            }], [Symbol.for('map'), ElixirScript.Core.Patterns.variable('map')]])), ElixirScript.Core.Patterns.variable('value')], __function_args__, (map0, map_set0, value0) => {
+                return true;
+            })) !== null) {
+                let [map0, map_set0, value0] = __arg_matches__;
+
+                return new Map([...map_set0, [Symbol.for('map'), ElixirScript.Core.maps.put(value0, [], map0)]]);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function size(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
+                __MODULE__: Symbol.for('Elixir.MapSet')
+            }], [Symbol.for('map'), ElixirScript.Core.Patterns.variable('map')]])], __function_args__, (map0) => {
+                return true;
+            })) !== null) {
+                let [map0] = __arg_matches__;
+
+                return ElixirScript.Core.erlang.map_size(map0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function to_list(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
+                __MODULE__: Symbol.for('Elixir.MapSet')
+            }], [Symbol.for('map'), ElixirScript.Core.Patterns.variable('map')]])], __function_args__, (map0) => {
+                return true;
+            })) !== null) {
+                let [map0] = __arg_matches__;
+
+                return ElixirScript.Core.maps.keys(map0);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -11328,15 +11097,17 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Map').__l
     }
 
     const __exports = {
-        __impl__,
-        count,
+        __struct__,
         member__qmark__,
-        reduce,
-        __MODULE__: Symbol.for('Elixir.Enumerable.Map'),
+        __new__,
+        put,
+        size,
+        to_list,
+        __MODULE__: Symbol.for('Elixir.MapSet'),
         __info__
     };
 
-    Elixir.Enumerable.Map.__exports = __exports
+    Elixir.MapSet.__exports = __exports
 
     return __exports;
 }
@@ -11791,7 +11562,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.File.Stre
                     values: [Symbol.for('ok'), ElixirScript.Core.Patterns.variable('_new_pos')]
                 }), ElixirScript.Core.file.position(device0, bom_length(header0)));
 
-                const _ref8305054 = new ElixirScript.Core.Tuple(_new_pos0);
+                const _ref1499382 = new ElixirScript.Core.Tuple(_new_pos0);
 
                 return device0;
             }
@@ -11812,6 +11583,328 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.File.Stre
     };
 
     Elixir.Enumerable.File.Stream.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.MapSet').__load = function(Elixir) {
+    if (Elixir.Enumerable.MapSet.__exports)
+        return Elixir.Enumerable.MapSet.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [60011642930429269673849551126667568266]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.MapSet.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/map_set.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(45), ElixirScript.Core.BitString.integer(37), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(111), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(14), ElixirScript.Core.BitString.integer(90), ElixirScript.Core.BitString.integer(96), ElixirScript.Core.BitString.integer(186), ElixirScript.Core.BitString.integer(59), ElixirScript.Core.BitString.integer(145), ElixirScript.Core.BitString.integer(188), ElixirScript.Core.BitString.integer(145), ElixirScript.Core.BitString.integer(164), ElixirScript.Core.BitString.integer(138))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.MapSet')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.MapSet.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Enumerable.MapSet.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Enumerable.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function count(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map_set')], __function_args__, (map_set0) => {
+                return true;
+            })) !== null) {
+                let [map_set0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), Elixir.MapSet.__load(Elixir).size(map_set0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function member__qmark__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map_set'), ElixirScript.Core.Patterns.variable('val')], __function_args__, (map_set0, val0) => {
+                return true;
+            })) !== null) {
+                let [map_set0, val0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), Elixir.MapSet.__load(Elixir).member__qmark__(map_set0, val0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function reduce(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map_set'), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (map_set0, acc0, fun0) => {
+                return true;
+            })) !== null) {
+                let [map_set0, acc0, fun0] = __arg_matches__;
+
+                return Elixir.Enumerable.List.__load(Elixir).reduce(Elixir.MapSet.__load(Elixir).to_list(map_set0), acc0, fun0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        count,
+        member__qmark__,
+        reduce,
+        __MODULE__: Symbol.for('Elixir.Enumerable.MapSet'),
+        __info__
+    };
+
+    Elixir.Enumerable.MapSet.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Map').__load = function(Elixir) {
+    if (Elixir.Enumerable.Map.__exports)
+        return Elixir.Enumerable.Map.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [149380522820473093543120499350511023585]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Map.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/enum.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(112), ElixirScript.Core.BitString.integer(97), ElixirScript.Core.BitString.integer(164), ElixirScript.Core.BitString.integer(103), ElixirScript.Core.BitString.integer(69), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(118), ElixirScript.Core.BitString.integer(125), ElixirScript.Core.BitString.integer(136), ElixirScript.Core.BitString.integer(250), ElixirScript.Core.BitString.integer(254), ElixirScript.Core.BitString.integer(107), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(245), ElixirScript.Core.BitString.integer(225))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.Map')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Map.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Enumerable.Map.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Enumerable.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function count(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map')], __function_args__, (map0) => {
+                return true;
+            })) !== null) {
+                let [map0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.erlang.map_size(map0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function member__qmark__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [ElixirScript.Core.Patterns.variable('key'), ElixirScript.Core.Patterns.variable('value')]
+            })], __function_args__, (map0, key0, value0) => {
+                return true;
+            })) !== null) {
+                let [map0, key0, value0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [Symbol.for('ok'), ElixirScript.Core.Patterns.bound(value0)]
+                })], () => {
+                    return true;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return false;
+                }, () => {
+                    return true;
+                })).call(this, ElixirScript.Core.maps.find(key0, map0)));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_map'), ElixirScript.Core.Patterns.variable('_other')], __function_args__, (_map0, _other0) => {
+                return true;
+            })) !== null) {
+                let [_map0, _other0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), false);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function reduce(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map'), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (map0, acc0, fun0) => {
+                return true;
+            })) !== null) {
+                let [map0, acc0, fun0] = __arg_matches__;
+
+                return reduce_list(ElixirScript.Core.maps.to_list(map0), acc0, fun0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function reduce_list(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [Symbol.for('halt'), ElixirScript.Core.Patterns.variable('acc')]
+            }), ElixirScript.Core.Patterns.variable('_fun')], __function_args__, (acc0, _fun0) => {
+                return true;
+            })) !== null) {
+                let [acc0, _fun0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('halted'), acc0);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('list'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [Symbol.for('suspend'), ElixirScript.Core.Patterns.variable('acc')]
+            }), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (list0, acc0, fun0) => {
+                return true;
+            })) !== null) {
+                let [list0, acc0, fun0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('suspended'), acc0, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x10) => {
+                            return true;
+                        })) !== null) {
+                            let [x10] = __arg_matches__;
+
+                            return reduce_list(list0, x10, fun0);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                });
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([[], ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('acc')]
+            }), ElixirScript.Core.Patterns.variable('_fun')], __function_args__, (acc0, _fun0) => {
+                return true;
+            })) !== null) {
+                let [acc0, _fun0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('done'), acc0);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('h'), ElixirScript.Core.Patterns.variable('t')), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('acc')]
+            }), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (h0, t0, acc0, fun0) => {
+                return true;
+            })) !== null) {
+                let [h0, t0, acc0, fun0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, t0, fun0(h0, acc0), fun0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        count,
+        member__qmark__,
+        reduce,
+        __MODULE__: Symbol.for('Elixir.Enumerable.Map'),
+        __info__
+    };
+
+    Elixir.Enumerable.Map.__exports = __exports
 
     return __exports;
 }
@@ -12230,7 +12323,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.IO.StreamError').__l
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref1789063 = new ElixirScript.Core.Tuple(map5764607523033575670, keys5764607523033575670);
+                const _ref2901288 = new ElixirScript.Core.Tuple(map5764607523033575670, keys5764607523033575670);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523033575670;
@@ -12281,421 +12374,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.IO.StreamError').__l
     };
 
     Elixir.IO.StreamError.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.HashSet').__load = function(Elixir) {
-    if (Elixir.Enumerable.HashSet.__exports)
-        return Elixir.Enumerable.HashSet.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [79574681374943783881605710047048620718]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.HashSet.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/hash_set.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(59), ElixirScript.Core.BitString.integer(221), ElixirScript.Core.BitString.integer(134), ElixirScript.Core.BitString.integer(178), ElixirScript.Core.BitString.integer(233), ElixirScript.Core.BitString.integer(238), ElixirScript.Core.BitString.integer(0), ElixirScript.Core.BitString.integer(107), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(228), ElixirScript.Core.BitString.integer(125), ElixirScript.Core.BitString.integer(90), ElixirScript.Core.BitString.integer(88), ElixirScript.Core.BitString.integer(187), ElixirScript.Core.BitString.integer(218), ElixirScript.Core.BitString.integer(174))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.HashSet')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.HashSet.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Enumerable.HashSet.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Enumerable.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function count(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('set')], __function_args__, (set0) => {
-                return true;
-            })) !== null) {
-                let [set0] = __arg_matches__;
-
-                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashSet.__load(Elixir));
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), module0.size(set0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function member__qmark__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('set'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (set0, term0) => {
-                return true;
-            })) !== null) {
-                let [set0, term0] = __arg_matches__;
-
-                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashSet.__load(Elixir));
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), module0.member__qmark__(set0, term0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function reduce(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('set'), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (set0, acc0, fun0) => {
-                return true;
-            })) !== null) {
-                let [set0, acc0, fun0] = __arg_matches__;
-
-                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashSet.__load(Elixir));
-
-                return module0.reduce(set0, acc0, fun0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        count,
-        member__qmark__,
-        reduce,
-        __MODULE__: Symbol.for('Elixir.Enumerable.HashSet'),
-        __info__
-    };
-
-    Elixir.Enumerable.HashSet.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.HashDict').__load = function(Elixir) {
-    if (Elixir.Enumerable.HashDict.__exports)
-        return Elixir.Enumerable.HashDict.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [137229011705551921882350661307484497374]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.HashDict.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/hash_dict.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(103), ElixirScript.Core.BitString.integer(61), ElixirScript.Core.BitString.integer(88), ElixirScript.Core.BitString.integer(166), ElixirScript.Core.BitString.integer(88), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(55), ElixirScript.Core.BitString.integer(14), ElixirScript.Core.BitString.integer(102), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(49), ElixirScript.Core.BitString.integer(192), ElixirScript.Core.BitString.integer(62), ElixirScript.Core.BitString.integer(101), ElixirScript.Core.BitString.integer(222))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.HashDict')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.HashDict.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Enumerable.HashDict.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Enumerable.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function count(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('dict')], __function_args__, (dict0) => {
-                return true;
-            })) !== null) {
-                let [dict0] = __arg_matches__;
-
-                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashDict.__load(Elixir));
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), module0.size(dict0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function member__qmark__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('dict'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [ElixirScript.Core.Patterns.variable('key'), ElixirScript.Core.Patterns.variable('value')]
-            })], __function_args__, (dict0, key0, value0) => {
-                return true;
-            })) !== null) {
-                let [dict0, key0, value0] = __arg_matches__;
-
-                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashDict.__load(Elixir));
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [Symbol.for('ok'), ElixirScript.Core.Patterns.bound(value0)]
-                })], () => {
-                    return true;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return false;
-                }, () => {
-                    return true;
-                })).call(this, module0.fetch(dict0, key0)));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_dict'), ElixirScript.Core.Patterns.variable('_')], __function_args__, (_dict0) => {
-                return true;
-            })) !== null) {
-                let [_dict0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), false);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function reduce(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('dict'), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (dict0, acc0, fun0) => {
-                return true;
-            })) !== null) {
-                let [dict0, acc0, fun0] = __arg_matches__;
-
-                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashDict.__load(Elixir));
-
-                return module0.reduce(dict0, acc0, fun0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        count,
-        member__qmark__,
-        reduce,
-        __MODULE__: Symbol.for('Elixir.Enumerable.HashDict'),
-        __info__
-    };
-
-    Elixir.Enumerable.HashDict.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Protocol.UndefinedError').__load = function(Elixir) {
-    if (Elixir.Protocol.UndefinedError.__exports)
-        return Elixir.Protocol.UndefinedError.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [235305223164949534635361447175377613475]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(177), ElixirScript.Core.BitString.integer(6), ElixirScript.Core.BitString.integer(35), ElixirScript.Core.BitString.integer(53), ElixirScript.Core.BitString.integer(150), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(213), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(175), ElixirScript.Core.BitString.integer(237), ElixirScript.Core.BitString.integer(86), ElixirScript.Core.BitString.integer(59), ElixirScript.Core.BitString.integer(73), ElixirScript.Core.BitString.integer(63), ElixirScript.Core.BitString.integer(114), ElixirScript.Core.BitString.integer(163))], [Symbol.for('module'), Symbol.for('Elixir.Protocol.UndefinedError')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.Protocol.UndefinedError.__load(Elixir)], [Symbol.for('description'), ''], [Symbol.for('protocol'), null], [Symbol.for('value'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303368252')], __function_args__, (kv5764607523033682520) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523033682520] = __arg_matches__;
-
-                const [map5764607523033682520, keys5764607523033682520] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303368252'), ElixirScript.Core.Patterns.variable('keys576460752303368252')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033682520, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303368252'), ElixirScript.Core.Patterns.variable('val576460752303368252')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303368252'), ElixirScript.Core.Patterns.variable('keys576460752303368252')]
-                        })], __function_args__, (key5764607523033682520, val5764607523033682520, map5764607523033682520, keys5764607523033682520) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523033682520, val5764607523033682520, map5764607523033682520, keys5764607523033682520] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033682520, val5764607523033682520, map5764607523033682520), Elixir.List.__load(Elixir).__delete__(keys5764607523033682520, key5764607523033682520));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref5726792 = new ElixirScript.Core.Tuple(map5764607523033682520, keys5764607523033682520);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033682520;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Protocol.UndefinedError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033682520)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523033682520);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function exception(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('args576460752303367326')], __function_args__, (args5764607523033673260) => {
-                return ElixirScript.Core.erlang.is_list(args5764607523033673260);
-            })) !== null) {
-                let [args5764607523033673260] = __arg_matches__;
-
-                const [struct5764607523033673260] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('struct576460752303367326'), __struct__());
-
-                const [valid5764607523033673260, invalid5764607523033673260] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('valid576460752303367326'), ElixirScript.Core.Patterns.variable('invalid576460752303367326')]
-                }), Elixir.Enum.__load(Elixir).split_with(args5764607523033673260, (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('k576460752303367326'), ElixirScript.Core.Patterns.variable('_')]
-                        })], __function_args__, (k5764607523033673260) => {
-                            return true;
-                        })) !== null) {
-                            let [k5764607523033673260] = __arg_matches__;
-
-                            return ElixirScript.Core.maps.is_key(k5764607523033673260, struct5764607523033673260);
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref1607089 = new ElixirScript.Core.Tuple(valid5764607523033673260, invalid5764607523033673260);
-
-                ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return Symbol.for('ok');
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return Elixir.IO.__load(Elixir).warn('the following fields are unknown when raising ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Protocol.UndefinedError.__load(Elixir))) + (': ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(invalid5764607523033673260)) + '. ')) + ('Please make sure to only give known fields when raising ' + ('or redefine ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Protocol.UndefinedError.__load(Elixir))) + '.exception/1 to ') + ('discard unknown fields. Future Elixir versions will raise on ' + 'unknown fields given to raise/2')))));
-                }, () => {
-                    return true;
-                })).call(this, invalid5764607523033673260)
-
-                return Elixir.Kernel.__load(Elixir).struct__emark__(struct5764607523033673260, valid5764607523033673260);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        exception,
-        __MODULE__: Symbol.for('Elixir.Protocol.UndefinedError'),
-        __info__
-    };
-
-    Elixir.Protocol.UndefinedError.__exports = __exports
 
     return __exports;
 }
@@ -12893,12 +12571,298 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File').__load = func
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.URI').__load = function(Elixir) {
-    if (Elixir.String.Chars.URI.__exports)
-        return Elixir.String.Chars.URI.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.Error').__load = function(Elixir) {
+    if (Elixir.File.Error.__exports)
+        return Elixir.File.Error.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [41684391308037489114556609376532809497]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.String.Chars.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.String.Chars.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.URI.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/uri.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(31), ElixirScript.Core.BitString.integer(92), ElixirScript.Core.BitString.integer(31), ElixirScript.Core.BitString.integer(42), ElixirScript.Core.BitString.integer(146), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(141), ElixirScript.Core.BitString.integer(130), ElixirScript.Core.BitString.integer(56), ElixirScript.Core.BitString.integer(24), ElixirScript.Core.BitString.integer(196), ElixirScript.Core.BitString.integer(237), ElixirScript.Core.BitString.integer(86), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(199), ElixirScript.Core.BitString.integer(25))], [Symbol.for('module'), Symbol.for('Elixir.String.Chars.URI')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [47509202473523436012368381899347079190]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(35), ElixirScript.Core.BitString.integer(189), ElixirScript.Core.BitString.integer(240), ElixirScript.Core.BitString.integer(135), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(114), ElixirScript.Core.BitString.integer(238), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(186), ElixirScript.Core.BitString.integer(114), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(118), ElixirScript.Core.BitString.integer(208), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(48), ElixirScript.Core.BitString.integer(22))], [Symbol.for('module'), Symbol.for('Elixir.File.Error')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.File.Error.__load(Elixir)], [Symbol.for('action'), ''], [Symbol.for('path'), null], [Symbol.for('reason'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303361564')], __function_args__, (kv5764607523033615640) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523033615640] = __arg_matches__;
+
+                const [map5764607523033615640, keys5764607523033615640] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303361564'), ElixirScript.Core.Patterns.variable('keys576460752303361564')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033615640, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303361564'), ElixirScript.Core.Patterns.variable('val576460752303361564')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303361564'), ElixirScript.Core.Patterns.variable('keys576460752303361564')]
+                        })], __function_args__, (key5764607523033615640, val5764607523033615640, map5764607523033615640, keys5764607523033615640) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523033615640, val5764607523033615640, map5764607523033615640, keys5764607523033615640] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033615640, val5764607523033615640, map5764607523033615640), Elixir.List.__load(Elixir).__delete__(keys5764607523033615640, key5764607523033615640));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref5954272 = new ElixirScript.Core.Tuple(map5764607523033615640, keys5764607523033615640);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523033615640;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.Error.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033615640)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523033615640);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function exception(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('args576460752303361628')], __function_args__, (args5764607523033616280) => {
+                return ElixirScript.Core.erlang.is_list(args5764607523033616280);
+            })) !== null) {
+                let [args5764607523033616280] = __arg_matches__;
+
+                const [struct5764607523033616280] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('struct576460752303361628'), __struct__());
+
+                const [valid5764607523033616280, invalid5764607523033616280] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('valid576460752303361628'), ElixirScript.Core.Patterns.variable('invalid576460752303361628')]
+                }), Elixir.Enum.__load(Elixir).split_with(args5764607523033616280, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('k576460752303361628'), ElixirScript.Core.Patterns.variable('_')]
+                        })], __function_args__, (k5764607523033616280) => {
+                            return true;
+                        })) !== null) {
+                            let [k5764607523033616280] = __arg_matches__;
+
+                            return ElixirScript.Core.maps.is_key(k5764607523033616280, struct5764607523033616280);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref2645632 = new ElixirScript.Core.Tuple(valid5764607523033616280, invalid5764607523033616280);
+
+                ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return Symbol.for('ok');
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return Elixir.IO.__load(Elixir).warn('the following fields are unknown when raising ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.Error.__load(Elixir))) + (': ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(invalid5764607523033616280)) + '. ')) + ('Please make sure to only give known fields when raising ' + ('or redefine ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.Error.__load(Elixir))) + '.exception/1 to ') + ('discard unknown fields. Future Elixir versions will raise on ' + 'unknown fields given to raise/2')))));
+                }, () => {
+                    return true;
+                })).call(this, invalid5764607523033616280)
+
+                return Elixir.Kernel.__load(Elixir).struct__emark__(struct5764607523033616280, valid5764607523033616280);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        exception,
+        __MODULE__: Symbol.for('Elixir.File.Error'),
+        __info__
+    };
+
+    Elixir.File.Error.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Protocol.UndefinedError').__load = function(Elixir) {
+    if (Elixir.Protocol.UndefinedError.__exports)
+        return Elixir.Protocol.UndefinedError.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [235305223164949534635361447175377613475]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(177), ElixirScript.Core.BitString.integer(6), ElixirScript.Core.BitString.integer(35), ElixirScript.Core.BitString.integer(53), ElixirScript.Core.BitString.integer(150), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(213), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(175), ElixirScript.Core.BitString.integer(237), ElixirScript.Core.BitString.integer(86), ElixirScript.Core.BitString.integer(59), ElixirScript.Core.BitString.integer(73), ElixirScript.Core.BitString.integer(63), ElixirScript.Core.BitString.integer(114), ElixirScript.Core.BitString.integer(163))], [Symbol.for('module'), Symbol.for('Elixir.Protocol.UndefinedError')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.Protocol.UndefinedError.__load(Elixir)], [Symbol.for('description'), ''], [Symbol.for('protocol'), null], [Symbol.for('value'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303368252')], __function_args__, (kv5764607523033682520) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523033682520] = __arg_matches__;
+
+                const [map5764607523033682520, keys5764607523033682520] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303368252'), ElixirScript.Core.Patterns.variable('keys576460752303368252')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033682520, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303368252'), ElixirScript.Core.Patterns.variable('val576460752303368252')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303368252'), ElixirScript.Core.Patterns.variable('keys576460752303368252')]
+                        })], __function_args__, (key5764607523033682520, val5764607523033682520, map5764607523033682520, keys5764607523033682520) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523033682520, val5764607523033682520, map5764607523033682520, keys5764607523033682520] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033682520, val5764607523033682520, map5764607523033682520), Elixir.List.__load(Elixir).__delete__(keys5764607523033682520, key5764607523033682520));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref4408775 = new ElixirScript.Core.Tuple(map5764607523033682520, keys5764607523033682520);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523033682520;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Protocol.UndefinedError.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033682520)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523033682520);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function exception(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('args576460752303367326')], __function_args__, (args5764607523033673260) => {
+                return ElixirScript.Core.erlang.is_list(args5764607523033673260);
+            })) !== null) {
+                let [args5764607523033673260] = __arg_matches__;
+
+                const [struct5764607523033673260] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('struct576460752303367326'), __struct__());
+
+                const [valid5764607523033673260, invalid5764607523033673260] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('valid576460752303367326'), ElixirScript.Core.Patterns.variable('invalid576460752303367326')]
+                }), Elixir.Enum.__load(Elixir).split_with(args5764607523033673260, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('k576460752303367326'), ElixirScript.Core.Patterns.variable('_')]
+                        })], __function_args__, (k5764607523033673260) => {
+                            return true;
+                        })) !== null) {
+                            let [k5764607523033673260] = __arg_matches__;
+
+                            return ElixirScript.Core.maps.is_key(k5764607523033673260, struct5764607523033673260);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref183956 = new ElixirScript.Core.Tuple(valid5764607523033673260, invalid5764607523033673260);
+
+                ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return Symbol.for('ok');
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return Elixir.IO.__load(Elixir).warn('the following fields are unknown when raising ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Protocol.UndefinedError.__load(Elixir))) + (': ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(invalid5764607523033673260)) + '. ')) + ('Please make sure to only give known fields when raising ' + ('or redefine ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.Protocol.UndefinedError.__load(Elixir))) + '.exception/1 to ') + ('discard unknown fields. Future Elixir versions will raise on ' + 'unknown fields given to raise/2')))));
+                }, () => {
+                    return true;
+                })).call(this, invalid5764607523033673260)
+
+                return Elixir.Kernel.__load(Elixir).struct__emark__(struct5764607523033673260, valid5764607523033673260);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        exception,
+        __MODULE__: Symbol.for('Elixir.Protocol.UndefinedError'),
+        __info__
+    };
+
+    Elixir.Protocol.UndefinedError.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.HashDict').__load = function(Elixir) {
+    if (Elixir.Enumerable.HashDict.__exports)
+        return Elixir.Enumerable.HashDict.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [137229011705551921882350661307484497374]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.HashDict.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/hash_dict.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(103), ElixirScript.Core.BitString.integer(61), ElixirScript.Core.BitString.integer(88), ElixirScript.Core.BitString.integer(166), ElixirScript.Core.BitString.integer(88), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(55), ElixirScript.Core.BitString.integer(14), ElixirScript.Core.BitString.integer(102), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(49), ElixirScript.Core.BitString.integer(192), ElixirScript.Core.BitString.integer(62), ElixirScript.Core.BitString.integer(101), ElixirScript.Core.BitString.integer(222))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.HashDict')]]);
 
         const value = __info__map__.get(kind);
 
@@ -12920,19 +12884,19 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.URI')._
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.URI.__load(Elixir);
+                return Elixir.HashDict.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.String.Chars.URI.__load(Elixir);
+                return Elixir.Enumerable.HashDict.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.String.Chars.__load(Elixir);
+                return Elixir.Enumerable.__load(Elixir);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -12941,48 +12905,20 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.URI')._
         return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
     }
 
-    function extract_authority(...__function_args__) {
+    function count(...__function_args__) {
         function recur(...__function_args__) {
             let __arg_matches__ = null;
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('host'), null], [Symbol.for('authority'), ElixirScript.Core.Patterns.variable('authority')]])], __function_args__, (authority0) => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('dict')], __function_args__, (dict0) => {
                 return true;
             })) !== null) {
-                let [authority0] = __arg_matches__;
+                let [dict0] = __arg_matches__;
 
-                return authority0;
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('host'), ElixirScript.Core.Patterns.variable('host')], [Symbol.for('userinfo'), ElixirScript.Core.Patterns.variable('userinfo')], [Symbol.for('port'), ElixirScript.Core.Patterns.variable('port')]])], __function_args__, (host0, userinfo0, port0) => {
-                return true;
-            })) !== null) {
-                let [host0, userinfo0, port0] = __arg_matches__;
+                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashDict.__load(Elixir));
 
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303255549')], (x5764607523032555490) => {
-                    return '';
-                }, (x5764607523032555490) => {
-                    return x5764607523032555490 === null || x5764607523032555490 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return userinfo0 + '@';
-                }, () => {
-                    return true;
-                })).call(this, userinfo0) + (ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303255453')], (x5764607523032554530) => {
-                    return host0;
-                }, (x5764607523032554530) => {
-                    return x5764607523032554530 === null || x5764607523032554530 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return '[' + (host0 + ']');
-                }, () => {
-                    return true;
-                })).call(this, Elixir.String.__load(Elixir).contains__qmark__(host0, ':')) + ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303255357')], (x5764607523032553570) => {
-                    return '';
-                }, (x5764607523032553570) => {
-                    return x5764607523032553570 === null || x5764607523032553570 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ':' + ElixirScript.Core.erlang.integer_to_binary(port0);
-                }, () => {
-                    return true;
-                })).call(this, port0));
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), module0.size(dict0));
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -12991,78 +12927,60 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.URI')._
         return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
     }
 
-    function to_string(...__function_args__) {
+    function member__qmark__(...__function_args__) {
         function recur(...__function_args__) {
             let __arg_matches__ = null;
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.capture(new Map([[Symbol.for('scheme'), ElixirScript.Core.Patterns.variable('scheme')], [Symbol.for('port'), ElixirScript.Core.Patterns.variable('port')], [Symbol.for('path'), ElixirScript.Core.Patterns.variable('path')], [Symbol.for('query'), ElixirScript.Core.Patterns.variable('query')], [Symbol.for('fragment'), ElixirScript.Core.Patterns.variable('fragment')]]))], __function_args__, (scheme0, port0, path0, query0, fragment0, uri0) => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('dict'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [ElixirScript.Core.Patterns.variable('key'), ElixirScript.Core.Patterns.variable('value')]
+            })], __function_args__, (dict0, key0, value0) => {
                 return true;
             })) !== null) {
-                let [scheme0, port0, path0, query0, fragment0, uri0] = __arg_matches__;
+                let [dict0, key0, value0] = __arg_matches__;
 
-                const [uri1] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('uri'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.bound(port0)], () => {
-                    return new Map([...uri0, [Symbol.for('port'), null]]);
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return uri0;
-                }, () => {
-                    return true;
-                })).call(this, ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303291132')], (x5764607523032911320) => {
-                    return x5764607523032911320;
-                }, (x5764607523032911320) => {
-                    return x5764607523032911320 === null || x5764607523032911320 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return Elixir.URI.__load(Elixir).default_port(scheme0);
-                }, () => {
-                    return true;
-                })).call(this, scheme0)));
+                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashDict.__load(Elixir));
 
-                const [authority0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('authority'), extract_authority(uri1));
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [Symbol.for('ok'), ElixirScript.Core.Patterns.bound(value0)]
+                })], () => {
+                    return true;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return false;
+                }, () => {
+                    return true;
+                })).call(this, module0.fetch(dict0, key0)));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_dict'), ElixirScript.Core.Patterns.variable('_')], __function_args__, (_dict0) => {
+                return true;
+            })) !== null) {
+                let [_dict0] = __arg_matches__;
 
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303291036')], (x5764607523032910360) => {
-                    return '';
-                }, (x5764607523032910360) => {
-                    return x5764607523032910360 === null || x5764607523032910360 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return scheme0 + ':';
-                }, () => {
-                    return true;
-                })).call(this, scheme0) + (ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303290940')], (x5764607523032909400) => {
-                    return '';
-                }, (x5764607523032909400) => {
-                    return x5764607523032909400 === null || x5764607523032909400 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return '//' + authority0;
-                }, () => {
-                    return true;
-                })).call(this, authority0) + (ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303290844')], (x5764607523032908440) => {
-                    return '';
-                }, (x5764607523032908440) => {
-                    return x5764607523032908440 === null || x5764607523032908440 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return path0;
-                }, () => {
-                    return true;
-                })).call(this, path0) + (ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303290780')], (x5764607523032907800) => {
-                    return '';
-                }, (x5764607523032907800) => {
-                    return x5764607523032907800 === null || x5764607523032907800 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return '?' + query0;
-                }, () => {
-                    return true;
-                })).call(this, query0) + ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303290684')], (x5764607523032906840) => {
-                    return '';
-                }, (x5764607523032906840) => {
-                    return x5764607523032906840 === null || x5764607523032906840 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return '#' + fragment0;
-                }, () => {
-                    return true;
-                })).call(this, fragment0))));
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), false);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function reduce(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('dict'), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (dict0, acc0, fun0) => {
+                return true;
+            })) !== null) {
+                let [dict0, acc0, fun0] = __arg_matches__;
+
+                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashDict.__load(Elixir));
+
+                return module0.reduce(dict0, acc0, fun0);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -13073,12 +12991,265 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.URI')._
 
     const __exports = {
         __impl__,
-        to_string,
-        __MODULE__: Symbol.for('Elixir.String.Chars.URI'),
+        count,
+        member__qmark__,
+        reduce,
+        __MODULE__: Symbol.for('Elixir.Enumerable.HashDict'),
         __info__
     };
 
-    Elixir.String.Chars.URI.__exports = __exports
+    Elixir.Enumerable.HashDict.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.HashSet').__load = function(Elixir) {
+    if (Elixir.Enumerable.HashSet.__exports)
+        return Elixir.Enumerable.HashSet.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [79574681374943783881605710047048620718]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.HashSet.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/hash_set.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(59), ElixirScript.Core.BitString.integer(221), ElixirScript.Core.BitString.integer(134), ElixirScript.Core.BitString.integer(178), ElixirScript.Core.BitString.integer(233), ElixirScript.Core.BitString.integer(238), ElixirScript.Core.BitString.integer(0), ElixirScript.Core.BitString.integer(107), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(228), ElixirScript.Core.BitString.integer(125), ElixirScript.Core.BitString.integer(90), ElixirScript.Core.BitString.integer(88), ElixirScript.Core.BitString.integer(187), ElixirScript.Core.BitString.integer(218), ElixirScript.Core.BitString.integer(174))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.HashSet')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.HashSet.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Enumerable.HashSet.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Enumerable.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function count(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('set')], __function_args__, (set0) => {
+                return true;
+            })) !== null) {
+                let [set0] = __arg_matches__;
+
+                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashSet.__load(Elixir));
+
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), module0.size(set0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function member__qmark__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('set'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (set0, term0) => {
+                return true;
+            })) !== null) {
+                let [set0, term0] = __arg_matches__;
+
+                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashSet.__load(Elixir));
+
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), module0.member__qmark__(set0, term0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function reduce(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('set'), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (set0, acc0, fun0) => {
+                return true;
+            })) !== null) {
+                let [set0, acc0, fun0] = __arg_matches__;
+
+                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashSet.__load(Elixir));
+
+                return module0.reduce(set0, acc0, fun0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        count,
+        member__qmark__,
+        reduce,
+        __MODULE__: Symbol.for('Elixir.Enumerable.HashSet'),
+        __info__
+    };
+
+    Elixir.Enumerable.HashSet.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Keyword').__load = function(Elixir) {
+    if (Elixir.Keyword.__exports)
+        return Elixir.Keyword.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('delete'), 2), new ElixirScript.Core.Tuple(Symbol.for('delete'), 3), new ElixirScript.Core.Tuple(Symbol.for('delete_first'), 2), new ElixirScript.Core.Tuple(Symbol.for('drop'), 2), new ElixirScript.Core.Tuple(Symbol.for('equal?'), 2), new ElixirScript.Core.Tuple(Symbol.for('fetch'), 2), new ElixirScript.Core.Tuple(Symbol.for('fetch!'), 2), new ElixirScript.Core.Tuple(Symbol.for('get'), 2), new ElixirScript.Core.Tuple(Symbol.for('get'), 3), new ElixirScript.Core.Tuple(Symbol.for('get_and_update'), 3), new ElixirScript.Core.Tuple(Symbol.for('get_and_update!'), 3), new ElixirScript.Core.Tuple(Symbol.for('get_lazy'), 3), new ElixirScript.Core.Tuple(Symbol.for('get_values'), 2), new ElixirScript.Core.Tuple(Symbol.for('has_key?'), 2), new ElixirScript.Core.Tuple(Symbol.for('keys'), 1), new ElixirScript.Core.Tuple(Symbol.for('keyword?'), 1), new ElixirScript.Core.Tuple(Symbol.for('merge'), 2), new ElixirScript.Core.Tuple(Symbol.for('merge'), 3), new ElixirScript.Core.Tuple(Symbol.for('new'), 0), new ElixirScript.Core.Tuple(Symbol.for('new'), 1), new ElixirScript.Core.Tuple(Symbol.for('new'), 2), new ElixirScript.Core.Tuple(Symbol.for('pop'), 2), new ElixirScript.Core.Tuple(Symbol.for('pop'), 3), new ElixirScript.Core.Tuple(Symbol.for('pop_first'), 2), new ElixirScript.Core.Tuple(Symbol.for('pop_first'), 3), new ElixirScript.Core.Tuple(Symbol.for('pop_lazy'), 3), new ElixirScript.Core.Tuple(Symbol.for('put'), 3), new ElixirScript.Core.Tuple(Symbol.for('put_new'), 3), new ElixirScript.Core.Tuple(Symbol.for('put_new_lazy'), 3), new ElixirScript.Core.Tuple(Symbol.for('replace'), 3), new ElixirScript.Core.Tuple(Symbol.for('replace!'), 3), new ElixirScript.Core.Tuple(Symbol.for('size'), 1), new ElixirScript.Core.Tuple(Symbol.for('split'), 2), new ElixirScript.Core.Tuple(Symbol.for('take'), 2), new ElixirScript.Core.Tuple(Symbol.for('to_list'), 1), new ElixirScript.Core.Tuple(Symbol.for('update'), 4), new ElixirScript.Core.Tuple(Symbol.for('update!'), 3), new ElixirScript.Core.Tuple(Symbol.for('values'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [275970530505707129807132243880086217764])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/keyword.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(207), ElixirScript.Core.BitString.integer(157), ElixirScript.Core.BitString.integer(253), ElixirScript.Core.BitString.integer(168), ElixirScript.Core.BitString.integer(37), ElixirScript.Core.BitString.integer(22), ElixirScript.Core.BitString.integer(213), ElixirScript.Core.BitString.integer(125), ElixirScript.Core.BitString.integer(111), ElixirScript.Core.BitString.integer(54), ElixirScript.Core.BitString.integer(161), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(94), ElixirScript.Core.BitString.integer(30), ElixirScript.Core.BitString.integer(36), ElixirScript.Core.BitString.integer(36))], [Symbol.for('module'), Symbol.for('Elixir.Keyword')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function fetch__emark__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('keywords'), ElixirScript.Core.Patterns.variable('key')], __function_args__, (keywords0, key0) => {
+                return ElixirScript.Core.erlang.is_list(keywords0) && ElixirScript.Core.erlang.is_atom(key0);
+            })) !== null) {
+                let [keywords0, key0] = __arg_matches__;
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.bound(key0), ElixirScript.Core.Patterns.variable('value')]
+                })], (value0) => {
+                    return value0;
+                }, (value0) => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([false], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.KeyError.__load(Elixir).exception([new ElixirScript.Core.Tuple(Symbol.for('key'), key0), new ElixirScript.Core.Tuple(Symbol.for('term'), keywords0)]));
+                }, () => {
+                    return true;
+                })).call(this, ElixirScript.Core.lists.keyfind(key0, 1, keywords0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function get(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x0'), ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x00, x10) => {
+                return true;
+            })) !== null) {
+                let [x00, x10] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, x00, x10, null));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('keywords'), ElixirScript.Core.Patterns.variable('key'), ElixirScript.Core.Patterns.variable('default')], __function_args__, (keywords0, key0, __default__0) => {
+                return ElixirScript.Core.erlang.is_list(keywords0) && ElixirScript.Core.erlang.is_atom(key0);
+            })) !== null) {
+                let [keywords0, key0, __default__0] = __arg_matches__;
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.bound(key0), ElixirScript.Core.Patterns.variable('value')]
+                })], (value0) => {
+                    return value0;
+                }, (value0) => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([false], () => {
+                    return __default__0;
+                }, () => {
+                    return true;
+                })).call(this, ElixirScript.Core.lists.keyfind(key0, 1, keywords0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function put_new(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('keywords'), ElixirScript.Core.Patterns.variable('key'), ElixirScript.Core.Patterns.variable('value')], __function_args__, (keywords0, key0, value0) => {
+                return ElixirScript.Core.erlang.is_list(keywords0) && ElixirScript.Core.erlang.is_atom(key0);
+            })) !== null) {
+                let [keywords0, key0, value0] = __arg_matches__;
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.bound(key0), ElixirScript.Core.Patterns.variable('_')]
+                })], () => {
+                    return keywords0;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([false], () => {
+                    return ElixirScript.Core.Functions.concat(new ElixirScript.Core.Tuple(key0, value0), keywords0);
+                }, () => {
+                    return true;
+                })).call(this, ElixirScript.Core.lists.keyfind(key0, 1, keywords0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        fetch__emark__,
+        get,
+        put_new,
+        __MODULE__: Symbol.for('Elixir.Keyword'),
+        __info__
+    };
+
+    Elixir.Keyword.__exports = __exports
 
     return __exports;
 }
@@ -13209,12 +13380,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Function'
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.Error').__load = function(Elixir) {
-    if (Elixir.File.Error.__exports)
-        return Elixir.File.Error.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.Stat').__load = function(Elixir) {
+    if (Elixir.File.Stat.__exports)
+        return Elixir.File.Stat.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('exception'), 1), new ElixirScript.Core.Tuple(Symbol.for('message'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [47509202473523436012368381899347079190]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Exception.__load(Elixir)])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/exception.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(35), ElixirScript.Core.BitString.integer(189), ElixirScript.Core.BitString.integer(240), ElixirScript.Core.BitString.integer(135), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(114), ElixirScript.Core.BitString.integer(238), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(186), ElixirScript.Core.BitString.integer(114), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(118), ElixirScript.Core.BitString.integer(208), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(48), ElixirScript.Core.BitString.integer(22))], [Symbol.for('module'), Symbol.for('Elixir.File.Error')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('from_record'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_record'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [253670265643889226480533203944692006041])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/file/stat.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(190), ElixirScript.Core.BitString.integer(215), ElixirScript.Core.BitString.integer(29), ElixirScript.Core.BitString.integer(182), ElixirScript.Core.BitString.integer(34), ElixirScript.Core.BitString.integer(201), ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(167), ElixirScript.Core.BitString.integer(45), ElixirScript.Core.BitString.integer(114), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(89), ElixirScript.Core.BitString.integer(25), ElixirScript.Core.BitString.integer(244), ElixirScript.Core.BitString.integer(60), ElixirScript.Core.BitString.integer(153))], [Symbol.for('module'), Symbol.for('Elixir.File.Stat')]]);
 
         const value = __info__map__.get(kind);
 
@@ -13236,28 +13407,28 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.Error').__load 
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return new Map([[Symbol.for('__exception__'), true], [Symbol.for('__struct__'), Elixir.File.Error.__load(Elixir)], [Symbol.for('action'), ''], [Symbol.for('path'), null], [Symbol.for('reason'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303361564')], __function_args__, (kv5764607523033615640) => {
+                return new Map([[Symbol.for('__struct__'), Elixir.File.Stat.__load(Elixir)], [Symbol.for('access'), null], [Symbol.for('atime'), null], [Symbol.for('ctime'), null], [Symbol.for('gid'), null], [Symbol.for('inode'), null], [Symbol.for('links'), null], [Symbol.for('major_device'), null], [Symbol.for('minor_device'), null], [Symbol.for('mode'), null], [Symbol.for('mtime'), null], [Symbol.for('size'), null], [Symbol.for('type'), null], [Symbol.for('uid'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303301407')], __function_args__, (kv5764607523033014070) => {
                 return true;
             })) !== null) {
-                let [kv5764607523033615640] = __arg_matches__;
+                let [kv5764607523033014070] = __arg_matches__;
 
-                const [map5764607523033615640, keys5764607523033615640] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303361564'), ElixirScript.Core.Patterns.variable('keys576460752303361564')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033615640, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                const [map5764607523033014070, keys5764607523033014070] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303301407'), ElixirScript.Core.Patterns.variable('keys576460752303301407')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033014070, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
                     function recur(...__function_args__) {
                         let __arg_matches__ = null;
 
                         if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303361564'), ElixirScript.Core.Patterns.variable('val576460752303361564')]
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303301407'), ElixirScript.Core.Patterns.variable('val576460752303301407')]
                         }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303361564'), ElixirScript.Core.Patterns.variable('keys576460752303361564')]
-                        })], __function_args__, (key5764607523033615640, val5764607523033615640, map5764607523033615640, keys5764607523033615640) => {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303301407'), ElixirScript.Core.Patterns.variable('keys576460752303301407')]
+                        })], __function_args__, (key5764607523033014070, val5764607523033014070, map5764607523033014070, keys5764607523033014070) => {
                             return true;
                         })) !== null) {
-                            let [key5764607523033615640, val5764607523033615640, map5764607523033615640, keys5764607523033615640] = __arg_matches__;
+                            let [key5764607523033014070, val5764607523033014070, map5764607523033014070, keys5764607523033014070] = __arg_matches__;
 
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033615640, val5764607523033615640, map5764607523033615640), Elixir.List.__load(Elixir).__delete__(keys5764607523033615640, key5764607523033615640));
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033014070, val5764607523033014070, map5764607523033014070), Elixir.List.__load(Elixir).__delete__(keys5764607523033014070, key5764607523033014070));
                         }
 
                         throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -13266,17 +13437,17 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.Error').__load 
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref398744 = new ElixirScript.Core.Tuple(map5764607523033615640, keys5764607523033615640);
+                const _ref6115573 = new ElixirScript.Core.Tuple(map5764607523033014070, keys5764607523033014070);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033615640;
+                    return map5764607523033014070;
                 }, () => {
                     return true;
                 }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.Error.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033615640)))))));
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.Stat.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033014070)))))));
                 }, () => {
                     return true;
-                })).call(this, keys5764607523033615640);
+                })).call(this, keys5764607523033014070);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -13285,54 +13456,20 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.Error').__load 
         return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
     }
 
-    function exception(...__function_args__) {
+    function from_record(...__function_args__) {
         function recur(...__function_args__) {
             let __arg_matches__ = null;
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('args576460752303361628')], __function_args__, (args5764607523033616280) => {
-                return ElixirScript.Core.erlang.is_list(args5764607523033616280);
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [Symbol.for('file_info'), ElixirScript.Core.Patterns.variable('size'), ElixirScript.Core.Patterns.variable('type'), ElixirScript.Core.Patterns.variable('access'), ElixirScript.Core.Patterns.variable('atime'), ElixirScript.Core.Patterns.variable('mtime'), ElixirScript.Core.Patterns.variable('ctime'), ElixirScript.Core.Patterns.variable('mode'), ElixirScript.Core.Patterns.variable('links'), ElixirScript.Core.Patterns.variable('major_device'), ElixirScript.Core.Patterns.variable('minor_device'), ElixirScript.Core.Patterns.variable('inode'), ElixirScript.Core.Patterns.variable('uid'), ElixirScript.Core.Patterns.variable('gid')]
+            })], __function_args__, (size0, type0, access0, atime0, mtime0, ctime0, mode0, links0, major_device0, minor_device0, inode0, uid0, gid0) => {
+                return true;
             })) !== null) {
-                let [args5764607523033616280] = __arg_matches__;
+                let [size0, type0, access0, atime0, mtime0, ctime0, mode0, links0, major_device0, minor_device0, inode0, uid0, gid0] = __arg_matches__;
 
-                const [struct5764607523033616280] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('struct576460752303361628'), __struct__());
-
-                const [valid5764607523033616280, invalid5764607523033616280] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('valid576460752303361628'), ElixirScript.Core.Patterns.variable('invalid576460752303361628')]
-                }), Elixir.Enum.__load(Elixir).split_with(args5764607523033616280, (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('k576460752303361628'), ElixirScript.Core.Patterns.variable('_')]
-                        })], __function_args__, (k5764607523033616280) => {
-                            return true;
-                        })) !== null) {
-                            let [k5764607523033616280] = __arg_matches__;
-
-                            return ElixirScript.Core.maps.is_key(k5764607523033616280, struct5764607523033616280);
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref7098253 = new ElixirScript.Core.Tuple(valid5764607523033616280, invalid5764607523033616280);
-
-                ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return Symbol.for('ok');
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return Elixir.IO.__load(Elixir).warn('the following fields are unknown when raising ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.Error.__load(Elixir))) + (': ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(invalid5764607523033616280)) + '. ')) + ('Please make sure to only give known fields when raising ' + ('or redefine ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.Error.__load(Elixir))) + '.exception/1 to ') + ('discard unknown fields. Future Elixir versions will raise on ' + 'unknown fields given to raise/2')))));
-                }, () => {
-                    return true;
-                })).call(this, invalid5764607523033616280)
-
-                return Elixir.Kernel.__load(Elixir).struct__emark__(struct5764607523033616280, valid5764607523033616280);
+                return Elixir.File.Stat.__load(Elixir).__struct__(new Map([[Symbol.for('size'), size0], [Symbol.for('type'), type0], [Symbol.for('access'), access0], [Symbol.for('atime'), atime0], [Symbol.for('mtime'), mtime0], [Symbol.for('ctime'), ctime0], [Symbol.for('mode'), mode0], [Symbol.for('links'), links0], [Symbol.for('major_device'), major_device0], [Symbol.for('minor_device'), minor_device0], [Symbol.for('inode'), inode0], [Symbol.for('uid'), uid0], [Symbol.for('gid'), gid0]]));
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -13343,12 +13480,153 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.Error').__load 
 
     const __exports = {
         __struct__,
-        exception,
-        __MODULE__: Symbol.for('Elixir.File.Error'),
+        from_record,
+        __MODULE__: Symbol.for('Elixir.File.Stat'),
         __info__
     };
 
-    Elixir.File.Error.__exports = __exports
+    Elixir.File.Stat.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Version').__load = function(Elixir) {
+    if (Elixir.String.Chars.Version.__exports)
+        return Elixir.String.Chars.Version.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [277467372937582409401064142997552032580]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.String.Chars.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.String.Chars.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Version.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/version.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(208), ElixirScript.Core.BitString.integer(190), ElixirScript.Core.BitString.integer(69), ElixirScript.Core.BitString.integer(175), ElixirScript.Core.BitString.integer(193), ElixirScript.Core.BitString.integer(228), ElixirScript.Core.BitString.integer(202), ElixirScript.Core.BitString.integer(147), ElixirScript.Core.BitString.integer(194), ElixirScript.Core.BitString.integer(217), ElixirScript.Core.BitString.integer(221), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(119), ElixirScript.Core.BitString.integer(46), ElixirScript.Core.BitString.integer(235), ElixirScript.Core.BitString.integer(68))], [Symbol.for('module'), Symbol.for('Elixir.String.Chars.Version')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Version.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.String.Chars.Version.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.String.Chars.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function pre(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([[]], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return '';
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('pre')], __function_args__, (pre0) => {
+                return true;
+            })) !== null) {
+                let [pre0] = __arg_matches__;
+
+                return '-' + Elixir.Enum.__load(Elixir).map_join(pre0, '.', (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('int')], __function_args__, (int0) => {
+                            return ElixirScript.Core.erlang.is_integer(int0);
+                        })) !== null) {
+                            let [int0] = __arg_matches__;
+
+                            return ElixirScript.Core.erlang.integer_to_binary(int0);
+                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('string')], __function_args__, (string0) => {
+                            return ElixirScript.Core.erlang.is_binary(string0);
+                        })) !== null) {
+                            let [string0] = __arg_matches__;
+
+                            return string0;
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                });
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function to_string(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('version')], __function_args__, (version0) => {
+                return true;
+            })) !== null) {
+                let [version0] = __arg_matches__;
+
+                const [pre0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('pre'), pre(ElixirScript.Core.Functions.call_property(version0, 'pre')));
+
+                const [build0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('build'), ElixirScript.Core.Functions.call_property(version0, 'build'));
+
+                const [build1] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('build'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303278270')], (x5764607523032782700) => {
+                    return null;
+                }, (x5764607523032782700) => {
+                    return x5764607523032782700 === null || x5764607523032782700 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return '+' + Elixir.String.Chars.__load(Elixir).to_string(build0);
+                }, () => {
+                    return true;
+                })).call(this, build0));
+
+                return Elixir.String.Chars.__load(Elixir).to_string(ElixirScript.Core.Functions.call_property(version0, 'major')) + ('.' + (Elixir.String.Chars.__load(Elixir).to_string(ElixirScript.Core.Functions.call_property(version0, 'minor')) + ('.' + (Elixir.String.Chars.__load(Elixir).to_string(ElixirScript.Core.Functions.call_property(version0, 'patch')) + (Elixir.String.Chars.__load(Elixir).to_string(pre0) + Elixir.String.Chars.__load(Elixir).to_string(build1))))));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        to_string,
+        __MODULE__: Symbol.for('Elixir.String.Chars.Version'),
+        __info__
+    };
+
+    Elixir.String.Chars.Version.__exports = __exports
 
     return __exports;
 }
@@ -14165,245 +14443,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Algebra').__
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.File.Stat').__load = function(Elixir) {
-    if (Elixir.File.Stat.__exports)
-        return Elixir.File.Stat.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.URI').__load = function(Elixir) {
+    if (Elixir.String.Chars.URI.__exports)
+        return Elixir.String.Chars.URI.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('from_record'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_record'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [253670265643889226480533203944692006041])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/file/stat.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(190), ElixirScript.Core.BitString.integer(215), ElixirScript.Core.BitString.integer(29), ElixirScript.Core.BitString.integer(182), ElixirScript.Core.BitString.integer(34), ElixirScript.Core.BitString.integer(201), ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(167), ElixirScript.Core.BitString.integer(45), ElixirScript.Core.BitString.integer(114), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(89), ElixirScript.Core.BitString.integer(25), ElixirScript.Core.BitString.integer(244), ElixirScript.Core.BitString.integer(60), ElixirScript.Core.BitString.integer(153))], [Symbol.for('module'), Symbol.for('Elixir.File.Stat')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__struct__'), Elixir.File.Stat.__load(Elixir)], [Symbol.for('access'), null], [Symbol.for('atime'), null], [Symbol.for('ctime'), null], [Symbol.for('gid'), null], [Symbol.for('inode'), null], [Symbol.for('links'), null], [Symbol.for('major_device'), null], [Symbol.for('minor_device'), null], [Symbol.for('mode'), null], [Symbol.for('mtime'), null], [Symbol.for('size'), null], [Symbol.for('type'), null], [Symbol.for('uid'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303301407')], __function_args__, (kv5764607523033014070) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523033014070] = __arg_matches__;
-
-                const [map5764607523033014070, keys5764607523033014070] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303301407'), ElixirScript.Core.Patterns.variable('keys576460752303301407')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523033014070, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303301407'), ElixirScript.Core.Patterns.variable('val576460752303301407')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303301407'), ElixirScript.Core.Patterns.variable('keys576460752303301407')]
-                        })], __function_args__, (key5764607523033014070, val5764607523033014070, map5764607523033014070, keys5764607523033014070) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523033014070, val5764607523033014070, map5764607523033014070, keys5764607523033014070] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523033014070, val5764607523033014070, map5764607523033014070), Elixir.List.__load(Elixir).__delete__(keys5764607523033014070, key5764607523033014070));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref7434621 = new ElixirScript.Core.Tuple(map5764607523033014070, keys5764607523033014070);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523033014070;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.File.Stat.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523033014070)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523033014070);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function from_record(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [Symbol.for('file_info'), ElixirScript.Core.Patterns.variable('size'), ElixirScript.Core.Patterns.variable('type'), ElixirScript.Core.Patterns.variable('access'), ElixirScript.Core.Patterns.variable('atime'), ElixirScript.Core.Patterns.variable('mtime'), ElixirScript.Core.Patterns.variable('ctime'), ElixirScript.Core.Patterns.variable('mode'), ElixirScript.Core.Patterns.variable('links'), ElixirScript.Core.Patterns.variable('major_device'), ElixirScript.Core.Patterns.variable('minor_device'), ElixirScript.Core.Patterns.variable('inode'), ElixirScript.Core.Patterns.variable('uid'), ElixirScript.Core.Patterns.variable('gid')]
-            })], __function_args__, (size0, type0, access0, atime0, mtime0, ctime0, mode0, links0, major_device0, minor_device0, inode0, uid0, gid0) => {
-                return true;
-            })) !== null) {
-                let [size0, type0, access0, atime0, mtime0, ctime0, mode0, links0, major_device0, minor_device0, inode0, uid0, gid0] = __arg_matches__;
-
-                return Elixir.File.Stat.__load(Elixir).__struct__(new Map([[Symbol.for('size'), size0], [Symbol.for('type'), type0], [Symbol.for('access'), access0], [Symbol.for('atime'), atime0], [Symbol.for('mtime'), mtime0], [Symbol.for('ctime'), ctime0], [Symbol.for('mode'), mode0], [Symbol.for('links'), links0], [Symbol.for('major_device'), major_device0], [Symbol.for('minor_device'), minor_device0], [Symbol.for('inode'), inode0], [Symbol.for('uid'), uid0], [Symbol.for('gid'), gid0]]));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        from_record,
-        __MODULE__: Symbol.for('Elixir.File.Stat'),
-        __info__
-    };
-
-    Elixir.File.Stat.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Keyword').__load = function(Elixir) {
-    if (Elixir.Keyword.__exports)
-        return Elixir.Keyword.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('delete'), 2), new ElixirScript.Core.Tuple(Symbol.for('delete'), 3), new ElixirScript.Core.Tuple(Symbol.for('delete_first'), 2), new ElixirScript.Core.Tuple(Symbol.for('drop'), 2), new ElixirScript.Core.Tuple(Symbol.for('equal?'), 2), new ElixirScript.Core.Tuple(Symbol.for('fetch'), 2), new ElixirScript.Core.Tuple(Symbol.for('fetch!'), 2), new ElixirScript.Core.Tuple(Symbol.for('get'), 2), new ElixirScript.Core.Tuple(Symbol.for('get'), 3), new ElixirScript.Core.Tuple(Symbol.for('get_and_update'), 3), new ElixirScript.Core.Tuple(Symbol.for('get_and_update!'), 3), new ElixirScript.Core.Tuple(Symbol.for('get_lazy'), 3), new ElixirScript.Core.Tuple(Symbol.for('get_values'), 2), new ElixirScript.Core.Tuple(Symbol.for('has_key?'), 2), new ElixirScript.Core.Tuple(Symbol.for('keys'), 1), new ElixirScript.Core.Tuple(Symbol.for('keyword?'), 1), new ElixirScript.Core.Tuple(Symbol.for('merge'), 2), new ElixirScript.Core.Tuple(Symbol.for('merge'), 3), new ElixirScript.Core.Tuple(Symbol.for('new'), 0), new ElixirScript.Core.Tuple(Symbol.for('new'), 1), new ElixirScript.Core.Tuple(Symbol.for('new'), 2), new ElixirScript.Core.Tuple(Symbol.for('pop'), 2), new ElixirScript.Core.Tuple(Symbol.for('pop'), 3), new ElixirScript.Core.Tuple(Symbol.for('pop_first'), 2), new ElixirScript.Core.Tuple(Symbol.for('pop_first'), 3), new ElixirScript.Core.Tuple(Symbol.for('pop_lazy'), 3), new ElixirScript.Core.Tuple(Symbol.for('put'), 3), new ElixirScript.Core.Tuple(Symbol.for('put_new'), 3), new ElixirScript.Core.Tuple(Symbol.for('put_new_lazy'), 3), new ElixirScript.Core.Tuple(Symbol.for('replace'), 3), new ElixirScript.Core.Tuple(Symbol.for('replace!'), 3), new ElixirScript.Core.Tuple(Symbol.for('size'), 1), new ElixirScript.Core.Tuple(Symbol.for('split'), 2), new ElixirScript.Core.Tuple(Symbol.for('take'), 2), new ElixirScript.Core.Tuple(Symbol.for('to_list'), 1), new ElixirScript.Core.Tuple(Symbol.for('update'), 4), new ElixirScript.Core.Tuple(Symbol.for('update!'), 3), new ElixirScript.Core.Tuple(Symbol.for('values'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [275970530505707129807132243880086217764])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/keyword.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(207), ElixirScript.Core.BitString.integer(157), ElixirScript.Core.BitString.integer(253), ElixirScript.Core.BitString.integer(168), ElixirScript.Core.BitString.integer(37), ElixirScript.Core.BitString.integer(22), ElixirScript.Core.BitString.integer(213), ElixirScript.Core.BitString.integer(125), ElixirScript.Core.BitString.integer(111), ElixirScript.Core.BitString.integer(54), ElixirScript.Core.BitString.integer(161), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(94), ElixirScript.Core.BitString.integer(30), ElixirScript.Core.BitString.integer(36), ElixirScript.Core.BitString.integer(36))], [Symbol.for('module'), Symbol.for('Elixir.Keyword')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function fetch__emark__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('keywords'), ElixirScript.Core.Patterns.variable('key')], __function_args__, (keywords0, key0) => {
-                return ElixirScript.Core.erlang.is_list(keywords0) && ElixirScript.Core.erlang.is_atom(key0);
-            })) !== null) {
-                let [keywords0, key0] = __arg_matches__;
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.bound(key0), ElixirScript.Core.Patterns.variable('value')]
-                })], (value0) => {
-                    return value0;
-                }, (value0) => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([false], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.KeyError.__load(Elixir).exception([new ElixirScript.Core.Tuple(Symbol.for('key'), key0), new ElixirScript.Core.Tuple(Symbol.for('term'), keywords0)]));
-                }, () => {
-                    return true;
-                })).call(this, ElixirScript.Core.lists.keyfind(key0, 1, keywords0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function get(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x0'), ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x00, x10) => {
-                return true;
-            })) !== null) {
-                let [x00, x10] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, x00, x10, null));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('keywords'), ElixirScript.Core.Patterns.variable('key'), ElixirScript.Core.Patterns.variable('default')], __function_args__, (keywords0, key0, __default__0) => {
-                return ElixirScript.Core.erlang.is_list(keywords0) && ElixirScript.Core.erlang.is_atom(key0);
-            })) !== null) {
-                let [keywords0, key0, __default__0] = __arg_matches__;
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.bound(key0), ElixirScript.Core.Patterns.variable('value')]
-                })], (value0) => {
-                    return value0;
-                }, (value0) => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([false], () => {
-                    return __default__0;
-                }, () => {
-                    return true;
-                })).call(this, ElixirScript.Core.lists.keyfind(key0, 1, keywords0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function put_new(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('keywords'), ElixirScript.Core.Patterns.variable('key'), ElixirScript.Core.Patterns.variable('value')], __function_args__, (keywords0, key0, value0) => {
-                return ElixirScript.Core.erlang.is_list(keywords0) && ElixirScript.Core.erlang.is_atom(key0);
-            })) !== null) {
-                let [keywords0, key0, value0] = __arg_matches__;
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.bound(key0), ElixirScript.Core.Patterns.variable('_')]
-                })], () => {
-                    return keywords0;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([false], () => {
-                    return ElixirScript.Core.Functions.concat(new ElixirScript.Core.Tuple(key0, value0), keywords0);
-                }, () => {
-                    return true;
-                })).call(this, ElixirScript.Core.lists.keyfind(key0, 1, keywords0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        fetch__emark__,
-        get,
-        put_new,
-        __MODULE__: Symbol.for('Elixir.Keyword'),
-        __info__
-    };
-
-    Elixir.Keyword.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Version').__load = function(Elixir) {
-    if (Elixir.String.Chars.Version.__exports)
-        return Elixir.String.Chars.Version.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [277467372937582409401064142997552032580]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.String.Chars.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.String.Chars.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Version.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/version.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(208), ElixirScript.Core.BitString.integer(190), ElixirScript.Core.BitString.integer(69), ElixirScript.Core.BitString.integer(175), ElixirScript.Core.BitString.integer(193), ElixirScript.Core.BitString.integer(228), ElixirScript.Core.BitString.integer(202), ElixirScript.Core.BitString.integer(147), ElixirScript.Core.BitString.integer(194), ElixirScript.Core.BitString.integer(217), ElixirScript.Core.BitString.integer(221), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(119), ElixirScript.Core.BitString.integer(46), ElixirScript.Core.BitString.integer(235), ElixirScript.Core.BitString.integer(68))], [Symbol.for('module'), Symbol.for('Elixir.String.Chars.Version')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [41684391308037489114556609376532809497]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.String.Chars.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.String.Chars.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.URI.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/uri.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(31), ElixirScript.Core.BitString.integer(92), ElixirScript.Core.BitString.integer(31), ElixirScript.Core.BitString.integer(42), ElixirScript.Core.BitString.integer(146), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(141), ElixirScript.Core.BitString.integer(130), ElixirScript.Core.BitString.integer(56), ElixirScript.Core.BitString.integer(24), ElixirScript.Core.BitString.integer(196), ElixirScript.Core.BitString.integer(237), ElixirScript.Core.BitString.integer(86), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(199), ElixirScript.Core.BitString.integer(25))], [Symbol.for('module'), Symbol.for('Elixir.String.Chars.URI')]]);
 
         const value = __info__map__.get(kind);
 
@@ -14425,13 +14470,13 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Version
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Version.__load(Elixir);
+                return Elixir.URI.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.String.Chars.Version.__load(Elixir);
+                return Elixir.String.Chars.URI.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
                 return true;
             })) !== null) {
@@ -14446,46 +14491,48 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Version
         return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
     }
 
-    function pre(...__function_args__) {
+    function extract_authority(...__function_args__) {
         function recur(...__function_args__) {
             let __arg_matches__ = null;
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([[]], __function_args__, () => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('host'), null], [Symbol.for('authority'), ElixirScript.Core.Patterns.variable('authority')]])], __function_args__, (authority0) => {
                 return true;
             })) !== null) {
-                let [] = __arg_matches__;
+                let [authority0] = __arg_matches__;
 
-                return '';
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('pre')], __function_args__, (pre0) => {
+                return authority0;
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('host'), ElixirScript.Core.Patterns.variable('host')], [Symbol.for('userinfo'), ElixirScript.Core.Patterns.variable('userinfo')], [Symbol.for('port'), ElixirScript.Core.Patterns.variable('port')]])], __function_args__, (host0, userinfo0, port0) => {
                 return true;
             })) !== null) {
-                let [pre0] = __arg_matches__;
+                let [host0, userinfo0, port0] = __arg_matches__;
 
-                return '-' + Elixir.Enum.__load(Elixir).map_join(pre0, '.', (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('int')], __function_args__, (int0) => {
-                            return ElixirScript.Core.erlang.is_integer(int0);
-                        })) !== null) {
-                            let [int0] = __arg_matches__;
-
-                            return ElixirScript.Core.erlang.integer_to_binary(int0);
-                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('string')], __function_args__, (string0) => {
-                            return ElixirScript.Core.erlang.is_binary(string0);
-                        })) !== null) {
-                            let [string0] = __arg_matches__;
-
-                            return string0;
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                });
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303255549')], (x5764607523032555490) => {
+                    return '';
+                }, (x5764607523032555490) => {
+                    return x5764607523032555490 === null || x5764607523032555490 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return userinfo0 + '@';
+                }, () => {
+                    return true;
+                })).call(this, userinfo0) + (ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303255453')], (x5764607523032554530) => {
+                    return host0;
+                }, (x5764607523032554530) => {
+                    return x5764607523032554530 === null || x5764607523032554530 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return '[' + (host0 + ']');
+                }, () => {
+                    return true;
+                })).call(this, Elixir.String.__load(Elixir).contains__qmark__(host0, ':')) + ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303255357')], (x5764607523032553570) => {
+                    return '';
+                }, (x5764607523032553570) => {
+                    return x5764607523032553570 === null || x5764607523032553570 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ':' + ElixirScript.Core.erlang.integer_to_binary(port0);
+                }, () => {
+                    return true;
+                })).call(this, port0));
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -14500,26 +14547,72 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Version
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('version')], __function_args__, (version0) => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.capture(new Map([[Symbol.for('scheme'), ElixirScript.Core.Patterns.variable('scheme')], [Symbol.for('port'), ElixirScript.Core.Patterns.variable('port')], [Symbol.for('path'), ElixirScript.Core.Patterns.variable('path')], [Symbol.for('query'), ElixirScript.Core.Patterns.variable('query')], [Symbol.for('fragment'), ElixirScript.Core.Patterns.variable('fragment')]]))], __function_args__, (scheme0, port0, path0, query0, fragment0, uri0) => {
                 return true;
             })) !== null) {
-                let [version0] = __arg_matches__;
+                let [scheme0, port0, path0, query0, fragment0, uri0] = __arg_matches__;
 
-                const [pre0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('pre'), pre(ElixirScript.Core.Functions.call_property(version0, 'pre')));
-
-                const [build0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('build'), ElixirScript.Core.Functions.call_property(version0, 'build'));
-
-                const [build1] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('build'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303278270')], (x5764607523032782700) => {
-                    return null;
-                }, (x5764607523032782700) => {
-                    return x5764607523032782700 === null || x5764607523032782700 === false;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return '+' + Elixir.String.Chars.__load(Elixir).to_string(build0);
+                const [uri1] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('uri'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.bound(port0)], () => {
+                    return new Map([...uri0, [Symbol.for('port'), null]]);
                 }, () => {
                     return true;
-                })).call(this, build0));
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return uri0;
+                }, () => {
+                    return true;
+                })).call(this, ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303291132')], (x5764607523032911320) => {
+                    return x5764607523032911320;
+                }, (x5764607523032911320) => {
+                    return x5764607523032911320 === null || x5764607523032911320 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return Elixir.URI.__load(Elixir).default_port(scheme0);
+                }, () => {
+                    return true;
+                })).call(this, scheme0)));
 
-                return Elixir.String.Chars.__load(Elixir).to_string(ElixirScript.Core.Functions.call_property(version0, 'major')) + ('.' + (Elixir.String.Chars.__load(Elixir).to_string(ElixirScript.Core.Functions.call_property(version0, 'minor')) + ('.' + (Elixir.String.Chars.__load(Elixir).to_string(ElixirScript.Core.Functions.call_property(version0, 'patch')) + (Elixir.String.Chars.__load(Elixir).to_string(pre0) + Elixir.String.Chars.__load(Elixir).to_string(build1))))));
+                const [authority0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('authority'), extract_authority(uri1));
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303291036')], (x5764607523032910360) => {
+                    return '';
+                }, (x5764607523032910360) => {
+                    return x5764607523032910360 === null || x5764607523032910360 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return scheme0 + ':';
+                }, () => {
+                    return true;
+                })).call(this, scheme0) + (ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303290940')], (x5764607523032909400) => {
+                    return '';
+                }, (x5764607523032909400) => {
+                    return x5764607523032909400 === null || x5764607523032909400 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return '//' + authority0;
+                }, () => {
+                    return true;
+                })).call(this, authority0) + (ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303290844')], (x5764607523032908440) => {
+                    return '';
+                }, (x5764607523032908440) => {
+                    return x5764607523032908440 === null || x5764607523032908440 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return path0;
+                }, () => {
+                    return true;
+                })).call(this, path0) + (ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303290780')], (x5764607523032907800) => {
+                    return '';
+                }, (x5764607523032907800) => {
+                    return x5764607523032907800 === null || x5764607523032907800 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return '?' + query0;
+                }, () => {
+                    return true;
+                })).call(this, query0) + ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('x576460752303290684')], (x5764607523032906840) => {
+                    return '';
+                }, (x5764607523032906840) => {
+                    return x5764607523032906840 === null || x5764607523032906840 === false;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return '#' + fragment0;
+                }, () => {
+                    return true;
+                })).call(this, fragment0))));
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -14531,11 +14624,11 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Version
     const __exports = {
         __impl__,
         to_string,
-        __MODULE__: Symbol.for('Elixir.String.Chars.Version'),
+        __MODULE__: Symbol.for('Elixir.String.Chars.URI'),
         __info__
     };
 
-    Elixir.String.Chars.Version.__exports = __exports
+    Elixir.String.Chars.URI.__exports = __exports
 
     return __exports;
 }
@@ -15586,194 +15679,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String').__load = fu
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.URI').__load = function(Elixir) {
-    if (Elixir.URI.__exports)
-        return Elixir.URI.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('char_reserved?'), 1), new ElixirScript.Core.Tuple(Symbol.for('char_unescaped?'), 1), new ElixirScript.Core.Tuple(Symbol.for('char_unreserved?'), 1), new ElixirScript.Core.Tuple(Symbol.for('decode'), 1), new ElixirScript.Core.Tuple(Symbol.for('decode_query'), 1), new ElixirScript.Core.Tuple(Symbol.for('decode_query'), 2), new ElixirScript.Core.Tuple(Symbol.for('decode_www_form'), 1), new ElixirScript.Core.Tuple(Symbol.for('default_port'), 1), new ElixirScript.Core.Tuple(Symbol.for('default_port'), 2), new ElixirScript.Core.Tuple(Symbol.for('encode'), 1), new ElixirScript.Core.Tuple(Symbol.for('encode'), 2), new ElixirScript.Core.Tuple(Symbol.for('encode_query'), 1), new ElixirScript.Core.Tuple(Symbol.for('encode_www_form'), 1), new ElixirScript.Core.Tuple(Symbol.for('merge'), 2), new ElixirScript.Core.Tuple(Symbol.for('parse'), 1), new ElixirScript.Core.Tuple(Symbol.for('query_decoder'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [256566421649016364164109694179214404719])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/uri.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(193), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(229), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(26), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(188), ElixirScript.Core.BitString.integer(166), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(90), ElixirScript.Core.BitString.integer(79), ElixirScript.Core.BitString.integer(153), ElixirScript.Core.BitString.integer(144), ElixirScript.Core.BitString.integer(172), ElixirScript.Core.BitString.integer(111))], [Symbol.for('module'), Symbol.for('Elixir.URI')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __struct__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new Map([[Symbol.for('__struct__'), Elixir.URI.__load(Elixir)], [Symbol.for('authority'), null], [Symbol.for('fragment'), null], [Symbol.for('host'), null], [Symbol.for('path'), null], [Symbol.for('port'), null], [Symbol.for('query'), null], [Symbol.for('scheme'), null], [Symbol.for('userinfo'), null]]);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303260285')], __function_args__, (kv5764607523032602850) => {
-                return true;
-            })) !== null) {
-                let [kv5764607523032602850] = __arg_matches__;
-
-                const [map5764607523032602850, keys5764607523032602850] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('map576460752303260285'), ElixirScript.Core.Patterns.variable('keys576460752303260285')]
-                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523032602850, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('key576460752303260285'), ElixirScript.Core.Patterns.variable('val576460752303260285')]
-                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [ElixirScript.Core.Patterns.variable('map576460752303260285'), ElixirScript.Core.Patterns.variable('keys576460752303260285')]
-                        })], __function_args__, (key5764607523032602850, val5764607523032602850, map5764607523032602850, keys5764607523032602850) => {
-                            return true;
-                        })) !== null) {
-                            let [key5764607523032602850, val5764607523032602850, map5764607523032602850, keys5764607523032602850] = __arg_matches__;
-
-                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523032602850, val5764607523032602850, map5764607523032602850), Elixir.List.__load(Elixir).__delete__(keys5764607523032602850, key5764607523032602850));
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                }));
-
-                const _ref6138823 = new ElixirScript.Core.Tuple(map5764607523032602850, keys5764607523032602850);
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
-                    return map5764607523032602850;
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
-                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.URI.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523032602850)))))));
-                }, () => {
-                    return true;
-                })).call(this, keys5764607523032602850);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function default_port(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('scheme')], __function_args__, (scheme0) => {
-                return ElixirScript.Core.erlang.is_binary(scheme0);
-            })) !== null) {
-                let [scheme0] = __arg_matches__;
-
-                return ElixirScript.Core.elixir_config.safe_get(new ElixirScript.Core.Tuple(Symbol.for('uri'), scheme0), null);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __struct__,
-        default_port,
-        __MODULE__: Symbol.for('Elixir.URI'),
-        __info__
-    };
-
-    Elixir.URI.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Version.Requirement').__load = function(Elixir) {
-    if (Elixir.String.Chars.Version.Requirement.__exports)
-        return Elixir.String.Chars.Version.Requirement.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [74048157840532399580014422776857311885]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.String.Chars.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.String.Chars.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Version.Requirement.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/version.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(55), ElixirScript.Core.BitString.integer(181), ElixirScript.Core.BitString.integer(40), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(47), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(222), ElixirScript.Core.BitString.integer(135), ElixirScript.Core.BitString.integer(34), ElixirScript.Core.BitString.integer(96), ElixirScript.Core.BitString.integer(158), ElixirScript.Core.BitString.integer(178), ElixirScript.Core.BitString.integer(185), ElixirScript.Core.BitString.integer(49), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(141))], [Symbol.for('module'), Symbol.for('Elixir.String.Chars.Version.Requirement')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Version.Requirement.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.String.Chars.Version.Requirement.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.String.Chars.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function to_string(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
-                __MODULE__: Symbol.for('Elixir.Version.Requirement')
-            }], [Symbol.for('source'), ElixirScript.Core.Patterns.variable('source')]])], __function_args__, (source0) => {
-                return true;
-            })) !== null) {
-                let [source0] = __arg_matches__;
-
-                return source0;
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        to_string,
-        __MODULE__: Symbol.for('Elixir.String.Chars.Version.Requirement'),
-        __info__
-    };
-
-    Elixir.String.Chars.Version.Requirement.__exports = __exports
-
-    return __exports;
-}
 ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.BitString').__load = function(Elixir) {
     if (Elixir.Inspect.BitString.__exports)
         return Elixir.Inspect.BitString.__exports;
@@ -16277,12 +16182,119 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.BitString').
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Time').__load = function(Elixir) {
-    if (Elixir.String.Chars.Time.__exports)
-        return Elixir.String.Chars.Time.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.URI').__load = function(Elixir) {
+    if (Elixir.URI.__exports)
+        return Elixir.URI.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [232374037214202833794471926877820596768]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.String.Chars.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.String.Chars.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Time.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/time.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(174), ElixirScript.Core.BitString.integer(209), ElixirScript.Core.BitString.integer(156), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(139), ElixirScript.Core.BitString.integer(232), ElixirScript.Core.BitString.integer(89), ElixirScript.Core.BitString.integer(65), ElixirScript.Core.BitString.integer(54), ElixirScript.Core.BitString.integer(36), ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(111), ElixirScript.Core.BitString.integer(133), ElixirScript.Core.BitString.integer(60), ElixirScript.Core.BitString.integer(178), ElixirScript.Core.BitString.integer(32))], [Symbol.for('module'), Symbol.for('Elixir.String.Chars.Time')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 0), new ElixirScript.Core.Tuple(Symbol.for('__struct__'), 1), new ElixirScript.Core.Tuple(Symbol.for('char_reserved?'), 1), new ElixirScript.Core.Tuple(Symbol.for('char_unescaped?'), 1), new ElixirScript.Core.Tuple(Symbol.for('char_unreserved?'), 1), new ElixirScript.Core.Tuple(Symbol.for('decode'), 1), new ElixirScript.Core.Tuple(Symbol.for('decode_query'), 1), new ElixirScript.Core.Tuple(Symbol.for('decode_query'), 2), new ElixirScript.Core.Tuple(Symbol.for('decode_www_form'), 1), new ElixirScript.Core.Tuple(Symbol.for('default_port'), 1), new ElixirScript.Core.Tuple(Symbol.for('default_port'), 2), new ElixirScript.Core.Tuple(Symbol.for('encode'), 1), new ElixirScript.Core.Tuple(Symbol.for('encode'), 2), new ElixirScript.Core.Tuple(Symbol.for('encode_query'), 1), new ElixirScript.Core.Tuple(Symbol.for('encode_www_form'), 1), new ElixirScript.Core.Tuple(Symbol.for('merge'), 2), new ElixirScript.Core.Tuple(Symbol.for('parse'), 1), new ElixirScript.Core.Tuple(Symbol.for('query_decoder'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [256566421649016364164109694179214404719])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/uri.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(193), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(229), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(26), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(188), ElixirScript.Core.BitString.integer(166), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(90), ElixirScript.Core.BitString.integer(79), ElixirScript.Core.BitString.integer(153), ElixirScript.Core.BitString.integer(144), ElixirScript.Core.BitString.integer(172), ElixirScript.Core.BitString.integer(111))], [Symbol.for('module'), Symbol.for('Elixir.URI')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __struct__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new Map([[Symbol.for('__struct__'), Elixir.URI.__load(Elixir)], [Symbol.for('authority'), null], [Symbol.for('fragment'), null], [Symbol.for('host'), null], [Symbol.for('path'), null], [Symbol.for('port'), null], [Symbol.for('query'), null], [Symbol.for('scheme'), null], [Symbol.for('userinfo'), null]]);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('kv576460752303260285')], __function_args__, (kv5764607523032602850) => {
+                return true;
+            })) !== null) {
+                let [kv5764607523032602850] = __arg_matches__;
+
+                const [map5764607523032602850, keys5764607523032602850] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('map576460752303260285'), ElixirScript.Core.Patterns.variable('keys576460752303260285')]
+                }), Elixir.Enum.__load(Elixir).reduce(kv5764607523032602850, new ElixirScript.Core.Tuple(__struct__(), []), (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('key576460752303260285'), ElixirScript.Core.Patterns.variable('val576460752303260285')]
+                        }), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [ElixirScript.Core.Patterns.variable('map576460752303260285'), ElixirScript.Core.Patterns.variable('keys576460752303260285')]
+                        })], __function_args__, (key5764607523032602850, val5764607523032602850, map5764607523032602850, keys5764607523032602850) => {
+                            return true;
+                        })) !== null) {
+                            let [key5764607523032602850, val5764607523032602850, map5764607523032602850, keys5764607523032602850] = __arg_matches__;
+
+                            return new ElixirScript.Core.Tuple(ElixirScript.Core.maps.update(key5764607523032602850, val5764607523032602850, map5764607523032602850), Elixir.List.__load(Elixir).__delete__(keys5764607523032602850, key5764607523032602850));
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                }));
+
+                const _ref7022761 = new ElixirScript.Core.Tuple(map5764607523032602850, keys5764607523032602850);
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
+                    return map5764607523032602850;
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([ElixirScript.Core.Patterns.variable('_')], () => {
+                    return ElixirScript.Core.erlang.error(Elixir.ArgumentError.__load(Elixir).exception('the following keys must also be given when building ' + ('struct ' + (Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(Elixir.URI.__load(Elixir))) + (': ' + Elixir.String.Chars.__load(Elixir).to_string(Elixir.Kernel.__load(Elixir).inspect(keys5764607523032602850)))))));
+                }, () => {
+                    return true;
+                })).call(this, keys5764607523032602850);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function default_port(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('scheme')], __function_args__, (scheme0) => {
+                return ElixirScript.Core.erlang.is_binary(scheme0);
+            })) !== null) {
+                let [scheme0] = __arg_matches__;
+
+                return ElixirScript.Core.elixir_config.safe_get(new ElixirScript.Core.Tuple(Symbol.for('uri'), scheme0), null);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __struct__,
+        default_port,
+        __MODULE__: Symbol.for('Elixir.URI'),
+        __info__
+    };
+
+    Elixir.URI.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Version.Requirement').__load = function(Elixir) {
+    if (Elixir.String.Chars.Version.Requirement.__exports)
+        return Elixir.String.Chars.Version.Requirement.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [74048157840532399580014422776857311885]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.String.Chars.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.String.Chars.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Version.Requirement.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/version.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(55), ElixirScript.Core.BitString.integer(181), ElixirScript.Core.BitString.integer(40), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(47), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(222), ElixirScript.Core.BitString.integer(135), ElixirScript.Core.BitString.integer(34), ElixirScript.Core.BitString.integer(96), ElixirScript.Core.BitString.integer(158), ElixirScript.Core.BitString.integer(178), ElixirScript.Core.BitString.integer(185), ElixirScript.Core.BitString.integer(49), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(141))], [Symbol.for('module'), Symbol.for('Elixir.String.Chars.Version.Requirement')]]);
 
         const value = __info__map__.get(kind);
 
@@ -16304,13 +16316,13 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Time').
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Time.__load(Elixir);
+                return Elixir.Version.Requirement.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.String.Chars.Time.__load(Elixir);
+                return Elixir.String.Chars.Version.Requirement.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
                 return true;
             })) !== null) {
@@ -16331,12 +16343,14 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Time').
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('hour'), ElixirScript.Core.Patterns.variable('hour')], [Symbol.for('minute'), ElixirScript.Core.Patterns.variable('minute')], [Symbol.for('second'), ElixirScript.Core.Patterns.variable('second')], [Symbol.for('microsecond'), ElixirScript.Core.Patterns.variable('microsecond')], [Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')]])], __function_args__, (hour0, minute0, second0, microsecond0, calendar0) => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
+                __MODULE__: Symbol.for('Elixir.Version.Requirement')
+            }], [Symbol.for('source'), ElixirScript.Core.Patterns.variable('source')]])], __function_args__, (source0) => {
                 return true;
             })) !== null) {
-                let [hour0, minute0, second0, microsecond0, calendar0] = __arg_matches__;
+                let [source0] = __arg_matches__;
 
-                return calendar0.time_to_string(hour0, minute0, second0, microsecond0);
+                return source0;
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -16348,11 +16362,11 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Time').
     const __exports = {
         __impl__,
         to_string,
-        __MODULE__: Symbol.for('Elixir.String.Chars.Time'),
+        __MODULE__: Symbol.for('Elixir.String.Chars.Version.Requirement'),
         __info__
     };
 
-    Elixir.String.Chars.Time.__exports = __exports
+    Elixir.String.Chars.Version.Requirement.__exports = __exports
 
     return __exports;
 }
@@ -16435,6 +16449,85 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.NaiveDa
 
     return __exports;
 }
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Time').__load = function(Elixir) {
+    if (Elixir.String.Chars.Time.__exports)
+        return Elixir.String.Chars.Time.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [232374037214202833794471926877820596768]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.String.Chars.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.String.Chars.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Time.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/time.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(174), ElixirScript.Core.BitString.integer(209), ElixirScript.Core.BitString.integer(156), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(139), ElixirScript.Core.BitString.integer(232), ElixirScript.Core.BitString.integer(89), ElixirScript.Core.BitString.integer(65), ElixirScript.Core.BitString.integer(54), ElixirScript.Core.BitString.integer(36), ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(111), ElixirScript.Core.BitString.integer(133), ElixirScript.Core.BitString.integer(60), ElixirScript.Core.BitString.integer(178), ElixirScript.Core.BitString.integer(32))], [Symbol.for('module'), Symbol.for('Elixir.String.Chars.Time')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Time.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.String.Chars.Time.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.String.Chars.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function to_string(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('hour'), ElixirScript.Core.Patterns.variable('hour')], [Symbol.for('minute'), ElixirScript.Core.Patterns.variable('minute')], [Symbol.for('second'), ElixirScript.Core.Patterns.variable('second')], [Symbol.for('microsecond'), ElixirScript.Core.Patterns.variable('microsecond')], [Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')]])], __function_args__, (hour0, minute0, second0, microsecond0, calendar0) => {
+                return true;
+            })) !== null) {
+                let [hour0, minute0, second0, microsecond0, calendar0] = __arg_matches__;
+
+                return calendar0.time_to_string(hour0, minute0, second0, microsecond0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        to_string,
+        __MODULE__: Symbol.for('Elixir.String.Chars.Time'),
+        __info__
+    };
+
+    Elixir.String.Chars.Time.__exports = __exports
+
+    return __exports;
+}
 ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.List').__load = function(Elixir) {
     if (Elixir.String.Chars.List.__exports)
         return Elixir.String.Chars.List.__exports;
@@ -16514,6 +16607,85 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.List').
 
     return __exports;
 }
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.DateTime').__load = function(Elixir) {
+    if (Elixir.String.Chars.DateTime.__exports)
+        return Elixir.String.Chars.DateTime.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [183927011111246663984681656981354388091]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.String.Chars.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.String.Chars.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.DateTime.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/datetime.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(199), ElixirScript.Core.BitString.integer(173), ElixirScript.Core.BitString.integer(80), ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(251), ElixirScript.Core.BitString.integer(104), ElixirScript.Core.BitString.integer(227), ElixirScript.Core.BitString.integer(38), ElixirScript.Core.BitString.integer(224), ElixirScript.Core.BitString.integer(191), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(26), ElixirScript.Core.BitString.integer(123))], [Symbol.for('module'), Symbol.for('Elixir.String.Chars.DateTime')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.DateTime.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.String.Chars.DateTime.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.String.Chars.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function to_string(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('day')], [Symbol.for('hour'), ElixirScript.Core.Patterns.variable('hour')], [Symbol.for('minute'), ElixirScript.Core.Patterns.variable('minute')], [Symbol.for('second'), ElixirScript.Core.Patterns.variable('second')], [Symbol.for('microsecond'), ElixirScript.Core.Patterns.variable('microsecond')], [Symbol.for('time_zone'), ElixirScript.Core.Patterns.variable('time_zone')], [Symbol.for('zone_abbr'), ElixirScript.Core.Patterns.variable('zone_abbr')], [Symbol.for('utc_offset'), ElixirScript.Core.Patterns.variable('utc_offset')], [Symbol.for('std_offset'), ElixirScript.Core.Patterns.variable('std_offset')]])], __function_args__, (calendar0, year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0) => {
+                return true;
+            })) !== null) {
+                let [calendar0, year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0] = __arg_matches__;
+
+                return calendar0.datetime_to_string(year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        to_string,
+        __MODULE__: Symbol.for('Elixir.String.Chars.DateTime'),
+        __info__
+    };
+
+    Elixir.String.Chars.DateTime.__exports = __exports
+
+    return __exports;
+}
 ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enum').__load = function(Elixir) {
     if (Elixir.Enum.__exports)
         return Elixir.Enum.__exports;
@@ -16577,7 +16749,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enum').__load = func
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref2445820 = new ElixirScript.Core.Tuple(result0);
+                const _ref4465121 = new ElixirScript.Core.Tuple(result0);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([false], () => {
                     return [];
@@ -17119,7 +17291,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enum').__load = func
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref4821524 = new ElixirScript.Core.Tuple(acc10, acc20);
+                const _ref4906823 = new ElixirScript.Core.Tuple(acc10, acc20);
 
                 return new ElixirScript.Core.Tuple(ElixirScript.Core.lists.reverse(acc10), ElixirScript.Core.lists.reverse(acc20));
             }
@@ -17223,270 +17395,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.Integer
     };
 
     Elixir.String.Chars.Integer.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.String.Chars.DateTime').__load = function(Elixir) {
-    if (Elixir.String.Chars.DateTime.__exports)
-        return Elixir.String.Chars.DateTime.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('to_string'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [183927011111246663984681656981354388091]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.String.Chars.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.String.Chars.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.DateTime.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/datetime.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(199), ElixirScript.Core.BitString.integer(173), ElixirScript.Core.BitString.integer(80), ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(251), ElixirScript.Core.BitString.integer(104), ElixirScript.Core.BitString.integer(227), ElixirScript.Core.BitString.integer(38), ElixirScript.Core.BitString.integer(224), ElixirScript.Core.BitString.integer(191), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(26), ElixirScript.Core.BitString.integer(123))], [Symbol.for('module'), Symbol.for('Elixir.String.Chars.DateTime')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.DateTime.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.String.Chars.DateTime.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.String.Chars.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function to_string(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('day')], [Symbol.for('hour'), ElixirScript.Core.Patterns.variable('hour')], [Symbol.for('minute'), ElixirScript.Core.Patterns.variable('minute')], [Symbol.for('second'), ElixirScript.Core.Patterns.variable('second')], [Symbol.for('microsecond'), ElixirScript.Core.Patterns.variable('microsecond')], [Symbol.for('time_zone'), ElixirScript.Core.Patterns.variable('time_zone')], [Symbol.for('zone_abbr'), ElixirScript.Core.Patterns.variable('zone_abbr')], [Symbol.for('utc_offset'), ElixirScript.Core.Patterns.variable('utc_offset')], [Symbol.for('std_offset'), ElixirScript.Core.Patterns.variable('std_offset')]])], __function_args__, (calendar0, year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0) => {
-                return true;
-            })) !== null) {
-                let [calendar0, year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0] = __arg_matches__;
-
-                return calendar0.datetime_to_string(year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        to_string,
-        __MODULE__: Symbol.for('Elixir.String.Chars.DateTime'),
-        __info__
-    };
-
-    Elixir.String.Chars.DateTime.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Regex').__load = function(Elixir) {
-    if (Elixir.Inspect.Regex.__exports)
-        return Elixir.Inspect.Regex.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [54466767004534052728946950697046021916]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Regex.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/inspect.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(40), ElixirScript.Core.BitString.integer(249), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(250), ElixirScript.Core.BitString.integer(129), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(151), ElixirScript.Core.BitString.integer(44), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(168), ElixirScript.Core.BitString.integer(196), ElixirScript.Core.BitString.integer(192), ElixirScript.Core.BitString.integer(28), ElixirScript.Core.BitString.integer(151), ElixirScript.Core.BitString.integer(28))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Regex')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Regex.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.Regex.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function escape(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('bin'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (bin0, term0) => {
-                return true;
-            })) !== null) {
-                let [bin0, term0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, bin0, [], term0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer({
-                'value': ElixirScript.Core.Patterns.variable()
-            }), ElixirScript.Core.BitString.binary({
-                'value': ElixirScript.Core.Patterns.variable()
-            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (term0, rest0, buf0, term1) => {
-                return true;
-            })) !== null) {
-                let [term0, rest0, buf0, term1] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, term1]), term1));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(10), ElixirScript.Core.BitString.binary({
-                'value': ElixirScript.Core.Patterns.variable()
-            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
-                return true;
-            })) !== null) {
-                let [rest0, buf0, term0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 110]), term0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.binary({
-                'value': ElixirScript.Core.Patterns.variable()
-            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
-                return true;
-            })) !== null) {
-                let [rest0, buf0, term0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 114]), term0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(9), ElixirScript.Core.BitString.binary({
-                'value': ElixirScript.Core.Patterns.variable()
-            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
-                return true;
-            })) !== null) {
-                let [rest0, buf0, term0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 116]), term0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.binary({
-                'value': ElixirScript.Core.Patterns.variable()
-            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
-                return true;
-            })) !== null) {
-                let [rest0, buf0, term0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 118]), term0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(12), ElixirScript.Core.BitString.binary({
-                'value': ElixirScript.Core.Patterns.variable()
-            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
-                return true;
-            })) !== null) {
-                let [rest0, buf0, term0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 102]), term0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(7), ElixirScript.Core.BitString.binary({
-                'value': ElixirScript.Core.Patterns.variable()
-            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
-                return true;
-            })) !== null) {
-                let [rest0, buf0, term0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 97]), term0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.utf8({
-                'value': ElixirScript.Core.Patterns.variable()
-            }), ElixirScript.Core.BitString.binary({
-                'value': ElixirScript.Core.Patterns.variable()
-            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (char0, rest0, buf0, term0) => {
-                return ElixirScript.Core.erlang.is_integer(char0) && (char0 >= 32 && char0 <= 126) || ElixirScript.Core.erlang.is_integer(char0) && (char0 >= 160 && char0 <= 55295) || ElixirScript.Core.erlang.is_integer(char0) && (char0 >= 57344 && char0 <= 65533) || ElixirScript.Core.erlang.is_integer(char0) && (char0 >= 65536 && char0 <= 1114111);
-            })) !== null) {
-                let [char0, rest0, buf0, term0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, new ElixirScript.Core.BitString(ElixirScript.Core.BitString.utf8(char0))), term0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer({
-                'value': ElixirScript.Core.Patterns.variable()
-            }), ElixirScript.Core.BitString.binary({
-                'value': ElixirScript.Core.Patterns.variable()
-            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (char0, rest0, buf0, term0) => {
-                return true;
-            })) !== null) {
-                let [char0, rest0, buf0, term0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, Elixir.Inspect.BitString.__load(Elixir).escape_char(char0)), term0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('_')], __function_args__, (buf0) => {
-                return true;
-            })) !== null) {
-                let [buf0] = __arg_matches__;
-
-                return buf0;
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function inspect(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('regex'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (regex0, opts0) => {
-                return true;
-            })) !== null) {
-                let [regex0, opts0] = __arg_matches__;
-
-                const [source0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('source'), ElixirScript.Core.erlang.iolist_to_binary([[126, 114, 47], escape(ElixirScript.Core.Functions.call_property(regex0, 'source'), 47), 47, ElixirScript.Core.Functions.call_property(regex0, 'opts')]));
-
-                return Elixir.Inspect.Algebra.__load(Elixir).color(source0, Symbol.for('regex'), opts0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        inspect,
-        __MODULE__: Symbol.for('Elixir.Inspect.Regex'),
-        __info__
-    };
-
-    Elixir.Inspect.Regex.__exports = __exports
 
     return __exports;
 }
@@ -17805,6 +17713,191 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.List.Chars.List').__
     };
 
     Elixir.List.Chars.List.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Regex').__load = function(Elixir) {
+    if (Elixir.Inspect.Regex.__exports)
+        return Elixir.Inspect.Regex.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [54466767004534052728946950697046021916]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Regex.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/inspect.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(40), ElixirScript.Core.BitString.integer(249), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(250), ElixirScript.Core.BitString.integer(129), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(151), ElixirScript.Core.BitString.integer(44), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(168), ElixirScript.Core.BitString.integer(196), ElixirScript.Core.BitString.integer(192), ElixirScript.Core.BitString.integer(28), ElixirScript.Core.BitString.integer(151), ElixirScript.Core.BitString.integer(28))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Regex')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Regex.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.Regex.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function escape(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('bin'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (bin0, term0) => {
+                return true;
+            })) !== null) {
+                let [bin0, term0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, bin0, [], term0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer({
+                'value': ElixirScript.Core.Patterns.variable()
+            }), ElixirScript.Core.BitString.binary({
+                'value': ElixirScript.Core.Patterns.variable()
+            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (term0, rest0, buf0, term1) => {
+                return true;
+            })) !== null) {
+                let [term0, rest0, buf0, term1] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, term1]), term1));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(10), ElixirScript.Core.BitString.binary({
+                'value': ElixirScript.Core.Patterns.variable()
+            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
+                return true;
+            })) !== null) {
+                let [rest0, buf0, term0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 110]), term0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.binary({
+                'value': ElixirScript.Core.Patterns.variable()
+            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
+                return true;
+            })) !== null) {
+                let [rest0, buf0, term0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 114]), term0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(9), ElixirScript.Core.BitString.binary({
+                'value': ElixirScript.Core.Patterns.variable()
+            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
+                return true;
+            })) !== null) {
+                let [rest0, buf0, term0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 116]), term0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.binary({
+                'value': ElixirScript.Core.Patterns.variable()
+            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
+                return true;
+            })) !== null) {
+                let [rest0, buf0, term0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 118]), term0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(12), ElixirScript.Core.BitString.binary({
+                'value': ElixirScript.Core.Patterns.variable()
+            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
+                return true;
+            })) !== null) {
+                let [rest0, buf0, term0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 102]), term0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer(7), ElixirScript.Core.BitString.binary({
+                'value': ElixirScript.Core.Patterns.variable()
+            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (rest0, buf0, term0) => {
+                return true;
+            })) !== null) {
+                let [rest0, buf0, term0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, [92, 97]), term0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.utf8({
+                'value': ElixirScript.Core.Patterns.variable()
+            }), ElixirScript.Core.BitString.binary({
+                'value': ElixirScript.Core.Patterns.variable()
+            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (char0, rest0, buf0, term0) => {
+                return ElixirScript.Core.erlang.is_integer(char0) && (char0 >= 32 && char0 <= 126) || ElixirScript.Core.erlang.is_integer(char0) && (char0 >= 160 && char0 <= 55295) || ElixirScript.Core.erlang.is_integer(char0) && (char0 >= 57344 && char0 <= 65533) || ElixirScript.Core.erlang.is_integer(char0) && (char0 >= 65536 && char0 <= 1114111);
+            })) !== null) {
+                let [char0, rest0, buf0, term0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, new ElixirScript.Core.BitString(ElixirScript.Core.BitString.utf8(char0))), term0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(ElixirScript.Core.BitString.integer({
+                'value': ElixirScript.Core.Patterns.variable()
+            }), ElixirScript.Core.BitString.binary({
+                'value': ElixirScript.Core.Patterns.variable()
+            })), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('term')], __function_args__, (char0, rest0, buf0, term0) => {
+                return true;
+            })) !== null) {
+                let [char0, rest0, buf0, term0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, rest0, ElixirScript.Core.Functions.concat(buf0, Elixir.Inspect.BitString.__load(Elixir).escape_char(char0)), term0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.bitStringMatch(), ElixirScript.Core.Patterns.variable('buf'), ElixirScript.Core.Patterns.variable('_')], __function_args__, (buf0) => {
+                return true;
+            })) !== null) {
+                let [buf0] = __arg_matches__;
+
+                return buf0;
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function inspect(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('regex'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (regex0, opts0) => {
+                return true;
+            })) !== null) {
+                let [regex0, opts0] = __arg_matches__;
+
+                const [source0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('source'), ElixirScript.Core.erlang.iolist_to_binary([[126, 114, 47], escape(ElixirScript.Core.Functions.call_property(regex0, 'source'), 47), 47, ElixirScript.Core.Functions.call_property(regex0, 'opts')]));
+
+                return Elixir.Inspect.Algebra.__load(Elixir).color(source0, Symbol.for('regex'), opts0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        inspect,
+        __MODULE__: Symbol.for('Elixir.Inspect.Regex'),
+        __info__
+    };
+
+    Elixir.Inspect.Regex.__exports = __exports
 
     return __exports;
 }
@@ -18379,6 +18472,87 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Time').__loa
 
     return __exports;
 }
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Stream').__load = function(Elixir) {
+    if (Elixir.Inspect.Stream.__exports)
+        return Elixir.Inspect.Stream.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [223821501470125537074652101154652896372]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Stream.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/stream.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(168), ElixirScript.Core.BitString.integer(98), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(31), ElixirScript.Core.BitString.integer(84), ElixirScript.Core.BitString.integer(211), ElixirScript.Core.BitString.integer(117), ElixirScript.Core.BitString.integer(242), ElixirScript.Core.BitString.integer(162), ElixirScript.Core.BitString.integer(175), ElixirScript.Core.BitString.integer(212), ElixirScript.Core.BitString.integer(190), ElixirScript.Core.BitString.integer(61), ElixirScript.Core.BitString.integer(60), ElixirScript.Core.BitString.integer(116))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Stream')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Stream.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.Stream.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function inspect(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('enum'), ElixirScript.Core.Patterns.variable('enum')], [Symbol.for('funs'), ElixirScript.Core.Patterns.variable('funs')]]), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (enum0, funs0, opts0) => {
+                return true;
+            })) !== null) {
+                let [enum0, funs0, opts0] = __arg_matches__;
+
+                const [inner0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('inner'), [new ElixirScript.Core.Tuple(Symbol.for('enum'), enum0), new ElixirScript.Core.Tuple(Symbol.for('funs'), Elixir.Enum.__load(Elixir).reverse(funs0))]);
+
+                return Elixir.Inspect.Algebra.__load(Elixir).concat(['#Stream<', Elixir.Inspect.Algebra.__load(Elixir).to_doc(inner0, opts0), '>']);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        inspect,
+        __MODULE__: Symbol.for('Elixir.Inspect.Stream'),
+        __info__
+    };
+
+    Elixir.Inspect.Stream.__exports = __exports
+
+    return __exports;
+}
 ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Function').__load = function(Elixir) {
     if (Elixir.Inspect.Function.__exports)
         return Elixir.Inspect.Function.__exports;
@@ -18473,7 +18647,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Function')._
                         values: [ElixirScript.Core.Patterns.variable('escaped'), ElixirScript.Core.Patterns.variable('_')]
                     }), Elixir.Inspect.BitString.__load(Elixir).escape(string0, 34));
 
-                    const _ref9116708 = new ElixirScript.Core.Tuple(escaped0);
+                    const _ref1052455 = new ElixirScript.Core.Tuple(escaped0);
 
                     return ElixirScript.Core.erlang.iolist_to_binary([34, escaped0, 34]);
                 }, () => {
@@ -18508,7 +18682,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Function')._
 
                 const [trailing0, reversed0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.headTail(ElixirScript.Core.Patterns.variable('trailing'), ElixirScript.Core.Patterns.variable('reversed')), Elixir.Enum.__load(Elixir).reverse(Elixir.String.__load(Elixir).split(rest0, '/')));
 
-                const _ref7677371 = [trailing0, reversed0];
+                const _ref3871963 = [trailing0, reversed0];
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[ElixirScript.Core.Patterns.variable('arity'), ElixirScript.Core.Patterns.variable('_inner'), ElixirScript.Core.Patterns.variable('_count'), '']], (arity0, _inner0, _count0) => {
                     return new ElixirScript.Core.Tuple(ElixirScript.Core.erlang.binary_to_atom(Elixir.Enum.__load(Elixir).join(Elixir.Enum.__load(Elixir).reverse(reversed0), '/'), Symbol.for('utf8')), arity0);
@@ -18660,12 +18834,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Function')._
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Stream').__load = function(Elixir) {
-    if (Elixir.Inspect.Stream.__exports)
-        return Elixir.Inspect.Stream.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Range').__load = function(Elixir) {
+    if (Elixir.Inspect.Range.__exports)
+        return Elixir.Inspect.Range.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [223821501470125537074652101154652896372]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Stream.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/stream.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(168), ElixirScript.Core.BitString.integer(98), ElixirScript.Core.BitString.integer(116), ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(31), ElixirScript.Core.BitString.integer(84), ElixirScript.Core.BitString.integer(211), ElixirScript.Core.BitString.integer(117), ElixirScript.Core.BitString.integer(242), ElixirScript.Core.BitString.integer(162), ElixirScript.Core.BitString.integer(175), ElixirScript.Core.BitString.integer(212), ElixirScript.Core.BitString.integer(190), ElixirScript.Core.BitString.integer(61), ElixirScript.Core.BitString.integer(60), ElixirScript.Core.BitString.integer(116))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Stream')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [187315243111160685053933427387006138009]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Range.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/range.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(140), ElixirScript.Core.BitString.integer(235), ElixirScript.Core.BitString.integer(154), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(224), ElixirScript.Core.BitString.integer(185), ElixirScript.Core.BitString.integer(49), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(52), ElixirScript.Core.BitString.integer(237), ElixirScript.Core.BitString.integer(187), ElixirScript.Core.BitString.integer(47), ElixirScript.Core.BitString.integer(163), ElixirScript.Core.BitString.integer(243), ElixirScript.Core.BitString.integer(54), ElixirScript.Core.BitString.integer(153))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Range')]]);
 
         const value = __info__map__.get(kind);
 
@@ -18687,13 +18861,13 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Stream').__l
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Stream.__load(Elixir);
+                return Elixir.Range.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Inspect.Stream.__load(Elixir);
+                return Elixir.Inspect.Range.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
                 return true;
             })) !== null) {
@@ -18714,14 +18888,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Stream').__l
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('enum'), ElixirScript.Core.Patterns.variable('enum')], [Symbol.for('funs'), ElixirScript.Core.Patterns.variable('funs')]]), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (enum0, funs0, opts0) => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), Elixir.Range.__load(Elixir)], [Symbol.for('first'), ElixirScript.Core.Patterns.variable('first')], [Symbol.for('last'), ElixirScript.Core.Patterns.variable('last')]]), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (first0, last0, opts0) => {
                 return true;
             })) !== null) {
-                let [enum0, funs0, opts0] = __arg_matches__;
+                let [first0, last0, opts0] = __arg_matches__;
 
-                const [inner0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('inner'), [new ElixirScript.Core.Tuple(Symbol.for('enum'), enum0), new ElixirScript.Core.Tuple(Symbol.for('funs'), Elixir.Enum.__load(Elixir).reverse(funs0))]);
-
-                return Elixir.Inspect.Algebra.__load(Elixir).concat(['#Stream<', Elixir.Inspect.Algebra.__load(Elixir).to_doc(inner0, opts0), '>']);
+                return Elixir.Inspect.Algebra.__load(Elixir).concat([Elixir.Inspect.Algebra.__load(Elixir).to_doc(first0, opts0), '..', Elixir.Inspect.Algebra.__load(Elixir).to_doc(last0, opts0)]);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -18733,11 +18905,11 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Stream').__l
     const __exports = {
         __impl__,
         inspect,
-        __MODULE__: Symbol.for('Elixir.Inspect.Stream'),
+        __MODULE__: Symbol.for('Elixir.Inspect.Range'),
         __info__
     };
 
-    Elixir.Inspect.Stream.__exports = __exports
+    Elixir.Inspect.Range.__exports = __exports
 
     return __exports;
 }
@@ -18819,164 +18991,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Reference').
     };
 
     Elixir.Inspect.Reference.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Range').__load = function(Elixir) {
-    if (Elixir.Inspect.Range.__exports)
-        return Elixir.Inspect.Range.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [187315243111160685053933427387006138009]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Range.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/range.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(140), ElixirScript.Core.BitString.integer(235), ElixirScript.Core.BitString.integer(154), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(224), ElixirScript.Core.BitString.integer(185), ElixirScript.Core.BitString.integer(49), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(52), ElixirScript.Core.BitString.integer(237), ElixirScript.Core.BitString.integer(187), ElixirScript.Core.BitString.integer(47), ElixirScript.Core.BitString.integer(163), ElixirScript.Core.BitString.integer(243), ElixirScript.Core.BitString.integer(54), ElixirScript.Core.BitString.integer(153))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Range')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Range.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.Range.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function inspect(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), Elixir.Range.__load(Elixir)], [Symbol.for('first'), ElixirScript.Core.Patterns.variable('first')], [Symbol.for('last'), ElixirScript.Core.Patterns.variable('last')]]), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (first0, last0, opts0) => {
-                return true;
-            })) !== null) {
-                let [first0, last0, opts0] = __arg_matches__;
-
-                return Elixir.Inspect.Algebra.__load(Elixir).concat([Elixir.Inspect.Algebra.__load(Elixir).to_doc(first0, opts0), '..', Elixir.Inspect.Algebra.__load(Elixir).to_doc(last0, opts0)]);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        inspect,
-        __MODULE__: Symbol.for('Elixir.Inspect.Range'),
-        __info__
-    };
-
-    Elixir.Inspect.Range.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Port').__load = function(Elixir) {
-    if (Elixir.Inspect.Port.__exports)
-        return Elixir.Inspect.Port.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [37068664154452575815414955260239476135]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Port.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/inspect.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(227), ElixirScript.Core.BitString.integer(42), ElixirScript.Core.BitString.integer(63), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(10), ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(148), ElixirScript.Core.BitString.integer(253), ElixirScript.Core.BitString.integer(71), ElixirScript.Core.BitString.integer(104), ElixirScript.Core.BitString.integer(191), ElixirScript.Core.BitString.integer(24), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(245), ElixirScript.Core.BitString.integer(167))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Port')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Port.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.Port.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function inspect(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('port'), ElixirScript.Core.Patterns.variable('_opts')], __function_args__, (port0, _opts0) => {
-                return true;
-            })) !== null) {
-                let [port0, _opts0] = __arg_matches__;
-
-                return ElixirScript.Core.erlang.iolist_to_binary(ElixirScript.Core.erlang.port_to_list(port0));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        inspect,
-        __MODULE__: Symbol.for('Elixir.Inspect.Port'),
-        __info__
-    };
-
-    Elixir.Inspect.Port.__exports = __exports
 
     return __exports;
 }
@@ -19198,6 +19212,85 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Kernel').__load = fu
     };
 
     Elixir.Kernel.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Port').__load = function(Elixir) {
+    if (Elixir.Inspect.Port.__exports)
+        return Elixir.Inspect.Port.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [37068664154452575815414955260239476135]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Port.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/inspect.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(27), ElixirScript.Core.BitString.integer(227), ElixirScript.Core.BitString.integer(42), ElixirScript.Core.BitString.integer(63), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(10), ElixirScript.Core.BitString.integer(138), ElixirScript.Core.BitString.integer(148), ElixirScript.Core.BitString.integer(253), ElixirScript.Core.BitString.integer(71), ElixirScript.Core.BitString.integer(104), ElixirScript.Core.BitString.integer(191), ElixirScript.Core.BitString.integer(24), ElixirScript.Core.BitString.integer(252), ElixirScript.Core.BitString.integer(245), ElixirScript.Core.BitString.integer(167))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Port')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Port.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.Port.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function inspect(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('port'), ElixirScript.Core.Patterns.variable('_opts')], __function_args__, (port0, _opts0) => {
+                return true;
+            })) !== null) {
+                let [port0, _opts0] = __arg_matches__;
+
+                return ElixirScript.Core.erlang.iolist_to_binary(ElixirScript.Core.erlang.port_to_list(port0));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        inspect,
+        __MODULE__: Symbol.for('Elixir.Inspect.Port'),
+        __info__
+    };
+
+    Elixir.Inspect.Port.__exports = __exports
 
     return __exports;
 }
@@ -19605,425 +19698,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.MapSet').__l
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.HashSet').__load = function(Elixir) {
-    if (Elixir.Inspect.HashSet.__exports)
-        return Elixir.Inspect.HashSet.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [294440628594850747376135622864665144969]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.HashSet.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/hash_set.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(221), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(51), ElixirScript.Core.BitString.integer(204), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(51), ElixirScript.Core.BitString.integer(40), ElixirScript.Core.BitString.integer(80), ElixirScript.Core.BitString.integer(201), ElixirScript.Core.BitString.integer(222), ElixirScript.Core.BitString.integer(255), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(57), ElixirScript.Core.BitString.integer(137), ElixirScript.Core.BitString.integer(110), ElixirScript.Core.BitString.integer(137))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.HashSet')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.HashSet.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.HashSet.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function inspect(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('set'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (set0, opts0) => {
-                return true;
-            })) !== null) {
-                let [set0, opts0] = __arg_matches__;
-
-                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashSet.__load(Elixir));
-
-                return Elixir.Inspect.Algebra.__load(Elixir).concat(['#HashSet<', Elixir.Inspect.List.__load(Elixir).inspect(module0.to_list(set0), opts0), '>']);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        inspect,
-        __MODULE__: Symbol.for('Elixir.Inspect.HashSet'),
-        __info__
-    };
-
-    Elixir.Inspect.HashSet.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.HashDict').__load = function(Elixir) {
-    if (Elixir.Inspect.HashDict.__exports)
-        return Elixir.Inspect.HashDict.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [274674645674081767613756541103337189783]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.HashDict.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/hash_dict.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(206), ElixirScript.Core.BitString.integer(164), ElixirScript.Core.BitString.integer(105), ElixirScript.Core.BitString.integer(154), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(32), ElixirScript.Core.BitString.integer(202), ElixirScript.Core.BitString.integer(42), ElixirScript.Core.BitString.integer(212), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(188), ElixirScript.Core.BitString.integer(87), ElixirScript.Core.BitString.integer(223), ElixirScript.Core.BitString.integer(57), ElixirScript.Core.BitString.integer(49), ElixirScript.Core.BitString.integer(151))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.HashDict')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.HashDict.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.HashDict.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Inspect.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function inspect(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('dict'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (dict0, opts0) => {
-                return true;
-            })) !== null) {
-                let [dict0, opts0] = __arg_matches__;
-
-                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashDict.__load(Elixir));
-
-                return Elixir.Inspect.Algebra.__load(Elixir).concat(['#HashDict<', Elixir.Inspect.List.__load(Elixir).inspect(module0.to_list(dict0), opts0), '>']);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        inspect,
-        __MODULE__: Symbol.for('Elixir.Inspect.HashDict'),
-        __info__
-    };
-
-    Elixir.Inspect.HashDict.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Date.Range').__load = function(Elixir) {
-    if (Elixir.Enumerable.Date.Range.__exports)
-        return Elixir.Enumerable.Date.Range.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [168715343931978085351117066959922908211]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Date.Range.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/date_range.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(126), ElixirScript.Core.BitString.integer(237), ElixirScript.Core.BitString.integer(100), ElixirScript.Core.BitString.integer(175), ElixirScript.Core.BitString.integer(5), ElixirScript.Core.BitString.integer(140), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(232), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(103), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(204), ElixirScript.Core.BitString.integer(51))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.Date.Range')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Date.Range.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Enumerable.Date.Range.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Enumerable.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function count(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
-                __MODULE__: Symbol.for('Elixir.Date.Range')
-            }], [Symbol.for('first_in_iso_days'), ElixirScript.Core.Patterns.variable('first_in_iso_days')], [Symbol.for('last_in_iso_days'), ElixirScript.Core.Patterns.variable('last_in_iso_days')]])], __function_args__, (first_in_iso_days0, last_in_iso_days0) => {
-                return true;
-            })) !== null) {
-                let [first_in_iso_days0, last_in_iso_days0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.erlang.abs(first_in_iso_days0 - last_in_iso_days0) + 1);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function date_from_iso_days_days(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('days'), Elixir.Calendar.ISO.__load(Elixir)], __function_args__, (days0) => {
-                return true;
-            })) !== null) {
-                let [days0] = __arg_matches__;
-
-                const [year0, month0, day0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('year'), ElixirScript.Core.Patterns.variable('month'), ElixirScript.Core.Patterns.variable('day')]
-                }), Elixir.Calendar.ISO.__load(Elixir).date_from_iso_days_days(days0));
-
-                const _ref3877390 = new ElixirScript.Core.Tuple(year0, month0, day0);
-
-                return Elixir.Date.__load(Elixir).__struct__(new Map([[Symbol.for('year'), year0], [Symbol.for('month'), month0], [Symbol.for('day'), day0], [Symbol.for('calendar'), Elixir.Calendar.ISO.__load(Elixir)]]));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('days'), ElixirScript.Core.Patterns.variable('calendar')], __function_args__, (days0, calendar0) => {
-                return true;
-            })) !== null) {
-                let [days0, calendar0] = __arg_matches__;
-
-                const [year0, month0, day0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                    values: [ElixirScript.Core.Patterns.variable('year'), ElixirScript.Core.Patterns.variable('month'), ElixirScript.Core.Patterns.variable('day'), ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_')]
-                }), calendar0.naive_datetime_from_iso_days(new ElixirScript.Core.Tuple(days0, new ElixirScript.Core.Tuple(0, 86400000000))));
-
-                const _ref1149871 = new ElixirScript.Core.Tuple(year0, month0, day0);
-
-                return Elixir.Date.__load(Elixir).__struct__(new Map([[Symbol.for('year'), year0], [Symbol.for('month'), month0], [Symbol.for('day'), day0], [Symbol.for('calendar'), calendar0]]));
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function member__qmark__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('first'), new Map([[Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('first_year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('first_month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('first_day')]])], [Symbol.for('last'), new Map([[Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('last_year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('last_month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('last_day')]])], [Symbol.for('first_in_iso_days'), ElixirScript.Core.Patterns.variable('first_in_iso_days')], [Symbol.for('last_in_iso_days'), ElixirScript.Core.Patterns.variable('last_in_iso_days')]]), new Map([[Symbol.for('__struct__'), {
-                __MODULE__: Symbol.for('Elixir.Date')
-            }], [Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('day')]])], __function_args__, (calendar0, first_year0, first_month0, first_day0, calendar1, last_year0, last_month0, last_day0, first_in_iso_days0, last_in_iso_days0, calendar2, year0, month0, day0) => {
-                return true;
-            })) !== null) {
-                let [calendar0, first_year0, first_month0, first_day0, calendar1, last_year0, last_month0, last_day0, first_in_iso_days0, last_in_iso_days0, calendar2, year0, month0, day0] = __arg_matches__;
-
-                const [first0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('first'), new ElixirScript.Core.Tuple(first_year0, first_month0, first_day0));
-
-                const [last0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('last'), new ElixirScript.Core.Tuple(last_year0, last_month0, last_day0));
-
-                const [date0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('date'), new ElixirScript.Core.Tuple(year0, month0, day0));
-
-                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([false], () => {
-                    return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([true], () => {
-                        return date0 <= first0;
-                    }, () => {
-                        return true;
-                    }), ElixirScript.Core.Patterns.clause([false], () => {
-                        return false;
-                    }, () => {
-                        return true;
-                    })).call(this, date0 >= last0));
-                }, () => {
-                    return true;
-                }), ElixirScript.Core.Patterns.clause([true], () => {
-                    return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([true], () => {
-                        return date0 <= last0;
-                    }, () => {
-                        return true;
-                    }), ElixirScript.Core.Patterns.clause([false], () => {
-                        return false;
-                    }, () => {
-                        return true;
-                    })).call(this, date0 >= first0));
-                }, () => {
-                    return true;
-                })).call(this, first_in_iso_days0 <= last_in_iso_days0);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), false);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function reduce(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
-                __MODULE__: Symbol.for('Elixir.Date.Range')
-            }], [Symbol.for('first_in_iso_days'), ElixirScript.Core.Patterns.variable('first_in_iso_days')], [Symbol.for('last_in_iso_days'), ElixirScript.Core.Patterns.variable('last_in_iso_days')], [Symbol.for('first'), new Map([[Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')]])]]), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (first_in_iso_days0, last_in_iso_days0, calendar0, acc0, fun0) => {
-                return true;
-            })) !== null) {
-                let [first_in_iso_days0, last_in_iso_days0, calendar0, acc0, fun0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, first_in_iso_days0, last_in_iso_days0, acc0, fun0, calendar0, first_in_iso_days0 <= last_in_iso_days0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_x'), ElixirScript.Core.Patterns.variable('_y'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [Symbol.for('halt'), ElixirScript.Core.Patterns.variable('acc')]
-            }), ElixirScript.Core.Patterns.variable('_fun'), ElixirScript.Core.Patterns.variable('_calendar'), ElixirScript.Core.Patterns.variable('_up?')], __function_args__, (_x0, _y0, acc0, _fun0, _calendar0, _up__qmark__0) => {
-                return true;
-            })) !== null) {
-                let [_x0, _y0, acc0, _fun0, _calendar0, _up__qmark__0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('halted'), acc0);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x'), ElixirScript.Core.Patterns.variable('y'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [Symbol.for('suspend'), ElixirScript.Core.Patterns.variable('acc')]
-            }), ElixirScript.Core.Patterns.variable('fun'), ElixirScript.Core.Patterns.variable('calendar'), ElixirScript.Core.Patterns.variable('up?')], __function_args__, (x0, y0, acc0, fun0, calendar0, up__qmark__0) => {
-                return true;
-            })) !== null) {
-                let [x0, y0, acc0, fun0, calendar0, up__qmark__0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('suspended'), acc0, (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x10) => {
-                            return true;
-                        })) !== null) {
-                            let [x10] = __arg_matches__;
-
-                            return reduce(x0, y0, x10, fun0, calendar0, up__qmark__0);
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                });
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x'), ElixirScript.Core.Patterns.variable('y'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('acc')]
-            }), ElixirScript.Core.Patterns.variable('fun'), ElixirScript.Core.Patterns.variable('calendar'), ElixirScript.Core.Patterns.capture(true)], __function_args__, (x0, y0, acc0, fun0, calendar0, up__qmark__0) => {
-                return x0 <= y0;
-            })) !== null) {
-                let [x0, y0, acc0, fun0, calendar0, up__qmark__0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, x0 + 1, y0, fun0(date_from_iso_days_days(x0, calendar0), acc0), fun0, calendar0, up__qmark__0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x'), ElixirScript.Core.Patterns.variable('y'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('acc')]
-            }), ElixirScript.Core.Patterns.variable('fun'), ElixirScript.Core.Patterns.variable('calendar'), ElixirScript.Core.Patterns.capture(false)], __function_args__, (x0, y0, acc0, fun0, calendar0, up__qmark__0) => {
-                return x0 >= y0;
-            })) !== null) {
-                let [x0, y0, acc0, fun0, calendar0, up__qmark__0] = __arg_matches__;
-
-                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, x0 - 1, y0, fun0(date_from_iso_days_days(x0, calendar0), acc0), fun0, calendar0, up__qmark__0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('acc')]
-            }), ElixirScript.Core.Patterns.variable('_fun'), ElixirScript.Core.Patterns.variable('_calendar'), ElixirScript.Core.Patterns.variable('_up')], __function_args__, (acc0, _fun0, _calendar0, _up0) => {
-                return true;
-            })) !== null) {
-                let [acc0, _fun0, _calendar0, _up0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('done'), acc0);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        count,
-        member__qmark__,
-        reduce,
-        __MODULE__: Symbol.for('Elixir.Enumerable.Date.Range'),
-        __info__
-    };
-
-    Elixir.Enumerable.Date.Range.__exports = __exports
-
-    return __exports;
-}
 ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.IO').__load = function(Elixir) {
     if (Elixir.IO.__exports)
         return Elixir.IO.__exports;
@@ -20377,7 +20051,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.IO').__load = functi
                     values: [Symbol.for('current_stacktrace'), ElixirScript.Core.Patterns.variable('stacktrace')]
                 }), Elixir.Process.__load(Elixir).info(ElixirScript.Core.Functions.call_property(ElixirScript.Core.erlang.self), Symbol.for('current_stacktrace')));
 
-                const _ref9802429 = new ElixirScript.Core.Tuple(stacktrace0);
+                const _ref5576726 = new ElixirScript.Core.Tuple(stacktrace0);
 
                 return new ElixirScript.Core.Functions.Recurse(recur.bind(null, message0, Elixir.Enum.__load(Elixir).drop(stacktrace0, 2)));
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('message'), []], __function_args__, (message0) => {
@@ -20436,6 +20110,168 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.IO').__load = functi
     };
 
     Elixir.IO.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.HashSet').__load = function(Elixir) {
+    if (Elixir.Inspect.HashSet.__exports)
+        return Elixir.Inspect.HashSet.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [294440628594850747376135622864665144969]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.HashSet.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/hash_set.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(221), ElixirScript.Core.BitString.integer(131), ElixirScript.Core.BitString.integer(51), ElixirScript.Core.BitString.integer(204), ElixirScript.Core.BitString.integer(234), ElixirScript.Core.BitString.integer(51), ElixirScript.Core.BitString.integer(40), ElixirScript.Core.BitString.integer(80), ElixirScript.Core.BitString.integer(201), ElixirScript.Core.BitString.integer(222), ElixirScript.Core.BitString.integer(255), ElixirScript.Core.BitString.integer(13), ElixirScript.Core.BitString.integer(57), ElixirScript.Core.BitString.integer(137), ElixirScript.Core.BitString.integer(110), ElixirScript.Core.BitString.integer(137))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.HashSet')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.HashSet.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.HashSet.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function inspect(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('set'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (set0, opts0) => {
+                return true;
+            })) !== null) {
+                let [set0, opts0] = __arg_matches__;
+
+                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashSet.__load(Elixir));
+
+                return Elixir.Inspect.Algebra.__load(Elixir).concat(['#HashSet<', Elixir.Inspect.List.__load(Elixir).inspect(module0.to_list(set0), opts0), '>']);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        inspect,
+        __MODULE__: Symbol.for('Elixir.Inspect.HashSet'),
+        __info__
+    };
+
+    Elixir.Inspect.HashSet.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.HashDict').__load = function(Elixir) {
+    if (Elixir.Inspect.HashDict.__exports)
+        return Elixir.Inspect.HashDict.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [274674645674081767613756541103337189783]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.HashDict.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/hash_dict.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(206), ElixirScript.Core.BitString.integer(164), ElixirScript.Core.BitString.integer(105), ElixirScript.Core.BitString.integer(154), ElixirScript.Core.BitString.integer(11), ElixirScript.Core.BitString.integer(32), ElixirScript.Core.BitString.integer(202), ElixirScript.Core.BitString.integer(42), ElixirScript.Core.BitString.integer(212), ElixirScript.Core.BitString.integer(210), ElixirScript.Core.BitString.integer(188), ElixirScript.Core.BitString.integer(87), ElixirScript.Core.BitString.integer(223), ElixirScript.Core.BitString.integer(57), ElixirScript.Core.BitString.integer(49), ElixirScript.Core.BitString.integer(151))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.HashDict')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.HashDict.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.HashDict.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function inspect(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('dict'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (dict0, opts0) => {
+                return true;
+            })) !== null) {
+                let [dict0, opts0] = __arg_matches__;
+
+                const [module0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('module'), Elixir.HashDict.__load(Elixir));
+
+                return Elixir.Inspect.Algebra.__load(Elixir).concat(['#HashDict<', Elixir.Inspect.List.__load(Elixir).inspect(module0.to_list(dict0), opts0), '>']);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        inspect,
+        __MODULE__: Symbol.for('Elixir.Inspect.HashDict'),
+        __info__
+    };
+
+    Elixir.Inspect.HashDict.__exports = __exports
 
     return __exports;
 }
@@ -20751,12 +20587,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Calendar.ISO').__loa
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.DateTime').__load = function(Elixir) {
-    if (Elixir.Inspect.DateTime.__exports)
-        return Elixir.Inspect.DateTime.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Enumerable.Date.Range').__load = function(Elixir) {
+    if (Elixir.Enumerable.Date.Range.__exports)
+        return Elixir.Enumerable.Date.Range.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [231978842975781920988326917422164751410]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.DateTime.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/datetime.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(174), ElixirScript.Core.BitString.integer(133), ElixirScript.Core.BitString.integer(128), ElixirScript.Core.BitString.integer(0), ElixirScript.Core.BitString.integer(253), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(233), ElixirScript.Core.BitString.integer(37), ElixirScript.Core.BitString.integer(186), ElixirScript.Core.BitString.integer(19), ElixirScript.Core.BitString.integer(127), ElixirScript.Core.BitString.integer(34), ElixirScript.Core.BitString.integer(44), ElixirScript.Core.BitString.integer(244), ElixirScript.Core.BitString.integer(52), ElixirScript.Core.BitString.integer(50))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.DateTime')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('count'), 1), new ElixirScript.Core.Tuple(Symbol.for('member?'), 2), new ElixirScript.Core.Tuple(Symbol.for('reduce'), 3)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [168715343931978085351117066959922908211]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Enumerable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Enumerable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Date.Range.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/date_range.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(126), ElixirScript.Core.BitString.integer(237), ElixirScript.Core.BitString.integer(100), ElixirScript.Core.BitString.integer(175), ElixirScript.Core.BitString.integer(5), ElixirScript.Core.BitString.integer(140), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(149), ElixirScript.Core.BitString.integer(232), ElixirScript.Core.BitString.integer(82), ElixirScript.Core.BitString.integer(200), ElixirScript.Core.BitString.integer(103), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(95), ElixirScript.Core.BitString.integer(204), ElixirScript.Core.BitString.integer(51))], [Symbol.for('module'), Symbol.for('Elixir.Enumerable.Date.Range')]]);
 
         const value = __info__map__.get(kind);
 
@@ -20778,19 +20614,19 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.DateTime')._
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.DateTime.__load(Elixir);
+                return Elixir.Date.Range.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Inspect.DateTime.__load(Elixir);
+                return Elixir.Enumerable.Date.Range.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Inspect.__load(Elixir);
+                return Elixir.Enumerable.__load(Elixir);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -20799,24 +20635,194 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.DateTime')._
         return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
     }
 
-    function inspect(...__function_args__) {
+    function count(...__function_args__) {
         function recur(...__function_args__) {
             let __arg_matches__ = null;
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('calendar'), Elixir.Calendar.ISO.__load(Elixir)], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('day')], [Symbol.for('hour'), ElixirScript.Core.Patterns.variable('hour')], [Symbol.for('minute'), ElixirScript.Core.Patterns.variable('minute')], [Symbol.for('second'), ElixirScript.Core.Patterns.variable('second')], [Symbol.for('microsecond'), ElixirScript.Core.Patterns.variable('microsecond')], [Symbol.for('time_zone'), ElixirScript.Core.Patterns.variable('time_zone')], [Symbol.for('zone_abbr'), ElixirScript.Core.Patterns.variable('zone_abbr')], [Symbol.for('utc_offset'), ElixirScript.Core.Patterns.variable('utc_offset')], [Symbol.for('std_offset'), ElixirScript.Core.Patterns.variable('std_offset')]]), ElixirScript.Core.Patterns.variable('_')], __function_args__, (year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0) => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
+                __MODULE__: Symbol.for('Elixir.Date.Range')
+            }], [Symbol.for('first_in_iso_days'), ElixirScript.Core.Patterns.variable('first_in_iso_days')], [Symbol.for('last_in_iso_days'), ElixirScript.Core.Patterns.variable('last_in_iso_days')]])], __function_args__, (first_in_iso_days0, last_in_iso_days0) => {
                 return true;
             })) !== null) {
-                let [year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0] = __arg_matches__;
+                let [first_in_iso_days0, last_in_iso_days0] = __arg_matches__;
 
-                return '#DateTime<' + (Elixir.Calendar.ISO.__load(Elixir).datetime_to_string(year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0) + '>');
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('datetime'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (datetime0, opts0) => {
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.erlang.abs(first_in_iso_days0 - last_in_iso_days0) + 1);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function date_from_iso_days_days(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('days'), Elixir.Calendar.ISO.__load(Elixir)], __function_args__, (days0) => {
                 return true;
             })) !== null) {
-                let [datetime0, opts0] = __arg_matches__;
+                let [days0] = __arg_matches__;
 
-                return Elixir.Inspect.Any.__load(Elixir).inspect(datetime0, opts0);
+                const [year0, month0, day0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('year'), ElixirScript.Core.Patterns.variable('month'), ElixirScript.Core.Patterns.variable('day')]
+                }), Elixir.Calendar.ISO.__load(Elixir).date_from_iso_days_days(days0));
+
+                const _ref6591030 = new ElixirScript.Core.Tuple(year0, month0, day0);
+
+                return Elixir.Date.__load(Elixir).__struct__(new Map([[Symbol.for('year'), year0], [Symbol.for('month'), month0], [Symbol.for('day'), day0], [Symbol.for('calendar'), Elixir.Calendar.ISO.__load(Elixir)]]));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('days'), ElixirScript.Core.Patterns.variable('calendar')], __function_args__, (days0, calendar0) => {
+                return true;
+            })) !== null) {
+                let [days0, calendar0] = __arg_matches__;
+
+                const [year0, month0, day0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                    values: [ElixirScript.Core.Patterns.variable('year'), ElixirScript.Core.Patterns.variable('month'), ElixirScript.Core.Patterns.variable('day'), ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_')]
+                }), calendar0.naive_datetime_from_iso_days(new ElixirScript.Core.Tuple(days0, new ElixirScript.Core.Tuple(0, 86400000000))));
+
+                const _ref2050879 = new ElixirScript.Core.Tuple(year0, month0, day0);
+
+                return Elixir.Date.__load(Elixir).__struct__(new Map([[Symbol.for('year'), year0], [Symbol.for('month'), month0], [Symbol.for('day'), day0], [Symbol.for('calendar'), calendar0]]));
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function member__qmark__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('first'), new Map([[Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('first_year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('first_month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('first_day')]])], [Symbol.for('last'), new Map([[Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('last_year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('last_month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('last_day')]])], [Symbol.for('first_in_iso_days'), ElixirScript.Core.Patterns.variable('first_in_iso_days')], [Symbol.for('last_in_iso_days'), ElixirScript.Core.Patterns.variable('last_in_iso_days')]]), new Map([[Symbol.for('__struct__'), {
+                __MODULE__: Symbol.for('Elixir.Date')
+            }], [Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('day')]])], __function_args__, (calendar0, first_year0, first_month0, first_day0, calendar1, last_year0, last_month0, last_day0, first_in_iso_days0, last_in_iso_days0, calendar2, year0, month0, day0) => {
+                return true;
+            })) !== null) {
+                let [calendar0, first_year0, first_month0, first_day0, calendar1, last_year0, last_month0, last_day0, first_in_iso_days0, last_in_iso_days0, calendar2, year0, month0, day0] = __arg_matches__;
+
+                const [first0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('first'), new ElixirScript.Core.Tuple(first_year0, first_month0, first_day0));
+
+                const [last0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('last'), new ElixirScript.Core.Tuple(last_year0, last_month0, last_day0));
+
+                const [date0] = ElixirScript.Core.Patterns.match(ElixirScript.Core.Patterns.variable('date'), new ElixirScript.Core.Tuple(year0, month0, day0));
+
+                return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([false], () => {
+                    return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([true], () => {
+                        return date0 <= first0;
+                    }, () => {
+                        return true;
+                    }), ElixirScript.Core.Patterns.clause([false], () => {
+                        return false;
+                    }, () => {
+                        return true;
+                    })).call(this, date0 >= last0));
+                }, () => {
+                    return true;
+                }), ElixirScript.Core.Patterns.clause([true], () => {
+                    return new ElixirScript.Core.Tuple(Symbol.for('ok'), ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([true], () => {
+                        return date0 <= last0;
+                    }, () => {
+                        return true;
+                    }), ElixirScript.Core.Patterns.clause([false], () => {
+                        return false;
+                    }, () => {
+                        return true;
+                    })).call(this, date0 >= first0));
+                }, () => {
+                    return true;
+                })).call(this, first_in_iso_days0 <= last_in_iso_days0);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), false);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function reduce(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
+                __MODULE__: Symbol.for('Elixir.Date.Range')
+            }], [Symbol.for('first_in_iso_days'), ElixirScript.Core.Patterns.variable('first_in_iso_days')], [Symbol.for('last_in_iso_days'), ElixirScript.Core.Patterns.variable('last_in_iso_days')], [Symbol.for('first'), new Map([[Symbol.for('calendar'), ElixirScript.Core.Patterns.variable('calendar')]])]]), ElixirScript.Core.Patterns.variable('acc'), ElixirScript.Core.Patterns.variable('fun')], __function_args__, (first_in_iso_days0, last_in_iso_days0, calendar0, acc0, fun0) => {
+                return true;
+            })) !== null) {
+                let [first_in_iso_days0, last_in_iso_days0, calendar0, acc0, fun0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, first_in_iso_days0, last_in_iso_days0, acc0, fun0, calendar0, first_in_iso_days0 <= last_in_iso_days0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_x'), ElixirScript.Core.Patterns.variable('_y'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [Symbol.for('halt'), ElixirScript.Core.Patterns.variable('acc')]
+            }), ElixirScript.Core.Patterns.variable('_fun'), ElixirScript.Core.Patterns.variable('_calendar'), ElixirScript.Core.Patterns.variable('_up?')], __function_args__, (_x0, _y0, acc0, _fun0, _calendar0, _up__qmark__0) => {
+                return true;
+            })) !== null) {
+                let [_x0, _y0, acc0, _fun0, _calendar0, _up__qmark__0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('halted'), acc0);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x'), ElixirScript.Core.Patterns.variable('y'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [Symbol.for('suspend'), ElixirScript.Core.Patterns.variable('acc')]
+            }), ElixirScript.Core.Patterns.variable('fun'), ElixirScript.Core.Patterns.variable('calendar'), ElixirScript.Core.Patterns.variable('up?')], __function_args__, (x0, y0, acc0, fun0, calendar0, up__qmark__0) => {
+                return true;
+            })) !== null) {
+                let [x0, y0, acc0, fun0, calendar0, up__qmark__0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('suspended'), acc0, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x1')], __function_args__, (x10) => {
+                            return true;
+                        })) !== null) {
+                            let [x10] = __arg_matches__;
+
+                            return reduce(x0, y0, x10, fun0, calendar0, up__qmark__0);
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                });
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x'), ElixirScript.Core.Patterns.variable('y'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('acc')]
+            }), ElixirScript.Core.Patterns.variable('fun'), ElixirScript.Core.Patterns.variable('calendar'), ElixirScript.Core.Patterns.capture(true)], __function_args__, (x0, y0, acc0, fun0, calendar0, up__qmark__0) => {
+                return x0 <= y0;
+            })) !== null) {
+                let [x0, y0, acc0, fun0, calendar0, up__qmark__0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, x0 + 1, y0, fun0(date_from_iso_days_days(x0, calendar0), acc0), fun0, calendar0, up__qmark__0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('x'), ElixirScript.Core.Patterns.variable('y'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('acc')]
+            }), ElixirScript.Core.Patterns.variable('fun'), ElixirScript.Core.Patterns.variable('calendar'), ElixirScript.Core.Patterns.capture(false)], __function_args__, (x0, y0, acc0, fun0, calendar0, up__qmark__0) => {
+                return x0 >= y0;
+            })) !== null) {
+                let [x0, y0, acc0, fun0, calendar0, up__qmark__0] = __arg_matches__;
+
+                return new ElixirScript.Core.Functions.Recurse(recur.bind(null, x0 - 1, y0, fun0(date_from_iso_days_days(x0, calendar0), acc0), fun0, calendar0, up__qmark__0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.variable('_'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('acc')]
+            }), ElixirScript.Core.Patterns.variable('_fun'), ElixirScript.Core.Patterns.variable('_calendar'), ElixirScript.Core.Patterns.variable('_up')], __function_args__, (acc0, _fun0, _calendar0, _up0) => {
+                return true;
+            })) !== null) {
+                let [acc0, _fun0, _calendar0, _up0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('done'), acc0);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -20827,12 +20833,14 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.DateTime')._
 
     const __exports = {
         __impl__,
-        inspect,
-        __MODULE__: Symbol.for('Elixir.Inspect.DateTime'),
+        count,
+        member__qmark__,
+        reduce,
+        __MODULE__: Symbol.for('Elixir.Enumerable.Date.Range'),
         __info__
     };
 
-    Elixir.Inspect.DateTime.__exports = __exports
+    Elixir.Enumerable.Date.Range.__exports = __exports
 
     return __exports;
 }
@@ -20917,12 +20925,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Float').__lo
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Date.Range').__load = function(Elixir) {
-    if (Elixir.Inspect.Date.Range.__exports)
-        return Elixir.Inspect.Date.Range.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.DateTime').__load = function(Elixir) {
+    if (Elixir.Inspect.DateTime.__exports)
+        return Elixir.Inspect.DateTime.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [48658295195240662390305946859954921906]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Date.Range.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/date_range.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(36), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(63), ElixirScript.Core.BitString.integer(44), ElixirScript.Core.BitString.integer(181), ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(54), ElixirScript.Core.BitString.integer(230), ElixirScript.Core.BitString.integer(189), ElixirScript.Core.BitString.integer(182), ElixirScript.Core.BitString.integer(109), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(111), ElixirScript.Core.BitString.integer(218), ElixirScript.Core.BitString.integer(97), ElixirScript.Core.BitString.integer(178))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Date.Range')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [231978842975781920988326917422164751410]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.DateTime.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/datetime.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(174), ElixirScript.Core.BitString.integer(133), ElixirScript.Core.BitString.integer(128), ElixirScript.Core.BitString.integer(0), ElixirScript.Core.BitString.integer(253), ElixirScript.Core.BitString.integer(241), ElixirScript.Core.BitString.integer(233), ElixirScript.Core.BitString.integer(37), ElixirScript.Core.BitString.integer(186), ElixirScript.Core.BitString.integer(19), ElixirScript.Core.BitString.integer(127), ElixirScript.Core.BitString.integer(34), ElixirScript.Core.BitString.integer(44), ElixirScript.Core.BitString.integer(244), ElixirScript.Core.BitString.integer(52), ElixirScript.Core.BitString.integer(50))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.DateTime')]]);
 
         const value = __info__map__.get(kind);
 
@@ -20944,13 +20952,13 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Date.Range')
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Date.Range.__load(Elixir);
+                return Elixir.DateTime.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Inspect.Date.Range.__load(Elixir);
+                return Elixir.Inspect.DateTime.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
                 return true;
             })) !== null) {
@@ -20971,14 +20979,18 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Date.Range')
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
-                __MODULE__: Symbol.for('Elixir.Date.Range')
-            }], [Symbol.for('first'), ElixirScript.Core.Patterns.variable('first')], [Symbol.for('last'), ElixirScript.Core.Patterns.variable('last')]]), ElixirScript.Core.Patterns.variable('_')], __function_args__, (first0, last0) => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('calendar'), Elixir.Calendar.ISO.__load(Elixir)], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('day')], [Symbol.for('hour'), ElixirScript.Core.Patterns.variable('hour')], [Symbol.for('minute'), ElixirScript.Core.Patterns.variable('minute')], [Symbol.for('second'), ElixirScript.Core.Patterns.variable('second')], [Symbol.for('microsecond'), ElixirScript.Core.Patterns.variable('microsecond')], [Symbol.for('time_zone'), ElixirScript.Core.Patterns.variable('time_zone')], [Symbol.for('zone_abbr'), ElixirScript.Core.Patterns.variable('zone_abbr')], [Symbol.for('utc_offset'), ElixirScript.Core.Patterns.variable('utc_offset')], [Symbol.for('std_offset'), ElixirScript.Core.Patterns.variable('std_offset')]]), ElixirScript.Core.Patterns.variable('_')], __function_args__, (year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0) => {
                 return true;
             })) !== null) {
-                let [first0, last0] = __arg_matches__;
+                let [year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0] = __arg_matches__;
 
-                return '#DateRange<' + (Elixir.Kernel.__load(Elixir).inspect(first0) + (', ' + (Elixir.Kernel.__load(Elixir).inspect(last0) + '>')));
+                return '#DateTime<' + (Elixir.Calendar.ISO.__load(Elixir).datetime_to_string(year0, month0, day0, hour0, minute0, second0, microsecond0, time_zone0, zone_abbr0, utc_offset0, std_offset0) + '>');
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('datetime'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (datetime0, opts0) => {
+                return true;
+            })) !== null) {
+                let [datetime0, opts0] = __arg_matches__;
+
+                return Elixir.Inspect.Any.__load(Elixir).inspect(datetime0, opts0);
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -20990,11 +21002,11 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Date.Range')
     const __exports = {
         __impl__,
         inspect,
-        __MODULE__: Symbol.for('Elixir.Inspect.Date.Range'),
+        __MODULE__: Symbol.for('Elixir.Inspect.DateTime'),
         __info__
     };
 
-    Elixir.Inspect.Date.Range.__exports = __exports
+    Elixir.Inspect.DateTime.__exports = __exports
 
     return __exports;
 }
@@ -21126,7 +21138,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Atom').__loa
                         values: [ElixirScript.Core.Patterns.variable('escaped'), ElixirScript.Core.Patterns.variable('_')]
                     }), Elixir.Inspect.BitString.__load(Elixir).escape(binary0, 34));
 
-                    const _ref9544091 = new ElixirScript.Core.Tuple(escaped0);
+                    const _ref4753461 = new ElixirScript.Core.Tuple(escaped0);
 
                     return ElixirScript.Core.erlang.iolist_to_binary([58, 34, escaped0, 34]);
                 }, () => {
@@ -21157,12 +21169,12 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Atom').__loa
 
     return __exports;
 }
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Date').__load = function(Elixir) {
-    if (Elixir.Inspect.Date.__exports)
-        return Elixir.Inspect.Date.__exports;
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Date.Range').__load = function(Elixir) {
+    if (Elixir.Inspect.Date.Range.__exports)
+        return Elixir.Inspect.Date.Range.__exports;
 
     function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [277507269637214045403982873272960162308]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Date.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/date.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(208), ElixirScript.Core.BitString.integer(197), ElixirScript.Core.BitString.integer(244), ElixirScript.Core.BitString.integer(190), ElixirScript.Core.BitString.integer(231), ElixirScript.Core.BitString.integer(28), ElixirScript.Core.BitString.integer(238), ElixirScript.Core.BitString.integer(160), ElixirScript.Core.BitString.integer(180), ElixirScript.Core.BitString.integer(37), ElixirScript.Core.BitString.integer(213), ElixirScript.Core.BitString.integer(22), ElixirScript.Core.BitString.integer(136), ElixirScript.Core.BitString.integer(144), ElixirScript.Core.BitString.integer(26), ElixirScript.Core.BitString.integer(4))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Date')]]);
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [48658295195240662390305946859954921906]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Date.Range.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/date_range.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(36), ElixirScript.Core.BitString.integer(155), ElixirScript.Core.BitString.integer(63), ElixirScript.Core.BitString.integer(44), ElixirScript.Core.BitString.integer(181), ElixirScript.Core.BitString.integer(41), ElixirScript.Core.BitString.integer(54), ElixirScript.Core.BitString.integer(230), ElixirScript.Core.BitString.integer(189), ElixirScript.Core.BitString.integer(182), ElixirScript.Core.BitString.integer(109), ElixirScript.Core.BitString.integer(58), ElixirScript.Core.BitString.integer(111), ElixirScript.Core.BitString.integer(218), ElixirScript.Core.BitString.integer(97), ElixirScript.Core.BitString.integer(178))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Date.Range')]]);
 
         const value = __info__map__.get(kind);
 
@@ -21184,13 +21196,13 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Date').__loa
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Date.__load(Elixir);
+                return Elixir.Date.Range.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
                 return true;
             })) !== null) {
                 let [] = __arg_matches__;
 
-                return Elixir.Inspect.Date.__load(Elixir);
+                return Elixir.Inspect.Date.Range.__load(Elixir);
             } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
                 return true;
             })) !== null) {
@@ -21211,18 +21223,14 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Date').__loa
 
             let __intermediate__ = null;
 
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('calendar'), Elixir.Calendar.ISO.__load(Elixir)], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('day')]]), ElixirScript.Core.Patterns.variable('_')], __function_args__, (year0, month0, day0) => {
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('__struct__'), {
+                __MODULE__: Symbol.for('Elixir.Date.Range')
+            }], [Symbol.for('first'), ElixirScript.Core.Patterns.variable('first')], [Symbol.for('last'), ElixirScript.Core.Patterns.variable('last')]]), ElixirScript.Core.Patterns.variable('_')], __function_args__, (first0, last0) => {
                 return true;
             })) !== null) {
-                let [year0, month0, day0] = __arg_matches__;
+                let [first0, last0] = __arg_matches__;
 
-                return '~D[' + (Elixir.Calendar.ISO.__load(Elixir).date_to_string(year0, month0, day0) + ']');
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('date'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (date0, opts0) => {
-                return true;
-            })) !== null) {
-                let [date0, opts0] = __arg_matches__;
-
-                return Elixir.Inspect.Any.__load(Elixir).inspect(date0, opts0);
+                return '#DateRange<' + (Elixir.Kernel.__load(Elixir).inspect(first0) + (', ' + (Elixir.Kernel.__load(Elixir).inspect(last0) + '>')));
             }
 
             throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
@@ -21234,11 +21242,11 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Date').__loa
     const __exports = {
         __impl__,
         inspect,
-        __MODULE__: Symbol.for('Elixir.Inspect.Date'),
+        __MODULE__: Symbol.for('Elixir.Inspect.Date.Range'),
         __info__
     };
 
-    Elixir.Inspect.Date.__exports = __exports
+    Elixir.Inspect.Date.Range.__exports = __exports
 
     return __exports;
 }
@@ -21355,6 +21363,91 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Any').__load
 
     return __exports;
 }
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Inspect.Date').__load = function(Elixir) {
+    if (Elixir.Inspect.Date.__exports)
+        return Elixir.Inspect.Date.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('inspect'), 2)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [277507269637214045403982873272960162308]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Inspect.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Inspect.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.Date.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/calendar/date.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(208), ElixirScript.Core.BitString.integer(197), ElixirScript.Core.BitString.integer(244), ElixirScript.Core.BitString.integer(190), ElixirScript.Core.BitString.integer(231), ElixirScript.Core.BitString.integer(28), ElixirScript.Core.BitString.integer(238), ElixirScript.Core.BitString.integer(160), ElixirScript.Core.BitString.integer(180), ElixirScript.Core.BitString.integer(37), ElixirScript.Core.BitString.integer(213), ElixirScript.Core.BitString.integer(22), ElixirScript.Core.BitString.integer(136), ElixirScript.Core.BitString.integer(144), ElixirScript.Core.BitString.integer(26), ElixirScript.Core.BitString.integer(4))], [Symbol.for('module'), Symbol.for('Elixir.Inspect.Date')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Date.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.Date.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Inspect.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function inspect(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([new Map([[Symbol.for('calendar'), Elixir.Calendar.ISO.__load(Elixir)], [Symbol.for('year'), ElixirScript.Core.Patterns.variable('year')], [Symbol.for('month'), ElixirScript.Core.Patterns.variable('month')], [Symbol.for('day'), ElixirScript.Core.Patterns.variable('day')]]), ElixirScript.Core.Patterns.variable('_')], __function_args__, (year0, month0, day0) => {
+                return true;
+            })) !== null) {
+                let [year0, month0, day0] = __arg_matches__;
+
+                return '~D[' + (Elixir.Calendar.ISO.__load(Elixir).date_to_string(year0, month0, day0) + ']');
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('date'), ElixirScript.Core.Patterns.variable('opts')], __function_args__, (date0, opts0) => {
+                return true;
+            })) !== null) {
+                let [date0, opts0] = __arg_matches__;
+
+                return Elixir.Inspect.Any.__load(Elixir).inspect(date0, opts0);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        inspect,
+        __MODULE__: Symbol.for('Elixir.Inspect.Date'),
+        __info__
+    };
+
+    Elixir.Inspect.Date.__exports = __exports
+
+    return __exports;
+}
 ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Collectable.Map').__load = function(Elixir) {
     if (Elixir.Collectable.Map.__exports)
         return Elixir.Collectable.Map.__exports;
@@ -21463,115 +21556,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Collectable.Map').__
     };
 
     Elixir.Collectable.Map.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Collectable.MapSet').__load = function(Elixir) {
-    if (Elixir.Collectable.MapSet.__exports)
-        return Elixir.Collectable.MapSet.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('into'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [201123945222870993102087730716103515836]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Collectable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Collectable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.MapSet.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/map_set.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(151), ElixirScript.Core.BitString.integer(79), ElixirScript.Core.BitString.integer(16), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(215), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(3), ElixirScript.Core.BitString.integer(35), ElixirScript.Core.BitString.integer(100), ElixirScript.Core.BitString.integer(144), ElixirScript.Core.BitString.integer(10), ElixirScript.Core.BitString.integer(46), ElixirScript.Core.BitString.integer(235), ElixirScript.Core.BitString.integer(181), ElixirScript.Core.BitString.integer(158), ElixirScript.Core.BitString.integer(188))], [Symbol.for('module'), Symbol.for('Elixir.Collectable.MapSet')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.MapSet.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Collectable.MapSet.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Collectable.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function into(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('original')], __function_args__, (original0) => {
-                return true;
-            })) !== null) {
-                let [original0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(original0, (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map_set'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('x')]
-                        })], __function_args__, (map_set0, x0) => {
-                            return true;
-                        })) !== null) {
-                            let [map_set0, x0] = __arg_matches__;
-
-                            return Elixir.MapSet.__load(Elixir).put(map_set0, x0);
-                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map_set'), Symbol.for('done')], __function_args__, (map_set0) => {
-                            return true;
-                        })) !== null) {
-                            let [map_set0] = __arg_matches__;
-
-                            return map_set0;
-                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_'), Symbol.for('halt')], __function_args__, () => {
-                            return true;
-                        })) !== null) {
-                            let [] = __arg_matches__;
-
-                            return Symbol.for('ok');
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                });
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        into,
-        __MODULE__: Symbol.for('Elixir.Collectable.MapSet'),
-        __info__
-    };
-
-    Elixir.Collectable.MapSet.__exports = __exports
 
     return __exports;
 }
@@ -21717,6 +21701,232 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Collectable.File.Str
     };
 
     Elixir.Collectable.File.Stream.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Collectable.MapSet').__load = function(Elixir) {
+    if (Elixir.Collectable.MapSet.__exports)
+        return Elixir.Collectable.MapSet.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('into'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [201123945222870993102087730716103515836]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Collectable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Collectable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.MapSet.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/map_set.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(151), ElixirScript.Core.BitString.integer(79), ElixirScript.Core.BitString.integer(16), ElixirScript.Core.BitString.integer(23), ElixirScript.Core.BitString.integer(215), ElixirScript.Core.BitString.integer(152), ElixirScript.Core.BitString.integer(3), ElixirScript.Core.BitString.integer(35), ElixirScript.Core.BitString.integer(100), ElixirScript.Core.BitString.integer(144), ElixirScript.Core.BitString.integer(10), ElixirScript.Core.BitString.integer(46), ElixirScript.Core.BitString.integer(235), ElixirScript.Core.BitString.integer(181), ElixirScript.Core.BitString.integer(158), ElixirScript.Core.BitString.integer(188))], [Symbol.for('module'), Symbol.for('Elixir.Collectable.MapSet')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.MapSet.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Collectable.MapSet.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Collectable.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function into(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('original')], __function_args__, (original0) => {
+                return true;
+            })) !== null) {
+                let [original0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(original0, (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map_set'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('x')]
+                        })], __function_args__, (map_set0, x0) => {
+                            return true;
+                        })) !== null) {
+                            let [map_set0, x0] = __arg_matches__;
+
+                            return Elixir.MapSet.__load(Elixir).put(map_set0, x0);
+                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('map_set'), Symbol.for('done')], __function_args__, (map_set0) => {
+                            return true;
+                        })) !== null) {
+                            let [map_set0] = __arg_matches__;
+
+                            return map_set0;
+                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('_'), Symbol.for('halt')], __function_args__, () => {
+                            return true;
+                        })) !== null) {
+                            let [] = __arg_matches__;
+
+                            return Symbol.for('ok');
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                });
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        into,
+        __MODULE__: Symbol.for('Elixir.Collectable.MapSet'),
+        __info__
+    };
+
+    Elixir.Collectable.MapSet.__exports = __exports
+
+    return __exports;
+}
+ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Collectable.IO.Stream').__load = function(Elixir) {
+    if (Elixir.Collectable.IO.Stream.__exports)
+        return Elixir.Collectable.IO.Stream.__exports;
+
+    function __info__(kind) {
+        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('into'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [6471490514993830449207609781703435649]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Collectable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Collectable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.IO.Stream.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/io/stream.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(222), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(29), ElixirScript.Core.BitString.integer(218), ElixirScript.Core.BitString.integer(67), ElixirScript.Core.BitString.integer(180), ElixirScript.Core.BitString.integer(135), ElixirScript.Core.BitString.integer(247), ElixirScript.Core.BitString.integer(1), ElixirScript.Core.BitString.integer(104), ElixirScript.Core.BitString.integer(203), ElixirScript.Core.BitString.integer(76), ElixirScript.Core.BitString.integer(120), ElixirScript.Core.BitString.integer(101), ElixirScript.Core.BitString.integer(129))], [Symbol.for('module'), Symbol.for('Elixir.Collectable.IO.Stream')]]);
+
+        const value = __info__map__.get(kind);
+
+        if (value !== null) {
+            return value;
+        }
+
+        throw new ElixirScript.Core.Patterns.MatchError(kind);
+    }
+
+    function __impl__(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.IO.Stream.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Collectable.IO.Stream.__load(Elixir);
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
+                return true;
+            })) !== null) {
+                let [] = __arg_matches__;
+
+                return Elixir.Collectable.__load(Elixir);
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    function into(...__function_args__) {
+        function recur(...__function_args__) {
+            let __arg_matches__ = null;
+
+            let __intermediate__ = null;
+
+            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.capture(new Map([[Symbol.for('device'), ElixirScript.Core.Patterns.variable('device')], [Symbol.for('raw'), ElixirScript.Core.Patterns.variable('raw')]]))], __function_args__, (device0, raw0, stream0) => {
+                return true;
+            })) !== null) {
+                let [device0, raw0, stream0] = __arg_matches__;
+
+                return new ElixirScript.Core.Tuple(Symbol.for('ok'), into(stream0, device0, raw0));
+            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('stream'), ElixirScript.Core.Patterns.variable('device'), ElixirScript.Core.Patterns.variable('raw')], __function_args__, (stream0, device0, raw0) => {
+                return true;
+            })) !== null) {
+                let [stream0, device0, raw0] = __arg_matches__;
+
+                return (...__function_args__) => {
+                    function recur(...__function_args__) {
+                        let __arg_matches__ = null;
+
+                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('ok'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
+                            values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('x')]
+                        })], __function_args__, (x0) => {
+                            return true;
+                        })) !== null) {
+                            let [x0] = __arg_matches__;
+
+                            return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([true], () => {
+                                return Elixir.IO.__load(Elixir).binwrite(device0, x0);
+                            }, () => {
+                                return true;
+                            }), ElixirScript.Core.Patterns.clause([false], () => {
+                                return Elixir.IO.__load(Elixir).write(device0, x0);
+                            }, () => {
+                                return true;
+                            })).call(this, raw0);
+                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('ok'), ElixirScript.Core.Patterns.variable('_')], __function_args__, () => {
+                            return true;
+                        })) !== null) {
+                            let [] = __arg_matches__;
+
+                            return stream0;
+                        }
+
+                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+                    }
+
+                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+                };
+            }
+
+            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
+        }
+
+        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
+    }
+
+    const __exports = {
+        __impl__,
+        into,
+        __MODULE__: Symbol.for('Elixir.Collectable.IO.Stream'),
+        __info__
+    };
+
+    Elixir.Collectable.IO.Stream.__exports = __exports
 
     return __exports;
 }
@@ -21886,7 +22096,7 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Date').__load = func
                     return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
                 }));
 
-                const _ref3494237 = new ElixirScript.Core.Tuple(map5764607523034175960, keys5764607523034175960);
+                const _ref3918862 = new ElixirScript.Core.Tuple(map5764607523034175960, keys5764607523034175960);
 
                 return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([[]], () => {
                     return map5764607523034175960;
@@ -22023,123 +22233,6 @@ ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Collectable.HashSet'
     };
 
     Elixir.Collectable.HashSet.__exports = __exports
-
-    return __exports;
-}
-ElixirScript.Core.Functions.build_namespace(Elixir, 'Elixir.Collectable.IO.Stream').__load = function(Elixir) {
-    if (Elixir.Collectable.IO.Stream.__exports)
-        return Elixir.Collectable.IO.Stream.__exports;
-
-    function __info__(kind) {
-        const __info__map__ = new Map([[Symbol.for('functions'), [new ElixirScript.Core.Tuple(Symbol.for('__impl__'), 1), new ElixirScript.Core.Tuple(Symbol.for('into'), 1)]], [Symbol.for('macros'), []], [Symbol.for('attributes'), [new ElixirScript.Core.Tuple(Symbol.for('vsn'), [6471490514993830449207609781703435649]), new ElixirScript.Core.Tuple(Symbol.for('behaviour'), [Elixir.Collectable.__load(Elixir)]), new ElixirScript.Core.Tuple(Symbol.for('protocol_impl'), [new ElixirScript.Core.Tuple(Symbol.for('protocol'), Elixir.Collectable.__load(Elixir)), new ElixirScript.Core.Tuple(Symbol.for('for'), Elixir.IO.Stream.__load(Elixir))])]], [Symbol.for('compile'), [new ElixirScript.Core.Tuple(Symbol.for('options'), []), new ElixirScript.Core.Tuple(Symbol.for('version'), [55, 46, 49, 46, 50]), new ElixirScript.Core.Tuple(Symbol.for('source'), '/private/tmp/elixir-20170929-51947-wgj4qu/elixir-1.5.2/lib/elixir/lib/io/stream.ex')]], [Symbol.for('md5'), new ElixirScript.Core.BitString(ElixirScript.Core.BitString.integer(4), ElixirScript.Core.BitString.integer(222), ElixirScript.Core.BitString.integer(93), ElixirScript.Core.BitString.integer(29), ElixirScript.Core.BitString.integer(218), ElixirScript.Core.BitString.integer(67), ElixirScript.Core.BitString.integer(180), ElixirScript.Core.BitString.integer(135), ElixirScript.Core.BitString.integer(247), ElixirScript.Core.BitString.integer(1), ElixirScript.Core.BitString.integer(104), ElixirScript.Core.BitString.integer(203), ElixirScript.Core.BitString.integer(76), ElixirScript.Core.BitString.integer(120), ElixirScript.Core.BitString.integer(101), ElixirScript.Core.BitString.integer(129))], [Symbol.for('module'), Symbol.for('Elixir.Collectable.IO.Stream')]]);
-
-        const value = __info__map__.get(kind);
-
-        if (value !== null) {
-            return value;
-        }
-
-        throw new ElixirScript.Core.Patterns.MatchError(kind);
-    }
-
-    function __impl__(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('for')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.IO.Stream.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('target')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Collectable.IO.Stream.__load(Elixir);
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('protocol')], __function_args__, () => {
-                return true;
-            })) !== null) {
-                let [] = __arg_matches__;
-
-                return Elixir.Collectable.__load(Elixir);
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    function into(...__function_args__) {
-        function recur(...__function_args__) {
-            let __arg_matches__ = null;
-
-            let __intermediate__ = null;
-
-            if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.capture(new Map([[Symbol.for('device'), ElixirScript.Core.Patterns.variable('device')], [Symbol.for('raw'), ElixirScript.Core.Patterns.variable('raw')]]))], __function_args__, (device0, raw0, stream0) => {
-                return true;
-            })) !== null) {
-                let [device0, raw0, stream0] = __arg_matches__;
-
-                return new ElixirScript.Core.Tuple(Symbol.for('ok'), into(stream0, device0, raw0));
-            } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([ElixirScript.Core.Patterns.variable('stream'), ElixirScript.Core.Patterns.variable('device'), ElixirScript.Core.Patterns.variable('raw')], __function_args__, (stream0, device0, raw0) => {
-                return true;
-            })) !== null) {
-                let [stream0, device0, raw0] = __arg_matches__;
-
-                return (...__function_args__) => {
-                    function recur(...__function_args__) {
-                        let __arg_matches__ = null;
-
-                        if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('ok'), ElixirScript.Core.Patterns.type(ElixirScript.Core.Tuple, {
-                            values: [Symbol.for('cont'), ElixirScript.Core.Patterns.variable('x')]
-                        })], __function_args__, (x0) => {
-                            return true;
-                        })) !== null) {
-                            let [x0] = __arg_matches__;
-
-                            return ElixirScript.Core.Patterns.defmatch(ElixirScript.Core.Patterns.clause([true], () => {
-                                return Elixir.IO.__load(Elixir).binwrite(device0, x0);
-                            }, () => {
-                                return true;
-                            }), ElixirScript.Core.Patterns.clause([false], () => {
-                                return Elixir.IO.__load(Elixir).write(device0, x0);
-                            }, () => {
-                                return true;
-                            })).call(this, raw0);
-                        } else if ((__arg_matches__ = ElixirScript.Core.Patterns.match_or_default([Symbol.for('ok'), ElixirScript.Core.Patterns.variable('_')], __function_args__, () => {
-                            return true;
-                        })) !== null) {
-                            let [] = __arg_matches__;
-
-                            return stream0;
-                        }
-
-                        throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-                    }
-
-                    return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-                };
-            }
-
-            throw new ElixirScript.Core.Patterns.MatchError(__function_args__);
-        }
-
-        return ElixirScript.Core.Functions.trampoline(new ElixirScript.Core.Functions.Recurse(recur.bind(null, ...__function_args__)));
-    }
-
-    const __exports = {
-        __impl__,
-        into,
-        __MODULE__: Symbol.for('Elixir.Collectable.IO.Stream'),
-        __info__
-    };
-
-    Elixir.Collectable.IO.Stream.__exports = __exports
 
     return __exports;
 }

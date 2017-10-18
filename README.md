@@ -228,19 +228,23 @@ _Stats for at least three types of data structures are required:_
 ```json
 {
   "empty list": 47.344,
-  "empty map": 199.928,
-  "empty set": 622.424,
+  "empty tuple": 88.704,
+  "empty map": 198.816,
+  "empty set": 624.12,
 
-  "10 items list": 215.232,
-  "10 items map": 885.888,
-  "10 items set": 1072.96,
+  "10 items list": 216.568,
+  "10 items tuple": 546.928,
+  "10 items map": 872.704,
+  "10 items set": 1062.192,
 
-  "100 items list": 867.008,
-  "100 items map": 6876.048,
-  "100 items set": 7068.576,
+  "100 items list": 872.928,
+  "100 items tuple": 6290.04,
+  "100 items map": 6874.008,
+  "100 items set": 7063.624,
 
-  "1000 items list": 8064.04,
-  "1000 items map": 61020.504,
-  "1000 items set": 60948.184
+  "1000 items list": 8063.992,
+  "1000 items tuple": 49294.264,
+  "1000 items map": 61026.544,
+  "1000 items set": 60951.72
 }
 ```
