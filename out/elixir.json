@@ -1,11 +1,14 @@
 {
-  "empty list": 390.464,
-  "empty map": 879.656,
-  "empty set": 1113.472,
-  "100 items list": 868.592,
-  "100 items map": 6879.232,
-  "100 items set": 7066.392,
-  "1000 items list": 8067.248,
-  "1000 items map": 61019.32,
-  "1000 items set": 60954.144
+  "empty list": 47.344,
+  "empty map": 199.928,
+  "empty set": 622.424,
+  "10 items list": 215.232,
+  "10 items map": 885.888,
+  "10 items set": 1072.96,
+  "100 items list": 867.008,
+  "100 items map": 6876.048,
+  "100 items set": 7068.576,
+  "1000 items list": 8064.04,
+  "1000 items map": 61020.504,
+  "1000 items set": 60948.184
 }

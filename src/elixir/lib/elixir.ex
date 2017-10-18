@@ -19,9 +19,13 @@ defmodule Test do
 
   def start(_, _) do
 
-    Node.record("empty list", 1000, fn() -> Test.fill(10, [], &Test.listSet/2) end)
-    Node.record("empty map", 1000, fn() -> Test.fill(10, %{}, &Test.mapSet/2) end)
-    Node.record("empty set", 1000, fn() -> Test.fill(10, MapSet.new, &Test.setSet/2) end)
+    Node.record("empty list", 1000, fn() -> [] end)
+    Node.record("empty map", 1000, fn() -> %{} end)
+    Node.record("empty set", 1000, fn() -> MapSet.new end)
+
+    Node.record("10 items list", 1000, fn() -> Test.fill(10, [], &Test.listSet/2) end)
+    Node.record("10 items map", 1000, fn() -> Test.fill(10, %{}, &Test.mapSet/2) end)
+    Node.record("10 items set", 1000, fn() -> Test.fill(10, MapSet.new, &Test.setSet/2) end)
 
     Node.record("100 items list", 1000, fn() -> Test.fill(100, [], &Test.listSet/2) end)
     Node.record("100 items map", 1000, fn() -> Test.fill(100, %{}, &Test.mapSet/2) end)
