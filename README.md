@@ -240,26 +240,28 @@ _v3.0.0_
 
 ## ElixirScript
 
+_v0.32.1_
+
 ```json
 {
   "empty list": 47.344,
   "empty tuple": 88.704,
   "empty map": 198.816,
-  "empty set": 624.12,
+  "empty set": 622.384,
 
-  "10 items list": 216.568,
-  "10 items tuple": 546.928,
-  "10 items map": 872.704,
-  "10 items set": 1062.192,
+  "10 items list": 215.744,
+  "10 items tuple": 544.272,
+  "10 items map": 873.832,
+  "10 items set": 1067.416,
 
-  "100 items list": 872.928,
-  "100 items tuple": 6290.04,
-  "100 items map": 6874.008,
-  "100 items set": 7063.624,
+  "100 items list": 870.384,
+  "100 items tuple": 6290.136,
+  "100 items map": 6876.056,
+  "100 items set": 7063.152,
 
-  "1000 items list": 8063.992,
-  "1000 items tuple": 49294.264,
-  "1000 items map": 61026.544,
-  "1000 items set": 60951.72
+  "1000 items list": 8063.208,
+  "1000 items tuple": 49294.2,
+  "1000 items map": 61026.376,
+  "1000 items set": 60951.816
 }
 ```

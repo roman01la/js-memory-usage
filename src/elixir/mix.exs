@@ -5,7 +5,7 @@ defmodule Test.Mixfile do
     [
       app: :elixir,
       version: "0.1.0",
-      elixir: "~> 1.5",
+      elixir: "~> 1.6",
       start_permanent: Mix.env == :prod,
       deps: deps(),
       compilers: Mix.compilers ++ [:elixir_script],
@@ -28,7 +28,7 @@ defmodule Test.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:elixir_script, "~> 0.31.1"}
+      {:elixir_script, "~> 0.32.1"}
     ]
   end
 end
