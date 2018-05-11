@@ -62,23 +62,25 @@ _Stats for at least three types of data structures are required:_
 
 ## ImmutableJS
 
+_v4.0.0-rc.9_
+
 ```json
 {
-  "empty list": 19.904,
-  "empty map": 23.16,
-  "empty set": 23.192,
+  "empty list": 16.216,
+  "empty map": 14.592,
+  "empty set": 14.16,
 
-  "10 items list": 641.752,
-  "10 items map": 1901.608,
-  "10 items set": 1578.704,
+  "10 item list": 570.944,
+  "10 item map": 1813.28,
+  "10 item set": 1518.16,
 
-  "100 items list": 2647.36,
-  "100 items map": 17411.496,
-  "100 items set": 15679.656,
+  "100 item list": 2618.096,
+  "100 item map": 17392.312,
+  "100 item set": 15664.728,
 
-  "1000 items list": 20485.224,
-  "1000 items map": 182600.704,
-  "1000 items set": 123834.648
+  "1000 item list": 20438.92,
+  "1000 item map": 182587.248,
+  "1000 item set": 123816.36
 }
 ```
 

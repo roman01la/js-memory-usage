@@ -1,14 +1,14 @@
 {
-  "empty list": 19.904,
-  "empty map": 23.16,
-  "empty set": 23.192,
-  "10 item list": 641.752,
-  "10 item map": 1901.608,
-  "10 item set": 1578.704,
-  "100 item list": 2647.36,
-  "100 item map": 17411.496,
-  "100 item set": 15679.656,
-  "1000 item list": 20485.224,
-  "1000 item map": 182600.704,
-  "1000 item set": 123834.648
+  "empty list": 16.216,
+  "empty map": 14.592,
+  "empty set": 14.16,
+  "10 item list": 570.944,
+  "10 item map": 1813.28,
+  "10 item set": 1518.16,
+  "100 item list": 2618.096,
+  "100 item map": 17392.312,
+  "100 item set": 15664.728,
+  "1000 item list": 20438.92,
+  "1000 item map": 182587.248,
+  "1000 item set": 123816.36
 }
