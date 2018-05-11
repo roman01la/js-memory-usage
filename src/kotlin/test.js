@@ -1,9 +1,11 @@
 (function (_, Kotlin) {
   'use strict';
   var ArrayList_init = Kotlin.kotlin.collections.ArrayList_init_ww73n8$;
+  var toString = Kotlin.toString;
   var LinkedHashMap_init = Kotlin.kotlin.collections.LinkedHashMap_init_q3lmfv$;
   var HashMap_init = Kotlin.kotlin.collections.HashMap_init_q3lmfv$;
   var HashSet_init = Kotlin.kotlin.collections.HashSet_init_287e2$;
+  var getCallableRef = Kotlin.getCallableRef;
   var toList = Kotlin.kotlin.collections.toList_abgq59$;
   var json = Kotlin.kotlin.js.json_pyyo18$;
   var println = Kotlin.kotlin.io.println_s8jyv4$;
@@ -33,7 +35,7 @@
     return arr;
   }
   function mapSet(map, i) {
-    map.put_xwzc9p$('key-' + Kotlin.toString(i), i);
+    map.put_xwzc9p$('key-' + toString(i), i);
     return map;
   }
   function setSet(set, i) {
@@ -42,9 +44,7 @@
   }
   function main$lambda() {
     var list = ArrayList_init(0);
-    var tmp$;
-    tmp$ = 0 - 1 | 0;
-    for (var index = 0; index <= tmp$; index++) {
+    for (var index = 0; index < 0; index++) {
       list.add_11rb$(index);
     }
     return list;
@@ -60,73 +60,67 @@
   }
   function main$lambda_3() {
     var list = ArrayList_init(10);
-    var tmp$;
-    tmp$ = 10 - 1 | 0;
-    for (var index = 0; index <= tmp$; index++) {
+    for (var index = 0; index < 10; index++) {
       list.add_11rb$(index);
     }
     return list;
   }
   function main$lambda_4() {
-    return fill(10, ArrayList_init(0), Kotlin.getCallableRef('arrSet', function (arr, i) {
+    return fill(10, ArrayList_init(0), getCallableRef('arrSet', function (arr, i) {
       return arrSet(arr, i);
     }));
   }
   function main$lambda_5() {
-    return fill(10, HashMap_init(), Kotlin.getCallableRef('mapSet', function (map, i) {
+    return fill(10, HashMap_init(), getCallableRef('mapSet', function (map, i) {
       return mapSet(map, i);
     }));
   }
   function main$lambda_6() {
-    return fill(10, HashSet_init(), Kotlin.getCallableRef('setSet', function (set, i) {
+    return fill(10, HashSet_init(), getCallableRef('setSet', function (set, i) {
       return setSet(set, i);
     }));
   }
   function main$lambda_7() {
     var list = ArrayList_init(100);
-    var tmp$;
-    tmp$ = 100 - 1 | 0;
-    for (var index = 0; index <= tmp$; index++) {
+    for (var index = 0; index < 100; index++) {
       list.add_11rb$(index);
     }
     return list;
   }
   function main$lambda_8() {
-    return fill(100, ArrayList_init(0), Kotlin.getCallableRef('arrSet', function (arr, i) {
+    return fill(100, ArrayList_init(0), getCallableRef('arrSet', function (arr, i) {
       return arrSet(arr, i);
     }));
   }
   function main$lambda_9() {
-    return fill(100, HashMap_init(), Kotlin.getCallableRef('mapSet', function (map, i) {
+    return fill(100, HashMap_init(), getCallableRef('mapSet', function (map, i) {
       return mapSet(map, i);
     }));
   }
   function main$lambda_10() {
-    return fill(100, HashSet_init(), Kotlin.getCallableRef('setSet', function (set, i) {
+    return fill(100, HashSet_init(), getCallableRef('setSet', function (set, i) {
       return setSet(set, i);
     }));
   }
   function main$lambda_11() {
     var list = ArrayList_init(1000);
-    var tmp$;
-    tmp$ = 1000 - 1 | 0;
-    for (var index = 0; index <= tmp$; index++) {
+    for (var index = 0; index < 1000; index++) {
       list.add_11rb$(index);
     }
     return list;
   }
   function main$lambda_12() {
-    return fill(1000, ArrayList_init(0), Kotlin.getCallableRef('arrSet', function (arr, i) {
+    return fill(1000, ArrayList_init(0), getCallableRef('arrSet', function (arr, i) {
       return arrSet(arr, i);
     }));
   }
   function main$lambda_13() {
-    return fill(1000, HashMap_init(), Kotlin.getCallableRef('mapSet', function (map, i) {
+    return fill(1000, HashMap_init(), getCallableRef('mapSet', function (map, i) {
       return mapSet(map, i);
     }));
   }
   function main$lambda_14() {
-    return fill(1000, HashSet_init(), Kotlin.getCallableRef('setSet', function (set, i) {
+    return fill(1000, HashSet_init(), getCallableRef('setSet', function (set, i) {
       return setSet(set, i);
     }));
   }

@@ -18,11 +18,11 @@
     "run:elixir": "node --experimental-modules src/elixir/build/index.mjs > out/elixir.json"
   },
   "dependencies": {
+    "bs-platform": "^3.0.0",
     "elm": "^0.18.0",
-    "bs-platform": "^1.7.5",
-    "immutable": "^3.8.1",
-    "kotlin": "^1.1.0",
-    "kotlin-compiler": "^1.1.0",
+    "immutable": "^3.8.2",
+    "kotlin": "^1.2.41",
+    "kotlin-compiler": "^1.2.41",
     "memwatch-next": "^0.3.0"
   }
 }

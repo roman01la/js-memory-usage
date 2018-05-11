@@ -2,39 +2,40 @@
 
 [Comparison chart](https://roman01la.github.io/js-memory-usage/)
 
-- [JavaScript](#javascript)
-- [ImmutableJS](#immutablejs)
-- [ClojureScript](#clojurescript)
-- [Kotlin](#kotlin)
-- [GopherJS (Go)](#gopherjs-go)
-- [RacketScript](#racketscript)
-- [Reason (BuckleScript)](#reason-bucklescript)
-- [Elm](#elm)
-- [ElixirScript](#elixirscript)
-- PureScript
-- Dart
-- Scala.js
-- GHCJS (Haskell)
-- ...
+* [JavaScript](#javascript)
+* [ImmutableJS](#immutablejs)
+* [ClojureScript](#clojurescript)
+* [Kotlin](#kotlin)
+* [GopherJS (Go)](#gopherjs-go)
+* [RacketScript](#racketscript)
+* [Reason (BuckleScript)](#reason-bucklescript)
+* [Elm](#elm)
+* [ElixirScript](#elixirscript)
+* PureScript
+* Dart
+* Scala.js
+* GHCJS (Haskell)
+* ...
 
 ## How to add stats
 
 _Stats for at least three types of data structures are required:_
-- Indexed collection of values such as _Array_ or _Vector_
-- Collection that maps keys to values such as _Map_ or _Record_
-- Collection of unique values — _Set_
 
+* Indexed collection of values such as _Array_ or _Vector_
+* Collection that maps keys to values such as _Map_ or _Record_
+* Collection of unique values — _Set_
 
-1. See how test code is implemented in other languages
-2. Implement test code in lang _X_
-3. Put sources in a directory in `src`
-4. Write NPM build script using this template: `"build:[lang]": "[build cmd]"`
-5. Write NPM test script using this template: `"run:[lang]": "node src/[lang]/test.js > out/[lang].json"`
-6. Run test script
-7. Add results to `README.md`
-8. Submit a PR
+1.  See how test code is implemented in other languages
+2.  Implement test code in lang _X_
+3.  Put sources in a directory in `src`
+4.  Write NPM build script using this template: `"build:[lang]": "[build cmd]"`
+5.  Write NPM test script using this template: `"run:[lang]": "node src/[lang]/test.js > out/[lang].json"`
+6.  Run test script
+7.  Add results to `README.md`
+8.  Submit a PR
 
 ## JavaScript
+
 ```json
 {
   "empty object": 70.192,
@@ -60,6 +61,7 @@ _Stats for at least three types of data structures are required:_
 ```
 
 ## ImmutableJS
+
 ```json
 {
   "empty list": 19.904,
@@ -78,10 +80,10 @@ _Stats for at least three types of data structures are required:_
   "1000 items map": 182600.704,
   "1000 items set": 123834.648
 }
-
 ```
 
 ## ClojureScript
+
 ```json
 {
   "empty list": 8.936,
@@ -104,35 +106,38 @@ _Stats for at least three types of data structures are required:_
   "1000 items map": 121328.16,
   "1000 items set": 123852.92
 }
-
 ```
 
 ## Kotlin
+
+_v1.2.41_
+
 ```json
 {
-  "empty List": 117.872,
-  "empty ArrayList": 107.24,
-  "empty HashMap": 454.968,
-  "empty HashSet": 497.112,
+  "empty List": 101.344,
+  "empty ArrayList": 99.144,
+  "empty HashMap": 322.904,
+  "empty HashSet": 380.688,
 
-  "10 items List": 252,
-  "10 items ArrayList": 262.624,
-  "10 items HashMap": 1725.72,
-  "10 items HashSet": 1072.216,
+  "10 item List": 253.648,
+  "10 item ArrayList": 255.6,
+  "10 item HashMap": 1580.992,
+  "10 item HashSet": 942.296,
 
-  "100 items List": 1165.448,
-  "100 items ArrayList": 1166.744,
-  "100 items HashMap": 20542.936,
-  "100 items HashSet": 5630.728,
+  "100 item List": 1238.616,
+  "100 item ArrayList": 1237.784,
+  "100 item HashMap": 14366.752,
+  "100 item HashSet": 5535.496,
 
-  "1000 items List": 9692.632,
-  "1000 items ArrayList": 9695.568,
-  "1000 items HashMap": 121960.52,
-  "1000 items HashSet": 50820.536
+  "1000 item List": 10430.664,
+  "1000 item ArrayList": 10431.176,
+  "1000 item HashMap": 121939.384,
+  "1000 item HashSet": 50716.304
 }
 ```
 
 ## GopherJS (Go)
+
 ```json
 {
   "empty array": 267,
@@ -150,6 +155,7 @@ _Stats for at least three types of data structures are required:_
 ```
 
 ## RacketScript
+
 ```json
 {
   "empty list": 20.104,
@@ -171,6 +177,7 @@ _Stats for at least three types of data structures are required:_
 ```
 
 ## Reason (BuckleScript)
+
 ```json
 {
   "empty List": 84,
@@ -200,6 +207,7 @@ _Stats for at least three types of data structures are required:_
 ```
 
 ## Elm
+
 ```json
 {
   "empty list": 43.776,
@@ -225,6 +233,7 @@ _Stats for at least three types of data structures are required:_
 ```
 
 ## ElixirScript
+
 ```json
 {
   "empty list": 47.344,
