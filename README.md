@@ -180,31 +180,33 @@ _v1.2.41_
 
 ## Reason (BuckleScript)
 
+_v3.0.0_
+
 ```json
 {
-  "empty List": 84,
-  "empty Array": 145,
-  "empty Set": 71,
-  "empty Map": 71,
-  "empty Hashtbl": 346,
+  "empty List": 71,
+  "empty Array": 112,
+  "empty Set": 64,
+  "empty Map": 64,
+  "empty Hashtbl": 325,
 
-  "10 items List": 720,
-  "10 items Array": 207,
-  "10 items Set": 975,
-  "10 items Map": 1363,
-  "10 items Hashtbl": 1443,
+  "10 item List": 707,
+  "10 item Array": 203,
+  "10 item Set": 886,
+  "10 item Map": 1296,
+  "10 item Hashtbl": 1387,
 
-  "100 items List": 6480,
-  "100 items Array": 927,
-  "100 items Set": 8082,
-  "100 items Map": 12081,
-  "100 items Hashtbl": 11165,
+  "100 item List": 6464,
+  "100 item Array": 912,
+  "100 item Set": 8067,
+  "100 item Map": 12064,
+  "100 item Hashtbl": 11132,
 
-  "1000 items List": 64073,
-  "1000 items Array": 8122,
-  "1000 items Set": 80404,
-  "1000 items Map": 120077,
-  "1000 items Hashtbl": 108343
+  "1000 item List": 64064,
+  "1000 item Array": 8112,
+  "1000 item Set": 80425,
+  "1000 item Map": 120064,
+  "1000 item Hashtbl": 108294
 }
 ```
 
