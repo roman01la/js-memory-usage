@@ -7,6 +7,7 @@
     "build:elm": "cd src/elm && elm-make --yes Main.elm --output elm.js",
     "build:reason": "bsb",
     "build:elixir": "mix compile",
+    "build:fsharp": "cd src/FSharp && yarn && yarn build",
     "run:js": "node src/plain-js/test.js > out/plain-js.json",
     "run:immutable-js": "node src/immutable-js/test.js > out/immutable-js.json",
     "run:clj": "node src/clj/test.js > out/clj.json",
@@ -15,7 +16,8 @@
     "run:rkt": "node src/racket/out/dist/modules/test.rkt.js > out/racket.json",
     "run:elm": "node src/elm/test.js > out/elm.json",
     "run:reason": "node lib/js/src/reason/test.js > out/reason.json",
-    "run:elixir": "node --experimental-modules src/elixir/build/index.mjs > out/elixir.json"
+    "run:elixir": "node --experimental-modules src/elixir/build/index.mjs > out/elixir.json",
+    "run:fsharp": "node src/FSharp/test.js > out/fsharp.json"
   },
   "dependencies": {
     "bs-platform": "^3.0.0",

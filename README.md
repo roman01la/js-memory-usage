@@ -11,6 +11,7 @@
 * [Reason (BuckleScript)](#reason-bucklescript)
 * [Elm](#elm)
 * [ElixirScript](#elixirscript)
+* [F# (Fable)](#f-fable)
 * PureScript
 * Dart
 * Scala.js
@@ -263,5 +264,33 @@ _v0.32.1_
   "1000 items tuple": 49294.2,
   "1000 items map": 61026.376,
   "1000 items set": 60951.816
+}
+```
+
+## F# (Fable)
+
+_Fable.Core (1.3.8)_
+
+```json
+{
+  "empty list": 52.976,
+  "empty array": 44.136,
+  "empty map": 119.504,
+  "empty set": 120.208,
+
+  "10 items list": 467.208,
+  "10 items array": 263.864,
+  "10 items map": 1637.776,
+  "10 items set": 1227.632,
+
+  "100 items list": 4056.8,
+  "100 items array": 605.056,
+  "100 items map": 14960.384,
+  "100 items set": 10941.968,
+
+  "1000 items list": 40054.592,
+  "1000 items array": 4204.248,
+  "1000 items map": 152052.272,
+  "1000 items set": 108155.44
 }
 ```

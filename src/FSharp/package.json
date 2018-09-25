@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "fable": {
+    "entry": "src/FSharp.fsproj"
+  },
+  "scripts": {
+    "postinstall": "dotnet restore",
+    "build": "cd tools && dotnet fable webpack -- -p --config webpack.config.prod.js"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.1",
+    "copy-webpack-plugin": "^4.4.1",
+    "fable-loader": "1.1.6",
+    "fable-utils": "1.0.6",
+    "html-webpack-plugin": "2.29.0",
+    "html-webpack-polyfill-io-plugin": "^1.0.0",
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.9.4"
+  }
+}
