@@ -1,14 +1,14 @@
 (ns clj.core
   (:require [cljs.nodejs :as node]))
 
-(def memwatch (node/require "memwatch-next"))
+(defn heap-used []
+  (.-heapUsed (.memoryUsage js/process)))
 
 (defn record [cnt f]
-  (.gc memwatch)
-  (let [hd (memwatch.HeapDiff.)
+  (let [hu (heap-used)
         arr #js []]
-    (dotimes [i cnt] (.push arr (f)))
-    (/ (.. (.end hd) -change -size_bytes) cnt)))
+    (dotimes [_ cnt] (.push arr (f)))
+    (/ (- (heap-used) hu) cnt)))
 
 (defn fill [cnt obj f]
   (->> (range cnt)

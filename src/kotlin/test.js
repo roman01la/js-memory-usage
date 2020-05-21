@@ -9,6 +9,7 @@
   var toList = Kotlin.kotlin.collections.toList_abgq59$;
   var json = Kotlin.kotlin.js.json_pyyo18$;
   var println = Kotlin.kotlin.io.println_s8jyv4$;
+  var copyToArray = Kotlin.kotlin.collections.copyToArray;
   function record(memwatch, cnt, fn) {
     memwatch.gc();
     var hd = new memwatch.HeapDiff();
@@ -127,7 +128,6 @@
   function main$lambda_15(f, v) {
     return v;
   }
-  var copyToArray = Kotlin.kotlin.collections.copyToArray;
   function main(args) {
     var memwatch = require('memwatch-next');
     var results = LinkedHashMap_init();

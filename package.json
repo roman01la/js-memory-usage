@@ -23,11 +23,7 @@
     "bs-platform": "^3.0.0",
     "elm": "^0.18.0",
     "immutable": "^4.0.0-rc.9",
-    "kotlin": "^1.2.41",
-    "kotlin-compiler": "^1.2.41",
-    "memwatch-next": "^0.3.0"
-  },
-  "engines": {
-    "node": "8.17.0"
+    "kotlin": "1.3.72",
+    "kotlin-compiler": "1.3.72"
   }
 }
