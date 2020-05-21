@@ -26,5 +26,8 @@
     "kotlin": "^1.2.41",
     "kotlin-compiler": "^1.2.41",
     "memwatch-next": "^0.3.0"
+  },
+  "engines": {
+    "node": "8.17.0"
   }
 }
