@@ -63,13 +63,6 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bindings@^1.2.1:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.5.0.tgz#10353c9e945334bc0511a6d90b38fbc7c9c504df"
-  integrity sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
-  dependencies:
-    file-uri-to-path "1.0.0"
-
 bl@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/bl/-/bl-1.1.2.tgz#fdca871a99713aa00d19e3bbba41c44787a65398"
@@ -198,11 +191,6 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
-
-file-uri-to-path@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz#553a7b8446ff6f684359c445f1e37a05dacc33dd"
-  integrity sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
 
 forever-agent@~0.6.1:
   version "0.6.1"
@@ -396,12 +384,12 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-kotlin-compiler@^1.2.41:
+kotlin-compiler@1.3.72:
   version "1.3.72"
   resolved "https://registry.yarnpkg.com/kotlin-compiler/-/kotlin-compiler-1.3.72.tgz#5d060694cc0a23d65a0a843a613beea7df974457"
   integrity sha512-zHZ+4F5A3tNYiEDm/bG3xKs2VVmNCcMmRZJAwtwf6OjBP13b6gpX6ty9fCGTe8Q71HdBlSxN0vzfD/HbyT3Vwg==
 
-kotlin@^1.2.41:
+kotlin@1.3.72:
   version "1.3.72"
   resolved "https://registry.yarnpkg.com/kotlin/-/kotlin-1.3.72.tgz#d30e94d1d9d6b72dcf80e6bf08098c9929922424"
   integrity sha512-hvGztbc+K1bXDBdyonHPAbQ+TQnFf/zpI/+x3TuqOl199/O1SPOxbbe0ct6Cmu+k48EURpuXY4iz/+sM0VOHIg==
@@ -410,14 +398,6 @@ lodash@^4.17.14:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
-
-memwatch-next@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/memwatch-next/-/memwatch-next-0.3.0.tgz#2111050f9a906e0aa2d72a4ec0f0089c78726f8f"
-  integrity sha1-IREFD5qQbgqi1ypOwPAInHhyb48=
-  dependencies:
-    bindings "^1.2.1"
-    nan "^2.3.2"
 
 mime-db@1.44.0:
   version "1.44.0"
@@ -461,11 +441,6 @@ mkdirp@0.5.1:
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
-
-nan@^2.3.2:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.1.tgz#d7be34dfa3105b91494c3147089315eff8874b01"
-  integrity sha512-isWHgVjnFjh2x2yuJ/tj3JbwoHu3UC2dX5G/88Cm24yB6YopVgxvBObDY7n5xW6ExmFhJpSEQqFPvq9zaXc8Jw==
 
 node-uuid@~1.4.7:
   version "1.4.8"
